@@ -112,12 +112,19 @@ def day_trades(rec):
 
 
 def capital_before(acct, day):
-    """Start capital plus realised P&L of every earlier day."""
+    """Stock book: its own start capital plus realised stock P&L of every earlier day.
+    The NIFTY/SENSEX option book has separate capital (options.OPT["capital"])."""
     cap = acct["start_capital"]
     for d, rec in sorted(acct["days"].items()):
         if d < day:
-            cap += sum(t["net_pnl"] for t in day_trades(rec) if t.get("status") == "CLOSED")
+            cap += sum(t["net_pnl"] for t in rec.get("trades", []) if t.get("status") == "CLOSED")
     return cap
+
+
+def option_history(acct, before):
+    """[(date, net option P&L)] for days before `before`, for the loss circuit breaker."""
+    return [(dt.date.fromisoformat(d), sum(t["net_pnl"] for t in (rec.get("options") or {}).get("trades", [])))
+            for d, rec in sorted(acct["days"].items()) if d < before]
 
 
 def day_bars(symbol, day, range_="5d"):
@@ -317,9 +324,13 @@ def cmd_update(args):
         print("no stock watchlist for today - run: python paper.py premarket")
     try:
         import options
-        und, vix = options.fetch("5d")
-        rec["options"] = options.simulate_options_day(
-            day, und, [b for b in vix if b["t"].date() == day], now=now)
+        paused = options.circuit_breaker(day, option_history(acct, day.isoformat()))
+        if paused:
+            rec["options"] = options.paused_day(paused)
+        else:
+            und, vix = options.fetch("5d")
+            rec["options"] = options.simulate_options_day(
+                day, und, [b for b in vix if b["t"].date() == day], now=now)
     except Exception as e:
         print(f"  options: data error {e}")
     rec.update(updated_at=now.isoformat(timespec="seconds"), final=now.time() >= dt.time(15, 35))
@@ -371,14 +382,19 @@ def summarise(trades):
 
 def cmd_report(args):
     acct = load_account()
+    import options
     all_trades = [t for rec in acct["days"].values() for t in day_trades(rec)]
     s = summarise(all_trades)
-    equity = acct["start_capital"] + s["net"]
+    stocks = summarise([t for rec in acct["days"].values() for t in rec.get("trades", [])])
+    opts = summarise([t for rec in acct["days"].values() for t in (rec.get("options") or {}).get("trades", [])])
+    st_eq, op_eq = acct["start_capital"] + stocks["net"], options.OPT["capital"] + opts["net"]
     lines = [
         "# Paper trading journal (virtual money)", "",
-        f"Start capital: Rs {acct['start_capital']:,.2f}  ",
-        f"Current equity: **Rs {equity:,.2f}** ({(equity / acct['start_capital'] - 1):+.2%})  ",
-        f"Closed trades: {s['trades']}  |  wins {s['wins']} ({s['win_rate']:.0%})  |  "
+        f"Stocks book: Rs {acct['start_capital']:,.0f} -> **Rs {st_eq:,.2f}** "
+        f"({st_eq / acct['start_capital'] - 1:+.2%}), {stocks['trades']} trades  ",
+        f"NIFTY + SENSEX options book: Rs {options.OPT['capital']:,.0f} -> **Rs {op_eq:,.2f}** "
+        f"({op_eq / options.OPT['capital'] - 1:+.2%}), {opts['trades']} trades  ",
+        f"All closed trades: {s['trades']}  |  wins {s['wins']} ({s['win_rate']:.0%})  |  "
         f"avg R {s['avg_r']:+.2f}  |  charges Rs {s['charges']:,.2f}  ",
         f"Exits: target {s['by_reason']['TARGET']}, stop {s['by_reason']['STOP']}, "
         f"15:15 square-off {s['by_reason']['SQUARE_OFF_15:15']}", "",

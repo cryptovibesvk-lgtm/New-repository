@@ -19,7 +19,7 @@ DOCS = os.path.join(HERE, "docs")
 DATA = os.path.join(DOCS, "data")
 CLOUD_LOG = os.path.join(paper.PAPER_DIR, "cloud.log")
 REPLAY_DAYS = 20
-REPLAY_VERSION = 2  # 2 = option strategies (ORB5, EMA9_21)
+REPLAY_VERSION = 3  # 3 = EMA retest entry + 9 EMA body-close exit
 
 
 def dump(path, obj):
@@ -83,6 +83,9 @@ def export():
             dump(os.path.join(DATA, "replay", f"{d}.json"), rep)
         dump(os.path.join(DATA, "days.json"), {"days": days})
         dump(marker, {"version": REPLAY_VERSION, "watchlist": wl})
+    import backtest
+    bt = backtest.export(os.path.join(DATA, "backtest.json"), backtest.run())
+    print(f"backtest: {len(bt['days'])} sessions")
     print(f"site exported: {DOCS}")
 
 

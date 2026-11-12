@@ -35,9 +35,10 @@ jobs:
           git config user.email "paper-trader-bot@users.noreply.github.com"
           step() {
             mkdir -p paper
+            python -u history.py update 2>&1 | tee -a paper/cloud.log
             python -u paper.py tick 2>&1 | tee -a paper/cloud.log
             python -u site.py
-            git add -A paper docs nse-trader
+            git add -A paper docs nse-trader data
             if git diff --cached --quiet; then
               echo "nothing changed"
               return 1

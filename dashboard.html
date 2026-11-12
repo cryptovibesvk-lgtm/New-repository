@@ -15,61 +15,53 @@
   body { margin: 0; background: var(--bg); color: var(--text);
          font: 14px/1.45 "Segoe UI", system-ui, sans-serif; }
   .wrap { max-width: 1280px; margin: 0 auto; padding: 16px; }
-  header { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+  header { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
   header h1 { font-size: 20px; margin: 0; letter-spacing: .3px; }
   .badge { padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; }
   .virtual { background: rgba(167,139,250,.15); color: var(--violet); border: 1px solid rgba(167,139,250,.4); }
   .pill { background: var(--panel2); color: var(--muted); border: 1px solid var(--line); }
-  .leg { white-space: nowrap; margin: 2px 0; }
-  .leg .chip { margin-top: 0; }
-  .badge.idx { font-size: 10px; padding: 1px 6px; vertical-align: middle; background: rgba(245,158,11,.15); color: var(--amber); border: 1px solid rgba(245,158,11,.4); }
   .pill.open { color: var(--green); border-color: rgba(34,197,94,.4); }
+  .badge.idx { font-size: 10px; padding: 1px 6px; vertical-align: middle; background: rgba(245,158,11,.15); color: var(--amber); border: 1px solid rgba(245,158,11,.4); }
   .spacer { flex: 1; }
   .clock { font-variant-numeric: tabular-nums; color: var(--muted); }
-  .tabs { display: flex; gap: 6px; margin-bottom: 16px; flex-wrap: wrap; align-items: center; }
-  .tab { background: var(--panel); border: 1px solid var(--line); color: var(--muted);
-         padding: 8px 14px; border-radius: 8px; cursor: pointer; font: inherit; }
-  .tab.active { color: var(--text); border-color: var(--blue); background: rgba(59,130,246,.12); }
-  select { background: var(--panel); color: var(--text); border: 1px solid var(--line);
-           border-radius: 8px; padding: 8px; font: inherit; }
+  .maintabs { display: flex; gap: 4px; border-bottom: 1px solid var(--line); margin-bottom: 14px; overflow-x: auto; }
+  .maintab { background: none; border: 0; border-bottom: 2px solid transparent; color: var(--muted);
+             padding: 10px 16px; font: 600 15px inherit; cursor: pointer; white-space: nowrap; }
+  .maintab.active { color: var(--text); border-bottom-color: var(--blue); }
+  .tabs { display: flex; gap: 6px; margin-bottom: 14px; flex-wrap: wrap; align-items: center; }
+  .tab, .seg button { background: var(--panel); border: 1px solid var(--line); color: var(--muted);
+         padding: 7px 12px; border-radius: 8px; cursor: pointer; font: inherit; }
+  .tab.active, .seg button.active { color: var(--text); border-color: var(--blue); background: rgba(59,130,246,.12); }
+  .seg { display: inline-flex; gap: 4px; flex-wrap: wrap; }
+  select, input[type=date] { background: var(--panel); color: var(--text); border: 1px solid var(--line);
+           border-radius: 8px; padding: 7px 8px; font: inherit; color-scheme: dark; }
   .card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
   .grid { display: grid; gap: 16px; }
   .grid > *, .two > *, .kpis > * { min-width: 0; }
   .control { display: grid; grid-template-columns: auto 1fr; gap: 20px; align-items: center; }
-  .go { border: 0; border-radius: 12px; padding: 18px 26px; font: 600 16px inherit; cursor: pointer;
+  .go { border: 0; border-radius: 12px; padding: 16px 24px; font: 600 16px inherit; cursor: pointer;
         color: white; background: linear-gradient(135deg, #16a34a, #22c55e); min-width: 230px;
-        box-shadow: 0 6px 24px rgba(34,197,94,.25); transition: transform .1s; }
-  .go:hover { transform: translateY(-1px); }
-  .go.stop { background: linear-gradient(135deg, #b91c1c, #ef4444); box-shadow: 0 6px 24px rgba(239,68,68,.25); }
+        box-shadow: 0 6px 24px rgba(34,197,94,.25); }
+  .go.stop { background: linear-gradient(135deg, #b91c1c, #ef4444); }
   .go:disabled { opacity: .5; cursor: default; }
-  .status-msg { font-size: 15px; }
   .status-msg .dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%;
                      background: var(--muted); margin-right: 8px; vertical-align: middle; }
   .status-msg .dot.live { background: var(--green); animation: pulse 1.4s infinite; }
   @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(34,197,94,.7); } 100% { box-shadow: 0 0 0 10px rgba(34,197,94,0); } }
-  .fine { color: var(--muted); font-size: 12px; margin-top: 6px; }
-  .steps { display: flex; gap: 6px; margin-top: 14px; flex-wrap: wrap; }
-  .step { flex: 1; min-width: 110px; padding: 8px 10px; border-radius: 8px; background: var(--panel2);
-          border: 1px solid var(--line); color: var(--muted); font-size: 12px; }
-  .step b { display: block; color: var(--text); font-size: 13px; }
-  .step.done { border-color: rgba(34,197,94,.35); }
-  .step.done b::after { content: " ✓"; color: var(--green); }
-  .step.now { border-color: var(--blue); background: rgba(59,130,246,.12); }
+  .fine { color: var(--muted); font-size: 12px; margin-top: 8px; }
   .kpis { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
   .kpi .label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .5px; }
-  .kpi .value { font-size: 22px; font-weight: 600; font-variant-numeric: tabular-nums; margin-top: 4px; }
+  .kpi .value { font-size: 21px; font-weight: 600; font-variant-numeric: tabular-nums; margin-top: 4px; }
+  .kpi .sub { color: var(--muted); font-size: 12px; }
   .pos { color: var(--green); } .neg { color: var(--red); }
-  h2 { font-size: 15px; margin: 0 0 12px; display: flex; align-items: center; gap: 8px; }
+  h2 { font-size: 15px; margin: 0 0 12px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
   h2 small { color: var(--muted); font-weight: 400; }
-  .stocks { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
   .stock { background: var(--panel2); border: 1px solid var(--line); border-radius: 10px; padding: 12px;
-           cursor: pointer; transition: border-color .15s, transform .15s; animation: rise .35s ease both; }
-  .stock:hover { transform: translateY(-2px); }
+           cursor: pointer; transition: border-color .15s; }
   .stock.sel { border-color: var(--blue); }
-  @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
-  .stock .top { display: flex; justify-content: space-between; align-items: baseline; }
+  .stock .top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
   .stock .sym { font-weight: 700; font-size: 15px; }
-  .stock .px { font-variant-numeric: tabular-nums; }
   .chip { display: inline-block; margin-top: 8px; padding: 2px 8px; border-radius: 6px; font-size: 12px; font-weight: 600; }
   .c-wait { background: rgba(139,151,176,.15); color: var(--muted); }
   .c-watch { background: rgba(59,130,246,.15); color: #93c5fd; }
@@ -82,18 +74,24 @@
   .bar { height: 6px; border-radius: 3px; background: linear-gradient(90deg, var(--red), #334155 50%, var(--green));
          position: relative; margin-top: 10px; }
   .bar i { position: absolute; top: -3px; width: 3px; height: 12px; background: white; border-radius: 2px; }
-  #chart { height: 380px; }
-  .legend { display: flex; gap: 14px; flex-wrap: wrap; color: var(--muted); font-size: 12px; margin-top: 8px; }
+  .chartbox { height: clamp(340px, 58vh, 600px); }
+  .legend { display: flex; gap: 14px; flex-wrap: wrap; color: var(--muted); font-size: 12px; margin-top: 8px; align-items: center; }
   .legend span::before { content: ""; display: inline-block; width: 14px; height: 2px; margin-right: 6px; vertical-align: middle; background: var(--c); }
+  .legend button { margin-left: auto; }
   table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
-  th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); white-space: nowrap; vertical-align: top; }
   th { color: var(--muted); font-weight: 500; font-size: 12px; }
   .tablewrap { overflow-x: auto; }
+  .leg { white-space: nowrap; margin: 2px 0; }
+  .leg .chip { margin-top: 0; }
   .two { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; }
-  pre { margin: 0; max-height: 260px; overflow: auto; font: 12px/1.5 Consolas, monospace; color: var(--muted); white-space: pre-wrap; }
+  pre { margin: 0; max-height: 240px; overflow: auto; font: 12px/1.5 Consolas, monospace; color: var(--muted); white-space: pre-wrap; }
   .empty { color: var(--muted); padding: 10px 0; }
-  .replay-banner { background: rgba(245,158,11,.12); border: 1px solid rgba(245,158,11,.4); color: var(--amber);
-                   border-radius: 10px; padding: 10px 14px; }
+  .banner { background: rgba(245,158,11,.12); border: 1px solid rgba(245,158,11,.4); color: var(--amber);
+            border-radius: 10px; padding: 10px 14px; }
+  .btrow { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  .btrow label { color: var(--muted); font-size: 12px; }
+  [hidden] { display: none !important; }
   @media (max-width: 900px) {
     .kpis { grid-template-columns: repeat(2, 1fr); }
     .two, .control { grid-template-columns: 1fr; }
@@ -111,78 +109,92 @@
     <span class="clock" id="clock"></span>
   </header>
 
-  <div class="tabs">
-    <button class="tab active" id="tab-live">Live today</button>
-    <button class="tab" id="tab-replay">Replay a past day</button>
-    <select id="replay-date" style="display:none"></select>
-  </div>
+  <nav class="maintabs">
+    <button class="maintab active" data-tab="NIFTY">NIFTY 50</button>
+    <button class="maintab" data-tab="SENSEX">SENSEX</button>
+    <button class="maintab" data-tab="STOCKS">Stocks</button>
+    <button class="maintab" data-tab="BACKTEST">Backtest</button>
+  </nav>
 
-  <div class="grid">
+  <!-- ===================== live / replay tabs ===================== -->
+  <div id="livearea" class="grid">
+    <div class="tabs">
+      <button class="tab active" id="mode-live">Live today</button>
+      <button class="tab" id="mode-replay">Replay a past day</button>
+      <select id="replay-date" hidden></select>
+    </div>
+
     <div class="card" id="control-card">
       <div class="control">
         <button class="go" id="go">▶ Start virtual trading</button>
         <div>
           <div class="status-msg"><span class="dot" id="dot"></span><span id="status">Loading…</span></div>
-          <div class="fine">Virtual ₹ only: no broker is connected. Rules: opening range 09:15–09:30 → buy the first 5-min close above it →
-            stop at range middle, target 1.5×, out by 15:15. NIFTY &amp; SENSEX trade as 1 futures lot each (simulated on the index level).
-            Real orders are always placed by you in your broker.</div>
+          <div class="fine" id="book-note"></div>
         </div>
       </div>
-      <div class="steps" id="steps"></div>
     </div>
 
-    <div class="replay-banner" id="replay-banner" style="display:none"></div>
+    <div class="banner" id="replay-banner" hidden></div>
 
     <div class="kpis">
-      <div class="card kpi"><div class="label">Virtual equity</div><div class="value" id="k-eq">–</div></div>
-      <div class="card kpi"><div class="label" id="k-pnl-label">Today P&amp;L</div><div class="value" id="k-pnl">–</div></div>
-      <div class="card kpi"><div class="label">Trades today</div><div class="value" id="k-trades">–</div></div>
-      <div class="card kpi"><div class="label">Open positions</div><div class="value" id="k-open">–</div></div>
-      <div class="card kpi"><div class="label">Win rate (all)</div><div class="value" id="k-win">–</div></div>
+      <div class="card kpi"><div class="label" id="k1l">Equity</div><div class="value" id="k1">–</div><div class="sub" id="k1s"></div></div>
+      <div class="card kpi"><div class="label" id="k2l">Today P&amp;L</div><div class="value" id="k2">–</div></div>
+      <div class="card kpi"><div class="label">Trades</div><div class="value" id="k3">–</div></div>
+      <div class="card kpi"><div class="label">Open positions</div><div class="value" id="k4">–</div></div>
+      <div class="card kpi"><div class="label">Win rate (book)</div><div class="value" id="k5">–</div></div>
     </div>
 
-    <div class="card">
-      <h2>Option strategies <small>NIFTY &amp; SENSEX · CE/PE buying · virtual</small></h2>
-      <div class="stocks" id="opt-cards"></div>
-      <div class="meta" id="opt-alltime" style="margin-top:10px"></div>
+    <!-- index tab: strategy cards + option trades -->
+    <div class="card" id="opt-section">
+      <h2 id="opt-title">Strategies</h2>
+      <div class="cards" id="opt-cards"></div>
       <div class="tablewrap" style="margin-top:12px"><table>
         <thead><tr><th>Strategy</th><th>Contract</th><th>Lots</th><th>Entry</th><th>Exits</th><th>Result</th><th>Net P&amp;L</th></tr></thead>
         <tbody id="opt-trades"></tbody>
       </table></div>
-      <div class="fine">ORB5: first 5-min candle high/low → breakout + retest → buy ATM CE (up) or PE (down), stop at the candle's middle.
-        EMA9_21: 9 EMA crosses 21 EMA → CE/PE, stop at the last 3 candles' low/high, target 1:2.
-        Trade 1 = 5 lots: at +30 pts book 3, stop to break-even, then trail 20 pts per 20 pts. Win → done for the day; loss → trade 2 = 7 lots (book 5).
-        Max 2 trades per strategy per index, no entries after 14:30, ₹15,000 day loss cap. Premiums are Black-Scholes estimates from India VIX, not live quotes.</div>
+      <div class="fine">
+        <b>ORB5</b>: first 5-min candle high/low → close beyond it, then a retest that closes beyond again → buy ATM CE (up) / PE (down).
+        Stop = middle of that candle. At +30 pts book, stop to break-even, then trail 20 pts per 20 pts.<br>
+        <b>EMA9_21</b>: the 9/21 cross only arms the setup (never an entry). Entry = a later candle whose wick retests the 9 EMA and
+        whose body closes on the trend side (above for CE, below for PE); a wrong-side close is skipped. Stop = last 3 candles' low/high.
+        At +30 pts book and stop to break-even; the rest exits only when a candle <b>body</b> closes across the 9 EMA (wicks don't count).<br>
+        Each strategy on its own: trade 1 = 5 lots (book 3); win → done for the day; loss → trade 2 = 7 lots (book 5); 2 losses → done.
+        No entries after 14:30, square-off 15:15. Option book ₹5L (NIFTY + SENSEX). Capital guards: ₹10,000 day, ₹15,000 week, ₹30,000 month loss stops.
+        Premiums are Black-Scholes estimates from India VIX, not live quotes.
+      </div>
     </div>
 
-    <div class="card">
-      <h2>Index &amp; stocks picked <small id="wl-src"></small></h2>
-      <div class="stocks" id="stocks"></div>
+    <!-- stocks tab: picks -->
+    <div class="card" id="stock-section" hidden>
+      <h2>Stocks picked <small id="wl-src"></small></h2>
+      <div class="cards" id="stocks"></div>
+      <div class="fine">Stock ORB: opening range 09:15–09:30 → buy the first 5-min close above it → stop at the range middle, target 1.5×, out by 15:15.
+        Max 3 stocks a day, 25% of the ₹5L stock book per position.</div>
     </div>
 
     <div class="card">
       <h2><span id="chart-title">Chart</span> <small id="chart-sub"></small></h2>
-      <div id="chart"></div>
-      <div class="legend">
-        <span style="--c:#64748b">Opening range / first 5-min candle</span>
+      <div class="chartbox" id="chart"></div>
+      <div class="legend" id="legend">
+        <span style="--c:#22c55e">5-min high</span>
+        <span style="--c:#ef4444">5-min low</span>
+        <span style="--c:#94a3b8">5-min mid (stop)</span>
         <span style="--c:#f59e0b">9 EMA</span>
         <span style="--c:#a78bfa">21 EMA</span>
-        <span style="--c:#3b82f6">Entry</span>
-        <span style="--c:#ef4444">Stop-loss</span>
-        <span style="--c:#22c55e">Target</span>
+        <button class="tab" id="fit">⤢ Fit chart</button>
       </div>
     </div>
 
-    <div class="two">
+    <div class="two" id="stock-tables" hidden>
       <div class="card">
-        <h2>Trades</h2>
+        <h2>Stock trades</h2>
         <div class="tablewrap"><table>
           <thead><tr><th>Stock</th><th>Qty</th><th>Entry</th><th>Stop</th><th>Target</th><th>Exit</th><th>Result</th><th>Net P&amp;L</th></tr></thead>
           <tbody id="trades"></tbody>
         </table></div>
       </div>
       <div class="card">
-        <h2>Equity curve <small>(closed trades)</small></h2>
+        <h2>Stock book equity</h2>
         <svg id="curve" viewBox="0 0 300 120" width="100%" height="140" preserveAspectRatio="none"></svg>
         <div class="meta" id="curve-meta"></div>
       </div>
@@ -193,21 +205,65 @@
       <pre id="log">–</pre>
     </div>
   </div>
+
+  <!-- ===================== backtest tab ===================== -->
+  <div id="btarea" class="grid" hidden>
+    <div class="card">
+      <h2>Backtest · NIFTY &amp; SENSEX option strategies <small id="bt-range"></small></h2>
+      <div class="btrow">
+        <label>From</label><input type="date" id="bt-from">
+        <label>To</label><input type="date" id="bt-to">
+        <div class="seg" id="bt-preset">
+          <button data-p="7">1W</button><button data-p="30">1M</button><button data-p="91">3M</button>
+          <button data-p="182">6M</button><button data-p="365">1Y</button><button data-p="0" class="active">All</button>
+        </div>
+      </div>
+      <div class="btrow" style="margin-top:10px">
+        <div class="seg" id="bt-group">
+          <button data-g="day">Day</button><button data-g="week">Week</button>
+          <button data-g="month" class="active">Month</button><button data-g="year">Year</button>
+        </div>
+        <select id="bt-strat"><option value="">All strategies</option><option>ORB5</option><option>EMA9_21</option></select>
+        <select id="bt-und"><option value="">NIFTY + SENSEX</option><option>NIFTY</option><option>SENSEX</option></select>
+      </div>
+      <div class="fine" id="bt-data"></div>
+    </div>
+
+    <div class="kpis">
+      <div class="card kpi"><div class="label">Net P&amp;L</div><div class="value" id="b1">–</div><div class="sub" id="b1s"></div></div>
+      <div class="card kpi"><div class="label">Trades</div><div class="value" id="b2">–</div><div class="sub" id="b2s"></div></div>
+      <div class="card kpi"><div class="label">Win rate</div><div class="value" id="b3">–</div><div class="sub" id="b3s"></div></div>
+      <div class="card kpi"><div class="label">Max drawdown</div><div class="value" id="b4">–</div><div class="sub" id="b4s"></div></div>
+      <div class="card kpi"><div class="label">Profit factor</div><div class="value" id="b5">–</div><div class="sub" id="b5s"></div></div>
+    </div>
+
+    <div class="card">
+      <h2>Equity curve <small>₹5L option book, day by day</small></h2>
+      <div style="height:300px" id="btchart"></div>
+    </div>
+
+    <div class="card">
+      <h2 id="bt-table-title">By month</h2>
+      <div class="tablewrap"><table>
+        <thead><tr><th>Period</th><th>Sessions</th><th>Trades</th><th>Wins</th><th>Win %</th><th>Net P&amp;L</th><th>Charges</th><th>Equity after</th></tr></thead>
+        <tbody id="bt-rows"></tbody>
+      </table></div>
+    </div>
+  </div>
 </div>
 
 <script>
-const IST_OFFSET = 19800;  // chart shows IST wall-clock times
-const inr = v => v == null ? "–" : "₹" + Number(v).toLocaleString("en-IN", {minimumFractionDigits: 2, maximumFractionDigits: 2});
-const signed = v => (v > 0 ? "+" : "") + inr(v);
+const IST_OFFSET = 19800;  // charts show IST wall-clock times
+const inr = v => v == null ? "–" : "₹" + Number(v).toLocaleString("en-IN", {minimumFractionDigits: 0, maximumFractionDigits: 0});
+const inr2 = v => v == null ? "–" : "₹" + Number(v).toLocaleString("en-IN", {minimumFractionDigits: 2, maximumFractionDigits: 2});
+const signed = v => (v > 0 ? "+" : v < 0 ? "−" : "") + inr(Math.abs(v || 0));
+const cls = v => v >= 0 ? "pos" : "neg";
 const hhmm = iso => iso ? iso.slice(11, 16) : "";
-const IDX = ["NIFTY", "SENSEX"];
-const size = t => t.lots ? `${t.lots} lot (${t.qty})` : t.qty;
 const $ = id => document.getElementById(id);
-
-let mode = "live", state = null, view = null, selected = null, chart, candles, ema9S, ema21S, lines = [];
-const STRATS = [["ORB5", "ORB 5-min retest"], ["EMA9_21", "9/21 EMA cross"]];
+const IDX = ["NIFTY", "SENSEX"];
+const STRATS = [["ORB5", "ORB 5-min retest"], ["EMA9_21", "9/21 EMA retest"]];
 const optOf = v => (v && v.options) || {};
-const reasonCls = r => /TARGET|PARTIAL|TRAIL/.test(r) ? "c-win" : /BREAKEVEN|SQUARE/.test(r) ? "c-flat" : "c-loss";
+const reasonCls = r => /PARTIAL|TRAIL|TARGET/.test(r) ? "c-win" : /BREAKEVEN|SQUARE|EMA9/.test(r) ? "c-flat" : "c-loss";
 
 // Local (python dashboard.py) uses the JSON API; anywhere else (GitHub Pages)
 // reads the files that site.py exports to data/.
@@ -218,81 +274,140 @@ const api = {
   state: () => get(STATIC ? "data/state.json" + bust() : "/api/state"),
   days: () => get(STATIC ? "data/days.json" + bust() : "/api/days"),
   replay: d => get(STATIC ? `data/replay/${d}.json` : `/api/replay?date=${d}`),
+  backtest: () => get(STATIC ? "data/backtest.json" + bust() : "/api/backtest"),
   bars: (sym, date) => {
-    if (!STATIC) return get(`/api/bars?symbol=${sym}&date=${date}`);
+    if (!STATIC) return get(`/api/bars?symbol=${sym}&date=${date || ""}`);
     if (mode === "replay") return Promise.resolve({ symbol: sym, requested: view.date, date: view.date, bars: (view.bars || {})[sym] || [] });
     return get(`data/bars/${sym}.json` + bust());
   },
 };
 
+let tab = "NIFTY", mode = "live", state = null, view = null, selectedStock = null;
+let chart, candles, ema9S, ema21S, lines = [], btChart, btLine, bt = null;
+let btGroup = "month";
+
+// ------------------------------------------------------------------ chart
 function initChart() {
   chart = LightweightCharts.createChart($("chart"), {
     layout: { background: { color: "#121826" }, textColor: "#8b97b0" },
     grid: { vertLines: { color: "#1c2537" }, horzLines: { color: "#1c2537" } },
     timeScale: { timeVisible: true, secondsVisible: false, borderColor: "#243049" },
-    rightPriceScale: { borderColor: "#243049" },
+    rightPriceScale: { borderColor: "#243049", autoScale: true, scaleMargins: { top: 0.08, bottom: 0.08 } },
+    handleScale: { axisPressedMouseMove: { time: true, price: true }, mouseWheel: true, pinch: true },
     crosshair: { mode: 0 },
     autoSize: true,
   });
   candles = chart.addCandlestickSeries({ upColor: "#22c55e", downColor: "#ef4444",
     wickUpColor: "#22c55e", wickDownColor: "#ef4444", borderVisible: false });
-  const line = color => chart.addLineSeries({ color, lineWidth: 1.5, priceLineVisible: false, lastValueVisible: false, crosshairMarkerVisible: false });
+  // EMAs never drive the price scale: on a gap day yesterday's EMA would squash the candles
+  const line = color => chart.addLineSeries({ color, lineWidth: 1.5, priceLineVisible: false, lastValueVisible: false,
+    crosshairMarkerVisible: false, autoscaleInfoProvider: () => null });
   ema9S = line("#f59e0b"); ema21S = line("#a78bfa");
 }
 
-function renderOptions(v) {
-  const o = optOf(v), trades = o.trades || [], box = $("opt-cards");
-  const cards = [];
-  for (const [s, label] of STRATS) for (const u of IDX) {
-    const st = (o.status || {})[`${s}:${u}`] || { trades: 0, net: 0 };
-    const open = trades.find(t => t.strategy === s && t.underlying === u && t.status === "OPEN");
+function fitChart() {
+  chart.priceScale("right").applyOptions({ autoScale: true });
+  chart.timeScale().fitContent();
+}
+
+function chartSymbol() { return IDX.includes(tab) ? tab : selectedStock; }
+
+async function loadChart() {
+  const sym = chartSymbol();
+  if (!sym) { candles.setData([]); ema9S.setData([]); ema21S.setData([]); $("chart-title").textContent = "Chart"; return; }
+  const date = mode === "live" ? "" : view.date;
+  let res;
+  try { res = await api.bars(sym, date); } catch (e) { $("chart-sub").textContent = "No chart data yet"; return; }
+  if (res.error) { $("chart-sub").textContent = res.error; return; }
+  $("chart-title").textContent = sym;
+  $("chart-sub").textContent = res.date !== res.requested ? `(last session ${res.date}; today's candles appear after 09:15)` : `5-min candles · ${res.date}`;
+  candles.setData(res.bars.map(b => ({ time: b.time + IST_OFFSET, open: b.open, high: b.high, low: b.low, close: b.close })));
+  const isIdx = IDX.includes(sym);
+  const emaLine = k => res.bars.filter(b => b[k] != null).map(b => ({ time: b.time + IST_OFFSET, value: b[k] }));
+  ema9S.setData(isIdx ? emaLine("ema9") : []);
+  ema21S.setData(isIdx ? emaLine("ema21") : []);
+  $("legend").querySelectorAll("span").forEach((s, i) => s.hidden = !isIdx && i >= 3);
+  lines.forEach(l => candles.removePriceLine(l)); lines = [];
+  const add = (price, color, title, style = 2, width = 1) => lines.push(candles.createPriceLine({ price, color, lineWidth: width, lineStyle: style, axisLabelVisible: true, title }));
+  const sameDay = res.date === (mode === "live" ? state.today.date : view.date);
+  const ts = iso => Math.floor(new Date(iso).getTime() / 1000) + IST_OFFSET;
+  const markers = [];
+  if (sameDay && isIdx) {
+    const o = optOf(view), lv = (o.levels || {})[sym];
+    if (lv) { add(lv.high, "#22c55e", "5m high", 0, 2); add(lv.low, "#ef4444", "5m low", 0, 2); add(lv.mid, "#94a3b8", "5m mid", 2); }
+    const short = r => r.startsWith("PARTIAL") ? "book" : r === "BREAKEVEN_STOP" ? "BE" : r === "TRAIL_STOP" ? "TSL"
+      : r === "EMA9_CLOSE" ? "9EMA close" : r.startsWith("SQUARE") ? "15:15" : "SL";
+    for (const ot of (o.trades || []).filter(x => x.underlying === sym)) {
+      const up = ot.side === "CE";
+      markers.push({ time: ts(ot.entry_time), position: up ? "belowBar" : "aboveBar", color: up ? "#3b82f6" : "#ec4899",
+        shape: up ? "arrowUp" : "arrowDown", text: `${ot.strategy === "ORB5" ? "ORB" : "EMA"} ${ot.lots}L ${ot.side}` });
+      for (const l of ot.legs) markers.push({ time: ts(l.time), position: up ? "aboveBar" : "belowBar",
+        color: l.reason === "STOP" ? "#ef4444" : "#22c55e", shape: "circle", text: `${l.lots}L ${short(l.reason)}` });
+      if (ot.status === "OPEN") { add(ot.stop_index, "#ef4444", `${ot.strategy} stop`); if (!ot.partial_done) add(ot.partial_index, "#22c55e", "+30 book"); }
+    }
+  }
+  if (sameDay && !isIdx) {
+    const r = (view.ranges || {})[sym];
+    if (r) { add(r.or_high, "#22c55e", "OR high", 0, 2); add(r.or_low, "#ef4444", "OR low", 0, 2); }
+    const t = (view.trades || []).find(x => x.symbol === sym);
+    if (t) {
+      add(t.entry, "#3b82f6", "Entry", 0); add(t.stop, "#ef4444", "Stop"); add(t.target, "#22c55e", "Target");
+      markers.push({ time: ts(t.entry_time), position: "belowBar", color: "#3b82f6", shape: "arrowUp", text: `BUY ${t.qty}` });
+      if (t.exit_time) markers.push({ time: ts(t.exit_time), position: "aboveBar", color: t.net_pnl >= 0 ? "#22c55e" : "#ef4444", shape: "arrowDown", text: `${t.exit_reason} ${signed(t.net_pnl)}` });
+    }
+  }
+  candles.setMarkers(markers.sort((a, b) => a.time - b.time));
+  fitChart();
+}
+
+// ------------------------------------------------------------------ index tabs
+function renderIndexTab(v) {
+  const u = tab, o = optOf(v), trades = (o.trades || []).filter(t => t.underlying === u);
+  const bk = state.books.options;
+  $("opt-title").innerHTML = `${u} strategies <small>${o.paused ? o.paused : "CE / PE buying · each strategy on its own"}</small>`;
+  // KPIs
+  $("k1l").textContent = "Option book (NIFTY+SENSEX)";
+  $("k1").textContent = inr(bk.equity);
+  const pct = (bk.equity / bk.start - 1) * 100;
+  $("k1s").innerHTML = `<span class="${cls(pct)}">${pct >= 0 ? "+" : ""}${pct.toFixed(2)}%</span> of ${inr(bk.start)}`;
+  const dayPnl = trades.reduce((a, t) => a + (t.status === "CLOSED" ? t.net_pnl : (t.unrealised || 0)), 0);
+  $("k2l").textContent = mode === "live" ? `${u} today` : `${u} on ${v.date}`;
+  $("k2").innerHTML = `<span class="${cls(dayPnl)}">${signed(dayPnl)}</span>`;
+  $("k3").textContent = `${trades.length} (max 4)`;
+  $("k4").textContent = trades.filter(t => t.status === "OPEN").length;
+  const s = bk.summary;
+  $("k5").textContent = s.trades ? `${Math.round(s.win_rate * 100)}% of ${s.trades}` : "–";
+  // strategy cards
+  $("opt-cards").innerHTML = STRATS.map(([sk, label]) => {
+    const st = (o.status || {})[`${sk}:${u}`] || { trades: 0, net: 0 };
+    const open = trades.find(t => t.strategy === sk && t.status === "OPEN");
     let chip = ["c-wait", mode === "live" ? "👀 Waiting for signal" : "No trade"];
     if (open) chip = ["c-open", `● In trade · ${open.symbol}`];
-    else if (st.done) chip = st.net > 0 ? ["c-win", "✓ Done for the day"] : ["c-loss", "✖ Done for the day"];
+    else if (st.done && st.trades) chip = st.net > 0 ? ["c-win", "✓ Done for the day"] : ["c-loss", "✖ Done for the day"];
+    else if (st.done) chip = ["c-flat", "Paused"];
     else if (st.trades) chip = ["c-watch", "Waiting for trade 2 signal"];
-    let meta = `<div class="meta">Trades ${st.trades || 0}/2 · Net <span class="${(st.net || 0) >= 0 ? "pos" : "neg"}">${signed(st.net || 0)}</span></div>`;
+    let meta = `<div class="meta">Trades ${st.trades || 0}/2 · Net <span class="${cls(st.net || 0)}">${signed(st.net || 0)}</span></div>`;
     const lv = (o.levels || {})[u], em = (o.ema || {})[u];
-    if (s === "ORB5" && lv) meta += `<div class="meta">5-min candle ${lv.low.toFixed(2)} – ${lv.high.toFixed(2)} · stop at ${lv.mid.toFixed(2)}</div>`;
-    if (s === "EMA9_21" && em && mode === "live") meta += `<div class="meta">9 EMA ${em.ema9.toFixed(2)} · 21 EMA ${em.ema21.toFixed(2)} (${em.ema9 > em.ema21 ? "above → CE side" : "below → PE side"})</div>`;
-    if (open) {
-      const pnl = open.unrealised || 0;
-      meta += `<div class="meta">${open.lots_open}/${open.lots} lots open · stop ${open.stop_index.toFixed(2)} · <span class="${pnl >= 0 ? "pos" : "neg"}">${signed(pnl)}</span></div>`;
-    }
+    if (sk === "ORB5" && lv) meta += `<div class="meta"><span class="pos">high ${lv.high.toFixed(2)}</span> · <span class="neg">low ${lv.low.toFixed(2)}</span> · stop ${lv.mid.toFixed(2)}</div>`;
+    if (sk === "EMA9_21" && em) meta += `<div class="meta">9 EMA ${em.ema9.toFixed(2)} · 21 EMA ${em.ema21.toFixed(2)} · ${em.setup ? `armed for ${em.setup} — waiting for a 9 EMA retest` : "no setup"}</div>`;
+    if (open) meta += `<div class="meta">${open.lots_open}/${open.lots} lots open · stop ${open.stop_index.toFixed(2)} · <span class="${cls(open.unrealised || 0)}">${signed(open.unrealised || 0)}</span></div>`;
     if (st.note) meta += `<div class="meta">${st.note}</div>`;
-    cards.push(`<div class="stock ${u === selected ? "sel" : ""}" data-sym="${u}">
-      <div class="top"><span class="sym">${label}</span><span class="badge idx">${u}</span></div>
-      <span class="chip ${chip[0]}">${chip[1]}</span>${meta}</div>`);
-  }
-  box.innerHTML = cards.join("");
-  box.querySelectorAll(".stock").forEach(el => el.onclick = () => { selected = el.dataset.sym; renderStocks(view); renderOptions(view); loadChart(); });
-
+    return `<div class="stock"><div class="top"><span class="sym">${label}</span><span class="badge idx">${u}</span></div>
+      <span class="chip ${chip[0]}">${chip[1]}</span>${meta}</div>`;
+  }).join("");
+  // trades
   $("opt-trades").innerHTML = trades.map(t => {
-    const legs = t.legs.map(l => `<div class="leg"><span class="chip ${reasonCls(l.reason)}">${l.lots}L ${l.reason.replace(/_/g, " ")}</span> @ ${l.premium.toFixed(1)} <span class="meta">${hhmm(l.time)}</span></div>`).join("") || "–";
+    const legs = t.legs.map(l => `<div class="leg"><span class="chip ${reasonCls(l.reason)}">${l.lots}L ${l.reason.replace(/_/g, " ")}</span> @ ${l.premium.toFixed(1)} <span class="meta">${hhmm(l.time)} · idx ${l.index.toFixed(0)}</span></div>`).join("") || "–";
     const pnl = t.status === "OPEN" ? (t.unrealised || 0) : t.net_pnl;
     const res = t.status === "OPEN" ? '<span class="chip c-open">OPEN</span>' : `<span class="chip ${pnl >= 0 ? "c-win" : "c-loss"}">${pnl >= 0 ? "PROFIT" : "LOSS"}</span>`;
     return `<tr><td>${t.strategy} <span class="meta">#${t.trade_no}</span></td><td><b>${t.symbol}</b> <span class="meta">exp ${t.expiry.slice(5)}</span></td>
       <td>${t.lots} × ${t.lot}</td><td>${t.entry_premium.toFixed(2)} <span class="meta">${hhmm(t.entry_time)} · idx ${t.entry_index.toFixed(0)}</span></td>
-      <td>${legs}</td><td>${res}</td><td class="${pnl >= 0 ? "pos" : "neg"}">${signed(pnl)}</td></tr>`;
-  }).join("") || `<tr><td colspan="7" class="empty">No option trades ${mode === "live" ? "yet today" : "on this day"}.</td></tr>`;
-
-  const bs = (state && state.by_strategy) || {};
-  $("opt-alltime").innerHTML = mode === "live" ? "All-time (virtual): " + ["ORB5", "EMA9_21", "STOCK_ORB"].map(k => {
-    const a = bs[k] || { trades: 0, wins: 0, net: 0 };
-    return `${k} ${a.trades} trades, ${a.trades ? Math.round(a.wins / a.trades * 100) : 0}% wins, <span class="${a.net >= 0 ? "pos" : "neg"}">${signed(a.net)}</span>`;
-  }).join(" · ") : "";
+      <td>${legs}</td><td>${res}</td><td class="${cls(pnl)}">${signed(pnl)}</td></tr>`;
+  }).join("") || `<tr><td colspan="7" class="empty">No ${u} option trades ${mode === "live" ? "yet today" : "on this day"}.</td></tr>`;
 }
 
-function status(sym, v) {
-  if (IDX.includes(sym)) {
-    const ot = (optOf(v).trades || []).filter(t => t.underlying === sym);
-    const open = ot.find(t => t.status === "OPEN");
-    if (open) return { cls: "c-open", text: `● ${open.strategy} ${open.side} open` };
-    if (ot.length) {
-      const net = ot.reduce((a, t) => a + (t.net_pnl || 0), 0);
-      return { cls: net >= 0 ? "c-win" : "c-loss", text: `${ot.length} option trade(s) · ${signed(net)}` };
-    }
-    return { cls: "c-wait", text: "Options: waiting for signal" };
-  }
+// ------------------------------------------------------------------ stocks tab
+function stockStatus(sym, v) {
   const t = (v.trades || []).find(x => x.symbol === sym);
   if (t) {
     if (t.status === "OPEN") return { cls: "c-open", text: "● In trade", t };
@@ -306,83 +421,50 @@ function status(sym, v) {
   return { cls: "c-wait", text: mode === "live" ? "Waiting for opening range" : "No data" };
 }
 
-function renderStocks(v) {
-  const box = $("stocks");
-  if (!v.watchlist.length) { box.innerHTML = '<div class="empty">No stocks yet. The scan runs at 08:45 IST after you start.</div>'; return; }
-  if (!selected || !v.watchlist.includes(selected)) selected = v.watchlist[0];
-  box.innerHTML = v.watchlist.map((sym, i) => {
-    const q = (v.quotes || {})[sym] || {}, s = status(sym, v), r = (v.ranges || {})[sym];
-    const chg = q.chg_pct == null ? "" : `<span class="${q.chg_pct >= 0 ? "pos" : "neg"}">${q.chg_pct >= 0 ? "+" : ""}${q.chg_pct.toFixed(2)}%</span>`;
+function renderStocksTab(v) {
+  const bk = state.books.stocks;
+  const stocks = (v.watchlist || []).filter(s => !IDX.includes(s));
+  $("k1l").textContent = "Stock book";
+  $("k1").textContent = inr(bk.equity);
+  const pct = (bk.equity / bk.start - 1) * 100;
+  $("k1s").innerHTML = `<span class="${cls(pct)}">${pct >= 0 ? "+" : ""}${pct.toFixed(2)}%</span> of ${inr(bk.start)}`;
+  const trades = v.trades || [];
+  const dayPnl = trades.reduce((a, t) => a + (t.status === "CLOSED" ? t.net_pnl : (t.unrealised || 0)), 0);
+  $("k2l").textContent = mode === "live" ? "Stocks today" : `Stocks on ${v.date}`;
+  $("k2").innerHTML = `<span class="${cls(dayPnl)}">${signed(dayPnl)}</span>`;
+  $("k3").textContent = `${trades.length} / ${state.config.max_trades_per_day}`;
+  $("k4").textContent = trades.filter(t => t.status === "OPEN").length;
+  const s = bk.summary;
+  $("k5").textContent = s.trades ? `${Math.round(s.win_rate * 100)}% of ${s.trades}` : "–";
+  $("wl-src").textContent = mode === "live" ? (state.today.watchlist_source === "today" ? "· today's scan" : "· from the last scan (today's runs at 08:45)") : "";
+  if (!selectedStock || !stocks.includes(selectedStock)) selectedStock = stocks[0] || null;
+  $("stocks").innerHTML = stocks.map(sym => {
+    const q = (v.quotes || {})[sym] || {}, st = stockStatus(sym, v), r = (v.ranges || {})[sym];
+    const chg = q.chg_pct == null ? "" : `<span class="${cls(q.chg_pct)}">${q.chg_pct >= 0 ? "+" : ""}${q.chg_pct.toFixed(2)}%</span>`;
     let extra = r ? `<div class="meta">Range ${r.or_low.toFixed(2)} – ${r.or_high.toFixed(2)}</div>` : "";
-    if (s.t) {
-      const t = s.t, px = t.status === "OPEN" ? (t.last || t.entry) : t.exit;
-      const pct = Math.max(0, Math.min(100, (px - t.stop) / (t.target - t.stop) * 100));
-      extra += `<div class="meta">${size(t)} @ ${t.entry.toFixed(2)} · stop ${t.stop.toFixed(2)} · target ${t.target.toFixed(2)}</div>
-        <div class="bar" title="stop ← price → target"><i style="left:calc(${pct}% - 1px)"></i></div>
+    if (st.t) {
+      const t = st.t, px = t.status === "OPEN" ? (t.last || t.entry) : t.exit;
+      const p = Math.max(0, Math.min(100, (px - t.stop) / (t.target - t.stop) * 100));
+      extra += `<div class="meta">${t.qty} @ ${t.entry.toFixed(2)} · stop ${t.stop.toFixed(2)} · target ${t.target.toFixed(2)}</div>
+        <div class="bar"><i style="left:calc(${p}% - 1px)"></i></div>
         <div class="meta">${t.status === "OPEN" ? "Unrealised " + signed(t.unrealised || 0) : "Net " + signed(t.net_pnl)}</div>`;
     }
-    if (s.note) extra += `<div class="meta">${s.note}</div>`;
-    return `<div class="stock ${sym === selected ? "sel" : ""}" style="animation-delay:${i * 60}ms" data-sym="${sym}">
-      <div class="top"><span class="sym">${sym}${IDX.includes(sym) ? ' <span class="badge idx">INDEX FUT</span>' : ""}</span><span class="px">${q.last != null ? q.last.toFixed(2) : "–"} ${chg}</span></div>
-      <span class="chip ${s.cls}">${s.text}</span>${extra}</div>`;
-  }).join("");
-  box.querySelectorAll(".stock").forEach(el => el.onclick = () => { selected = el.dataset.sym; renderStocks(view); renderOptions(view); loadChart(); });
-}
-
-async function loadChart() {
-  if (!selected) return;
-  const date = mode === "live" ? "" : view.date;
-  let res;
-  try { res = await api.bars(selected, date); } catch (e) { $("chart-sub").textContent = "No chart data yet"; return; }
-  if (res.error) { $("chart-sub").textContent = res.error; return; }
-  $("chart-title").textContent = selected;
-  $("chart-sub").textContent = res.date !== res.requested ? `(showing last session ${res.date}; today's bars appear after 09:15)` : `5-min candles · ${res.date}`;
-  candles.setData(res.bars.map(b => ({ ...b, time: b.time + IST_OFFSET })));
-  const emaLine = k => res.bars.filter(b => b[k] != null).map(b => ({ time: b.time + IST_OFFSET, value: b[k] }));
-  ema9S.setData(IDX.includes(selected) ? emaLine("ema9") : []);
-  ema21S.setData(IDX.includes(selected) ? emaLine("ema21") : []);
-  lines.forEach(l => candles.removePriceLine(l)); lines = [];
-  const add = (price, color, title, style = 2) => lines.push(candles.createPriceLine({ price, color, lineWidth: 1, lineStyle: style, axisLabelVisible: true, title }));
-  const sameDay = res.date === (mode === "live" ? state.today.date : view.date);
-  const r = sameDay && (view.ranges || {})[selected];
-  if (r) { add(r.or_high, "#64748b", "OR high"); add(r.or_low, "#64748b", "OR low"); }
-  const t = sameDay && (view.trades || []).find(x => x.symbol === selected);
-  const markers = [];
-  const ts = iso => Math.floor(new Date(iso).getTime() / 1000) + IST_OFFSET;
-  if (sameDay && IDX.includes(selected)) {
-    const o = optOf(view), lv = (o.levels || {})[selected];
-    if (lv) { add(lv.high, "#64748b", "5m high"); add(lv.low, "#64748b", "5m low"); add(lv.mid, "#94a3b8", "5m mid", 1); }
-    for (const ot of (o.trades || []).filter(x => x.underlying === selected)) {
-      const up = ot.side === "CE";
-      markers.push({ time: ts(ot.entry_time), position: up ? "belowBar" : "aboveBar", color: up ? "#3b82f6" : "#ec4899",
-        shape: up ? "arrowUp" : "arrowDown", text: `${ot.strategy === "ORB5" ? "ORB" : "EMA"} ${ot.lots}L ${ot.side}` });
-      const short = r => r.startsWith("PARTIAL") ? "book" : r === "BREAKEVEN_STOP" ? "BE" : r === "TRAIL_STOP" ? "TSL"
-        : r.startsWith("TARGET") ? "TGT" : r.startsWith("SQUARE") ? "15:15" : "SL";
-      for (const l of ot.legs) markers.push({ time: ts(l.time), position: up ? "aboveBar" : "belowBar",
-        color: l.reason === "STOP" ? "#ef4444" : "#22c55e", shape: "circle", text: `${l.lots}L ${short(l.reason)}` });
-      if (ot.status === "OPEN") { add(ot.stop_index, "#ef4444", `${ot.strategy} stop`); if (!ot.partial_done) add(ot.partial_index, "#22c55e", "+30 book"); }
-    }
-  }
-  if (t) {
-    add(t.entry, "#3b82f6", "Entry", 0); add(t.stop, "#ef4444", "Stop"); add(t.target, "#22c55e", "Target");
-    markers.push({ time: ts(t.entry_time), position: "belowBar", color: "#3b82f6", shape: "arrowUp", text: `BUY ${t.qty}` });
-    if (t.exit_time) markers.push({ time: ts(t.exit_time), position: "aboveBar", color: t.net_pnl >= 0 ? "#22c55e" : "#ef4444", shape: "arrowDown", text: `${t.exit_reason} ${signed(t.net_pnl)}` });
-  }
-  candles.setMarkers(markers.sort((a, b) => a.time - b.time));
-  chart.timeScale().fitContent();
-}
-
-function renderTrades(v) {
-  const rows = (v.trades || []).map(t => {
+    if (st.note) extra += `<div class="meta">${st.note}</div>`;
+    return `<div class="stock ${sym === selectedStock ? "sel" : ""}" data-sym="${sym}">
+      <div class="top"><span class="sym">${sym}</span><span>${q.last != null ? q.last.toFixed(2) : "–"} ${chg}</span></div>
+      <span class="chip ${st.cls}">${st.text}</span>${extra}</div>`;
+  }).join("") || '<div class="empty">No stocks yet. The scan runs at 08:45 IST.</div>';
+  $("stocks").querySelectorAll(".stock").forEach(el => el.onclick = () => { selectedStock = el.dataset.sym; renderStocksTab(view); loadChart(); });
+  $("trades").innerHTML = trades.map(t => {
     const res = t.status === "OPEN" ? '<span class="chip c-open">OPEN</span>' :
       `<span class="chip ${t.exit_reason === "TARGET" ? "c-win" : t.exit_reason === "STOP" ? "c-loss" : "c-flat"}">${t.exit_reason}</span>`;
     const pnl = t.status === "OPEN" ? (t.unrealised || 0) : t.net_pnl;
-    return `<tr><td><b>${t.symbol}</b></td><td>${size(t)}</td><td>${t.entry.toFixed(2)} <span class="meta">${hhmm(t.entry_time)}</span></td>
+    return `<tr><td><b>${t.symbol}</b></td><td>${t.qty}</td><td>${t.entry.toFixed(2)} <span class="meta">${hhmm(t.entry_time)}</span></td>
       <td>${t.stop.toFixed(2)}</td><td>${t.target.toFixed(2)}</td>
       <td>${t.exit ? t.exit.toFixed(2) + ' <span class="meta">' + hhmm(t.exit_time) + "</span>" : "–"}</td>
-      <td>${res}</td><td class="${pnl >= 0 ? "pos" : "neg"}">${signed(pnl)}</td></tr>`;
-  });
-  $("trades").innerHTML = rows.join("") || `<tr><td colspan="8" class="empty">No trades yet${mode === "live" ? " today" : " on this day"}.</td></tr>`;
+      <td>${res}</td><td class="${cls(pnl)}">${signed(pnl)}</td></tr>`;
+  }).join("") || `<tr><td colspan="8" class="empty">No stock trades ${mode === "live" ? "yet today" : "on this day"}.</td></tr>`;
+  renderCurve(bk.curve);
 }
 
 function renderCurve(curve) {
@@ -390,83 +472,142 @@ function renderCurve(curve) {
   if (curve.length < 2) { svg.innerHTML = '<text x="150" y="60" fill="#8b97b0" font-size="11" text-anchor="middle">Builds up as sessions finish</text>'; $("curve-meta").textContent = ""; return; }
   const ys = curve.map(c => c.equity), lo = Math.min(...ys), hi = Math.max(...ys), span = hi - lo || 1;
   const pts = ys.map((y, i) => `${(i / (ys.length - 1)) * 300},${110 - ((y - lo) / span) * 100}`).join(" ");
-  const up = ys[ys.length - 1] >= ys[0];
-  svg.innerHTML = `<polyline points="${pts}" fill="none" stroke="${up ? "#22c55e" : "#ef4444"}" stroke-width="2" vector-effect="non-scaling-stroke"/>`;
+  svg.innerHTML = `<polyline points="${pts}" fill="none" stroke="${ys[ys.length - 1] >= ys[0] ? "#22c55e" : "#ef4444"}" stroke-width="2" vector-effect="non-scaling-stroke"/>`;
   $("curve-meta").textContent = `${curve.length - 1} session(s) · ${inr(ys[0])} → ${inr(ys[ys.length - 1])}`;
 }
 
-function renderSteps() {
-  const st = state.status.state, now = state.now.slice(11, 16), trades = state.today.trades;
-  const steps = [
-    ["Start", "you click Start", ["starting", "waiting", "scanning", "trading", "finished"].includes(st)],
-    ["Scan 08:45", "Nifty 100 → top 5", state.today.watchlist_source === "today"],
-    ["Opening range", "09:15 – 09:30", Object.keys(state.today.ranges).length > 0],
-    ["Breakout watch", "09:30 – 15:00", trades.length > 0 || now >= "15:00"],
-    ["Square-off", "15:15", st === "finished" || now >= "15:15"],
-  ];
-  const cur = steps.findIndex(s => !s[2]);
-  $("steps").innerHTML = steps.map(([b, s, done], i) =>
-    `<div class="step ${done ? "done" : ""} ${i === cur && state.status.running ? "now" : ""}"><b>${b}</b>${s}</div>`).join("");
-}
-
-function renderLive() {
-  const s = state, st = s.status;
-  view = { ...s.today, quotes: s.quotes };
+// ------------------------------------------------------------------ shared live
+function renderControl() {
+  const st = state.status, go = $("go");
   $("dot").className = "dot" + (st.running ? " live" : "");
-  const go = $("go");
   if (STATIC) {
-    const at = s.exported_at ? ` · last cloud update ${hhmm(s.exported_at)} IST` : "";
-    $("status").textContent = (st.message || st.state) + at;
-    go.className = "go";
-    go.textContent = "⚙ Start / Stop on GitHub";
+    $("status").textContent = (st.message || st.state) + (state.exported_at ? ` · last cloud update ${hhmm(state.exported_at)} IST` : "");
+    go.className = "go"; go.textContent = "⚙ Start / Stop on GitHub";
   } else {
     $("status").textContent = st.message || st.state;
     go.className = "go" + (st.running ? " stop" : "");
     go.textContent = st.running ? "■ Stop virtual trading" : "▶ Start virtual trading";
   }
-  renderSteps();
-  $("k-pnl-label").textContent = "Today P&L";
-  const pnl = s.today.realised + s.today.unrealised;
-  $("k-pnl").innerHTML = `<span class="${pnl >= 0 ? "pos" : "neg"}">${signed(pnl)}</span>`;
-  const ot = optOf(s.today).trades || [];
-  $("k-trades").textContent = `${s.today.trades.length}/${s.config.max_trades_per_day} stocks · ${ot.length} options`;
-  $("k-open").textContent = s.today.trades.filter(t => t.status === "OPEN").length + ot.filter(t => t.status === "OPEN").length;
-  $("wl-src").textContent = s.today.watchlist_source === "today" ? `· today's scan` : s.today.watchlist.length ? "· from the last scan (today's scan runs at 08:45)" : "";
-  $("log").textContent = s.log.join("\n") || "Nothing yet. Press Start.";
-  $("log").scrollTop = 1e6;
-  renderStocks(view); renderOptions(view); renderTrades(view);
+  const oc = state.options_config || {};
+  $("book-note").textContent = IDX.includes(tab)
+    ? `Option book ₹5L shared by NIFTY & SENSEX · loss stops: day ₹${(oc.day_loss_limit || 0).toLocaleString("en-IN")}, week ₹${(oc.week_loss_limit || 0).toLocaleString("en-IN")}, month ₹${(oc.month_loss_limit || 0).toLocaleString("en-IN")}. Virtual money only.`
+    : "Stock book ₹5L, separate from the option book. Virtual money only.";
 }
 
-function renderShared() {
-  $("k-eq").textContent = inr(state.equity);
-  const pct = (state.equity / state.start_capital - 1) * 100;
-  $("k-eq").innerHTML += ` <span class="${pct >= 0 ? "pos" : "neg"}" style="font-size:13px">${pct >= 0 ? "+" : ""}${pct.toFixed(2)}%</span>`;
-  $("k-win").textContent = state.summary.trades ? `${Math.round(state.summary.win_rate * 100)}% of ${state.summary.trades}` : "–";
+function render() {
+  if (!state) return;
   const m = $("market"), ss = state.session;
   m.textContent = "NSE " + ss.state.replace("_", " ").toLowerCase();
   m.className = "badge pill" + (ss.state === "OPEN" ? " open" : "");
-  renderCurve(state.curve);
+  if (tab === "BACKTEST") return;
+  const isIdx = IDX.includes(tab);
+  $("opt-section").hidden = !isIdx;
+  $("stock-section").hidden = isIdx;
+  $("stock-tables").hidden = isIdx;
+  $("control-card").hidden = mode !== "live";
+  if (mode === "live") { view = { ...state.today, quotes: state.quotes }; renderControl(); }
+  isIdx ? renderIndexTab(view) : renderStocksTab(view);
+  $("log").textContent = (state.log || []).join("\n") || "Nothing yet.";
+  $("log").scrollTop = 1e6;
 }
 
 async function refresh() {
   try { state = await api.state(); } catch { $("status").textContent = STATIC ? "No data yet. The first cloud run publishes it." : "Dashboard server not reachable"; return; }
-  renderShared();
-  if (mode === "live") { const first = !view; renderLive(); if (first) loadChart(); }
+  if (mode === "live" && tab !== "BACKTEST") { const first = !view || view.date === undefined; render(); if (first) loadChart(); }
+  else render();
 }
 
 async function showReplay(date) {
-  $("replay-banner").style.display = "block";
+  $("replay-banner").hidden = false;
   $("replay-banner").textContent = `Loading replay for ${date}…`;
   view = await api.replay(date);
-  const t = view.trades;
-  $("replay-banner").innerHTML = `⏪ REPLAY of ${date}: the same rules on that day's real 5-minute bars, using today's watchlist. Not part of your virtual account.`;
-  $("k-pnl-label").textContent = "Day P&L (replay)";
-  $("k-pnl").innerHTML = `<span class="${view.realised >= 0 ? "pos" : "neg"}">${signed(view.realised)}</span>`;
-  $("k-trades").textContent = `${t.length} stocks · ${(optOf(view).trades || []).length} options`;
-  $("k-open").textContent = 0;
-  renderStocks(view); renderOptions(view); renderTrades(view); loadChart();
+  $("replay-banner").innerHTML = `⏪ REPLAY of ${date}: today's rules on that day's real 5-minute candles. Not part of your virtual account.`;
+  render(); loadChart();
 }
 
+// ------------------------------------------------------------------ backtest
+function initBtChart() {
+  btChart = LightweightCharts.createChart($("btchart"), {
+    layout: { background: { color: "#121826" }, textColor: "#8b97b0" },
+    grid: { vertLines: { color: "#1c2537" }, horzLines: { color: "#1c2537" } },
+    rightPriceScale: { borderColor: "#243049" }, timeScale: { borderColor: "#243049" }, autoSize: true,
+  });
+  btLine = btChart.addBaselineSeries({ baseValue: { type: "price", price: 500000 },
+    topLineColor: "#22c55e", topFillColor1: "rgba(34,197,94,.25)", topFillColor2: "rgba(34,197,94,.02)",
+    bottomLineColor: "#ef4444", bottomFillColor1: "rgba(239,68,68,.02)", bottomFillColor2: "rgba(239,68,68,.25)" });
+}
+
+function periodKey(ds, g) {
+  if (g === "day") return ds;
+  if (g === "month") return ds.slice(0, 7);
+  if (g === "year") return ds.slice(0, 4);
+  const d = new Date(ds + "T00:00:00Z"), day = (d.getUTCDay() + 6) % 7;
+  d.setUTCDate(d.getUTCDate() - day + 3);
+  const y = d.getUTCFullYear(), jan4 = new Date(Date.UTC(y, 0, 4));
+  const wk = 1 + Math.round(((d - jan4) / 864e5 - 3 + ((jan4.getUTCDay() + 6) % 7)) / 7);
+  return `${y}-W${String(wk).padStart(2, "0")}`;
+}
+
+async function loadBacktest() {
+  if (!bt) {
+    $("bt-data").textContent = "Loading backtest…";
+    try { bt = await api.backtest(); } catch { $("bt-data").textContent = "No backtest data yet."; return; }
+    const ds = bt.days.map(d => d.date);
+    $("bt-from").min = $("bt-to").min = ds[0]; $("bt-from").max = $("bt-to").max = ds[ds.length - 1];
+    $("bt-from").value = ds[0]; $("bt-to").value = ds[ds.length - 1];
+    const a = bt.archive.NIFTY || {};
+    $("bt-range").textContent = `· ${a.first} → ${a.last} (${a.sessions} sessions)`;
+    $("bt-data").innerHTML = `Data: NIFTY, SENSEX and India VIX 5-minute candles from ${a.first} to ${a.last}. Free Yahoo data only reaches back ~60 days, so the archive
+      grows by itself every trading day. For a full year now, export 5-minute candles (e.g. from Zerodha Kite) and run
+      <code>python history.py import FILE --symbol NIFTY</code>. Same rules and costs as the live book; premiums are estimates.`;
+  }
+  renderBacktest();
+}
+
+function renderBacktest() {
+  if (!bt) return;
+  const from = $("bt-from").value, to = $("bt-to").value, fs = $("bt-strat").value, fu = $("bt-und").value;
+  const days = bt.days.filter(d => d.date >= from && d.date <= to);
+  let eq = bt.capital, peak = eq, dd = 0, ddDate = "", gw = 0, gl = 0, n = 0, w = 0, chg = 0;
+  const rows = new Map(), curve = [];
+  for (const d of days) {
+    const ts = d.trades.filter(t => (!fs || t.s === fs) && (!fu || t.u === fu));
+    const net = ts.reduce((a, t) => a + t.net, 0);
+    eq += net; peak = Math.max(peak, eq);
+    if (eq - peak < dd) { dd = eq - peak; ddDate = d.date; }
+    curve.push({ time: d.date, value: Math.round(eq) });
+    const k = periodKey(d.date, btGroup);
+    const r = rows.get(k) || { sessions: 0, trades: 0, wins: 0, net: 0, chg: 0, paused: 0 };
+    r.sessions++; if (d.paused) r.paused++;
+    for (const t of ts) { r.trades++; n++; if (t.net > 0) { r.wins++; w++; gw += t.net; } else gl -= t.net; r.net += t.net; r.chg += t.chg; chg += t.chg; }
+    r.eq = eq; rows.set(k, r);
+  }
+  const net = eq - bt.capital;
+  $("b1").innerHTML = `<span class="${cls(net)}">${signed(net)}</span>`;
+  $("b1s").textContent = `${(net / bt.capital * 100).toFixed(2)}% of ${inr(bt.capital)} · charges ${inr(chg)}`;
+  $("b2").textContent = n; $("b2s").textContent = `${days.length} sessions · ${days.filter(d => d.paused).length} paused by loss stops`;
+  $("b3").textContent = n ? `${Math.round(w / n * 100)}%` : "–"; $("b3s").textContent = `${w} wins / ${n - w} losses`;
+  $("b4").innerHTML = `<span class="neg">${signed(dd)}</span>`; $("b4s").textContent = dd ? `${(dd / bt.capital * 100).toFixed(1)}% · bottom on ${ddDate}` : "none";
+  $("b5").textContent = gl ? (gw / gl).toFixed(2) : (gw ? "∞" : "–"); $("b5s").textContent = "gross wins ÷ gross losses";
+  btLine.setData(curve); btChart.timeScale().fitContent();
+  $("bt-table-title").textContent = "By " + btGroup;
+  $("bt-rows").innerHTML = [...rows.entries()].reverse().map(([k, r]) =>
+    `<tr><td><b>${k}</b></td><td>${r.sessions}${r.paused ? ` <span class="meta">(${r.paused} paused)</span>` : ""}</td><td>${r.trades}</td><td>${r.wins}</td>
+     <td>${r.trades ? Math.round(r.wins / r.trades * 100) + "%" : "–"}</td><td class="${cls(r.net)}">${signed(r.net)}</td>
+     <td>${inr(r.chg)}</td><td>${inr(r.eq)}</td></tr>`).join("") || '<tr><td colspan="8" class="empty">No sessions in this range.</td></tr>';
+}
+
+// ------------------------------------------------------------------ events
+document.querySelectorAll(".maintab").forEach(b => b.onclick = () => {
+  document.querySelectorAll(".maintab").forEach(x => x.classList.toggle("active", x === b));
+  tab = b.dataset.tab;
+  $("livearea").hidden = tab === "BACKTEST";
+  $("btarea").hidden = tab !== "BACKTEST";
+  try { localStorage.setItem("tab", tab); } catch {}
+  if (tab === "BACKTEST") { if (!btChart) initBtChart(); loadBacktest(); }
+  else { render(); loadChart(); }
+});
+$("fit").onclick = fitChart;
 $("go").onclick = async () => {
   if (STATIC) {
     if (state && state.actions_url) window.open(state.actions_url, "_blank");
@@ -480,16 +621,13 @@ $("go").onclick = async () => {
   $("go").disabled = false;
   refresh();
 };
-
-$("tab-live").onclick = () => {
-  mode = "live"; $("tab-live").classList.add("active"); $("tab-replay").classList.remove("active");
-  $("replay-date").style.display = "none"; $("replay-banner").style.display = "none";
-  $("control-card").style.display = ""; view = null; refresh();
+$("mode-live").onclick = () => {
+  mode = "live"; $("mode-live").classList.add("active"); $("mode-replay").classList.remove("active");
+  $("replay-date").hidden = true; $("replay-banner").hidden = true; view = null; refresh();
 };
-$("tab-replay").onclick = async () => {
-  mode = "replay"; $("tab-replay").classList.add("active"); $("tab-live").classList.remove("active");
-  $("control-card").style.display = "none";
-  const sel = $("replay-date"); sel.style.display = "";
+$("mode-replay").onclick = async () => {
+  mode = "replay"; $("mode-replay").classList.add("active"); $("mode-live").classList.remove("active");
+  const sel = $("replay-date"); sel.hidden = false;
   if (!sel.options.length) {
     let d = { days: [] };
     try { d = await api.days(); } catch {}
@@ -498,10 +636,28 @@ $("tab-replay").onclick = async () => {
   if (sel.value) showReplay(sel.value);
 };
 $("replay-date").onchange = e => showReplay(e.target.value);
+["bt-from", "bt-to", "bt-strat", "bt-und"].forEach(id => $(id).onchange = () => {
+  if (id.startsWith("bt-f") || id.startsWith("bt-to")) document.querySelectorAll("#bt-preset button").forEach(x => x.classList.remove("active"));
+  renderBacktest();
+});
+document.querySelectorAll("#bt-preset button").forEach(b => b.onclick = () => {
+  document.querySelectorAll("#bt-preset button").forEach(x => x.classList.toggle("active", x === b));
+  const last = $("bt-to").max, days = +b.dataset.p;
+  $("bt-to").value = last;
+  if (!days) $("bt-from").value = $("bt-from").min;
+  else { const d = new Date(last + "T00:00:00Z"); d.setUTCDate(d.getUTCDate() - days + 1); const s = d.toISOString().slice(0, 10); $("bt-from").value = s < $("bt-from").min ? $("bt-from").min : s; }
+  renderBacktest();
+});
+document.querySelectorAll("#bt-group button").forEach(b => b.onclick = () => {
+  document.querySelectorAll("#bt-group button").forEach(x => x.classList.toggle("active", x === b));
+  btGroup = b.dataset.g; renderBacktest();
+});
 
 setInterval(() => { $("clock").textContent = new Date().toLocaleTimeString("en-IN", { timeZone: "Asia/Kolkata", hour12: false }) + " IST"; }, 1000);
 initChart();
-refresh();
+let saved = null;
+try { saved = localStorage.getItem("tab"); } catch {}
+refresh().then(() => { if (saved && saved !== "NIFTY") document.querySelector(`.maintab[data-tab="${saved}"]`)?.click(); });
 setInterval(refresh, 15000);
 </script>
 </body>

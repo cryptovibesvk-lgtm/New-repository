@@ -17,23 +17,41 @@ Signals come from the index's 5-minute candles; an ATM CE (up) or PE (down) is b
 - **ORB5** – mark the first 5-minute candle (09:15–09:20) high and low. A close above the
   high, then a retest (a later candle dips back to the high and still closes above it)
   buys a CE; the mirror below the low buys a PE. Stop = middle of that first candle.
-- **EMA9_21** – the 9 EMA crossing above the 21 EMA buys a CE, crossing below buys a PE.
-  Stop = lowest low / highest high of the last 3 candles; target = 2× risk (1:2).
+- **EMA9_21** – the 9/21 EMA cross only arms the setup; the cross candle is never an
+  entry. CE: wait for a later candle whose wick comes back to the 9 EMA and whose body
+  closes above it (a retest candle closing below the 9 EMA is skipped). PE is the mirror.
+  Stop = lowest low / highest high of the last 3 candles. Exit: book at +30 and move the
+  stop to break-even; the rest exits only when a candle **body** closes across the 9 EMA
+  (a wick through it does not exit).
 
-Money management (both): trade 1 = 5 lots. At +30 index points book 3 lots and move the
-stop to break-even; after that every further 20 points trails the stop by 20 for the last
-2 lots. If trade 1 makes money, that strategy stops for the day; if it loses, trade 2 =
-7 lots (book 5 at +30, trail 2). Max 2 trades per strategy per index per day.
+Money management: ORB5 and EMA9_21 run independently. Trade 1 = 5 lots; at +30 index
+points book 3 lots and move the stop to break-even (ORB5 then trails 20 points per 20).
+If trade 1 makes money, that strategy stops for the day; if it loses, trade 2 = 7 lots
+(book 5 at +30). Max 2 trades per strategy per index per day.
 
-Added for capital protection: no new entries after 14:30; square-off at 15:15; skip a
-signal whose stop is wider than 40 NIFTY points (130 SENSEX); a ₹15,000 day cap across
-all option trades, which also blocks a new trade whose risk would cross it. SENSEX
-thresholds are scaled to its bigger points (100 / 65 / 130). On expiry day the next
-weekly expiry is used. NIFTY lot from NSE (65); SENSEX lot 20 (BSE, confirm it).
+Capital: stocks ₹5L and the NIFTY + SENSEX option book ₹5L are separate books.
+Capital protection added: no new entries after 14:30; square-off at 15:15; skip a signal
+whose stop is wider than 40 NIFTY points (130 SENSEX); loss stops of ₹10,000 per day
+(also blocks a new trade whose risk would cross it), ₹15,000 per week and ₹30,000 per
+month - after a weekly/monthly stop the option book pauses until the next week/month.
+SENSEX thresholds are scaled to its bigger points (100 / 65 / 130). On expiry day the
+next weekly expiry is used. NIFTY lot from NSE (65); SENSEX lot 20 (BSE, confirm it).
 
 Premiums are **estimates** (Black-Scholes with India VIX, ATM strike, time to the weekly
-expiry: NIFTY Tuesday, SENSEX Thursday), not exchange quotes, plus 0.5% slippage and
-option charges. The earlier 1-lot index-futures ORB is switched off (`INDEX_FUTURES`).
+expiry: NIFTY Tuesday, SENSEX Thursday), not exchange quotes, plus 0.25% slippage per
+fill and option charges. The earlier 1-lot index-futures ORB is switched off.
+
+## Backtest
+
+`backtest.py` replays the option strategies over every session in the bar archive
+(`data/bars/`, written by `history.py`); the dashboard's **Backtest** tab groups it by
+day / week / month / year for any date range. Free Yahoo 5-minute data only reaches back
+~60 days, so the archive grows by itself every trading day. To backtest a full year now,
+export 5-minute candles (e.g. from Zerodha Kite) and import them:
+
+    python history.py import nifty_5min.csv --symbol NIFTY
+    python history.py import sensex_5min.csv --symbol SENSEX
+    python history.py import indiavix_5min.csv --symbol INDIAVIX
 
 ## Set up (once)
 

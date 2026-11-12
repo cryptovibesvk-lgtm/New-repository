@@ -107,6 +107,28 @@ def api_state():
     for d, r in sorted(acct["days"].items()):
         equity += sum(t["net_pnl"] for t in paper.day_trades(r) if t["status"] == "CLOSED")
         curve.append({"date": d, "equity": round(equity, 2)})
+    import options
+
+    def book(start, key):
+        """One capital book: equity, today's P&L and its daily equity curve."""
+        trades_of = (lambda r: r.get("trades", [])) if key == "stocks" else \
+            (lambda r: (r.get("options") or {}).get("trades", []))
+        eq, cv = start, [{"date": "start", "equity": start}]
+        for d, r in sorted(acct["days"].items()):
+            eq += sum(t["net_pnl"] for t in trades_of(r) if t["status"] == "CLOSED")
+            cv.append({"date": d, "equity": round(eq, 2)})
+        tt = trades_of(rec)
+        out = {"start": start, "equity": round(eq, 2), "curve": cv,
+               "realised": round(sum(t["net_pnl"] for t in tt if t["status"] == "CLOSED"), 2),
+               "unrealised": round(sum(t.get("unrealised", 0) for t in tt if t["status"] == "OPEN"), 2),
+               "summary": paper.summarise([t for r in acct["days"].values() for t in trades_of(r)])}
+        if key == "options":
+            out["by_index"] = {u: round(sum(t["net_pnl"] if t["status"] == "CLOSED" else t.get("unrealised", 0)
+                                            for t in tt if t["underlying"] == u), 2)
+                               for u in options.OPT["underlyings"]}
+        return out
+
+    books = {"stocks": book(acct["start_capital"], "stocks"), "options": book(options.OPT["capital"], "options")}
     by_strategy = {}
     for t in all_trades:
         k = t.get("strategy") or "STOCK_ORB"
@@ -131,6 +153,7 @@ def api_state():
         "start_capital": acct["start_capital"],
         "equity": round(equity, 2),
         "summary": s,
+        "books": books,
         "by_strategy": by_strategy,
         "today": {"date": day.isoformat(), "watchlist": symbols, "watchlist_source": source,
                   "ranges": rec.get("ranges", {}), "trades": today_trades, "notes": rec.get("notes", {}),
@@ -147,7 +170,9 @@ def options_config():
     import options
     o = options.OPT
     return {"lots": o["lots"], "book": o["book"], "max_trades": o["max_trades"], "points": o["points"],
-            "entry_until": o["entry_until"].strftime("%H:%M"), "day_loss_limit": o["day_loss_limit"]}
+            "entry_until": o["entry_until"].strftime("%H:%M"), "day_loss_limit": o["day_loss_limit"],
+            "week_loss_limit": o["week_loss_limit"], "month_loss_limit": o["month_loss_limit"],
+            "capital": o["capital"]}
 
 
 def api_bars(symbol, date):
@@ -262,6 +287,9 @@ class Handler(BaseHTTPRequestHandler):
                 return self._send(200, api_days())
             if u.path == "/api/replay":
                 return self._send(200, api_replay(q["date"]))
+            if u.path == "/api/backtest":
+                import backtest
+                return self._send(200, backtest.export(os.path.join(paper.PAPER_DIR, "backtest.json"), backtest.run()))
             self._send(404, {"error": "not found"})
         except Exception as e:
             self._send(500, {"error": str(e)})
