@@ -1,30 +1,30 @@
 """Index option-buying strategies on NIFTY and SENSEX (virtual money only).
 
-Signals come from the index's 5-minute candles. The option itself is priced with
-Black-Scholes using India VIX as the volatility, the ATM strike at entry, and the
-time left to the weekly expiry, so premium, time decay and charges are realistic
-estimates, not exchange quotes (free intraday option prices are not available).
+Day routing: NIFTY trades on Monday, Tuesday and Friday; SENSEX on Wednesday and
+Thursday. Only that day's index is traded.
 
-ORB5      First 5-min candle (09:15-09:20) high/low. A close above the high, then a
-          retest (a later candle dips back to the high and still closes above it)
-          buys an ATM CE; the mirror below the low buys an ATM PE.
-          Stop = middle of the first candle. Exit: book at +30, stop to
-          break-even, then trail the stop 20 points per 20 points.
-EMA9_21   The 9/21 EMA cross only arms the setup; the cross candle is never an entry.
-          CE: after the 9 crosses above the 21, wait for a candle whose wick comes
-          back to the 9 EMA and whose body closes ABOVE it - that candle is the
-          entry. A retest candle that closes below the 9 EMA is skipped; keep
-          waiting. PE is the mirror. Stop = lowest low (CE) / highest high (PE) of
-          the last 3 candles. Exit: book at +30 and move the stop to break-even;
-          the rest stays open until a candle BODY closes across the 9 EMA (a wick
-          through it does not exit).
+The option is priced with Black-Scholes using India VIX as the volatility, the ATM
+strike at entry and the time left to the weekly expiry, so premium, time decay and
+charges are realistic estimates, not exchange quotes (free intraday option prices
+are not available).
 
-Money management (each strategy on its own): trade 1 = 5 lots, book 3 at +30.
-If trade 1 makes money that strategy is done for the day; if it loses, trade 2 =
-7 lots (book 5 at +30). After 2 trades, or a winning one, the strategy stops.
-ORB5 and EMA9_21 run independently, each with its own 2-trade day.
-All points are index points (SENSEX values are scaled to its larger point size).
-The option book has its own capital (OPT["capital"]), separate from stocks.
+ORB1      1-minute candles. Mark the first 1-minute candle (09:15) high and low.
+          A 1-minute close above the high buys an ATM CE; a close below the low buys
+          an ATM PE. Stop = 20 index points (NIFTY, ~10 premium points) / 30 (SENSEX).
+          Trailing (index points in our favour):
+            NIFTY : +20 -> stop at -10, +30 -> break-even, +40 -> +10, then the stop
+                    follows every further 10 points.
+            SENSEX: +30 -> break-even, +40 -> +10, then every further 10 points.
+          Quantity: NIFTY 195 then 325; SENSEX 200 then 300 (trade 2 only after a loss).
+EMA9_21   5-minute candles. The 9/21 EMA cross only arms the setup; the cross candle is
+          never an entry. CE: wait for a later candle whose wick comes back to the 9 EMA
+          and whose body closes ABOVE it; a retest closing below is skipped. PE mirror.
+          Stop = lowest low / highest high of the last 3 candles. Book at +30 points and
+          move the stop to break-even; the rest exits when a candle BODY closes across
+          the 9 EMA. 5 lots, then 7 lots after a loss.
+
+Each strategy runs on its own: a winning trade ends that strategy for the day, a
+losing trade 1 allows trade 2, two losses end it. The option book has its own capital.
 """
 import datetime as dt
 import math
@@ -35,30 +35,41 @@ from paper import nsemkt, IST
 OPT = {
     "capital": 500000.0,              # NIFTY + SENSEX option book, separate from stocks
     "underlyings": ["NIFTY", "SENSEX"],
-    "strategies": ["ORB5", "EMA9_21"],
+    "strategies": ["ORB1", "EMA9_21"],
+    "trade_days": {"NIFTY": [0, 1, 4], "SENSEX": [2, 3]},   # Mon/Tue/Fri, Wed/Thu
     "strike_step": {"NIFTY": 50, "SENSEX": 100},
-    # SENSEX moves ~3.2x NIFTY's points, so its thresholds are scaled
-    "points": {
-        "NIFTY": {"partial": 30, "trail": 20, "retest_buffer": 5, "min_sl": 10, "max_sl": 40},
-        "SENSEX": {"partial": 100, "trail": 65, "retest_buffer": 15, "min_sl": 30, "max_sl": 130},
+    "orb1": {
+        "NIFTY": {"sl": 20, "qty": [195, 325], "early_trail": (20, -10)},
+        "SENSEX": {"sl": 30, "qty": [200, 300], "early_trail": None},
+        "breakeven_at": 30, "step": 10,
     },
-    "lots": [5, 7],          # trade 1, trade 2 (only after a losing trade 1)
-    "book": [3, 5],          # lots booked at the first +30
+    # EMA9_21 points (SENSEX moves ~3.2x NIFTY's points, so its thresholds are scaled)
+    "points": {
+        "NIFTY": {"partial": 30, "retest_buffer": 5, "min_sl": 10, "max_sl": 40},
+        "SENSEX": {"partial": 100, "retest_buffer": 15, "min_sl": 30, "max_sl": 130},
+    },
+    "ema_lots": [5, 7], "ema_book": [3, 5],
     "max_trades": 2,
-    "orb_entry_from": dt.time(9, 20),
+    "orb_entry_from": dt.time(9, 16),
     "ema_entry_from": dt.time(9, 30),
-    "entry_until": dt.time(14, 30),   # leave time for the trade to work
+    "entry_until": dt.time(14, 30),
     "squareoff": dt.time(15, 15),
     "day_loss_limit": 10000.0,        # all option trades together: 2% of the option capital
     "week_loss_limit": 15000.0,       # pause for the rest of the week after -3%
     "month_loss_limit": 30000.0,      # pause for the rest of the month after -6%
     "ema_fast": 9, "ema_slow": 21, "ema_sl_lookback": 3,
     "expiry_weekday": {"NIFTY": 1, "SENSEX": 3},   # Tuesday / Thursday weeklies
-    "premium_slippage": 0.0025,       # 0.25% of premium against us per fill (liquid ATM weeklies)
+    "premium_slippage": 0.0025,       # 0.25% of premium against us per fill
     "rate": 0.065,
     "default_vix": 15.0,
 }
-BAR = dt.timedelta(minutes=5)
+M1, M5 = dt.timedelta(minutes=1), dt.timedelta(minutes=5)
+DAY_NAMES = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+
+
+def index_for_day(day):
+    """Which index trades on this date (None on weekends)."""
+    return next((u for u, wds in OPT["trade_days"].items() if day.weekday() in wds), None)
 
 
 # ------------------------------------------------------------ option pricing
@@ -102,8 +113,6 @@ def option_charges(qty, buy_px, sells):
     return round(total, 2)
 
 
-# ------------------------------------------------------------ indicators
-
 def ema_series(closes, n):
     k, out, e = 2 / (n + 1), [], None
     for c in closes:
@@ -112,7 +121,7 @@ def ema_series(closes, n):
     return out
 
 
-# ------------------------------------------------------------ the simulation
+# ------------------------------------------------------------ capital guards
 
 def circuit_breaker(day, past):
     """past: [(date, net P&L)] of earlier option days. Returns why trading is paused, or None."""
@@ -126,10 +135,11 @@ def circuit_breaker(day, past):
     return None
 
 
-def paused_day(reason):
+def paused_day(reason, day=None):
     status = {f"{s}:{u}": {"trades": 0, "done": True, "note": reason, "net": 0.0}
               for s in OPT["strategies"] for u in OPT["underlyings"]}
-    return {"levels": {}, "trades": [], "notes": {}, "status": status, "ema": {}, "paused": reason}
+    return {"levels": {}, "trades": [], "notes": {}, "status": status, "ema": {}, "paused": reason,
+            "index_today": index_for_day(day) if day else None}
 
 
 class Book:
@@ -142,101 +152,109 @@ class Book:
     def open_trade(self):
         return next((t for t in self.trades if t["status"] == "OPEN"), None)
 
-    def next_size(self):
-        """(lots, book_lots) for the next trade, or None when the day is over."""
+    def trade_no(self):
+        """1 or 2 for the next trade, or None when the day is over for this strategy."""
         if self.done or self.open_trade() or len(self.trades) >= OPT["max_trades"]:
             return None
         if not self.trades:
-            return OPT["lots"][0], OPT["book"][0]
-        if self.trades[-1]["net_pnl"] > 0:
-            return None
-        return OPT["lots"][1], OPT["book"][1]
+            return 1
+        return None if self.trades[-1]["net_pnl"] > 0 else 2
 
 
-def simulate_options_day(day, und_bars, vix_bars, now=None):
-    """und_bars: {und: [bars across recent days, sorted]} so the EMAs are warm at 09:15.
+# ------------------------------------------------------------ the simulation
+
+def simulate_options_day(day, und5, und1, vix_bars, now=None):
+    """und5 / und1: {und: [5-minute / 1-minute bars across recent days, sorted]}.
     Deterministic and rebuilt from completed bars, like paper.simulate_day."""
     cutoff = now or dt.datetime.combine(day, dt.time(23, 59), IST)
     vix_at = _vix_lookup(vix_bars)
-    levels, emas, prev_t, books, notes, today = {}, {}, {}, {}, {}, {}
-    for und, bars in und_bars.items():
-        done = [b for b in bars if b["t"] + BAR <= cutoff]
-        today[und] = [b for b in done if b["t"].date() == day
-                      and dt.time(9, 15) <= b["t"].time() < dt.time(15, 30)]
-        first = next((b for b in today[und] if b["t"].time() == dt.time(9, 15)), None)
+    active = index_for_day(day)
+    levels, emas, prev_t, books, notes, today5, today1 = {}, {}, {}, {}, {}, {}, {}
+    in_day = lambda b: b["t"].date() == day and dt.time(9, 15) <= b["t"].time() < dt.time(15, 30)
+    for und in OPT["underlyings"]:
+        done5 = [b for b in und5.get(und, []) if b["t"] + M5 <= cutoff]
+        today5[und] = [b for b in done5 if in_day(b)]
+        today1[und] = [b for b in und1.get(und, []) if b["t"] + M1 <= cutoff and in_day(b)]
+        first = next((b for b in today1[und] if b["t"].time() == dt.time(9, 15)), None)
         if first:
-            levels[und] = {"high": round(first["h"], 2), "low": round(first["l"], 2),
-                           "mid": round((first["h"] + first["l"]) / 2, 2)}
-        closes = [b["c"] for b in done]
+            levels[und] = {"high": round(first["h"], 2), "low": round(first["l"], 2)}
+        closes = [b["c"] for b in done5]
         f, s = ema_series(closes, OPT["ema_fast"]), ema_series(closes, OPT["ema_slow"])
-        emas[und] = {b["t"]: (f[i], s[i]) for i, b in enumerate(done)}
-        prev_t[und] = {done[i]["t"]: done[i - 1]["t"] for i in range(1, len(done))}
+        emas[und] = {b["t"]: (f[i], s[i]) for i, b in enumerate(done5)}
+        prev_t[und] = {done5[i]["t"]: done5[i - 1]["t"] for i in range(1, len(done5))}
         for strat in OPT["strategies"]:
             books[(strat, und)] = Book(strat, und)
-    orb_state = {und: {"prev_close": None, "up_broken": False, "dn_broken": False} for und in und_bars}
-    ema_state = {und: {"setup": None} for und in und_bars}
+            if und != active:
+                books[(strat, und)].done = True
+                books[(strat, und)].note = (f"{und} trades on {'/'.join(DAY_NAMES[d] for d in OPT['trade_days'][und])} only "
+                                            f"- today ({DAY_NAMES[day.weekday()]}) is "
+                                            f"{active or 'no-trade day'}")
+    orb_state = {u: {"prev_close": None} for u in OPT["underlyings"]}
+    ema_state = {u: {"setup": None} for u in OPT["underlyings"]}
 
-    times = sorted({b["t"] for bars in today.values() for b in bars})
-    for t in times:
+    # events in completion order: every 1-minute bar (ORB1), every 5-minute bar (EMA9_21)
+    events = []
+    for und in OPT["underlyings"]:
+        if und != active:
+            continue
+        events += [(b["t"] + M1, 0, "1m", und, b) for b in today1[und]]
+        events += [(b["t"] + M5, 1, "5m", und, b) for b in today5[und]]
+    events.sort(key=lambda e: (e[0], e[1]))
+
+    for done_at, _, res, und, bar in events:
+        t = bar["t"]
         realised = sum(tr["net_pnl"] for bk in books.values() for tr in bk.trades if tr["status"] == "CLOSED")
-        for und in und_bars:
-            bar = next((b for b in today[und] if b["t"] == t), None)
-            if bar is None:
-                continue
-            vix = vix_at(t)
-            pts = OPT["points"][und]
-            e_now = emas[und].get(t)
+        vix = vix_at(t)
+        strat = "ORB1" if res == "1m" else "EMA9_21"
+        bk = books[(strat, und)]
+        e_now = emas[und].get(t) if res == "5m" else None
+        signal = None
+        if res == "5m":
             e_prev = emas[und].get(prev_t[und].get(t))
-            ema_sig = None
             if e_now and e_prev:  # track the EMA setup on every bar, trade open or not
-                recent = [b for b in today[und] if b["t"] <= t][-OPT["ema_sl_lookback"]:]
-                ema_sig = _ema_signal(ema_state[und], e_prev, e_now, bar, recent, pts)
-            for strat in OPT["strategies"]:
-                bk = books[(strat, und)]
-                tr = bk.open_trade()
-                if tr:
-                    _manage(tr, bar, t, vix, e_now[0] if e_now else None)
-                    if tr["status"] == "CLOSED":
-                        realised += tr["net_pnl"]
-                        if tr["net_pnl"] > 0:
-                            bk.done, bk.note = True, "done for the day: trade made money"
-                        elif len(bk.trades) >= OPT["max_trades"]:
-                            bk.done, bk.note = True, "done for the day: 2 losing trades"
-                    continue
-                if t.time() >= OPT["entry_until"]:
-                    continue
-                size = bk.next_size()
-                if size is None:
-                    continue
-                if realised <= -OPT["day_loss_limit"]:
-                    bk.note = f"no new trades: day loss limit Rs {OPT['day_loss_limit']:,.0f} reached"
-                    continue
-                signal = None
-                if strat == "ORB5" and und in levels and t.time() >= OPT["orb_entry_from"]:
-                    signal = _orb_signal(orb_state[und], levels[und], bar, pts)
-                elif strat == "EMA9_21" and t.time() >= OPT["ema_entry_from"]:
-                    signal = ema_sig
-                if not signal:
-                    continue
-                kind, stop, why = signal
-                dist = abs(bar["c"] - stop)
-                if dist > pts["max_sl"]:
-                    notes[f"{strat}:{und}:{t:%H%M}"] = f"{t:%H:%M} {strat} {und} {kind} skipped: stop {dist:.0f} pts > max {pts['max_sl']}"
-                    continue
-                if dist < pts["min_sl"]:
-                    stop = bar["c"] - pts["min_sl"] if kind == "CE" else bar["c"] + pts["min_sl"]
-                trade = _enter(strat, und, kind, bar, t, stop, size, vix, why, len(bk.trades) + 1)
-                # capital first: realised loss + what open trades can still lose + this trade's
-                # risk must stay inside the day limit (a trade past break-even risks ~0)
-                open_risk = sum(o["risk_at_stop"] for b2 in books.values() for o in b2.trades
-                                if o["status"] == "OPEN" and not o["partial_done"])
-                if -realised + open_risk + trade["risk_at_stop"] > OPT["day_loss_limit"]:
-                    notes[f"{strat}:{und}:{t:%H%M}"] = (f"{t:%H:%M} {strat} {und} {kind} skipped: would risk more than the "
-                                                        f"Rs {OPT['day_loss_limit']:,.0f} day limit")
-                    continue
-                bk.trades.append(trade)
-            if und in levels:
-                orb_state[und]["prev_close"] = bar["c"]
+                recent = [b for b in today5[und] if b["t"] <= t][-OPT["ema_sl_lookback"]:]
+                signal = _ema_signal(ema_state[und], e_prev, e_now, bar, recent, OPT["points"][und])
+        elif und in levels and t.time() >= OPT["orb_entry_from"]:
+            signal = _orb1_signal(orb_state[und], levels[und], bar, und)
+        if res == "1m":
+            orb_state[und]["prev_close"] = bar["c"]
+
+        tr = bk.open_trade()
+        if tr:
+            _manage(tr, bar, t, done_at, vix, e_now[0] if e_now else None)
+            if tr["status"] == "CLOSED":
+                if tr["net_pnl"] > 0:
+                    bk.done, bk.note = True, "done for the day: trade made money"
+                elif len(bk.trades) >= OPT["max_trades"]:
+                    bk.done, bk.note = True, "done for the day: 2 losing trades"
+            continue
+        if not signal or t.time() >= OPT["entry_until"]:
+            continue
+        n = bk.trade_no()
+        if n is None:
+            continue
+        if realised <= -OPT["day_loss_limit"]:
+            bk.note = f"no new trades: day loss limit Rs {OPT['day_loss_limit']:,.0f} reached"
+            continue
+        kind, stop, why = signal
+        if strat == "EMA9_21":
+            pts = OPT["points"][und]
+            dist = abs(bar["c"] - stop)
+            if dist > pts["max_sl"]:
+                notes[f"{strat}:{und}:{t:%H%M}"] = f"{t:%H:%M} {strat} {und} {kind} skipped: stop {dist:.0f} pts > max {pts['max_sl']}"
+                continue
+            if dist < pts["min_sl"]:
+                stop = bar["c"] - pts["min_sl"] if kind == "CE" else bar["c"] + pts["min_sl"]
+        trade = _enter(strat, und, kind, bar, done_at, stop, n, vix, why)
+        # capital first: realised loss + what open trades can still lose + this trade's
+        # risk must stay inside the day limit (a trade at break-even or better risks ~0)
+        open_risk = sum(o["risk_at_stop"] for b2 in books.values() for o in b2.trades
+                        if o["status"] == "OPEN" and not o["protected"])
+        if -realised + open_risk + trade["risk_at_stop"] > OPT["day_loss_limit"]:
+            notes[f"{strat}:{und}:{t:%H%M}"] = (f"{t:%H:%M} {strat} {und} {kind} skipped: would risk more than the "
+                                                f"Rs {OPT['day_loss_limit']:,.0f} day limit")
+            continue
+        bk.trades.append(trade)
 
     # mark or close what is still open
     session_over = cutoff >= dt.datetime.combine(day, dt.time(15, 20), IST)
@@ -244,25 +262,24 @@ def simulate_options_day(day, und_bars, vix_bars, now=None):
         tr = bk.open_trade()
         if not tr:
             continue
-        bars = today[tr["underlying"]]
-        last = bars[-1] if bars else None
-        if not last:
+        bars = today1[tr["underlying"]] if tr["strategy"] == "ORB1" else today5[tr["underlying"]]
+        if not bars:
             continue
+        last = bars[-1]
         vix = vix_at(last["t"])
         if session_over:
-            _exit(tr, tr["lots_open"], last["c"], last["t"], "SQUARE_OFF_15:15", vix)
+            _exit(tr, tr["qty_open"], last["c"], last["t"], "SQUARE_OFF_15:15", vix)
             _close(tr)
         else:
             px = premium(tr["underlying"], tr["side"], tr["strike"], dt.date.fromisoformat(tr["expiry"]),
                          last["c"], last["t"], vix)
             tr["last_index"], tr["last_premium"] = round(last["c"], 2), round(px, 2)
             booked = sum((l["premium"] - tr["entry_premium"]) * l["qty"] for l in tr["legs"])
-            tr["unrealised"] = round(booked + (px - tr["entry_premium"]) * tr["lots_open"] * tr["lot"], 2)
+            tr["unrealised"] = round(booked + (px - tr["entry_premium"]) * tr["qty_open"], 2)
 
-    trades = [tr for bk in books.values() for tr in bk.trades]
-    trades.sort(key=lambda x: x["entry_time"])
+    trades = sorted((tr for bk in books.values() for tr in bk.trades), key=lambda x: x["entry_time"])
     status = {f"{s}:{u}": {"trades": len(books[(s, u)].trades), "done": books[(s, u)].done,
-                           "note": books[(s, u)].note,
+                           "note": books[(s, u)].note, "active": u == active,
                            "net": round(sum(t["net_pnl"] for t in books[(s, u)].trades), 2)}
               for (s, u) in books}
     ema_now = {}
@@ -270,9 +287,9 @@ def simulate_options_day(day, und_bars, vix_bars, now=None):
         day_ts = [t for t in e if t.date() == day]
         if day_ts:
             last = e[max(day_ts)]
-            ema_now[u] = {"ema9": round(last[0], 2), "ema21": round(last[1], 2),
-                          "setup": ema_state[u]["setup"]}
-    return {"levels": levels, "trades": trades, "notes": notes, "status": status, "ema": ema_now}
+            ema_now[u] = {"ema9": round(last[0], 2), "ema21": round(last[1], 2), "setup": ema_state[u]["setup"]}
+    return {"levels": levels, "trades": trades, "notes": notes, "status": status, "ema": ema_now,
+            "index_today": active}
 
 
 def _vix_lookup(vix_bars):
@@ -288,28 +305,15 @@ def _vix_lookup(vix_bars):
     return at
 
 
-def _orb_signal(st, lv, bar, pts):
-    """Breakout (close crosses the level) then retest (dips back to it, closes beyond)."""
-    hi, lo, buf = lv["high"], lv["low"], pts["retest_buffer"]
-    prev = st["prev_close"]
-    sig = None
-    if st["up_broken"] and bar["l"] <= hi + buf and bar["c"] > hi:
-        sig = ("CE", lv["mid"], f"retest of ORB high {hi:.2f}")
-        st["up_broken"] = False
-    elif st["dn_broken"] and bar["h"] >= lo - buf and bar["c"] < lo:
-        sig = ("PE", lv["mid"], f"retest of ORB low {lo:.2f}")
-        st["dn_broken"] = False
-    if sig:
-        return sig
-    # a close back through the middle cancels a pending breakout
-    if st["up_broken"] and bar["c"] < lv["mid"]:
-        st["up_broken"] = False
-    if st["dn_broken"] and bar["c"] > lv["mid"]:
-        st["dn_broken"] = False
-    if prev is not None and prev <= hi < bar["c"]:
-        st["up_broken"], st["dn_broken"] = True, False
-    elif prev is not None and prev >= lo > bar["c"]:
-        st["dn_broken"], st["up_broken"] = True, False
+def _orb1_signal(st, lv, bar, und):
+    """A 1-minute close that crosses the first 1-minute candle's high (CE) or low (PE)."""
+    prev, sl = st["prev_close"], OPT["orb1"][und]["sl"]
+    if prev is None:
+        return None
+    if prev <= lv["high"] < bar["c"]:
+        return "CE", bar["c"] - sl, f"1-min close {bar['c']:.2f} above first-minute high {lv['high']:.2f}"
+    if prev >= lv["low"] > bar["c"]:
+        return "PE", bar["c"] + sl, f"1-min close {bar['c']:.2f} below first-minute low {lv['low']:.2f}"
     return None
 
 
@@ -331,70 +335,92 @@ def _ema_signal(st, e_prev, e_now, bar, recent, pts):
     return None
 
 
-def _enter(strat, und, kind, bar, t, stop, size, vix, why, n):
-    lots, book_lots = size
+def _enter(strat, und, kind, bar, at, stop, n, vix, why):
     lot = paper.lot_size(und)
+    if strat == "ORB1":
+        qty = OPT["orb1"][und]["qty"][n - 1]
+        book_qty = 0
+    else:
+        qty = OPT["ema_lots"][n - 1] * lot
+        book_qty = OPT["ema_book"][n - 1] * lot
     step = OPT["strike_step"][und]
     strike = int(round(bar["c"] / step) * step)
-    expiry = expiry_for(und, t.date())
-    entry_prem = premium(und, kind, strike, expiry, bar["c"], t, vix) * (1 + OPT["premium_slippage"])
+    expiry = expiry_for(und, at.date())
+    entry_prem = premium(und, kind, strike, expiry, bar["c"], at, vix) * (1 + OPT["premium_slippage"])
+    stop_prem = premium(und, kind, strike, expiry, stop, at, vix)
     pts = OPT["points"][und]
-    stop_prem = premium(und, kind, strike, expiry, stop, t, vix)
-    risk = (entry_prem - stop_prem) * lots * lot
     return {
         "strategy": strat, "underlying": und, "side": kind, "strike": strike,
         "expiry": expiry.isoformat(), "symbol": f"{und} {strike} {kind}", "trade_no": n,
-        "status": "OPEN", "why": why, "entry_time": t.isoformat(),
+        "status": "OPEN", "why": why, "entry_time": at.isoformat(),
         "entry_index": round(bar["c"], 2), "entry_premium": round(entry_prem, 2), "vix": round(vix, 2),
-        "lot": lot, "lots": lots, "qty": lots * lot, "book_lots": book_lots, "lots_open": lots,
-        "stop_index": round(stop, 2), "initial_stop": round(stop, 2),
-        "trail_mode": "ema9_close" if strat == "EMA9_21" else "points",
+        "lot": lot, "lots": round(qty / lot, 2), "qty": qty, "qty_open": qty, "book_qty": book_qty,
+        "stop_index": round(stop, 2), "initial_stop": round(stop, 2), "sl_premium": round(stop_prem, 2),
         "partial_index": round(bar["c"] + (pts["partial"] if kind == "CE" else -pts["partial"]), 2),
-        "partial_done": False, "next_trail": pts["partial"] + pts["trail"],
-        "risk_at_stop": round(risk, 2), "legs": [],
+        "partial_done": False, "protected": False, "best_points": 0.0, "stop_moves": [],
+        "risk_at_stop": round(max(entry_prem - stop_prem, 0) * qty, 2), "legs": [],
         "gross_pnl": 0.0, "charges": 0.0, "net_pnl": 0.0,
     }
 
 
-def _manage(tr, bar, t, vix, ema9):
-    """Stop first (a wick through a stop fills it), then booking at +30, then the trail:
-    points steps for ORB5, a candle body closing across the 9 EMA for EMA9_21."""
-    if t <= dt.datetime.fromisoformat(tr["entry_time"]):
+def _move_stop(tr, new_stop, at, why):
+    d = 1 if tr["side"] == "CE" else -1
+    if (new_stop - tr["stop_index"]) * d > 0.001:
+        tr["stop_index"] = round(new_stop, 2)
+        tr["stop_moves"].append({"time": at.isoformat(), "stop": tr["stop_index"], "why": why})
+        tr["protected"] = (tr["stop_index"] - tr["entry_index"]) * d >= -0.001
+
+
+def _manage(tr, bar, t, at, vix, ema9):
+    """A wick through the stop fills it first; then the trail moves (ORB1 points
+    ladder / EMA9_21 booking + break-even); EMA9_21 also exits on a body close
+    across the 9 EMA."""
+    if at <= dt.datetime.fromisoformat(tr["entry_time"]):
         return
     d = 1 if tr["side"] == "CE" else -1
-    e, pts = tr["entry_index"], OPT["points"][tr["underlying"]]
+    e = tr["entry_index"]
     if t.time() >= OPT["squareoff"]:
-        _exit(tr, tr["lots_open"], bar["o"], t, "SQUARE_OFF_15:15", vix)
+        _exit(tr, tr["qty_open"], bar["o"], at, "SQUARE_OFF_15:15", vix)
         return _close(tr)
     adverse = bar["l"] if d == 1 else bar["h"]
     if (adverse - tr["stop_index"]) * d <= 0:
         level = bar["o"] if (bar["o"] - tr["stop_index"]) * d < 0 else tr["stop_index"]  # gap through the stop
-        reason = "STOP" if not tr["partial_done"] else (
-            "BREAKEVEN_STOP" if abs(tr["stop_index"] - e) < 0.01 else "TRAIL_STOP")
-        _exit(tr, tr["lots_open"], level, t, reason, vix)
+        off = (tr["stop_index"] - e) * d
+        reason = "STOP" if off < -0.01 and not tr["stop_moves"] else (
+            "BREAKEVEN_STOP" if abs(off) < 0.01 else "TRAIL_STOP")
+        _exit(tr, tr["qty_open"], level, at, reason, vix)
         return _close(tr)
     fav = ((bar["h"] if d == 1 else bar["l"]) - e) * d
+    tr["best_points"] = round(max(tr["best_points"], fav), 2)
+    if tr["strategy"] == "ORB1":
+        cfg, und_cfg = OPT["orb1"], OPT["orb1"][tr["underlying"]]
+        k = math.floor(fav / cfg["step"]) * cfg["step"]
+        if k >= cfg["breakeven_at"]:
+            off = k - cfg["breakeven_at"]
+            _move_stop(tr, e + d * off, at, f"+{k:.0f} pts -> stop {'break-even' if off == 0 else f'+{off:.0f}'}")
+        elif und_cfg["early_trail"] and fav >= und_cfg["early_trail"][0]:
+            trig, off = und_cfg["early_trail"]
+            _move_stop(tr, e + d * off, at, f"+{trig} pts -> stop {off}")
+        return
+    pts = OPT["points"][tr["underlying"]]
     if not tr["partial_done"] and fav >= pts["partial"]:
-        _exit(tr, tr["book_lots"], e + d * pts["partial"], t, "PARTIAL_+%d" % pts["partial"], vix)
-        tr["partial_done"], tr["stop_index"] = True, e
-    if tr["trail_mode"] == "points":
-        while tr["partial_done"] and fav >= tr["next_trail"]:
-            tr["stop_index"] = round(e + d * (tr["next_trail"] - pts["partial"]), 2)
-            tr["next_trail"] += pts["trail"]
-    elif ema9 is not None and (bar["c"] - ema9) * d < 0:
+        _exit(tr, tr["book_qty"], e + d * pts["partial"], at, "PARTIAL_+%d" % pts["partial"], vix)
+        tr["partial_done"] = True
+        _move_stop(tr, e, at, f"+{pts['partial']} pts booked -> stop break-even")
+    if ema9 is not None and (bar["c"] - ema9) * d < 0:
         # only a candle BODY closing across the 9 EMA exits; a wick through it does not
-        _exit(tr, tr["lots_open"], bar["c"], t, "EMA9_CLOSE", vix)
+        _exit(tr, tr["qty_open"], bar["c"], at, "EMA9_CLOSE", vix)
         return _close(tr)
 
 
-def _exit(tr, lots, index_level, t, reason, vix):
-    if lots <= 0:
+def _exit(tr, qty, index_level, at, reason, vix):
+    if qty <= 0:
         return
     px = premium(tr["underlying"], tr["side"], tr["strike"], dt.date.fromisoformat(tr["expiry"]),
-                 index_level, t, vix) * (1 - OPT["premium_slippage"])
-    tr["legs"].append({"time": t.isoformat(), "lots": lots, "qty": lots * tr["lot"],
+                 index_level, at, vix) * (1 - OPT["premium_slippage"])
+    tr["legs"].append({"time": at.isoformat(), "qty": qty, "lots": round(qty / tr["lot"], 2),
                        "index": round(index_level, 2), "premium": round(px, 2), "reason": reason})
-    tr["lots_open"] -= lots
+    tr["qty_open"] -= qty
 
 
 def _close(tr):
@@ -412,14 +438,19 @@ def _close(tr):
 
 # ------------------------------------------------------------ data helpers
 
-def fetch(range_="5d"):
-    """Recent bars: the local archive (history.py) topped up with a fresh Yahoo fetch."""
+def fetch():
+    """Recent 5m + 1m bars and VIX: the local archive topped up with a fresh Yahoo fetch."""
     import history
-    out = {}
+    und5, und1 = {}, {}
     for u in OPT["underlyings"]:
-        out[u] = history.merged(u, nsemkt.yahoo_chart(paper.yahoo_of(u), interval="5m", range_=range_)["bars"])
+        ys = paper.yahoo_of(u)
+        und5[u] = history.merged(u, nsemkt.yahoo_chart(ys, interval="5m", range_="5d")["bars"])
+        try:
+            und1[u] = history.merged(u, nsemkt.yahoo_chart(ys, interval="1m", range_="1d")["bars"], days=2, interval="1m")
+        except Exception:
+            und1[u] = history.load(u, start=paper.now_ist().date(), interval="1m")
     try:
-        vix = history.merged("INDIAVIX", nsemkt.yahoo_chart("^INDIAVIX", interval="5m", range_=range_)["bars"])
+        vix = history.merged("INDIAVIX", nsemkt.yahoo_chart("^INDIAVIX", interval="5m", range_="5d")["bars"])
     except Exception:
         vix = history.load("INDIAVIX")
-    return out, vix
+    return und5, und1, vix

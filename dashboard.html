@@ -14,7 +14,7 @@
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--text);
          font: 14px/1.45 "Segoe UI", system-ui, sans-serif; }
-  .wrap { max-width: 1280px; margin: 0 auto; padding: 16px; }
+  .wrap { max-width: 1320px; margin: 0 auto; padding: 16px; }
   header { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
   header h1 { font-size: 20px; margin: 0; letter-spacing: .3px; }
   .badge { padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; }
@@ -26,13 +26,14 @@
   .clock { font-variant-numeric: tabular-nums; color: var(--muted); }
   .maintabs { display: flex; gap: 4px; border-bottom: 1px solid var(--line); margin-bottom: 14px; overflow-x: auto; }
   .maintab { background: none; border: 0; border-bottom: 2px solid transparent; color: var(--muted);
-             padding: 10px 16px; font: 600 15px inherit; cursor: pointer; white-space: nowrap; }
+             padding: 10px 18px; font: 600 15px inherit; cursor: pointer; white-space: nowrap; }
   .maintab.active { color: var(--text); border-bottom-color: var(--blue); }
-  .tabs { display: flex; gap: 6px; margin-bottom: 14px; flex-wrap: wrap; align-items: center; }
+  .tabs { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+  .seg { display: inline-flex; gap: 4px; flex-wrap: wrap; }
   .tab, .seg button { background: var(--panel); border: 1px solid var(--line); color: var(--muted);
          padding: 7px 12px; border-radius: 8px; cursor: pointer; font: inherit; }
-  .tab.active, .seg button.active { color: var(--text); border-color: var(--blue); background: rgba(59,130,246,.12); }
-  .seg { display: inline-flex; gap: 4px; flex-wrap: wrap; }
+  .tab.active, .seg button.active { color: var(--text); border-color: var(--blue); background: rgba(59,130,246,.15); }
+  .seg button .today { font-size: 10px; color: var(--green); margin-left: 4px; }
   select, input[type=date] { background: var(--panel); color: var(--text); border: 1px solid var(--line);
            border-radius: 8px; padding: 7px 8px; font: inherit; color-scheme: dark; }
   .card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
@@ -56,9 +57,8 @@
   .pos { color: var(--green); } .neg { color: var(--red); }
   h2 { font-size: 15px; margin: 0 0 12px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
   h2 small { color: var(--muted); font-weight: 400; }
-  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
-  .stock { background: var(--panel2); border: 1px solid var(--line); border-radius: 10px; padding: 12px;
-           cursor: pointer; transition: border-color .15s; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+  .stock { background: var(--panel2); border: 1px solid var(--line); border-radius: 10px; padding: 12px; cursor: pointer; }
   .stock.sel { border-color: var(--blue); }
   .stock .top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
   .stock .sym { font-weight: 700; font-size: 15px; }
@@ -70,19 +70,23 @@
   .c-loss { background: rgba(239,68,68,.15); color: var(--red); }
   .c-flat { background: rgba(245,158,11,.15); color: var(--amber); }
   @keyframes glow { to { box-shadow: 0 0 12px rgba(59,130,246,.6); } }
-  .meta { color: var(--muted); font-size: 12px; margin-top: 6px; }
+  .meta { color: var(--muted); font-size: 12px; margin-top: 4px; }
   .bar { height: 6px; border-radius: 3px; background: linear-gradient(90deg, var(--red), #334155 50%, var(--green));
          position: relative; margin-top: 10px; }
   .bar i { position: absolute; top: -3px; width: 3px; height: 12px; background: white; border-radius: 2px; }
-  .chartbox { height: clamp(340px, 58vh, 600px); }
+  .chartbox { height: clamp(340px, 58vh, 620px); }
   .legend { display: flex; gap: 14px; flex-wrap: wrap; color: var(--muted); font-size: 12px; margin-top: 8px; align-items: center; }
   .legend span::before { content: ""; display: inline-block; width: 14px; height: 2px; margin-right: 6px; vertical-align: middle; background: var(--c); }
-  .legend button { margin-left: auto; }
+  .legend .right { margin-left: auto; display: flex; gap: 6px; }
   table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
-  th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); white-space: nowrap; vertical-align: top; }
-  th { color: var(--muted); font-weight: 500; font-size: 12px; }
-  .tablewrap { overflow-x: auto; }
-  .leg { white-space: nowrap; margin: 2px 0; }
+  th, td { text-align: left; padding: 7px 6px; border-bottom: 1px solid var(--line); white-space: nowrap; vertical-align: top; }
+  th { color: var(--muted); font-weight: 500; font-size: 12px; position: sticky; top: 0; background: var(--panel); }
+  td small { color: var(--muted); }
+  tr.click { cursor: pointer; } tr.click:hover td { background: rgba(59,130,246,.07); }
+  tr.sel td { background: rgba(59,130,246,.14); }
+  .tablewrap { overflow: auto; }
+  .tablewrap.tall { max-height: 560px; }
+  .leg { white-space: nowrap; margin: 1px 0; }
   .leg .chip { margin-top: 0; }
   .two { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; }
   pre { margin: 0; max-height: 240px; overflow: auto; font: 12px/1.5 Consolas, monospace; color: var(--muted); white-space: pre-wrap; }
@@ -110,18 +114,21 @@
   </header>
 
   <nav class="maintabs">
-    <button class="maintab active" data-tab="NIFTY">NIFTY 50</button>
-    <button class="maintab" data-tab="SENSEX">SENSEX</button>
+    <button class="maintab active" data-tab="INDEX">NIFTY &amp; SENSEX</button>
     <button class="maintab" data-tab="STOCKS">Stocks</button>
     <button class="maintab" data-tab="BACKTEST">Backtest</button>
   </nav>
 
-  <!-- ===================== live / replay tabs ===================== -->
+  <!-- ===================== live / replay ===================== -->
   <div id="livearea" class="grid">
     <div class="tabs">
       <button class="tab active" id="mode-live">Live today</button>
       <button class="tab" id="mode-replay">Replay a past day</button>
       <select id="replay-date" hidden></select>
+      <div class="spacer"></div>
+      <div class="seg" id="idx-switch">
+        <button data-u="NIFTY">NIFTY</button><button data-u="SENSEX">SENSEX</button>
+      </div>
     </div>
 
     <div class="card" id="control-card">
@@ -138,33 +145,31 @@
 
     <div class="kpis">
       <div class="card kpi"><div class="label" id="k1l">Equity</div><div class="value" id="k1">–</div><div class="sub" id="k1s"></div></div>
-      <div class="card kpi"><div class="label" id="k2l">Today P&amp;L</div><div class="value" id="k2">–</div></div>
+      <div class="card kpi"><div class="label" id="k2l">Today P&amp;L</div><div class="value" id="k2">–</div><div class="sub" id="k2s"></div></div>
       <div class="card kpi"><div class="label">Trades</div><div class="value" id="k3">–</div></div>
       <div class="card kpi"><div class="label">Open positions</div><div class="value" id="k4">–</div></div>
       <div class="card kpi"><div class="label">Win rate (book)</div><div class="value" id="k5">–</div></div>
     </div>
 
-    <!-- index tab: strategy cards + option trades -->
     <div class="card" id="opt-section">
       <h2 id="opt-title">Strategies</h2>
       <div class="cards" id="opt-cards"></div>
       <div class="tablewrap" style="margin-top:12px"><table>
-        <thead><tr><th>Strategy</th><th>Contract</th><th>Lots</th><th>Entry</th><th>Exits</th><th>Result</th><th>Net P&amp;L</th></tr></thead>
+        <thead><tr><th>Strategy</th><th>Contract</th><th>Qty</th><th>Entry</th><th>Stop-loss</th><th>Exits</th><th>Stop moves</th><th>Net P&amp;L</th></tr></thead>
         <tbody id="opt-trades"></tbody>
       </table></div>
       <div class="fine">
-        <b>ORB5</b>: first 5-min candle high/low → close beyond it, then a retest that closes beyond again → buy ATM CE (up) / PE (down).
-        Stop = middle of that candle. At +30 pts book, stop to break-even, then trail 20 pts per 20 pts.<br>
-        <b>EMA9_21</b>: the 9/21 cross only arms the setup (never an entry). Entry = a later candle whose wick retests the 9 EMA and
-        whose body closes on the trend side (above for CE, below for PE); a wrong-side close is skipped. Stop = last 3 candles' low/high.
-        At +30 pts book and stop to break-even; the rest exits only when a candle <b>body</b> closes across the 9 EMA (wicks don't count).<br>
-        Each strategy on its own: trade 1 = 5 lots (book 3); win → done for the day; loss → trade 2 = 7 lots (book 5); 2 losses → done.
-        No entries after 14:30, square-off 15:15. Option book ₹5L (NIFTY + SENSEX). Capital guards: ₹10,000 day, ₹15,000 week, ₹30,000 month loss stops.
-        Premiums are Black-Scholes estimates from India VIX, not live quotes.
+        <b>Day routing:</b> NIFTY trades Mon, Tue, Fri · SENSEX trades Wed, Thu. Only that day's index takes trades.<br>
+        <b>ORB1 (1-min)</b>: first 1-minute candle (09:15) high/low → a 1-min close above the high buys ATM CE, below the low buys ATM PE.
+        NIFTY: SL 20 index pts (~10 premium pts); +20 → SL −10, +30 → break-even, +40 → SL +10, then every +10. Qty 195, then 325 after a loss.
+        SENSEX: SL 30 pts; +30 → break-even, +40 → SL +10, then every +10. Qty 200, then 300 after a loss.<br>
+        <b>EMA9_21 (5-min)</b>: cross arms the setup; entry on a later candle that wicks to the 9 EMA and closes on the trend side. Stop = last 3 candles'
+        low/high. Book at +30 and stop to break-even; rest exits on a candle body close across the 9 EMA. 5 lots, then 7 after a loss.<br>
+        Each strategy on its own: a win ends it for the day, two losses end it. No entries after 14:30, square-off 15:15.
+        Option book ₹5L. Loss stops: ₹10,000 day, ₹15,000 week, ₹30,000 month. Premiums are Black-Scholes estimates from India VIX.
       </div>
     </div>
 
-    <!-- stocks tab: picks -->
     <div class="card" id="stock-section" hidden>
       <h2>Stocks picked <small id="wl-src"></small></h2>
       <div class="cards" id="stocks"></div>
@@ -176,12 +181,14 @@
       <h2><span id="chart-title">Chart</span> <small id="chart-sub"></small></h2>
       <div class="chartbox" id="chart"></div>
       <div class="legend" id="legend">
-        <span style="--c:#22c55e">5-min high</span>
-        <span style="--c:#ef4444">5-min low</span>
-        <span style="--c:#94a3b8">5-min mid (stop)</span>
-        <span style="--c:#f59e0b">9 EMA</span>
-        <span style="--c:#a78bfa">21 EMA</span>
-        <button class="tab" id="fit">⤢ Fit chart</button>
+        <span style="--c:#22c55e" data-k="hl">first-candle high</span>
+        <span style="--c:#ef4444" data-k="hl">first-candle low</span>
+        <span style="--c:#f59e0b" data-k="ema">9 EMA</span>
+        <span style="--c:#a78bfa" data-k="ema">21 EMA</span>
+        <div class="right">
+          <div class="seg" id="tf"><button data-tf="1m" class="active">1 min</button><button data-tf="5m">5 min</button></div>
+          <button class="tab" id="fit">⤢ Fit</button>
+        </div>
       </div>
     </div>
 
@@ -206,10 +213,13 @@
     </div>
   </div>
 
-  <!-- ===================== backtest tab ===================== -->
+  <!-- ===================== backtest ===================== -->
   <div id="btarea" class="grid" hidden>
     <div class="card">
-      <h2>Backtest · NIFTY &amp; SENSEX option strategies <small id="bt-range"></small></h2>
+      <div class="btrow" style="margin-bottom:12px">
+        <div class="seg" id="bt-book"><button data-b="index" class="active">NIFTY &amp; SENSEX options</button><button data-b="stocks">Stocks</button></div>
+        <small class="meta" id="bt-range"></small>
+      </div>
       <div class="btrow">
         <label>From</label><input type="date" id="bt-from">
         <label>To</label><input type="date" id="bt-to">
@@ -219,11 +229,12 @@
         </div>
       </div>
       <div class="btrow" style="margin-top:10px">
+        <span class="meta">Group by</span>
         <div class="seg" id="bt-group">
           <button data-g="day">Day</button><button data-g="week">Week</button>
           <button data-g="month" class="active">Month</button><button data-g="year">Year</button>
         </div>
-        <select id="bt-strat"><option value="">All strategies</option><option>ORB5</option><option>EMA9_21</option></select>
+        <select id="bt-strat"><option value="">All strategies</option><option>ORB1</option><option>EMA9_21</option></select>
         <select id="bt-und"><option value="">NIFTY + SENSEX</option><option>NIFTY</option><option>SENSEX</option></select>
       </div>
       <div class="fine" id="bt-data"></div>
@@ -238,15 +249,26 @@
     </div>
 
     <div class="card">
-      <h2>Equity curve <small>₹5L option book, day by day</small></h2>
+      <h2 id="bt-chart-title">Net P&amp;L by month</h2>
       <div style="height:300px" id="btchart"></div>
+      <div class="legend"><span style="--c:#22c55e">profit period</span><span style="--c:#ef4444">loss period</span><span style="--c:#3b82f6">equity</span></div>
     </div>
 
     <div class="card">
-      <h2 id="bt-table-title">By month</h2>
-      <div class="tablewrap"><table>
+      <h2 id="bt-table-title">By month <small>click a row to see its trades</small></h2>
+      <div class="tablewrap tall"><table>
         <thead><tr><th>Period</th><th>Sessions</th><th>Trades</th><th>Wins</th><th>Win %</th><th>Net P&amp;L</th><th>Charges</th><th>Equity after</th></tr></thead>
         <tbody id="bt-rows"></tbody>
+      </table></div>
+    </div>
+
+    <div class="card">
+      <h2><span id="bt-log-title">Trade log</span>
+        <button class="tab" id="bt-clear" hidden>✕ show all</button>
+        <span class="spacer"></span><button class="tab" id="bt-csv">⬇ Download CSV</button></h2>
+      <div class="tablewrap tall"><table>
+        <thead id="bt-log-head"></thead>
+        <tbody id="bt-log"></tbody>
       </table></div>
     </div>
   </div>
@@ -254,19 +276,20 @@
 
 <script>
 const IST_OFFSET = 19800;  // charts show IST wall-clock times
-const inr = v => v == null ? "–" : "₹" + Number(v).toLocaleString("en-IN", {minimumFractionDigits: 0, maximumFractionDigits: 0});
-const inr2 = v => v == null ? "–" : "₹" + Number(v).toLocaleString("en-IN", {minimumFractionDigits: 2, maximumFractionDigits: 2});
+const inr = v => v == null ? "–" : "₹" + Number(v).toLocaleString("en-IN", {maximumFractionDigits: 0});
 const signed = v => (v > 0 ? "+" : v < 0 ? "−" : "") + inr(Math.abs(v || 0));
+const n2 = v => v == null ? "–" : Number(v).toFixed(2);
 const cls = v => v >= 0 ? "pos" : "neg";
 const hhmm = iso => iso ? iso.slice(11, 16) : "";
 const $ = id => document.getElementById(id);
 const IDX = ["NIFTY", "SENSEX"];
-const STRATS = [["ORB5", "ORB 5-min retest"], ["EMA9_21", "9/21 EMA retest"]];
+const STRATS = [["ORB1", "ORB 1-min breakout"], ["EMA9_21", "9/21 EMA retest"]];
+const DAYS_FOR = { NIFTY: "Mon/Tue/Fri", SENSEX: "Wed/Thu" };
 const optOf = v => (v && v.options) || {};
-const reasonCls = r => /PARTIAL|TRAIL|TARGET/.test(r) ? "c-win" : /BREAKEVEN|SQUARE|EMA9/.test(r) ? "c-flat" : "c-loss";
+const reasonCls = r => /PARTIAL|TRAIL/.test(r) ? "c-win" : /BREAKEVEN|SQUARE|EMA9/.test(r) ? "c-flat" : "c-loss";
+const indexForDate = ds => { const d = new Date(ds + "T00:00:00Z").getUTCDay(); return [1, 2, 5].includes(d) ? "NIFTY" : [3, 4].includes(d) ? "SENSEX" : null; };
 
-// Local (python dashboard.py) uses the JSON API; anywhere else (GitHub Pages)
-// reads the files that site.py exports to data/.
+// Local (python dashboard.py) uses the JSON API; GitHub Pages reads files exported by site.py.
 const STATIC = !["127.0.0.1", "localhost"].includes(location.hostname) || location.search.includes("static");
 const get = url => fetch(url).then(r => { if (!r.ok) throw new Error(r.status + " " + url); return r.json(); });
 const bust = () => "?t=" + Date.now();
@@ -275,16 +298,19 @@ const api = {
   days: () => get(STATIC ? "data/days.json" + bust() : "/api/days"),
   replay: d => get(STATIC ? `data/replay/${d}.json` : `/api/replay?date=${d}`),
   backtest: () => get(STATIC ? "data/backtest.json" + bust() : "/api/backtest"),
-  bars: (sym, date) => {
-    if (!STATIC) return get(`/api/bars?symbol=${sym}&date=${date || ""}`);
-    if (mode === "replay") return Promise.resolve({ symbol: sym, requested: view.date, date: view.date, bars: (view.bars || {})[sym] || [] });
-    return get(`data/bars/${sym}.json` + bust());
+  bars: (sym, date, tf) => {
+    if (!STATIC) return get(`/api/bars?symbol=${sym}&date=${date || ""}&interval=${tf}`);
+    if (mode === "replay") {
+      const src = tf === "1m" ? view.bars1m : view.bars;
+      return Promise.resolve({ symbol: sym, requested: view.date, date: view.date, bars: (src || {})[sym] || [] });
+    }
+    return get(`data/bars/${sym}${tf === "1m" ? "-1m" : ""}.json` + bust());
   },
 };
 
-let tab = "NIFTY", mode = "live", state = null, view = null, selectedStock = null;
-let chart, candles, ema9S, ema21S, lines = [], btChart, btLine, bt = null;
-let btGroup = "month";
+let tab = "INDEX", mode = "live", state = null, view = null, selectedStock = null, idxSel = null, tf = "1m";
+let chart, candles, ema9S, ema21S, lines = [];
+let btChart, btBars, btEq, bt = null, btBook = "index", btGroup = "month", btPeriod = null;
 
 // ------------------------------------------------------------------ chart
 function initChart() {
@@ -294,56 +320,55 @@ function initChart() {
     timeScale: { timeVisible: true, secondsVisible: false, borderColor: "#243049" },
     rightPriceScale: { borderColor: "#243049", autoScale: true, scaleMargins: { top: 0.08, bottom: 0.08 } },
     handleScale: { axisPressedMouseMove: { time: true, price: true }, mouseWheel: true, pinch: true },
-    crosshair: { mode: 0 },
-    autoSize: true,
+    crosshair: { mode: 0 }, autoSize: true,
   });
   candles = chart.addCandlestickSeries({ upColor: "#22c55e", downColor: "#ef4444",
     wickUpColor: "#22c55e", wickDownColor: "#ef4444", borderVisible: false });
-  // EMAs never drive the price scale: on a gap day yesterday's EMA would squash the candles
+  // EMAs never drive the price scale (a gap day's EMA would squash the candles)
   const line = color => chart.addLineSeries({ color, lineWidth: 1.5, priceLineVisible: false, lastValueVisible: false,
     crosshairMarkerVisible: false, autoscaleInfoProvider: () => null });
   ema9S = line("#f59e0b"); ema21S = line("#a78bfa");
 }
-
-function fitChart() {
-  chart.priceScale("right").applyOptions({ autoScale: true });
-  chart.timeScale().fitContent();
-}
-
-function chartSymbol() { return IDX.includes(tab) ? tab : selectedStock; }
+function fitChart() { chart.priceScale("right").applyOptions({ autoScale: true }); chart.timeScale().fitContent(); }
+function currentIndex() { return idxSel || optOf(view).index_today || indexForDate((view && view.date) || state.today.date) || "NIFTY"; }
+function chartSymbol() { return tab === "INDEX" ? currentIndex() : selectedStock; }
 
 async function loadChart() {
   const sym = chartSymbol();
   if (!sym) { candles.setData([]); ema9S.setData([]); ema21S.setData([]); $("chart-title").textContent = "Chart"; return; }
+  const isIdx = IDX.includes(sym), useTf = isIdx ? tf : "5m";
+  $("tf").hidden = !isIdx;
   const date = mode === "live" ? "" : view.date;
   let res;
-  try { res = await api.bars(sym, date); } catch (e) { $("chart-sub").textContent = "No chart data yet"; return; }
+  try { res = await api.bars(sym, date, useTf); } catch (e) { $("chart-sub").textContent = "No chart data yet"; return; }
   if (res.error) { $("chart-sub").textContent = res.error; return; }
   $("chart-title").textContent = sym;
-  $("chart-sub").textContent = res.date !== res.requested ? `(last session ${res.date}; today's candles appear after 09:15)` : `5-min candles · ${res.date}`;
+  $("chart-sub").textContent = (res.date !== res.requested ? `(last session ${res.date}; today's candles appear after 09:15)` : res.date)
+    + ` · ${useTf === "1m" ? "1-minute" : "5-minute"} candles` + (res.bars.length ? "" : " · no candles for this day");
   candles.setData(res.bars.map(b => ({ time: b.time + IST_OFFSET, open: b.open, high: b.high, low: b.low, close: b.close })));
-  const isIdx = IDX.includes(sym);
   const emaLine = k => res.bars.filter(b => b[k] != null).map(b => ({ time: b.time + IST_OFFSET, value: b[k] }));
-  ema9S.setData(isIdx ? emaLine("ema9") : []);
-  ema21S.setData(isIdx ? emaLine("ema21") : []);
-  $("legend").querySelectorAll("span").forEach((s, i) => s.hidden = !isIdx && i >= 3);
+  const showEma = isIdx && useTf === "5m";
+  ema9S.setData(showEma ? emaLine("ema9") : []); ema21S.setData(showEma ? emaLine("ema21") : []);
+  $("legend").querySelectorAll("span[data-k]").forEach(s => s.hidden = s.dataset.k === "ema" ? !showEma : false);
   lines.forEach(l => candles.removePriceLine(l)); lines = [];
   const add = (price, color, title, style = 2, width = 1) => lines.push(candles.createPriceLine({ price, color, lineWidth: width, lineStyle: style, axisLabelVisible: true, title }));
   const sameDay = res.date === (mode === "live" ? state.today.date : view.date);
   const ts = iso => Math.floor(new Date(iso).getTime() / 1000) + IST_OFFSET;
+  // markers must sit on a candle of this timeframe: snap to the candle that contains the time
+  const step = useTf === "1m" ? 60 : 300, snap = t => t - ((t - IST_OFFSET) % step);
   const markers = [];
   if (sameDay && isIdx) {
     const o = optOf(view), lv = (o.levels || {})[sym];
-    if (lv) { add(lv.high, "#22c55e", "5m high", 0, 2); add(lv.low, "#ef4444", "5m low", 0, 2); add(lv.mid, "#94a3b8", "5m mid", 2); }
+    if (lv) { add(lv.high, "#22c55e", "1m high", 0, 2); add(lv.low, "#ef4444", "1m low", 0, 2); }
     const short = r => r.startsWith("PARTIAL") ? "book" : r === "BREAKEVEN_STOP" ? "BE" : r === "TRAIL_STOP" ? "TSL"
-      : r === "EMA9_CLOSE" ? "9EMA close" : r.startsWith("SQUARE") ? "15:15" : "SL";
+      : r === "EMA9_CLOSE" ? "9EMA" : r.startsWith("SQUARE") ? "15:15" : "SL";
     for (const ot of (o.trades || []).filter(x => x.underlying === sym)) {
-      const up = ot.side === "CE";
-      markers.push({ time: ts(ot.entry_time), position: up ? "belowBar" : "aboveBar", color: up ? "#3b82f6" : "#ec4899",
-        shape: up ? "arrowUp" : "arrowDown", text: `${ot.strategy === "ORB5" ? "ORB" : "EMA"} ${ot.lots}L ${ot.side}` });
-      for (const l of ot.legs) markers.push({ time: ts(l.time), position: up ? "aboveBar" : "belowBar",
-        color: l.reason === "STOP" ? "#ef4444" : "#22c55e", shape: "circle", text: `${l.lots}L ${short(l.reason)}` });
-      if (ot.status === "OPEN") { add(ot.stop_index, "#ef4444", `${ot.strategy} stop`); if (!ot.partial_done) add(ot.partial_index, "#22c55e", "+30 book"); }
+      const up = ot.side === "CE", tag = ot.strategy === "ORB1" ? "ORB" : "EMA";
+      markers.push({ time: snap(ts(ot.entry_time) - step), position: up ? "belowBar" : "aboveBar", color: up ? "#3b82f6" : "#ec4899",
+        shape: up ? "arrowUp" : "arrowDown", text: `${tag} ${ot.qty} ${ot.side}` });
+      for (const l of ot.legs) markers.push({ time: snap(ts(l.time) - step), position: up ? "aboveBar" : "belowBar",
+        color: l.reason === "STOP" ? "#ef4444" : "#22c55e", shape: "circle", text: `${short(l.reason)}` });
+      if (ot.status === "OPEN") add(ot.stop_index, "#ef4444", `${tag} SL`);
     }
   }
   if (sameDay && !isIdx) {
@@ -353,19 +378,28 @@ async function loadChart() {
     if (t) {
       add(t.entry, "#3b82f6", "Entry", 0); add(t.stop, "#ef4444", "Stop"); add(t.target, "#22c55e", "Target");
       markers.push({ time: ts(t.entry_time), position: "belowBar", color: "#3b82f6", shape: "arrowUp", text: `BUY ${t.qty}` });
-      if (t.exit_time) markers.push({ time: ts(t.exit_time), position: "aboveBar", color: t.net_pnl >= 0 ? "#22c55e" : "#ef4444", shape: "arrowDown", text: `${t.exit_reason} ${signed(t.net_pnl)}` });
+      if (t.exit_time) markers.push({ time: ts(t.exit_time), position: "aboveBar", color: t.net_pnl >= 0 ? "#22c55e" : "#ef4444", shape: "arrowDown", text: `${t.exit_reason}` });
     }
   }
   candles.setMarkers(markers.sort((a, b) => a.time - b.time));
   fitChart();
 }
 
-// ------------------------------------------------------------------ index tabs
+// ------------------------------------------------------------------ index tab
+function legsHtml(t) {
+  return t.legs.map(l => `<div class="leg"><span class="chip ${reasonCls(l.reason)}">${l.qty} ${l.reason.replace(/_/g, " ")}</span>
+    ${hhmm(l.time)} · idx ${n2(l.index)} · prem ${n2(l.premium)}</div>`).join("") || "–";
+}
+
 function renderIndexTab(v) {
-  const u = tab, o = optOf(v), trades = (o.trades || []).filter(t => t.underlying === u);
+  const o = optOf(v), u = currentIndex(), todayIdx = o.index_today || indexForDate(v.date || state.today.date);
+  document.querySelectorAll("#idx-switch button").forEach(b => {
+    b.classList.toggle("active", b.dataset.u === u);
+    b.innerHTML = b.dataset.u + (b.dataset.u === todayIdx ? '<span class="today">● trading day</span>' : "");
+  });
+  const trades = (o.trades || []).filter(t => t.underlying === u);
   const bk = state.books.options;
-  $("opt-title").innerHTML = `${u} strategies <small>${o.paused ? o.paused : "CE / PE buying · each strategy on its own"}</small>`;
-  // KPIs
+  $("opt-title").innerHTML = `${u} strategies <small>${o.paused ? o.paused : u === todayIdx ? `trades today (${DAYS_FOR[u]})` : `no ${u} trades today — ${u} trades ${DAYS_FOR[u]}`}</small>`;
   $("k1l").textContent = "Option book (NIFTY+SENSEX)";
   $("k1").textContent = inr(bk.equity);
   const pct = (bk.equity / bk.start - 1) * 100;
@@ -373,37 +407,39 @@ function renderIndexTab(v) {
   const dayPnl = trades.reduce((a, t) => a + (t.status === "CLOSED" ? t.net_pnl : (t.unrealised || 0)), 0);
   $("k2l").textContent = mode === "live" ? `${u} today` : `${u} on ${v.date}`;
   $("k2").innerHTML = `<span class="${cls(dayPnl)}">${signed(dayPnl)}</span>`;
+  $("k2s").textContent = todayIdx ? `trading index: ${todayIdx}` : "weekend";
   $("k3").textContent = `${trades.length} (max 4)`;
   $("k4").textContent = trades.filter(t => t.status === "OPEN").length;
   const s = bk.summary;
   $("k5").textContent = s.trades ? `${Math.round(s.win_rate * 100)}% of ${s.trades}` : "–";
-  // strategy cards
   $("opt-cards").innerHTML = STRATS.map(([sk, label]) => {
     const st = (o.status || {})[`${sk}:${u}`] || { trades: 0, net: 0 };
     const open = trades.find(t => t.strategy === sk && t.status === "OPEN");
     let chip = ["c-wait", mode === "live" ? "👀 Waiting for signal" : "No trade"];
-    if (open) chip = ["c-open", `● In trade · ${open.symbol}`];
+    if (u !== todayIdx) chip = ["c-flat", `Off today — ${DAYS_FOR[u]} only`];
+    else if (open) chip = ["c-open", `● In trade · ${open.symbol}`];
     else if (st.done && st.trades) chip = st.net > 0 ? ["c-win", "✓ Done for the day"] : ["c-loss", "✖ Done for the day"];
     else if (st.done) chip = ["c-flat", "Paused"];
     else if (st.trades) chip = ["c-watch", "Waiting for trade 2 signal"];
     let meta = `<div class="meta">Trades ${st.trades || 0}/2 · Net <span class="${cls(st.net || 0)}">${signed(st.net || 0)}</span></div>`;
     const lv = (o.levels || {})[u], em = (o.ema || {})[u];
-    if (sk === "ORB5" && lv) meta += `<div class="meta"><span class="pos">high ${lv.high.toFixed(2)}</span> · <span class="neg">low ${lv.low.toFixed(2)}</span> · stop ${lv.mid.toFixed(2)}</div>`;
-    if (sk === "EMA9_21" && em) meta += `<div class="meta">9 EMA ${em.ema9.toFixed(2)} · 21 EMA ${em.ema21.toFixed(2)} · ${em.setup ? `armed for ${em.setup} — waiting for a 9 EMA retest` : "no setup"}</div>`;
-    if (open) meta += `<div class="meta">${open.lots_open}/${open.lots} lots open · stop ${open.stop_index.toFixed(2)} · <span class="${cls(open.unrealised || 0)}">${signed(open.unrealised || 0)}</span></div>`;
-    if (st.note) meta += `<div class="meta">${st.note}</div>`;
+    if (sk === "ORB1" && lv) meta += `<div class="meta">first 1-min: <span class="pos">high ${n2(lv.high)}</span> · <span class="neg">low ${n2(lv.low)}</span></div>`;
+    if (sk === "ORB1") meta += `<div class="meta">${u === "NIFTY" ? "SL 20 pts · qty 195 → 325" : "SL 30 pts · qty 200 → 300"}</div>`;
+    if (sk === "EMA9_21" && em) meta += `<div class="meta">9 EMA ${n2(em.ema9)} · 21 EMA ${n2(em.ema21)} · ${em.setup ? `armed for ${em.setup}` : "no setup"}</div>`;
+    if (open) meta += `<div class="meta">${open.qty_open}/${open.qty} open · SL ${n2(open.stop_index)} · <span class="${cls(open.unrealised || 0)}">${signed(open.unrealised || 0)}</span></div>`;
+    if (st.note && u === todayIdx) meta += `<div class="meta">${st.note}</div>`;
     return `<div class="stock"><div class="top"><span class="sym">${label}</span><span class="badge idx">${u}</span></div>
       <span class="chip ${chip[0]}">${chip[1]}</span>${meta}</div>`;
   }).join("");
-  // trades
   $("opt-trades").innerHTML = trades.map(t => {
-    const legs = t.legs.map(l => `<div class="leg"><span class="chip ${reasonCls(l.reason)}">${l.lots}L ${l.reason.replace(/_/g, " ")}</span> @ ${l.premium.toFixed(1)} <span class="meta">${hhmm(l.time)} · idx ${l.index.toFixed(0)}</span></div>`).join("") || "–";
     const pnl = t.status === "OPEN" ? (t.unrealised || 0) : t.net_pnl;
-    const res = t.status === "OPEN" ? '<span class="chip c-open">OPEN</span>' : `<span class="chip ${pnl >= 0 ? "c-win" : "c-loss"}">${pnl >= 0 ? "PROFIT" : "LOSS"}</span>`;
-    return `<tr><td>${t.strategy} <span class="meta">#${t.trade_no}</span></td><td><b>${t.symbol}</b> <span class="meta">exp ${t.expiry.slice(5)}</span></td>
-      <td>${t.lots} × ${t.lot}</td><td>${t.entry_premium.toFixed(2)} <span class="meta">${hhmm(t.entry_time)} · idx ${t.entry_index.toFixed(0)}</span></td>
-      <td>${legs}</td><td>${res}</td><td class="${cls(pnl)}">${signed(pnl)}</td></tr>`;
-  }).join("") || `<tr><td colspan="7" class="empty">No ${u} option trades ${mode === "live" ? "yet today" : "on this day"}.</td></tr>`;
+    const moves = (t.stop_moves || []).map(m => `<div class="leg">${hhmm(m.time)} → ${n2(m.stop)} <small>${m.why}</small></div>`).join("") || "–";
+    return `<tr><td>${t.strategy} <small>#${t.trade_no}</small></td><td><b>${t.symbol}</b><br><small>exp ${t.expiry}</small></td>
+      <td>${t.qty}</td><td>${hhmm(t.entry_time)}<br><small>idx ${n2(t.entry_index)} · prem ${n2(t.entry_premium)}</small></td>
+      <td>idx ${n2(t.initial_stop)}<br><small>prem ≈ ${n2(t.sl_premium)}</small></td>
+      <td>${t.status === "OPEN" ? '<span class="chip c-open">OPEN</span>' : legsHtml(t)}</td><td>${moves}</td>
+      <td class="${cls(pnl)}"><b>${signed(pnl)}</b>${t.charges ? `<br><small>charges ${inr(t.charges)}</small>` : ""}</td></tr>`;
+  }).join("") || `<tr><td colspan="8" class="empty">No ${u} option trades ${mode === "live" ? "yet today" : "on this day"}.</td></tr>`;
 }
 
 // ------------------------------------------------------------------ stocks tab
@@ -422,8 +458,7 @@ function stockStatus(sym, v) {
 }
 
 function renderStocksTab(v) {
-  const bk = state.books.stocks;
-  const stocks = (v.watchlist || []).filter(s => !IDX.includes(s));
+  const bk = state.books.stocks, stocks = (v.watchlist || []).filter(s => !IDX.includes(s));
   $("k1l").textContent = "Stock book";
   $("k1").textContent = inr(bk.equity);
   const pct = (bk.equity / bk.start - 1) * 100;
@@ -431,21 +466,20 @@ function renderStocksTab(v) {
   const trades = v.trades || [];
   const dayPnl = trades.reduce((a, t) => a + (t.status === "CLOSED" ? t.net_pnl : (t.unrealised || 0)), 0);
   $("k2l").textContent = mode === "live" ? "Stocks today" : `Stocks on ${v.date}`;
-  $("k2").innerHTML = `<span class="${cls(dayPnl)}">${signed(dayPnl)}</span>`;
+  $("k2").innerHTML = `<span class="${cls(dayPnl)}">${signed(dayPnl)}</span>`; $("k2s").textContent = "";
   $("k3").textContent = `${trades.length} / ${state.config.max_trades_per_day}`;
   $("k4").textContent = trades.filter(t => t.status === "OPEN").length;
-  const s = bk.summary;
-  $("k5").textContent = s.trades ? `${Math.round(s.win_rate * 100)}% of ${s.trades}` : "–";
+  $("k5").textContent = bk.summary.trades ? `${Math.round(bk.summary.win_rate * 100)}% of ${bk.summary.trades}` : "–";
   $("wl-src").textContent = mode === "live" ? (state.today.watchlist_source === "today" ? "· today's scan" : "· from the last scan (today's runs at 08:45)") : "";
   if (!selectedStock || !stocks.includes(selectedStock)) selectedStock = stocks[0] || null;
   $("stocks").innerHTML = stocks.map(sym => {
     const q = (v.quotes || {})[sym] || {}, st = stockStatus(sym, v), r = (v.ranges || {})[sym];
     const chg = q.chg_pct == null ? "" : `<span class="${cls(q.chg_pct)}">${q.chg_pct >= 0 ? "+" : ""}${q.chg_pct.toFixed(2)}%</span>`;
-    let extra = r ? `<div class="meta">Range ${r.or_low.toFixed(2)} – ${r.or_high.toFixed(2)}</div>` : "";
+    let extra = r ? `<div class="meta">Range ${n2(r.or_low)} – ${n2(r.or_high)}</div>` : "";
     if (st.t) {
       const t = st.t, px = t.status === "OPEN" ? (t.last || t.entry) : t.exit;
       const p = Math.max(0, Math.min(100, (px - t.stop) / (t.target - t.stop) * 100));
-      extra += `<div class="meta">${t.qty} @ ${t.entry.toFixed(2)} · stop ${t.stop.toFixed(2)} · target ${t.target.toFixed(2)}</div>
+      extra += `<div class="meta">${t.qty} @ ${n2(t.entry)} · stop ${n2(t.stop)} · target ${n2(t.target)}</div>
         <div class="bar"><i style="left:calc(${p}% - 1px)"></i></div>
         <div class="meta">${t.status === "OPEN" ? "Unrealised " + signed(t.unrealised || 0) : "Net " + signed(t.net_pnl)}</div>`;
     }
@@ -459,9 +493,8 @@ function renderStocksTab(v) {
     const res = t.status === "OPEN" ? '<span class="chip c-open">OPEN</span>' :
       `<span class="chip ${t.exit_reason === "TARGET" ? "c-win" : t.exit_reason === "STOP" ? "c-loss" : "c-flat"}">${t.exit_reason}</span>`;
     const pnl = t.status === "OPEN" ? (t.unrealised || 0) : t.net_pnl;
-    return `<tr><td><b>${t.symbol}</b></td><td>${t.qty}</td><td>${t.entry.toFixed(2)} <span class="meta">${hhmm(t.entry_time)}</span></td>
-      <td>${t.stop.toFixed(2)}</td><td>${t.target.toFixed(2)}</td>
-      <td>${t.exit ? t.exit.toFixed(2) + ' <span class="meta">' + hhmm(t.exit_time) + "</span>" : "–"}</td>
+    return `<tr><td><b>${t.symbol}</b></td><td>${t.qty}</td><td>${n2(t.entry)} <small>${hhmm(t.entry_time)}</small></td>
+      <td>${n2(t.stop)}</td><td>${n2(t.target)}</td><td>${t.exit ? n2(t.exit) + ' <small>' + hhmm(t.exit_time) + "</small>" : "–"}</td>
       <td>${res}</td><td class="${cls(pnl)}">${signed(pnl)}</td></tr>`;
   }).join("") || `<tr><td colspan="8" class="empty">No stock trades ${mode === "live" ? "yet today" : "on this day"}.</td></tr>`;
   renderCurve(bk.curve);
@@ -488,10 +521,9 @@ function renderControl() {
     go.className = "go" + (st.running ? " stop" : "");
     go.textContent = st.running ? "■ Stop virtual trading" : "▶ Start virtual trading";
   }
-  const oc = state.options_config || {};
-  $("book-note").textContent = IDX.includes(tab)
-    ? `Option book ₹5L shared by NIFTY & SENSEX · loss stops: day ₹${(oc.day_loss_limit || 0).toLocaleString("en-IN")}, week ₹${(oc.week_loss_limit || 0).toLocaleString("en-IN")}, month ₹${(oc.month_loss_limit || 0).toLocaleString("en-IN")}. Virtual money only.`
-    : "Stock book ₹5L, separate from the option book. Virtual money only.";
+  $("book-note").textContent = tab === "INDEX"
+    ? "Option book ₹5L shared by NIFTY & SENSEX · NIFTY Mon/Tue/Fri, SENSEX Wed/Thu · virtual money only."
+    : "Stock book ₹5L, separate from the option book · virtual money only.";
 }
 
 function render() {
@@ -500,10 +532,9 @@ function render() {
   m.textContent = "NSE " + ss.state.replace("_", " ").toLowerCase();
   m.className = "badge pill" + (ss.state === "OPEN" ? " open" : "");
   if (tab === "BACKTEST") return;
-  const isIdx = IDX.includes(tab);
-  $("opt-section").hidden = !isIdx;
-  $("stock-section").hidden = isIdx;
-  $("stock-tables").hidden = isIdx;
+  const isIdx = tab === "INDEX";
+  $("opt-section").hidden = !isIdx; $("idx-switch").hidden = !isIdx;
+  $("stock-section").hidden = isIdx; $("stock-tables").hidden = isIdx;
   $("control-card").hidden = mode !== "live";
   if (mode === "live") { view = { ...state.today, quotes: state.quotes }; renderControl(); }
   isIdx ? renderIndexTab(view) : renderStocksTab(view);
@@ -511,17 +542,19 @@ function render() {
   $("log").scrollTop = 1e6;
 }
 
+let chartLoaded = false;
 async function refresh() {
   try { state = await api.state(); } catch { $("status").textContent = STATIC ? "No data yet. The first cloud run publishes it." : "Dashboard server not reachable"; return; }
-  if (mode === "live" && tab !== "BACKTEST") { const first = !view || view.date === undefined; render(); if (first) loadChart(); }
-  else render();
+  render();
+  if (tab !== "BACKTEST" && mode === "live" && !chartLoaded) { chartLoaded = true; loadChart(); }
 }
 
 async function showReplay(date) {
   $("replay-banner").hidden = false;
   $("replay-banner").textContent = `Loading replay for ${date}…`;
   view = await api.replay(date);
-  $("replay-banner").innerHTML = `⏪ REPLAY of ${date}: today's rules on that day's real 5-minute candles. Not part of your virtual account.`;
+  idxSel = null;
+  $("replay-banner").innerHTML = `⏪ REPLAY of ${date} (${["Sun","Mon","Tue","Wed","Thu","Fri","Sat"][new Date(date + "T00:00:00Z").getUTCDay()]}): today's rules on that day's real candles. Not part of your virtual account.`;
   render(); loadChart();
 }
 
@@ -530,71 +563,158 @@ function initBtChart() {
   btChart = LightweightCharts.createChart($("btchart"), {
     layout: { background: { color: "#121826" }, textColor: "#8b97b0" },
     grid: { vertLines: { color: "#1c2537" }, horzLines: { color: "#1c2537" } },
-    rightPriceScale: { borderColor: "#243049" }, timeScale: { borderColor: "#243049" }, autoSize: true,
+    rightPriceScale: { borderColor: "#243049" }, leftPriceScale: { visible: true, borderColor: "#243049" },
+    timeScale: { borderColor: "#243049" }, autoSize: true,
   });
-  btLine = btChart.addBaselineSeries({ baseValue: { type: "price", price: 500000 },
-    topLineColor: "#22c55e", topFillColor1: "rgba(34,197,94,.25)", topFillColor2: "rgba(34,197,94,.02)",
-    bottomLineColor: "#ef4444", bottomFillColor1: "rgba(239,68,68,.02)", bottomFillColor2: "rgba(239,68,68,.25)" });
+  btBars = btChart.addHistogramSeries({ priceScaleId: "left", priceFormat: { type: "volume" } });
+  btEq = btChart.addLineSeries({ color: "#3b82f6", lineWidth: 2, priceScaleId: "right" });
 }
 
-function periodKey(ds, g) {
-  if (g === "day") return ds;
-  if (g === "month") return ds.slice(0, 7);
-  if (g === "year") return ds.slice(0, 4);
+function isoWeek(ds) {
   const d = new Date(ds + "T00:00:00Z"), day = (d.getUTCDay() + 6) % 7;
   d.setUTCDate(d.getUTCDate() - day + 3);
   const y = d.getUTCFullYear(), jan4 = new Date(Date.UTC(y, 0, 4));
   const wk = 1 + Math.round(((d - jan4) / 864e5 - 3 + ((jan4.getUTCDay() + 6) % 7)) / 7);
   return `${y}-W${String(wk).padStart(2, "0")}`;
 }
+function periodKey(ds, g) { return g === "day" ? ds : g === "month" ? ds.slice(0, 7) : g === "year" ? ds.slice(0, 4) : isoWeek(ds); }
+function weekStart(ds) { const d = new Date(ds + "T00:00:00Z"); d.setUTCDate(d.getUTCDate() - ((d.getUTCDay() + 6) % 7)); return d.toISOString().slice(0, 10); }
+function periodTime(ds, g) { return g === "day" ? ds : g === "week" ? weekStart(ds) : g === "month" ? ds.slice(0, 7) + "-01" : ds.slice(0, 4) + "-01-01"; }
+
+function btData() { return bt ? (btBook === "index" ? bt.index : bt.stocks) : null; }
 
 async function loadBacktest() {
   if (!bt) {
     $("bt-data").textContent = "Loading backtest…";
     try { bt = await api.backtest(); } catch { $("bt-data").textContent = "No backtest data yet."; return; }
-    const ds = bt.days.map(d => d.date);
-    $("bt-from").min = $("bt-to").min = ds[0]; $("bt-from").max = $("bt-to").max = ds[ds.length - 1];
-    $("bt-from").value = ds[0]; $("bt-to").value = ds[ds.length - 1];
-    const a = bt.archive.NIFTY || {};
-    $("bt-range").textContent = `· ${a.first} → ${a.last} (${a.sessions} sessions)`;
-    $("bt-data").innerHTML = `Data: NIFTY, SENSEX and India VIX 5-minute candles from ${a.first} to ${a.last}. Free Yahoo data only reaches back ~60 days, so the archive
-      grows by itself every trading day. For a full year now, export 5-minute candles (e.g. from Zerodha Kite) and run
-      <code>python history.py import FILE --symbol NIFTY</code>. Same rules and costs as the live book; premiums are estimates.`;
   }
+  setupBtRange();
   renderBacktest();
 }
 
-function renderBacktest() {
-  if (!bt) return;
-  const from = $("bt-from").value, to = $("bt-to").value, fs = $("bt-strat").value, fu = $("bt-und").value;
-  const days = bt.days.filter(d => d.date >= from && d.date <= to);
-  let eq = bt.capital, peak = eq, dd = 0, ddDate = "", gw = 0, gl = 0, n = 0, w = 0, chg = 0;
-  const rows = new Map(), curve = [];
-  for (const d of days) {
-    const ts = d.trades.filter(t => (!fs || t.s === fs) && (!fu || t.u === fu));
-    const net = ts.reduce((a, t) => a + t.net, 0);
-    eq += net; peak = Math.max(peak, eq);
-    if (eq - peak < dd) { dd = eq - peak; ddDate = d.date; }
-    curve.push({ time: d.date, value: Math.round(eq) });
-    const k = periodKey(d.date, btGroup);
-    const r = rows.get(k) || { sessions: 0, trades: 0, wins: 0, net: 0, chg: 0, paused: 0 };
-    r.sessions++; if (d.paused) r.paused++;
-    for (const t of ts) { r.trades++; n++; if (t.net > 0) { r.wins++; w++; gw += t.net; } else gl -= t.net; r.net += t.net; r.chg += t.chg; chg += t.chg; }
-    r.eq = eq; rows.set(k, r);
+function setupBtRange() {
+  const d = btData();
+  if (!d || !d.days.length) { $("bt-data").textContent = btBook === "stocks" ? "Stock backtest not built yet (it builds once a day)." : "No data."; return; }
+  const ds = d.days.map(x => x.date), first = ds[0], last = ds[ds.length - 1];
+  for (const id of ["bt-from", "bt-to"]) { $(id).min = first; $(id).max = last; }
+  $("bt-from").value = first; $("bt-to").value = last;
+  document.querySelectorAll("#bt-preset button").forEach(x => x.classList.toggle("active", x.dataset.p === "0"));
+  $("bt-strat").hidden = $("bt-und").hidden = btBook !== "index";
+  if (btBook === "index") {
+    const a5 = d.archive5.NIFTY || {}, a1 = d.archive1.NIFTY || {}, s1 = d.archive1.SENSEX || {};
+    $("bt-range").textContent = `${first} → ${last} · ${ds.length} sessions`;
+    $("bt-data").innerHTML = `Same code and rules as the live option book, with NIFTY on Mon/Tue/Fri and SENSEX on Wed/Thu and the loss stops.
+      5-minute data ${a5.first} → ${a5.last} (EMA9_21). 1-minute data NIFTY ${a1.first} → ${a1.last}, SENSEX ${s1.first} → ${s1.last} (ORB1) —
+      free 1-minute data only goes back ~30 days; the archive grows every trading day. Days without 1-minute data run EMA9_21 only.
+      Premiums are Black-Scholes estimates. Import a year of candles with <code>python history.py import FILE --symbol NIFTY --interval 1m</code>.`;
+  } else {
+    $("bt-range").textContent = `${first} → ${last} · ${ds.length} sessions · ${d.universe}`;
+    $("bt-data").innerHTML = `Stock ORB on every ${d.universe} stock each day, first 3 breakouts (fixed universe, no hindsight). 5-minute data, last ~60 days. Built once a day.`;
   }
-  const net = eq - bt.capital;
+}
+
+function filteredDays() {
+  const d = btData(); if (!d) return [];
+  const from = $("bt-from").value, to = $("bt-to").value, fs = $("bt-strat").value, fu = $("bt-und").value;
+  return d.days.filter(x => x.date >= from && x.date <= to).map(x => ({ ...x,
+    trades: btBook === "index" ? x.trades.filter(t => (!fs || t.s === fs) && (!fu || t.u === fu)) : x.trades }));
+}
+
+function renderBacktest() {
+  const d = btData(); if (!d) return;
+  const days = filteredDays();
+  let eq = d.capital, peak = eq, dd = 0, ddDate = "", gw = 0, gl = 0, n = 0, w = 0, chg = 0;
+  const rows = new Map(), eqPts = new Map();
+  for (const day of days) {
+    const net = day.trades.reduce((a, t) => a + t.net, 0);
+    eq += net; peak = Math.max(peak, eq);
+    if (eq - peak < dd) { dd = eq - peak; ddDate = day.date; }
+    const k = periodKey(day.date, btGroup);
+    const r = rows.get(k) || { key: k, time: periodTime(day.date, btGroup), sessions: 0, trades: 0, wins: 0, net: 0, chg: 0, paused: 0 };
+    r.sessions++; if (day.paused) r.paused++;
+    for (const t of day.trades) { r.trades++; n++; if (t.net > 0) { r.wins++; w++; gw += t.net; } else gl -= t.net; r.net += t.net; r.chg += t.chg; chg += t.chg; }
+    r.eq = eq; rows.set(k, r); eqPts.set(r.time, Math.round(eq));
+  }
+  const net = eq - d.capital;
   $("b1").innerHTML = `<span class="${cls(net)}">${signed(net)}</span>`;
-  $("b1s").textContent = `${(net / bt.capital * 100).toFixed(2)}% of ${inr(bt.capital)} · charges ${inr(chg)}`;
-  $("b2").textContent = n; $("b2s").textContent = `${days.length} sessions · ${days.filter(d => d.paused).length} paused by loss stops`;
+  $("b1s").textContent = `${(net / d.capital * 100).toFixed(2)}% of ${inr(d.capital)} · charges ${inr(chg)}`;
+  $("b2").textContent = n; $("b2s").textContent = `${days.length} sessions` + (btBook === "index" ? ` · ${days.filter(x => x.paused).length} paused` : "");
   $("b3").textContent = n ? `${Math.round(w / n * 100)}%` : "–"; $("b3s").textContent = `${w} wins / ${n - w} losses`;
-  $("b4").innerHTML = `<span class="neg">${signed(dd)}</span>`; $("b4s").textContent = dd ? `${(dd / bt.capital * 100).toFixed(1)}% · bottom on ${ddDate}` : "none";
+  $("b4").innerHTML = `<span class="neg">${signed(dd)}</span>`; $("b4s").textContent = dd ? `${(dd / d.capital * 100).toFixed(1)}% · bottom ${ddDate}` : "none";
   $("b5").textContent = gl ? (gw / gl).toFixed(2) : (gw ? "∞" : "–"); $("b5s").textContent = "gross wins ÷ gross losses";
-  btLine.setData(curve); btChart.timeScale().fitContent();
-  $("bt-table-title").textContent = "By " + btGroup;
-  $("bt-rows").innerHTML = [...rows.entries()].reverse().map(([k, r]) =>
-    `<tr><td><b>${k}</b></td><td>${r.sessions}${r.paused ? ` <span class="meta">(${r.paused} paused)</span>` : ""}</td><td>${r.trades}</td><td>${r.wins}</td>
-     <td>${r.trades ? Math.round(r.wins / r.trades * 100) + "%" : "–"}</td><td class="${cls(r.net)}">${signed(r.net)}</td>
-     <td>${inr(r.chg)}</td><td>${inr(r.eq)}</td></tr>`).join("") || '<tr><td colspan="8" class="empty">No sessions in this range.</td></tr>';
+  const label = { day: "day", week: "week", month: "month", year: "year" }[btGroup];
+  $("bt-chart-title").textContent = `Net P&L by ${label}`;
+  const list = [...rows.values()];
+  btBars.setData(list.map(r => ({ time: r.time, value: Math.round(r.net), color: r.net >= 0 ? "rgba(34,197,94,.75)" : "rgba(239,68,68,.75)" })));
+  btEq.setData(list.map(r => ({ time: r.time, value: Math.round(r.eq) })));
+  btChart.timeScale().fitContent();
+  $("bt-table-title").innerHTML = `By ${label} <small>click a row to see its trades</small>`;
+  if (btPeriod && !rows.has(btPeriod)) btPeriod = null;
+  $("bt-rows").innerHTML = list.slice().reverse().map(r =>
+    `<tr class="click ${r.key === btPeriod ? "sel" : ""}" data-k="${r.key}"><td><b>${r.key}</b></td><td>${r.sessions}${r.paused ? ` <small>(${r.paused} paused)</small>` : ""}</td>
+     <td>${r.trades}</td><td>${r.wins}</td><td>${r.trades ? Math.round(r.wins / r.trades * 100) + "%" : "–"}</td>
+     <td class="${cls(r.net)}">${signed(r.net)}</td><td>${inr(r.chg)}</td><td>${inr(r.eq)}</td></tr>`).join("")
+    || '<tr><td colspan="8" class="empty">No sessions in this range.</td></tr>';
+  $("bt-rows").querySelectorAll("tr.click").forEach(tr => tr.onclick = () => { btPeriod = btPeriod === tr.dataset.k ? null : tr.dataset.k; renderBacktest(); });
+  renderTradeLog(days);
+}
+
+function tradeRows(days) {
+  const out = [];
+  for (const day of days) {
+    if (btPeriod && periodKey(day.date, btGroup) !== btPeriod) continue;
+    for (const t of day.trades) out.push({ date: day.date, dow: day.dow, ...t });
+  }
+  return out;
+}
+
+function renderTradeLog(days) {
+  const rows = tradeRows(days);
+  $("bt-log-title").textContent = `Trade log · ${rows.length} trades${btPeriod ? " in " + btPeriod : ""}`;
+  $("bt-clear").hidden = !btPeriod;
+  if (btBook === "index") {
+    $("bt-log-head").innerHTML = `<tr><th>Date</th><th>Strategy</th><th>Contract</th><th>Qty</th><th>Entry</th><th>Stop-loss</th>
+      <th>Exits</th><th>Best move</th><th>Charges</th><th>Net P&amp;L</th></tr>`;
+    $("bt-log").innerHTML = rows.slice().reverse().map(t => `<tr>
+      <td>${t.date}<br><small>${t.dow}</small></td><td>${t.s} <small>#${t.n}</small><br><small>${t.side}</small></td>
+      <td><b>${t.contract}</b><br><small>exp ${t.expiry}</small></td><td>${t.qty}</td>
+      <td>${t.in}<br><small>idx ${n2(t.in_idx)} · prem ${n2(t.in_prem)}</small></td>
+      <td>idx ${n2(t.sl_idx)}<br><small>prem ≈ ${n2(t.sl_prem)} · final ${n2(t.final_sl)}</small></td>
+      <td>${t.legs.map(l => `<div class="leg"><span class="chip ${reasonCls(l[4])}">${l[1]} ${l[4].replace(/_/g, " ")}</span> ${l[0]} · idx ${n2(l[2])} · prem ${n2(l[3])}</div>`).join("")}</td>
+      <td>+${n2(t.best)} pts</td><td>${inr(t.chg)}</td><td class="${cls(t.net)}"><b>${signed(t.net)}</b></td></tr>`).join("")
+      || '<tr><td colspan="10" class="empty">No trades.</td></tr>';
+  } else {
+    $("bt-log-head").innerHTML = `<tr><th>Date</th><th>Stock</th><th>Qty</th><th>Entry</th><th>Stop-loss</th><th>Target</th>
+      <th>Exit</th><th>Reason</th><th>Charges</th><th>Net P&amp;L</th></tr>`;
+    $("bt-log").innerHTML = rows.slice().reverse().map(t => `<tr>
+      <td>${t.date}<br><small>${t.dow}</small></td><td><b>${t.sym}</b><br><small>range ${n2(t.or_lo)}–${n2(t.or_hi)}</small></td><td>${t.qty}</td>
+      <td>${t.in}<br><small>${n2(t.in_px)}</small></td><td>${n2(t.sl)}</td><td>${n2(t.tgt)}</td>
+      <td>${t.out}<br><small>${n2(t.out_px)}</small></td><td><span class="chip ${t.why === "TARGET" ? "c-win" : t.why === "STOP" ? "c-loss" : "c-flat"}">${t.why}</span></td>
+      <td>${inr(t.chg)}</td><td class="${cls(t.net)}"><b>${signed(t.net)}</b></td></tr>`).join("")
+      || '<tr><td colspan="10" class="empty">No trades.</td></tr>';
+  }
+}
+
+function downloadCsv() {
+  const rows = tradeRows(filteredDays());
+  const esc = v => { const s = String(v ?? ""); return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; };
+  let head, body;
+  if (btBook === "index") {
+    head = ["date", "day", "strategy", "trade_no", "index", "side", "contract", "expiry", "qty", "entry_time", "entry_index", "entry_premium",
+      "sl_index", "sl_premium", "final_sl_index", "exit_time", "exit_index", "exit_premium", "exit_reason", "exits_detail", "stop_moves", "best_points",
+      "gross_pnl", "charges", "net_pnl", "entry_reason"];
+    body = rows.map(t => [t.date, t.dow, t.s, t.n, t.u, t.side, t.contract, t.expiry, t.qty, t.in, t.in_idx, t.in_prem, t.sl_idx, t.sl_prem,
+      t.final_sl, t.out, t.out_idx, t.out_prem, t.why, t.legs.map(l => `${l[0]} ${l[1]} ${l[4]} idx ${l[2]} prem ${l[3]}`).join(" | "),
+      (t.moves || []).map(m => `${m[0]} -> ${m[1]} (${m[2]})`).join(" | "), t.best, t.gross, t.chg, t.net, t.reason]);
+  } else {
+    head = ["date", "day", "stock", "qty", "entry_time", "entry_price", "stop_loss", "target", "range_low", "range_high", "exit_time", "exit_price", "exit_reason", "gross_pnl", "charges", "net_pnl"];
+    body = rows.map(t => [t.date, t.dow, t.sym, t.qty, t.in, t.in_px, t.sl, t.tgt, t.or_lo, t.or_hi, t.out, t.out_px, t.why, t.gross, t.chg, t.net]);
+  }
+  const csv = [head, ...body].map(r => r.map(esc).join(",")).join("\n");
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([csv], { type: "text/csv" }));
+  a.download = `backtest-${btBook}-${$("bt-from").value}-to-${$("bt-to").value}${btPeriod ? "-" + btPeriod : ""}.csv`;
+  a.click();
 }
 
 // ------------------------------------------------------------------ events
@@ -606,6 +726,10 @@ document.querySelectorAll(".maintab").forEach(b => b.onclick = () => {
   try { localStorage.setItem("tab", tab); } catch {}
   if (tab === "BACKTEST") { if (!btChart) initBtChart(); loadBacktest(); }
   else { render(); loadChart(); }
+});
+document.querySelectorAll("#idx-switch button").forEach(b => b.onclick = () => { idxSel = b.dataset.u; render(); loadChart(); });
+document.querySelectorAll("#tf button").forEach(b => b.onclick = () => {
+  tf = b.dataset.tf; document.querySelectorAll("#tf button").forEach(x => x.classList.toggle("active", x === b)); loadChart();
 });
 $("fit").onclick = fitChart;
 $("go").onclick = async () => {
@@ -622,8 +746,8 @@ $("go").onclick = async () => {
   refresh();
 };
 $("mode-live").onclick = () => {
-  mode = "live"; $("mode-live").classList.add("active"); $("mode-replay").classList.remove("active");
-  $("replay-date").hidden = true; $("replay-banner").hidden = true; view = null; refresh();
+  mode = "live"; idxSel = null; $("mode-live").classList.add("active"); $("mode-replay").classList.remove("active");
+  $("replay-date").hidden = true; $("replay-banner").hidden = true; render(); loadChart();
 };
 $("mode-replay").onclick = async () => {
   mode = "replay"; $("mode-replay").classList.add("active"); $("mode-live").classList.remove("active");
@@ -631,33 +755,39 @@ $("mode-replay").onclick = async () => {
   if (!sel.options.length) {
     let d = { days: [] };
     try { d = await api.days(); } catch {}
-    sel.innerHTML = d.days.map(x => `<option>${x}</option>`).join("");
+    sel.innerHTML = d.days.map(x => `<option value="${x}">${x} (${["Sun","Mon","Tue","Wed","Thu","Fri","Sat"][new Date(x + "T00:00:00Z").getUTCDay()]})</option>`).join("");
   }
   if (sel.value) showReplay(sel.value);
 };
 $("replay-date").onchange = e => showReplay(e.target.value);
-["bt-from", "bt-to", "bt-strat", "bt-und"].forEach(id => $(id).onchange = () => {
-  if (id.startsWith("bt-f") || id.startsWith("bt-to")) document.querySelectorAll("#bt-preset button").forEach(x => x.classList.remove("active"));
-  renderBacktest();
+document.querySelectorAll("#bt-book button").forEach(b => b.onclick = () => {
+  document.querySelectorAll("#bt-book button").forEach(x => x.classList.toggle("active", x === b));
+  btBook = b.dataset.b; btPeriod = null; setupBtRange(); renderBacktest();
 });
+["bt-from", "bt-to"].forEach(id => $(id).onchange = () => {
+  document.querySelectorAll("#bt-preset button").forEach(x => x.classList.remove("active")); btPeriod = null; renderBacktest();
+});
+["bt-strat", "bt-und"].forEach(id => $(id).onchange = () => renderBacktest());
 document.querySelectorAll("#bt-preset button").forEach(b => b.onclick = () => {
   document.querySelectorAll("#bt-preset button").forEach(x => x.classList.toggle("active", x === b));
   const last = $("bt-to").max, days = +b.dataset.p;
   $("bt-to").value = last;
   if (!days) $("bt-from").value = $("bt-from").min;
   else { const d = new Date(last + "T00:00:00Z"); d.setUTCDate(d.getUTCDate() - days + 1); const s = d.toISOString().slice(0, 10); $("bt-from").value = s < $("bt-from").min ? $("bt-from").min : s; }
-  renderBacktest();
+  btPeriod = null; renderBacktest();
 });
 document.querySelectorAll("#bt-group button").forEach(b => b.onclick = () => {
   document.querySelectorAll("#bt-group button").forEach(x => x.classList.toggle("active", x === b));
-  btGroup = b.dataset.g; renderBacktest();
+  btGroup = b.dataset.g; btPeriod = null; renderBacktest();
 });
+$("bt-clear").onclick = () => { btPeriod = null; renderBacktest(); };
+$("bt-csv").onclick = downloadCsv;
 
 setInterval(() => { $("clock").textContent = new Date().toLocaleTimeString("en-IN", { timeZone: "Asia/Kolkata", hour12: false }) + " IST"; }, 1000);
 initChart();
 let saved = null;
 try { saved = localStorage.getItem("tab"); } catch {}
-refresh().then(() => { if (saved && saved !== "NIFTY") document.querySelector(`.maintab[data-tab="${saved}"]`)?.click(); });
+refresh().then(() => { if (saved && saved !== "INDEX") document.querySelector(`.maintab[data-tab="${saved}"]`)?.click(); });
 setInterval(refresh, 15000);
 </script>
 </body>

@@ -326,11 +326,11 @@ def cmd_update(args):
         import options
         paused = options.circuit_breaker(day, option_history(acct, day.isoformat()))
         if paused:
-            rec["options"] = options.paused_day(paused)
+            rec["options"] = options.paused_day(paused, day)
         else:
-            und, vix = options.fetch("5d")
+            und5, und1, vix = options.fetch()
             rec["options"] = options.simulate_options_day(
-                day, und, [b for b in vix if b["t"].date() == day], now=now)
+                day, und5, und1, [b for b in vix if b["t"].date() == day], now=now)
     except Exception as e:
         print(f"  options: data error {e}")
     rec.update(updated_at=now.isoformat(timespec="seconds"), final=now.time() >= dt.time(15, 35))
@@ -356,13 +356,15 @@ def print_day(day, rec):
     if not rec.get("trades"):
         print("  no stock trades yet")
     opt = rec.get("options") or {}
+    if opt.get("index_today"):
+        print(f"  index today: {opt['index_today']}")
     for und, lv in opt.get("levels", {}).items():
-        print(f"  {und:<12} first 5-min candle {lv['low']:.2f}-{lv['high']:.2f} (mid {lv['mid']:.2f})")
+        print(f"  {und:<12} first 1-min candle {lv['low']:.2f}-{lv['high']:.2f}")
     for t in opt.get("trades", []):
-        legs = " | ".join(f"{l['lots']}L {l['reason']} @ {l['index']:.2f} (prem {l['premium']:.2f})" for l in t["legs"])
+        legs = " | ".join(f"{l['qty']} {l['reason']} @ {l['index']:.2f} (prem {l['premium']:.2f})" for l in t["legs"])
         tail = f"net Rs {t['net_pnl']:,.2f}" if t["status"] == "CLOSED" else f"open, unrealised Rs {t.get('unrealised', 0):,.2f}"
-        print(f"  {t['strategy']:<8} #{t['trade_no']} BUY {t['lots']} lots {t['symbol']} @ prem {t['entry_premium']:.2f} "
-              f"(index {t['entry_index']:.2f}, {t['entry_time'][11:16]})  {legs}  {tail}")
+        print(f"  {t['strategy']:<8} #{t['trade_no']} BUY {t['qty']} {t['symbol']} @ prem {t['entry_premium']:.2f} "
+              f"(index {t['entry_index']:.2f}, SL {t['initial_stop']:.2f}, {t['entry_time'][11:16]})  {legs}  {tail}")
     for k, s in opt.get("status", {}).items():
         if s.get("note"):
             print(f"  {k}: {s['note']}")
@@ -404,9 +406,9 @@ def cmd_report(args):
     for d, rec in sorted(acct["days"].items()):
         for t in day_trades(rec):
             if t.get("strategy"):  # option strategy: show the contract, lots and every exit leg
-                legs = "; ".join(f"{l['lots']}L {l['reason']} {l['premium']:.2f}" for l in t["legs"]) or "open"
+                legs = "; ".join(f"{l['qty']} {l['reason']} {l['premium']:.2f}" for l in t["legs"]) or "open"
                 net = f"{t['net_pnl']:,.2f}" if t["status"] == "CLOSED" else "-"
-                lines.append(f"| {d} | {t['strategy']} {t['symbol']} | {t['lots']} lots | "
+                lines.append(f"| {d} | {t['strategy']} {t['symbol']} | {t['qty']} | "
                              f"{t['entry_premium']:.2f} @ {t['entry_time'][11:16]} | {legs} | "
                              f"{t.get('exit_reason', 'open')} | {net} | {t.get('r_multiple') or 0:+.2f} |")
             elif t["status"] == "CLOSED":

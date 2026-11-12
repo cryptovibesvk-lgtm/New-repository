@@ -27,15 +27,15 @@ _cache = {}
 _lock = threading.Lock()
 
 
-def chart(symbol, range_):
-    """Yahoo 5-minute chart, cached (1 min for today, 30 min for history)."""
+def chart(symbol, range_, interval="5m"):
+    """Yahoo chart, cached (1 min for today, 30 min for history)."""
     ttl = 60 if range_ == "1d" else 1800
-    key = (symbol, range_)
+    key = (symbol, range_, interval)
     with _lock:
         hit = _cache.get(key)
         if hit and time.time() - hit[0] < ttl:
             return hit[1]
-    data = nsemkt.yahoo_chart(paper.yahoo_of(symbol), interval="5m", range_=range_)
+    data = nsemkt.yahoo_chart(paper.yahoo_of(symbol), interval=interval, range_=range_)
     with _lock:
         _cache[key] = (time.time(), data)
     return data
@@ -169,15 +169,36 @@ def api_state():
 def options_config():
     import options
     o = options.OPT
-    return {"lots": o["lots"], "book": o["book"], "max_trades": o["max_trades"], "points": o["points"],
+    return {"orb1": o["orb1"], "ema_lots": o["ema_lots"], "ema_book": o["ema_book"], "trade_days": o["trade_days"],
+            "max_trades": o["max_trades"], "points": o["points"],
             "entry_until": o["entry_until"].strftime("%H:%M"), "day_loss_limit": o["day_loss_limit"],
             "week_loss_limit": o["week_loss_limit"], "month_loss_limit": o["month_loss_limit"],
             "capital": o["capital"]}
 
 
-def api_bars(symbol, date):
+def bars_1m(symbol, day):
+    """1-minute session bars for an index: live Yahoo for today, the archive otherwise."""
+    import history
+    today = dt.datetime.now(IST).date()
+    src = chart(symbol, "1d", "1m")["bars"] if day == today else history.load(symbol, start=day, end=day, interval="1m")
+    return [b for b in src if b["t"].date() == day and dt.time(9, 15) <= b["t"].time() < dt.time(15, 30)]
+
+
+def api_bars(symbol, date, interval="5m"):
     today = dt.datetime.now(IST).date()
     day = dt.date.fromisoformat(date) if date else today
+    if interval == "1m" and symbol in paper.INDEXES:
+        import history
+        b1 = bars_1m(symbol, day)
+        shown = day
+        if not b1:  # before the open: the latest archived session
+            info = history.info("1m").get(symbol) or {}
+            if info.get("last"):
+                shown = dt.date.fromisoformat(info["last"])
+                b1 = bars_1m(symbol, shown)
+        return {"symbol": symbol, "interval": "1m", "requested": day.isoformat(), "date": shown.isoformat(),
+                "bars": [{"time": int(b["t"].timestamp()), "open": b["o"], "high": b["h"], "low": b["l"],
+                          "close": b["c"]} for b in b1]}
     bars = session_bars(symbol, day, "1d" if day == today else "60d")
     shown = day
     if not bars:  # before the open: show the latest session instead
@@ -221,12 +242,13 @@ def api_replay(date):
     stock_bars = {s: b for s, b in bars.items() if s not in paper.INDEXES or paper.INDEX_FUTURES}
     res = paper.simulate_day(day, stock_bars, paper.CONFIG["start_capital"])
     import options
-    und = {u: [b for b in chart(u, "60d")["bars"] if b["t"].date() <= day] for u in options.OPT["underlyings"]}
-    try:
-        vix = [b for b in nsemkt.yahoo_chart("^INDIAVIX", interval="5m", range_="60d")["bars"] if b["t"].date() == day]
-    except Exception:
-        vix = []
-    res["options"] = options.simulate_options_day(day, und, vix)
+    import history
+    lo = day - dt.timedelta(days=6)
+    und5 = {u: history.load(u, start=lo, end=day) or [b for b in chart(u, "60d")["bars"] if b["t"].date() <= day]
+            for u in options.OPT["underlyings"]}
+    und1 = {u: bars_1m(u, day) for u in options.OPT["underlyings"]}
+    vix = history.load("INDIAVIX", start=day, end=day)
+    res["options"] = options.simulate_options_day(day, und5, und1, vix)
     quotes_ = {}
     for s, b in bars.items():
         if b:
@@ -235,6 +257,19 @@ def api_replay(date):
                           "chg_pct": (b[ts[-1]]["c"] / b[ts[0]]["o"] - 1) * 100}
     realised = sum(t["net_pnl"] for t in paper.day_trades(res) if t["status"] == "CLOSED")
     return {"date": date, "watchlist": symbols, "quotes": quotes_, "realised": round(realised, 2), **res}
+
+
+def site_stocks(path):
+    """The stock backtest fetches 50 charts, so it is rebuilt once a day only."""
+    import backtest
+    try:
+        with open(path, encoding="utf-8") as f:
+            old = (json.load(f) or {}).get("stocks") or {}
+        if old.get("generated_for") == dt.datetime.now(IST).date().isoformat():
+            return None
+    except (OSError, ValueError):
+        pass
+    return backtest.run_stocks()
 
 
 def start_session():
@@ -282,14 +317,15 @@ class Handler(BaseHTTPRequestHandler):
             if u.path == "/api/state":
                 return self._send(200, api_state())
             if u.path == "/api/bars":
-                return self._send(200, api_bars(q["symbol"], q.get("date")))
+                return self._send(200, api_bars(q["symbol"], q.get("date"), q.get("interval", "5m")))
             if u.path == "/api/days":
                 return self._send(200, api_days())
             if u.path == "/api/replay":
                 return self._send(200, api_replay(q["date"]))
             if u.path == "/api/backtest":
                 import backtest
-                return self._send(200, backtest.export(os.path.join(paper.PAPER_DIR, "backtest.json"), backtest.run()))
+                path = os.path.join(paper.PAPER_DIR, "backtest.json")
+                return self._send(200, backtest.export(path, backtest.run(), site_stocks(path)))
             self._send(404, {"error": "not found"})
         except Exception as e:
             self._send(500, {"error": str(e)})

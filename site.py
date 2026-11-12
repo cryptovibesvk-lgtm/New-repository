@@ -19,7 +19,7 @@ DOCS = os.path.join(HERE, "docs")
 DATA = os.path.join(DOCS, "data")
 CLOUD_LOG = os.path.join(paper.PAPER_DIR, "cloud.log")
 REPLAY_DAYS = 20
-REPLAY_VERSION = 3  # 3 = EMA retest entry + 9 EMA body-close exit
+REPLAY_VERSION = 4  # 4 = ORB1 (1-minute) + day routing
 
 
 def dump(path, obj):
@@ -62,6 +62,8 @@ def export():
     for sym in state["today"]["watchlist"]:
         try:
             dump(os.path.join(DATA, "bars", f"{sym}.json"), dashboard.api_bars(sym, None))
+            if sym in paper.INDEXES:
+                dump(os.path.join(DATA, "bars", f"{sym}-1m.json"), dashboard.api_bars(sym, None, "1m"))
         except Exception as e:
             print(f"bars {sym}: {e}")
 
@@ -80,12 +82,15 @@ def export():
         for d in days:
             rep = dashboard.api_replay(d)
             rep["bars"] = {s: dashboard.api_bars(s, d)["bars"] for s in wl}
+            rep["bars1m"] = {s: dashboard.api_bars(s, d, "1m")["bars"] for s in paper.INDEXES}
             dump(os.path.join(DATA, "replay", f"{d}.json"), rep)
         dump(os.path.join(DATA, "days.json"), {"days": days})
         dump(marker, {"version": REPLAY_VERSION, "watchlist": wl})
     import backtest
-    bt = backtest.export(os.path.join(DATA, "backtest.json"), backtest.run())
-    print(f"backtest: {len(bt['days'])} sessions")
+    path = os.path.join(DATA, "backtest.json")
+    bt = backtest.export(path, backtest.run(), dashboard.site_stocks(path))
+    print(f"backtest: {len(bt['index']['days'])} index sessions, "
+          f"{len((bt.get('stocks') or {}).get('days') or [])} stock sessions")
     print(f"site exported: {DOCS}")
 
 
