@@ -57,9 +57,18 @@ The dashboard's **Backtest** tab groups results by day / week / month / year for
 range, lists every trade (date, time, buy/sell, qty, entry, stop-loss, every exit,
 charges, net) and downloads it as CSV.
 
-Free Yahoo data only reaches back ~60 days (5-minute) and ~30 days (1-minute). **For a
-full year, import from Zerodha Kite Connect** (read-only market data; needs a Kite Connect
-app with historical data). Set your keys in your own terminal, never in chat or git:
+Free Yahoo data only reaches back ~60 days (5-minute) and ~30 days (1-minute). **A full
+year comes from Upstox's public historical-candle API** (no login needed):
+
+    python upstox.py --days 400 --stocks       # NIFTY, SENSEX, VIX (1m + 5m) + Nifty 50 stocks (5m)
+    python site.py                             # rebuild the backtest, then commit and push
+
+The archive in `data/` currently holds Sep 2025 onwards and grows every trading day.
+Index prices are real candles; option premiums are Black-Scholes estimates, not traded
+option prices.
+
+Zerodha Kite Connect also works (needs a paid Kite Connect app). Set your keys in your own
+terminal, never in chat or git:
 
     $env:KITE_API_KEY = "your_api_key"; $env:KITE_API_SECRET = "your_api_secret"
     python kite.py login                       # sign in to Kite in the browser

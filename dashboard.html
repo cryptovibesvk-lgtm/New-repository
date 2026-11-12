@@ -649,11 +649,11 @@ function setupBtRange() {
     $("bt-range").textContent = `${first} → ${last} · ${ds.length} sessions`;
     $("bt-data").innerHTML = `Same code and rules as the live option book: Mon/Fri NIFTY ORB1, Tue NIFTY expiry sell, Wed/Thu SENSEX EMA9_21, with the loss stops.
       5-minute data ${a5.first} → ${a5.last}. 1-minute data NIFTY ${a1.first} → ${a1.last} (ORB1 needs it; the Tuesday sell uses 1-minute when
-      available, else 5-minute). <b>Free data only reaches back ~60 days (5-min) / ~30 days (1-min).</b> For a full year, import from Zerodha Kite:
-      <code>python kite.py login</code> then <code>python kite.py history --days 365 --stocks</code>. Premiums are Black-Scholes estimates (India VIX, trading time).`;
+      available, else 5-minute). History imported from Upstox's public candle API (<code>python upstox.py --days 400 --stocks</code>) and topped up
+      every trading day. Index prices are real; <b>option premiums are Black-Scholes estimates</b> (India VIX, trading time), not traded option prices.`;
   } else {
     $("bt-range").textContent = `${first} → ${last} · ${ds.length} sessions · ${d.universe}`;
-    $("bt-data").innerHTML = `Stock ORB on every ${d.universe} stock each day, first 3 breakouts (fixed universe, no hindsight). 5-minute data, last ~60 days. Built once a day.`;
+    $("bt-data").innerHTML = `Stock ORB on every ${d.universe} stock each day, first 3 breakouts (fixed universe, no hindsight). 5-minute candles from Upstox history + Yahoo. Built once a day.`;
   }
 }
 

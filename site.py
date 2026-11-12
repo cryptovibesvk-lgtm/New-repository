@@ -93,10 +93,24 @@ def export():
         dump(os.path.join(DATA, "days.json"), {"days": days})
         dump(marker, {"version": REPLAY_VERSION, "watchlist": wl})
     import backtest
+    import history
     path = os.path.join(DATA, "backtest.json")
-    bt = backtest.export(path, backtest.run(), dashboard.site_stocks(path))
-    print(f"backtest: {len(bt['index']['days'])} index sessions, "
-          f"{len((bt.get('stocks') or {}).get('days') or [])} stock sessions")
+    # a full-year backtest only changes when new candles arrive or the rules change
+    key = json.dumps([REPLAY_VERSION, {i: {s: v.get("last") for s, v in history.info(i).items()} for i in ("1m", "5m")}])
+    try:
+        with open(path, encoding="utf-8") as f:
+            old = json.load(f)
+    except (OSError, ValueError):
+        old = {}
+    stocks = dashboard.site_stocks(path)
+    if old.get("key") == key and stocks is None:
+        print("backtest: unchanged")
+    else:
+        bt = backtest.export(path, backtest.run(), stocks)
+        bt["key"] = key
+        dump(path, bt)
+        print(f"backtest: {len(bt['index']['days'])} index sessions, "
+              f"{len((bt.get('stocks') or {}).get('days') or [])} stock sessions")
     print(f"site exported: {DOCS}")
 
 
