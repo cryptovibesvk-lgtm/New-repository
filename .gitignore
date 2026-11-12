@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+paper/*.log
+!paper/cloud.log
+paper/*.tmp
+.claude/
