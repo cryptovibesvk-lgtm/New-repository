@@ -20,32 +20,37 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
-      - name: Trade one step (virtual money)
-        run: |
-          mkdir -p paper
-          python -u paper.py tick 2>&1 | tee -a paper/cloud.log
-
-      - name: Publish dashboard data
-        run: python -u site.py
-
-      - name: Save results
+      # One step does trade + publish + save. Every output file is regenerated
+      # from market data, so if another run pushed first we never merge: we
+      # reset to the newest commit, redo the step on top of it, and push again.
+      - name: Trade, publish and save (virtual money)
         run: |
           git config user.name "paper-trader-bot"
           git config user.email "paper-trader-bot@users.noreply.github.com"
-          git add -A paper docs nse-trader
-          if git diff --cached --quiet; then
-            echo "nothing changed"
-            exit 0
-          fi
-          git commit -m "paper: $(TZ=Asia/Kolkata date '+%Y-%m-%d %H:%M') IST"
-          for i in 1 2 3; do
-            git pull --rebase --autostash && git push && exit 0
-            sleep 5
+          step() {
+            mkdir -p paper
+            python -u paper.py tick 2>&1 | tee -a paper/cloud.log
+            python -u site.py
+            git add -A paper docs nse-trader
+            if git diff --cached --quiet; then
+              echo "nothing changed"
+              return 1
+            fi
+            git commit -q -m "paper: $(TZ=Asia/Kolkata date '+%Y-%m-%d %H:%M') IST"
+          }
+          for i in 1 2 3 4 5; do
+            step || exit 0
+            git push origin HEAD:main && exit 0
+            echo "another run saved first - redoing this step on the newest data"
+            sleep $((i * 3))
+            git fetch -q origin main
+            git reset -q --hard origin/main
           done
+          echo "could not save after 5 tries"
           exit 1
