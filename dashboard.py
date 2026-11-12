@@ -35,7 +35,7 @@ def chart(symbol, range_):
         hit = _cache.get(key)
         if hit and time.time() - hit[0] < ttl:
             return hit[1]
-    data = nsemkt.yahoo_chart(symbol, interval="5m", range_=range_)
+    data = nsemkt.yahoo_chart(paper.yahoo_of(symbol), interval="5m", range_=range_)
     with _lock:
         _cache[key] = (time.time(), data)
     return data
@@ -61,16 +61,18 @@ def read_status():
 
 
 def watch_symbols(acct, day):
+    """NIFTY and SENSEX always come first, then the day's stock picks."""
+    idx = list(paper.INDEXES)
     rec = acct["days"].get(day.isoformat(), {})
     if rec.get("watchlist"):
-        return rec["watchlist"], "today"
+        return idx + rec["watchlist"], "today"
     try:
         with open(os.path.join(HERE, "nse-trader", "watchlist.json"), encoding="utf-8") as f:
             wl = json.load(f)
         items = wl.get("items", wl) if isinstance(wl, dict) else wl
-        return [i["symbol"] for i in items][: paper.CONFIG["watchlist_size"]], "last scan"
+        return idx + [i["symbol"] for i in items][: paper.CONFIG["watchlist_size"]], "last scan"
     except (OSError, ValueError, KeyError):
-        return [], "none"
+        return idx, "none"
 
 
 def quotes(symbols):
@@ -115,6 +117,7 @@ def api_state():
         "session": nsemkt.session_state(now),
         "status": read_status(),
         "config": {k: (v.strftime("%H:%M") if isinstance(v, dt.time) else v) for k, v in paper.CONFIG.items()},
+        "indexes": {s: {"lot": paper.lot_size(s)} for s in paper.INDEXES},
         "start_capital": acct["start_capital"],
         "equity": round(equity, 2),
         "summary": s,

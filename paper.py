@@ -54,6 +54,35 @@ CONFIG = {
 }
 BAR = dt.timedelta(minutes=5)
 
+# Index trades: the same breakout rules on the index level, sized and charged as
+# index futures. Prices come from the spot index (Yahoo), so a real future's
+# premium/discount is not modelled. NIFTY's lot is read from NSE's fo_mktlots;
+# SENSEX (a BSE contract) uses the fallback - confirm it with your broker.
+INDEXES = {
+    "NIFTY": {"yahoo": "^NSEI", "fallback_lot": 65},
+    "SENSEX": {"yahoo": "^BSESN", "fallback_lot": 20},
+}
+INDEX_CONFIG = {
+    "lots": 1,
+    "margin_pct": 0.12,          # estimated futures margin, of contract value
+    "slippage_pct": 0.0002,
+    "min_stop_pct": 0.0008,      # ~20 points on NIFTY
+}
+_lots_cache = {}
+
+
+def yahoo_of(sym):
+    return INDEXES[sym]["yahoo"] if sym in INDEXES else sym
+
+
+def lot_size(sym):
+    if sym not in _lots_cache:
+        try:
+            _lots_cache[sym] = int(nsemkt.fo_lots().get(sym) or INDEXES[sym]["fallback_lot"])
+        except Exception:
+            _lots_cache[sym] = INDEXES[sym]["fallback_lot"]
+    return _lots_cache[sym]
+
 
 def now_ist():
     return dt.datetime.now(IST)
@@ -86,7 +115,7 @@ def capital_before(acct, day):
 
 def day_bars(symbol, day, range_="5d"):
     """Regular-session 5-minute bars for one date, keyed by bar start time."""
-    chart = nsemkt.yahoo_chart(symbol, interval="5m", range_=range_)
+    chart = nsemkt.yahoo_chart(yahoo_of(symbol), interval="5m", range_=range_)
     out = {}
     for b in chart["bars"]:
         t = b["t"]
@@ -95,12 +124,17 @@ def day_bars(symbol, day, range_="5d"):
     return out
 
 
-def fill_up(p):
-    return nsemkt.round_tick(p * (1 + CONFIG["slippage_pct"]), "up")
+def fill_up(p, slip=None):
+    return nsemkt.round_tick(p * (1 + (CONFIG["slippage_pct"] if slip is None else slip)), "up")
 
 
-def fill_down(p):
-    return nsemkt.round_tick(p * (1 - CONFIG["slippage_pct"]), "down")
+def fill_down(p, slip=None):
+    return nsemkt.round_tick(p * (1 - (CONFIG["slippage_pct"] if slip is None else slip)), "down")
+
+
+def charges(segment, qty, entry, exit_px):
+    product = "NRML" if segment == "FNO" else "MIS"
+    return nsemkt.round_trip_charges(segment, qty, entry, exit_px, product)["total"]
 
 
 def simulate_day(day, bars_by_symbol, capital, now=None):
@@ -126,25 +160,31 @@ def simulate_day(day, bars_by_symbol, capital, now=None):
             b = bars_by_symbol[tr["symbol"]].get(t)
             if b is None or t <= dt.datetime.fromisoformat(tr["entry_time"]):
                 continue
+            slip = tr.get("slippage_pct")
             exit_px = reason = None
             if t.time() >= c["squareoff"]:
-                exit_px, reason = fill_down(b["o"]), "SQUARE_OFF_15:15"
+                exit_px, reason = fill_down(b["o"], slip), "SQUARE_OFF_15:15"
             elif b["l"] <= tr["stop"]:
-                exit_px, reason = fill_down(min(b["o"], tr["stop"])), "STOP"
+                exit_px, reason = fill_down(min(b["o"], tr["stop"]), slip), "STOP"
             elif b["h"] >= tr["target"]:
                 exit_px, reason = nsemkt.round_tick(max(b["o"], tr["target"]) if b["o"] > tr["target"]
                                                     else tr["target"]), "TARGET"
             if exit_px is not None:
                 close_trade(tr, exit_px, reason, t)
-                cash += tr["qty"] * tr["entry"] + tr["gross_pnl"]
+                cash += tr["margin"] + tr["gross_pnl"]
 
         # 2. look for new entries on this bar
         if not (c["entry_from"] <= t.time() < c["entry_cutoff"]):
             continue
         realised = sum(x["net_pnl"] for x in trades if x["status"] == "CLOSED")
         open_risk = sum(x["risk_at_stop"] for x in trades if x["status"] == "OPEN")
-        for sym in sorted(ranges):
-            if len(trades) >= c["max_trades_per_day"] or any(x["symbol"] == sym for x in trades):
+        stock_trades = sum(1 for x in trades if x["symbol"] not in INDEXES)
+        # indices first, then stocks; the stock cap does not count index trades
+        for sym in sorted(ranges, key=lambda s: (s not in INDEXES, s)):
+            is_index = sym in INDEXES
+            if any(x["symbol"] == sym for x in trades):
+                continue
+            if not is_index and stock_trades >= c["max_trades_per_day"]:
                 continue
             b = bars_by_symbol[sym].get(t)
             r = ranges[sym]
@@ -155,33 +195,57 @@ def simulate_day(day, bars_by_symbol, capital, now=None):
                      if c["entry_from"] <= tt.time() and tt < t and bb["c"] > r["or_high"]]
             if prior:
                 continue
-            entry = fill_up(b["c"])
+            slip = INDEX_CONFIG["slippage_pct"] if is_index else c["slippage_pct"]
+            min_stop = INDEX_CONFIG["min_stop_pct"] if is_index else c["min_stop_pct"]
+            entry = fill_up(b["c"], slip)
             stop = nsemkt.round_tick(r["or_mid"], "down")
             risk = entry - stop
-            if risk < max(2 * nsemkt.TICK, c["min_stop_pct"] * entry):
+            if risk < max(2 * nsemkt.TICK, min_stop * entry):
                 notes[sym] = f"{t:%H:%M} skipped: stop too tight ({risk:.2f})"
                 continue
             if risk > c["max_stop_pct"] * entry:
                 notes[sym] = f"{t:%H:%M} skipped: opening range too wide ({risk / entry:.1%})"
                 continue
             target = nsemkt.round_tick(entry + c["rr"] * risk, "up")
-            per_share_chg = nsemkt.round_trip_charges("CASH", 1000, entry, stop)["total"] / 1000
-            qty = math.floor(min(c["max_loss_per_trade"] / (risk + per_share_chg),
-                                 c["max_position_pct"] * capital / entry,
-                                 cash / entry))
-            if qty < 1:
-                notes[sym] = f"{t:%H:%M} skipped: no cash for a position"
-                continue
-            risk_at_stop = qty * risk + nsemkt.round_trip_charges("CASH", qty, entry, stop)["total"]
+            if is_index:
+                segment, lot = "FNO", lot_size(sym)
+                lots = INDEX_CONFIG["lots"]
+                while lots > 0 and lots * lot * risk + charges(segment, lots * lot, entry, stop) > c["max_loss_per_trade"]:
+                    lots -= 1
+                qty = lots * lot
+                margin = INDEX_CONFIG["margin_pct"] * entry * qty
+                if qty < 1:
+                    notes[sym] = f"{t:%H:%M} skipped: one lot risks more than the max loss"
+                    continue
+                if margin > cash:
+                    notes[sym] = f"{t:%H:%M} skipped: not enough virtual cash for margin (Rs {margin:,.0f})"
+                    continue
+            else:
+                segment, lot, lots = "CASH", 1, None
+                per_share_chg = charges(segment, 1000, entry, stop) / 1000
+                qty = math.floor(min(c["max_loss_per_trade"] / (risk + per_share_chg),
+                                     c["max_position_pct"] * capital / entry,
+                                     cash / entry))
+                margin = qty * entry
+                if qty < 1:
+                    notes[sym] = f"{t:%H:%M} skipped: no cash for a position"
+                    continue
+            risk_at_stop = qty * risk + charges(segment, qty, entry, stop)
             if -realised + open_risk + risk_at_stop > c["daily_loss_limit"]:
                 notes[sym] = f"{t:%H:%M} skipped: daily loss limit"
                 continue
-            trades.append({"symbol": sym, "status": "OPEN", "entry_time": t.isoformat(),
-                           "entry": entry, "stop": stop, "target": target, "qty": qty,
-                           "risk_at_stop": round(risk_at_stop, 2), **r,
-                           "gross_pnl": 0.0, "charges": 0.0, "net_pnl": 0.0})
-            cash -= qty * entry
+            trade = {"symbol": sym, "status": "OPEN", "entry_time": t.isoformat(),
+                     "entry": round(entry, 2), "stop": round(stop, 2), "target": round(target, 2), "qty": qty,
+                     "segment": segment, "margin": round(margin, 2), "slippage_pct": slip,
+                     "risk_at_stop": round(risk_at_stop, 2), **r,
+                     "gross_pnl": 0.0, "charges": 0.0, "net_pnl": 0.0}
+            if is_index:
+                trade.update(kind="INDEX_FUT", lot=lot, lots=lots)
+            trades.append(trade)
+            cash -= margin
             open_risk += risk_at_stop
+            if not is_index:
+                stock_trades += 1
 
     # mark open positions to the last completed bar; past 15:20 a missing
     # 15:15 bar must not leave a position open overnight, so close at that bar
@@ -193,7 +257,7 @@ def simulate_day(day, bars_by_symbol, capital, now=None):
             last_t = max(done) if done else None
             last = bars[last_t]["c"] if done else tr["entry"]
             if session_over and last_t is not None:
-                close_trade(tr, fill_down(last), "SQUARE_OFF_15:15", last_t)
+                close_trade(tr, fill_down(last, tr.get("slippage_pct")), "SQUARE_OFF_15:15", last_t)
                 continue
             tr["last"] = last
             tr["unrealised"] = round((last - tr["entry"]) * tr["qty"], 2)
@@ -201,9 +265,10 @@ def simulate_day(day, bars_by_symbol, capital, now=None):
 
 
 def close_trade(tr, exit_px, reason, t):
+    exit_px = round(exit_px, 2)
     tr.update(status="CLOSED", exit=exit_px, exit_time=t.isoformat(), exit_reason=reason)
     tr["gross_pnl"] = round((exit_px - tr["entry"]) * tr["qty"], 2)
-    tr["charges"] = nsemkt.round_trip_charges("CASH", tr["qty"], tr["entry"], exit_px)["total"]
+    tr["charges"] = charges(tr.get("segment", "CASH"), tr["qty"], tr["entry"], exit_px)
     tr["net_pnl"] = round(tr["gross_pnl"] - tr["charges"], 2)
     tr["r_multiple"] = round(tr["net_pnl"] / tr["risk_at_stop"], 2) if tr["risk_at_stop"] else None
 
@@ -237,7 +302,7 @@ def cmd_update(args):
         print("no watchlist for today - run: python paper.py premarket")
         return
     bars = {}
-    for sym in rec["watchlist"]:
+    for sym in list(INDEXES) + rec["watchlist"]:
         try:
             bars[sym] = day_bars(sym, day, "1d")
         except Exception as e:  # keep going on one bad symbol
@@ -250,11 +315,12 @@ def cmd_update(args):
 
 
 def print_day(day, rec):
-    print(f"PAPER {day}  watchlist {', '.join(rec.get('watchlist', []))}")
+    print(f"PAPER {day}  indices {', '.join(INDEXES)}  watchlist {', '.join(rec.get('watchlist', []))}")
     for sym, r in rec.get("ranges", {}).items():
         print(f"  {sym:<12} OR {r['or_low']:.2f}-{r['or_high']:.2f}")
     for t in rec.get("trades", []):
-        line = (f"  {t['status']:<6} {t['symbol']:<12} BUY {t['qty']} @ {t['entry']:.2f} "
+        size = f"{t['lots']} lot ({t['qty']})" if t.get("kind") == "INDEX_FUT" else str(t["qty"])
+        line = (f"  {t['status']:<6} {t['symbol']:<12} BUY {size} @ {t['entry']:.2f} "
                 f"({t['entry_time'][11:16]})  stop {t['stop']:.2f}  target {t['target']:.2f}")
         if t["status"] == "CLOSED":
             line += f"  -> {t['exit_reason']} {t['exit']:.2f} ({t['exit_time'][11:16]})  net Rs {t['net_pnl']:,.2f}"
@@ -405,8 +471,8 @@ def cmd_replay(args):
     if not symbols:
         with open(os.path.join(HERE, "nse-trader", "watchlist.json"), encoding="utf-8") as f:
             wl = json.load(f)
-        symbols = [i["symbol"] for i in (wl.get("items", wl) if isinstance(wl, dict) else wl)][:10]
-    charts = {s: nsemkt.yahoo_chart(s, interval="5m", range_="60d")["bars"] for s in symbols}
+        symbols = list(INDEXES) + [i["symbol"] for i in (wl.get("items", wl) if isinstance(wl, dict) else wl)][:10]
+    charts = {s: nsemkt.yahoo_chart(yahoo_of(s), interval="5m", range_="60d")["bars"] for s in symbols}
     days = sorted({b["t"].date() for bars in charts.values() for b in bars})
     today = now_ist().date()
     days = [d for d in days if d < today][-args.days:]

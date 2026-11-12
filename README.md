@@ -10,6 +10,12 @@ middle, target 1.5× risk → square off at 15:15. Max 3 trades/day, 25% of capi
 position, ₹10,000 max loss per trade, ₹20,000 daily loss limit. Prices: Yahoo Finance
 5-minute bars (free, may lag a little). Charges and 0.05% slippage are included.
 
+**NIFTY 50 and SENSEX** are traded every day with the same rules, as 1 futures lot each
+(NIFTY lot from NSE's lot-size file, currently 65; SENSEX 20, a BSE contract, so confirm
+it). They use the index level from Yahoo, so a real future's premium is not modelled.
+Margin is estimated at 12% of contract value, and F&O charges are included. Index trades
+do not count toward the 3-stock limit but do count toward the daily loss limit.
+
 ## Set up (once)
 
 1. Create a free account at github.com and sign in.

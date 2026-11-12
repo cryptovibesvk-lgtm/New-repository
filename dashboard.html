@@ -20,6 +20,7 @@
   .badge { padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; }
   .virtual { background: rgba(167,139,250,.15); color: var(--violet); border: 1px solid rgba(167,139,250,.4); }
   .pill { background: var(--panel2); color: var(--muted); border: 1px solid var(--line); }
+  .badge.idx { font-size: 10px; padding: 1px 6px; vertical-align: middle; background: rgba(245,158,11,.15); color: var(--amber); border: 1px solid rgba(245,158,11,.4); }
   .pill.open { color: var(--green); border-color: rgba(34,197,94,.4); }
   .spacer { flex: 1; }
   .clock { font-variant-numeric: tabular-nums; color: var(--muted); }
@@ -121,7 +122,8 @@
         <div>
           <div class="status-msg"><span class="dot" id="dot"></span><span id="status">Loading…</span></div>
           <div class="fine">Virtual ₹ only: no broker is connected. Rules: opening range 09:15–09:30 → buy the first 5-min close above it →
-            stop at range middle, target 1.5×, out by 15:15. Real orders are always placed by you in your broker.</div>
+            stop at range middle, target 1.5×, out by 15:15. NIFTY &amp; SENSEX trade as 1 futures lot each (simulated on the index level).
+            Real orders are always placed by you in your broker.</div>
         </div>
       </div>
       <div class="steps" id="steps"></div>
@@ -138,7 +140,7 @@
     </div>
 
     <div class="card">
-      <h2>Stocks picked <small id="wl-src"></small></h2>
+      <h2>NIFTY, SENSEX &amp; stocks picked <small id="wl-src"></small></h2>
       <div class="stocks" id="stocks"></div>
     </div>
 
@@ -180,6 +182,8 @@ const IST_OFFSET = 19800;  // chart shows IST wall-clock times
 const inr = v => v == null ? "–" : "₹" + Number(v).toLocaleString("en-IN", {minimumFractionDigits: 2, maximumFractionDigits: 2});
 const signed = v => (v > 0 ? "+" : "") + inr(v);
 const hhmm = iso => iso ? iso.slice(11, 16) : "";
+const IDX = ["NIFTY", "SENSEX"];
+const size = t => t.lots ? `${t.lots} lot (${t.qty})` : t.qty;
 const $ = id => document.getElementById(id);
 
 let mode = "live", state = null, view = null, selected = null, chart, candles, lines = [];
@@ -238,13 +242,13 @@ function renderStocks(v) {
     if (s.t) {
       const t = s.t, px = t.status === "OPEN" ? (t.last || t.entry) : t.exit;
       const pct = Math.max(0, Math.min(100, (px - t.stop) / (t.target - t.stop) * 100));
-      extra += `<div class="meta">${t.qty} @ ${t.entry.toFixed(2)} · stop ${t.stop.toFixed(2)} · target ${t.target.toFixed(2)}</div>
+      extra += `<div class="meta">${size(t)} @ ${t.entry.toFixed(2)} · stop ${t.stop.toFixed(2)} · target ${t.target.toFixed(2)}</div>
         <div class="bar" title="stop ← price → target"><i style="left:calc(${pct}% - 1px)"></i></div>
         <div class="meta">${t.status === "OPEN" ? "Unrealised " + signed(t.unrealised || 0) : "Net " + signed(t.net_pnl)}</div>`;
     }
     if (s.note) extra += `<div class="meta">${s.note}</div>`;
     return `<div class="stock ${sym === selected ? "sel" : ""}" style="animation-delay:${i * 60}ms" data-sym="${sym}">
-      <div class="top"><span class="sym">${sym}</span><span class="px">${q.last != null ? q.last.toFixed(2) : "–"} ${chg}</span></div>
+      <div class="top"><span class="sym">${sym}${IDX.includes(sym) ? ' <span class="badge idx">INDEX FUT</span>' : ""}</span><span class="px">${q.last != null ? q.last.toFixed(2) : "–"} ${chg}</span></div>
       <span class="chip ${s.cls}">${s.text}</span>${extra}</div>`;
   }).join("");
   box.querySelectorAll(".stock").forEach(el => el.onclick = () => { selected = el.dataset.sym; renderStocks(view); loadChart(); });
@@ -281,7 +285,7 @@ function renderTrades(v) {
     const res = t.status === "OPEN" ? '<span class="chip c-open">OPEN</span>' :
       `<span class="chip ${t.exit_reason === "TARGET" ? "c-win" : t.exit_reason === "STOP" ? "c-loss" : "c-flat"}">${t.exit_reason}</span>`;
     const pnl = t.status === "OPEN" ? (t.unrealised || 0) : t.net_pnl;
-    return `<tr><td><b>${t.symbol}</b></td><td>${t.qty}</td><td>${t.entry.toFixed(2)} <span class="meta">${hhmm(t.entry_time)}</span></td>
+    return `<tr><td><b>${t.symbol}</b></td><td>${size(t)}</td><td>${t.entry.toFixed(2)} <span class="meta">${hhmm(t.entry_time)}</span></td>
       <td>${t.stop.toFixed(2)}</td><td>${t.target.toFixed(2)}</td>
       <td>${t.exit ? t.exit.toFixed(2) + ' <span class="meta">' + hhmm(t.exit_time) + "</span>" : "–"}</td>
       <td>${res}</td><td class="${pnl >= 0 ? "pos" : "neg"}">${signed(pnl)}</td></tr>`;
@@ -332,7 +336,8 @@ function renderLive() {
   $("k-pnl-label").textContent = "Today P&L";
   const pnl = s.today.realised + s.today.unrealised;
   $("k-pnl").innerHTML = `<span class="${pnl >= 0 ? "pos" : "neg"}">${signed(pnl)}</span>`;
-  $("k-trades").textContent = `${s.today.trades.length} / ${s.config.max_trades_per_day}`;
+  const nIdx = s.today.trades.filter(t => IDX.includes(t.symbol)).length;
+  $("k-trades").textContent = `${s.today.trades.length - nIdx}/${s.config.max_trades_per_day} stocks · ${nIdx} index`;
   $("k-open").textContent = s.today.trades.filter(t => t.status === "OPEN").length;
   $("wl-src").textContent = s.today.watchlist_source === "today" ? `· today's scan` : s.today.watchlist.length ? "· from the last scan (today's scan runs at 08:45)" : "";
   $("log").textContent = s.log.join("\n") || "Nothing yet. Press Start.";
