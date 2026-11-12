@@ -20,6 +20,8 @@
   .badge { padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; }
   .virtual { background: rgba(167,139,250,.15); color: var(--violet); border: 1px solid rgba(167,139,250,.4); }
   .pill { background: var(--panel2); color: var(--muted); border: 1px solid var(--line); }
+  .leg { white-space: nowrap; margin: 2px 0; }
+  .leg .chip { margin-top: 0; }
   .badge.idx { font-size: 10px; padding: 1px 6px; vertical-align: middle; background: rgba(245,158,11,.15); color: var(--amber); border: 1px solid rgba(245,158,11,.4); }
   .pill.open { color: var(--green); border-color: rgba(34,197,94,.4); }
   .spacer { flex: 1; }
@@ -140,7 +142,21 @@
     </div>
 
     <div class="card">
-      <h2>NIFTY, SENSEX &amp; stocks picked <small id="wl-src"></small></h2>
+      <h2>Option strategies <small>NIFTY &amp; SENSEX · CE/PE buying · virtual</small></h2>
+      <div class="stocks" id="opt-cards"></div>
+      <div class="meta" id="opt-alltime" style="margin-top:10px"></div>
+      <div class="tablewrap" style="margin-top:12px"><table>
+        <thead><tr><th>Strategy</th><th>Contract</th><th>Lots</th><th>Entry</th><th>Exits</th><th>Result</th><th>Net P&amp;L</th></tr></thead>
+        <tbody id="opt-trades"></tbody>
+      </table></div>
+      <div class="fine">ORB5: first 5-min candle high/low → breakout + retest → buy ATM CE (up) or PE (down), stop at the candle's middle.
+        EMA9_21: 9 EMA crosses 21 EMA → CE/PE, stop at the last 3 candles' low/high, target 1:2.
+        Trade 1 = 5 lots: at +30 pts book 3, stop to break-even, then trail 20 pts per 20 pts. Win → done for the day; loss → trade 2 = 7 lots (book 5).
+        Max 2 trades per strategy per index, no entries after 14:30, ₹15,000 day loss cap. Premiums are Black-Scholes estimates from India VIX, not live quotes.</div>
+    </div>
+
+    <div class="card">
+      <h2>Index &amp; stocks picked <small id="wl-src"></small></h2>
       <div class="stocks" id="stocks"></div>
     </div>
 
@@ -148,7 +164,9 @@
       <h2><span id="chart-title">Chart</span> <small id="chart-sub"></small></h2>
       <div id="chart"></div>
       <div class="legend">
-        <span style="--c:#64748b">Opening range</span>
+        <span style="--c:#64748b">Opening range / first 5-min candle</span>
+        <span style="--c:#f59e0b">9 EMA</span>
+        <span style="--c:#a78bfa">21 EMA</span>
         <span style="--c:#3b82f6">Entry</span>
         <span style="--c:#ef4444">Stop-loss</span>
         <span style="--c:#22c55e">Target</span>
@@ -186,7 +204,10 @@ const IDX = ["NIFTY", "SENSEX"];
 const size = t => t.lots ? `${t.lots} lot (${t.qty})` : t.qty;
 const $ = id => document.getElementById(id);
 
-let mode = "live", state = null, view = null, selected = null, chart, candles, lines = [];
+let mode = "live", state = null, view = null, selected = null, chart, candles, ema9S, ema21S, lines = [];
+const STRATS = [["ORB5", "ORB 5-min retest"], ["EMA9_21", "9/21 EMA cross"]];
+const optOf = v => (v && v.options) || {};
+const reasonCls = r => /TARGET|PARTIAL|TRAIL/.test(r) ? "c-win" : /BREAKEVEN|SQUARE/.test(r) ? "c-flat" : "c-loss";
 
 // Local (python dashboard.py) uses the JSON API; anywhere else (GitHub Pages)
 // reads the files that site.py exports to data/.
@@ -215,9 +236,63 @@ function initChart() {
   });
   candles = chart.addCandlestickSeries({ upColor: "#22c55e", downColor: "#ef4444",
     wickUpColor: "#22c55e", wickDownColor: "#ef4444", borderVisible: false });
+  const line = color => chart.addLineSeries({ color, lineWidth: 1.5, priceLineVisible: false, lastValueVisible: false, crosshairMarkerVisible: false });
+  ema9S = line("#f59e0b"); ema21S = line("#a78bfa");
+}
+
+function renderOptions(v) {
+  const o = optOf(v), trades = o.trades || [], box = $("opt-cards");
+  const cards = [];
+  for (const [s, label] of STRATS) for (const u of IDX) {
+    const st = (o.status || {})[`${s}:${u}`] || { trades: 0, net: 0 };
+    const open = trades.find(t => t.strategy === s && t.underlying === u && t.status === "OPEN");
+    let chip = ["c-wait", mode === "live" ? "👀 Waiting for signal" : "No trade"];
+    if (open) chip = ["c-open", `● In trade · ${open.symbol}`];
+    else if (st.done) chip = st.net > 0 ? ["c-win", "✓ Done for the day"] : ["c-loss", "✖ Done for the day"];
+    else if (st.trades) chip = ["c-watch", "Waiting for trade 2 signal"];
+    let meta = `<div class="meta">Trades ${st.trades || 0}/2 · Net <span class="${(st.net || 0) >= 0 ? "pos" : "neg"}">${signed(st.net || 0)}</span></div>`;
+    const lv = (o.levels || {})[u], em = (o.ema || {})[u];
+    if (s === "ORB5" && lv) meta += `<div class="meta">5-min candle ${lv.low.toFixed(2)} – ${lv.high.toFixed(2)} · stop at ${lv.mid.toFixed(2)}</div>`;
+    if (s === "EMA9_21" && em && mode === "live") meta += `<div class="meta">9 EMA ${em.ema9.toFixed(2)} · 21 EMA ${em.ema21.toFixed(2)} (${em.ema9 > em.ema21 ? "above → CE side" : "below → PE side"})</div>`;
+    if (open) {
+      const pnl = open.unrealised || 0;
+      meta += `<div class="meta">${open.lots_open}/${open.lots} lots open · stop ${open.stop_index.toFixed(2)} · <span class="${pnl >= 0 ? "pos" : "neg"}">${signed(pnl)}</span></div>`;
+    }
+    if (st.note) meta += `<div class="meta">${st.note}</div>`;
+    cards.push(`<div class="stock ${u === selected ? "sel" : ""}" data-sym="${u}">
+      <div class="top"><span class="sym">${label}</span><span class="badge idx">${u}</span></div>
+      <span class="chip ${chip[0]}">${chip[1]}</span>${meta}</div>`);
+  }
+  box.innerHTML = cards.join("");
+  box.querySelectorAll(".stock").forEach(el => el.onclick = () => { selected = el.dataset.sym; renderStocks(view); renderOptions(view); loadChart(); });
+
+  $("opt-trades").innerHTML = trades.map(t => {
+    const legs = t.legs.map(l => `<div class="leg"><span class="chip ${reasonCls(l.reason)}">${l.lots}L ${l.reason.replace(/_/g, " ")}</span> @ ${l.premium.toFixed(1)} <span class="meta">${hhmm(l.time)}</span></div>`).join("") || "–";
+    const pnl = t.status === "OPEN" ? (t.unrealised || 0) : t.net_pnl;
+    const res = t.status === "OPEN" ? '<span class="chip c-open">OPEN</span>' : `<span class="chip ${pnl >= 0 ? "c-win" : "c-loss"}">${pnl >= 0 ? "PROFIT" : "LOSS"}</span>`;
+    return `<tr><td>${t.strategy} <span class="meta">#${t.trade_no}</span></td><td><b>${t.symbol}</b> <span class="meta">exp ${t.expiry.slice(5)}</span></td>
+      <td>${t.lots} × ${t.lot}</td><td>${t.entry_premium.toFixed(2)} <span class="meta">${hhmm(t.entry_time)} · idx ${t.entry_index.toFixed(0)}</span></td>
+      <td>${legs}</td><td>${res}</td><td class="${pnl >= 0 ? "pos" : "neg"}">${signed(pnl)}</td></tr>`;
+  }).join("") || `<tr><td colspan="7" class="empty">No option trades ${mode === "live" ? "yet today" : "on this day"}.</td></tr>`;
+
+  const bs = (state && state.by_strategy) || {};
+  $("opt-alltime").innerHTML = mode === "live" ? "All-time (virtual): " + ["ORB5", "EMA9_21", "STOCK_ORB"].map(k => {
+    const a = bs[k] || { trades: 0, wins: 0, net: 0 };
+    return `${k} ${a.trades} trades, ${a.trades ? Math.round(a.wins / a.trades * 100) : 0}% wins, <span class="${a.net >= 0 ? "pos" : "neg"}">${signed(a.net)}</span>`;
+  }).join(" · ") : "";
 }
 
 function status(sym, v) {
+  if (IDX.includes(sym)) {
+    const ot = (optOf(v).trades || []).filter(t => t.underlying === sym);
+    const open = ot.find(t => t.status === "OPEN");
+    if (open) return { cls: "c-open", text: `● ${open.strategy} ${open.side} open` };
+    if (ot.length) {
+      const net = ot.reduce((a, t) => a + (t.net_pnl || 0), 0);
+      return { cls: net >= 0 ? "c-win" : "c-loss", text: `${ot.length} option trade(s) · ${signed(net)}` };
+    }
+    return { cls: "c-wait", text: "Options: waiting for signal" };
+  }
   const t = (v.trades || []).find(x => x.symbol === sym);
   if (t) {
     if (t.status === "OPEN") return { cls: "c-open", text: "● In trade", t };
@@ -251,7 +326,7 @@ function renderStocks(v) {
       <div class="top"><span class="sym">${sym}${IDX.includes(sym) ? ' <span class="badge idx">INDEX FUT</span>' : ""}</span><span class="px">${q.last != null ? q.last.toFixed(2) : "–"} ${chg}</span></div>
       <span class="chip ${s.cls}">${s.text}</span>${extra}</div>`;
   }).join("");
-  box.querySelectorAll(".stock").forEach(el => el.onclick = () => { selected = el.dataset.sym; renderStocks(view); loadChart(); });
+  box.querySelectorAll(".stock").forEach(el => el.onclick = () => { selected = el.dataset.sym; renderStocks(view); renderOptions(view); loadChart(); });
 }
 
 async function loadChart() {
@@ -263,6 +338,9 @@ async function loadChart() {
   $("chart-title").textContent = selected;
   $("chart-sub").textContent = res.date !== res.requested ? `(showing last session ${res.date}; today's bars appear after 09:15)` : `5-min candles · ${res.date}`;
   candles.setData(res.bars.map(b => ({ ...b, time: b.time + IST_OFFSET })));
+  const emaLine = k => res.bars.filter(b => b[k] != null).map(b => ({ time: b.time + IST_OFFSET, value: b[k] }));
+  ema9S.setData(IDX.includes(selected) ? emaLine("ema9") : []);
+  ema21S.setData(IDX.includes(selected) ? emaLine("ema21") : []);
   lines.forEach(l => candles.removePriceLine(l)); lines = [];
   const add = (price, color, title, style = 2) => lines.push(candles.createPriceLine({ price, color, lineWidth: 1, lineStyle: style, axisLabelVisible: true, title }));
   const sameDay = res.date === (mode === "live" ? state.today.date : view.date);
@@ -270,13 +348,27 @@ async function loadChart() {
   if (r) { add(r.or_high, "#64748b", "OR high"); add(r.or_low, "#64748b", "OR low"); }
   const t = sameDay && (view.trades || []).find(x => x.symbol === selected);
   const markers = [];
+  const ts = iso => Math.floor(new Date(iso).getTime() / 1000) + IST_OFFSET;
+  if (sameDay && IDX.includes(selected)) {
+    const o = optOf(view), lv = (o.levels || {})[selected];
+    if (lv) { add(lv.high, "#64748b", "5m high"); add(lv.low, "#64748b", "5m low"); add(lv.mid, "#94a3b8", "5m mid", 1); }
+    for (const ot of (o.trades || []).filter(x => x.underlying === selected)) {
+      const up = ot.side === "CE";
+      markers.push({ time: ts(ot.entry_time), position: up ? "belowBar" : "aboveBar", color: up ? "#3b82f6" : "#ec4899",
+        shape: up ? "arrowUp" : "arrowDown", text: `${ot.strategy === "ORB5" ? "ORB" : "EMA"} ${ot.lots}L ${ot.side}` });
+      const short = r => r.startsWith("PARTIAL") ? "book" : r === "BREAKEVEN_STOP" ? "BE" : r === "TRAIL_STOP" ? "TSL"
+        : r.startsWith("TARGET") ? "TGT" : r.startsWith("SQUARE") ? "15:15" : "SL";
+      for (const l of ot.legs) markers.push({ time: ts(l.time), position: up ? "aboveBar" : "belowBar",
+        color: l.reason === "STOP" ? "#ef4444" : "#22c55e", shape: "circle", text: `${l.lots}L ${short(l.reason)}` });
+      if (ot.status === "OPEN") { add(ot.stop_index, "#ef4444", `${ot.strategy} stop`); if (!ot.partial_done) add(ot.partial_index, "#22c55e", "+30 book"); }
+    }
+  }
   if (t) {
     add(t.entry, "#3b82f6", "Entry", 0); add(t.stop, "#ef4444", "Stop"); add(t.target, "#22c55e", "Target");
-    const ts = iso => Math.floor(new Date(iso).getTime() / 1000) + IST_OFFSET;
     markers.push({ time: ts(t.entry_time), position: "belowBar", color: "#3b82f6", shape: "arrowUp", text: `BUY ${t.qty}` });
     if (t.exit_time) markers.push({ time: ts(t.exit_time), position: "aboveBar", color: t.net_pnl >= 0 ? "#22c55e" : "#ef4444", shape: "arrowDown", text: `${t.exit_reason} ${signed(t.net_pnl)}` });
   }
-  candles.setMarkers(markers);
+  candles.setMarkers(markers.sort((a, b) => a.time - b.time));
   chart.timeScale().fitContent();
 }
 
@@ -336,13 +428,13 @@ function renderLive() {
   $("k-pnl-label").textContent = "Today P&L";
   const pnl = s.today.realised + s.today.unrealised;
   $("k-pnl").innerHTML = `<span class="${pnl >= 0 ? "pos" : "neg"}">${signed(pnl)}</span>`;
-  const nIdx = s.today.trades.filter(t => IDX.includes(t.symbol)).length;
-  $("k-trades").textContent = `${s.today.trades.length - nIdx}/${s.config.max_trades_per_day} stocks · ${nIdx} index`;
-  $("k-open").textContent = s.today.trades.filter(t => t.status === "OPEN").length;
+  const ot = optOf(s.today).trades || [];
+  $("k-trades").textContent = `${s.today.trades.length}/${s.config.max_trades_per_day} stocks · ${ot.length} options`;
+  $("k-open").textContent = s.today.trades.filter(t => t.status === "OPEN").length + ot.filter(t => t.status === "OPEN").length;
   $("wl-src").textContent = s.today.watchlist_source === "today" ? `· today's scan` : s.today.watchlist.length ? "· from the last scan (today's scan runs at 08:45)" : "";
   $("log").textContent = s.log.join("\n") || "Nothing yet. Press Start.";
   $("log").scrollTop = 1e6;
-  renderStocks(view); renderTrades(view);
+  renderStocks(view); renderOptions(view); renderTrades(view);
 }
 
 function renderShared() {
@@ -370,9 +462,9 @@ async function showReplay(date) {
   $("replay-banner").innerHTML = `⏪ REPLAY of ${date}: the same rules on that day's real 5-minute bars, using today's watchlist. Not part of your virtual account.`;
   $("k-pnl-label").textContent = "Day P&L (replay)";
   $("k-pnl").innerHTML = `<span class="${view.realised >= 0 ? "pos" : "neg"}">${signed(view.realised)}</span>`;
-  $("k-trades").textContent = t.length;
+  $("k-trades").textContent = `${t.length} stocks · ${(optOf(view).trades || []).length} options`;
   $("k-open").textContent = 0;
-  renderStocks(view); renderTrades(view); loadChart();
+  renderStocks(view); renderOptions(view); renderTrades(view); loadChart();
 }
 
 $("go").onclick = async () => {

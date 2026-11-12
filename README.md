@@ -10,11 +10,30 @@ middle, target 1.5× risk → square off at 15:15. Max 3 trades/day, 25% of capi
 position, ₹10,000 max loss per trade, ₹20,000 daily loss limit. Prices: Yahoo Finance
 5-minute bars (free, may lag a little). Charges and 0.05% slippage are included.
 
-**NIFTY 50 and SENSEX** are traded every day with the same rules, as 1 futures lot each
-(NIFTY lot from NSE's lot-size file, currently 65; SENSEX 20, a BSE contract, so confirm
-it). They use the index level from Yahoo, so a real future's premium is not modelled.
-Margin is estimated at 12% of contract value, and F&O charges are included. Index trades
-do not count toward the 3-stock limit but do count toward the daily loss limit.
+## Option strategies on NIFTY and SENSEX (`options.py`)
+
+Signals come from the index's 5-minute candles; an ATM CE (up) or PE (down) is bought.
+
+- **ORB5** – mark the first 5-minute candle (09:15–09:20) high and low. A close above the
+  high, then a retest (a later candle dips back to the high and still closes above it)
+  buys a CE; the mirror below the low buys a PE. Stop = middle of that first candle.
+- **EMA9_21** – the 9 EMA crossing above the 21 EMA buys a CE, crossing below buys a PE.
+  Stop = lowest low / highest high of the last 3 candles; target = 2× risk (1:2).
+
+Money management (both): trade 1 = 5 lots. At +30 index points book 3 lots and move the
+stop to break-even; after that every further 20 points trails the stop by 20 for the last
+2 lots. If trade 1 makes money, that strategy stops for the day; if it loses, trade 2 =
+7 lots (book 5 at +30, trail 2). Max 2 trades per strategy per index per day.
+
+Added for capital protection: no new entries after 14:30; square-off at 15:15; skip a
+signal whose stop is wider than 40 NIFTY points (130 SENSEX); a ₹15,000 day cap across
+all option trades, which also blocks a new trade whose risk would cross it. SENSEX
+thresholds are scaled to its bigger points (100 / 65 / 130). On expiry day the next
+weekly expiry is used. NIFTY lot from NSE (65); SENSEX lot 20 (BSE, confirm it).
+
+Premiums are **estimates** (Black-Scholes with India VIX, ATM strike, time to the weekly
+expiry: NIFTY Tuesday, SENSEX Thursday), not exchange quotes, plus 0.5% slippage and
+option charges. The earlier 1-lot index-futures ORB is switched off (`INDEX_FUTURES`).
 
 ## Set up (once)
 

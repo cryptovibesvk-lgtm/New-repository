@@ -97,15 +97,24 @@ def api_state():
     day = now.date()
     rec = acct["days"].get(day.isoformat(), {})
     symbols, source = watch_symbols(acct, day)
-    all_trades = [t for r in acct["days"].values() for t in r.get("trades", [])]
+    all_trades = [t for r in acct["days"].values() for t in paper.day_trades(r)]
     s = paper.summarise(all_trades)
     today_trades = rec.get("trades", [])
-    realised = sum(t["net_pnl"] for t in today_trades if t["status"] == "CLOSED")
-    unrealised = sum(t.get("unrealised", 0) for t in today_trades if t["status"] == "OPEN")
+    both = paper.day_trades(rec)
+    realised = sum(t["net_pnl"] for t in both if t["status"] == "CLOSED")
+    unrealised = sum(t.get("unrealised", 0) for t in both if t["status"] == "OPEN")
     equity, curve = acct["start_capital"], [{"date": "start", "equity": acct["start_capital"]}]
     for d, r in sorted(acct["days"].items()):
-        equity += sum(t["net_pnl"] for t in r.get("trades", []) if t["status"] == "CLOSED")
+        equity += sum(t["net_pnl"] for t in paper.day_trades(r) if t["status"] == "CLOSED")
         curve.append({"date": d, "equity": round(equity, 2)})
+    by_strategy = {}
+    for t in all_trades:
+        k = t.get("strategy") or "STOCK_ORB"
+        agg = by_strategy.setdefault(k, {"trades": 0, "wins": 0, "net": 0.0})
+        if t["status"] == "CLOSED":
+            agg["trades"] += 1
+            agg["wins"] += t["net_pnl"] > 0
+            agg["net"] = round(agg["net"] + t["net_pnl"], 2)
     log = []
     try:
         with open(os.path.join(paper.PAPER_DIR, "dashboard-run.log"), encoding="utf-8", errors="replace") as f:
@@ -118,17 +127,27 @@ def api_state():
         "status": read_status(),
         "config": {k: (v.strftime("%H:%M") if isinstance(v, dt.time) else v) for k, v in paper.CONFIG.items()},
         "indexes": {s: {"lot": paper.lot_size(s)} for s in paper.INDEXES},
+        "options_config": options_config(),
         "start_capital": acct["start_capital"],
         "equity": round(equity, 2),
         "summary": s,
+        "by_strategy": by_strategy,
         "today": {"date": day.isoformat(), "watchlist": symbols, "watchlist_source": source,
                   "ranges": rec.get("ranges", {}), "trades": today_trades, "notes": rec.get("notes", {}),
+                  "options": rec.get("options") or {},
                   "realised": round(realised, 2), "unrealised": round(unrealised, 2),
                   "updated_at": rec.get("updated_at")},
         "quotes": quotes(symbols),
         "curve": curve,
         "log": log,
     }
+
+
+def options_config():
+    import options
+    o = options.OPT
+    return {"lots": o["lots"], "book": o["book"], "max_trades": o["max_trades"], "points": o["points"],
+            "entry_until": o["entry_until"].strftime("%H:%M"), "day_loss_limit": o["day_loss_limit"]}
 
 
 def api_bars(symbol, date):
@@ -141,9 +160,22 @@ def api_bars(symbol, date):
         if hist:
             shown = max(b["t"].date() for b in hist)
             bars = session_bars(symbol, shown, "60d")
-    return {"symbol": symbol, "requested": day.isoformat(), "date": shown.isoformat(),
-            "bars": [{"time": int(t.timestamp()), "open": b["o"], "high": b["h"], "low": b["l"],
-                      "close": b["c"], "volume": b["v"]} for t, b in sorted(bars.items())]}
+    out = [{"time": int(t.timestamp()), "open": b["o"], "high": b["h"], "low": b["l"],
+            "close": b["c"], "volume": b["v"]} for t, b in sorted(bars.items())]
+    if symbol in paper.INDEXES and out:
+        # EMAs warmed up on earlier sessions, matching what the strategy saw
+        import options
+        hist = [b for b in chart(symbol, "60d")["bars"] if b["t"].date() < today and b["t"].date() <= shown]
+        if shown == today:
+            hist += [b for b in chart(symbol, "1d")["bars"] if b["t"].date() == today]
+        closes = [b["c"] for b in hist]
+        f = options.ema_series(closes, options.OPT["ema_fast"])
+        s = options.ema_series(closes, options.OPT["ema_slow"])
+        by_t = {int(b["t"].timestamp()): (f[i], s[i]) for i, b in enumerate(hist)}
+        for b in out:
+            if b["time"] in by_t:
+                b["ema9"], b["ema21"] = round(by_t[b["time"]][0], 2), round(by_t[b["time"]][1], 2)
+    return {"symbol": symbol, "requested": day.isoformat(), "date": shown.isoformat(), "bars": out}
 
 
 def api_days():
@@ -161,14 +193,22 @@ def api_replay(date):
     day = dt.date.fromisoformat(date)
     symbols, _ = watch_symbols(acct, dt.datetime.now(IST).date())
     bars = {s: session_bars(s, day, "60d") for s in symbols}
-    res = paper.simulate_day(day, bars, paper.CONFIG["start_capital"])
+    stock_bars = {s: b for s, b in bars.items() if s not in paper.INDEXES or paper.INDEX_FUTURES}
+    res = paper.simulate_day(day, stock_bars, paper.CONFIG["start_capital"])
+    import options
+    und = {u: [b for b in chart(u, "60d")["bars"] if b["t"].date() <= day] for u in options.OPT["underlyings"]}
+    try:
+        vix = [b for b in nsemkt.yahoo_chart("^INDIAVIX", interval="5m", range_="60d")["bars"] if b["t"].date() == day]
+    except Exception:
+        vix = []
+    res["options"] = options.simulate_options_day(day, und, vix)
     quotes_ = {}
     for s, b in bars.items():
         if b:
             ts = sorted(b)
             quotes_[s] = {"last": b[ts[-1]]["c"], "prev": b[ts[0]]["o"],
                           "chg_pct": (b[ts[-1]]["c"] / b[ts[0]]["o"] - 1) * 100}
-    realised = sum(t["net_pnl"] for t in res["trades"] if t["status"] == "CLOSED")
+    realised = sum(t["net_pnl"] for t in paper.day_trades(res) if t["status"] == "CLOSED")
     return {"date": date, "watchlist": symbols, "quotes": quotes_, "realised": round(realised, 2), **res}
 
 

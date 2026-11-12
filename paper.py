@@ -62,6 +62,8 @@ INDEXES = {
     "NIFTY": {"yahoo": "^NSEI", "fallback_lot": 65},
     "SENSEX": {"yahoo": "^BSESN", "fallback_lot": 20},
 }
+# The index-futures ORB is replaced by the option strategies in options.py.
+INDEX_FUTURES = False
 INDEX_CONFIG = {
     "lots": 1,
     "margin_pct": 0.12,          # estimated futures margin, of contract value
@@ -104,12 +106,17 @@ def save_account(acct):
     os.replace(tmp, ACCOUNT)
 
 
+def day_trades(rec):
+    """Stock trades plus option-strategy trades of one day record."""
+    return rec.get("trades", []) + (rec.get("options") or {}).get("trades", [])
+
+
 def capital_before(acct, day):
     """Start capital plus realised P&L of every earlier day."""
     cap = acct["start_capital"]
     for d, rec in sorted(acct["days"].items()):
         if d < day:
-            cap += sum(t["net_pnl"] for t in rec.get("trades", []) if t.get("status") == "CLOSED")
+            cap += sum(t["net_pnl"] for t in day_trades(rec) if t.get("status") == "CLOSED")
     return cap
 
 
@@ -297,19 +304,25 @@ def cmd_update(args):
     now = now_ist()
     day = now.date()
     acct = load_account()
-    rec = acct["days"].get(day.isoformat())
-    if not rec or not rec.get("watchlist"):
-        print("no watchlist for today - run: python paper.py premarket")
-        return
-    bars = {}
-    for sym in list(INDEXES) + rec["watchlist"]:
-        try:
-            bars[sym] = day_bars(sym, day, "1d")
-        except Exception as e:  # keep going on one bad symbol
-            print(f"  {sym}: data error {e}")
-    res = simulate_day(day, bars, capital_before(acct, day.isoformat()), now=now)
-    rec.update(res, updated_at=now.isoformat(timespec="seconds"),
-               final=now.time() >= dt.time(15, 35))
+    rec = acct["days"].setdefault(day.isoformat(), {})
+    if rec.get("watchlist"):
+        bars = {}
+        for sym in (list(INDEXES) if INDEX_FUTURES else []) + rec["watchlist"]:
+            try:
+                bars[sym] = day_bars(sym, day, "1d")
+            except Exception as e:  # keep going on one bad symbol
+                print(f"  {sym}: data error {e}")
+        rec.update(simulate_day(day, bars, capital_before(acct, day.isoformat()), now=now))
+    else:
+        print("no stock watchlist for today - run: python paper.py premarket")
+    try:
+        import options
+        und, vix = options.fetch("5d")
+        rec["options"] = options.simulate_options_day(
+            day, und, [b for b in vix if b["t"].date() == day], now=now)
+    except Exception as e:
+        print(f"  options: data error {e}")
+    rec.update(updated_at=now.isoformat(timespec="seconds"), final=now.time() >= dt.time(15, 35))
     save_account(acct)
     print_day(day.isoformat(), rec)
 
@@ -330,7 +343,18 @@ def print_day(day, rec):
     for sym, n in rec.get("notes", {}).items():
         print(f"  note {sym}: {n}")
     if not rec.get("trades"):
-        print("  no trades yet")
+        print("  no stock trades yet")
+    opt = rec.get("options") or {}
+    for und, lv in opt.get("levels", {}).items():
+        print(f"  {und:<12} first 5-min candle {lv['low']:.2f}-{lv['high']:.2f} (mid {lv['mid']:.2f})")
+    for t in opt.get("trades", []):
+        legs = " | ".join(f"{l['lots']}L {l['reason']} @ {l['index']:.2f} (prem {l['premium']:.2f})" for l in t["legs"])
+        tail = f"net Rs {t['net_pnl']:,.2f}" if t["status"] == "CLOSED" else f"open, unrealised Rs {t.get('unrealised', 0):,.2f}"
+        print(f"  {t['strategy']:<8} #{t['trade_no']} BUY {t['lots']} lots {t['symbol']} @ prem {t['entry_premium']:.2f} "
+              f"(index {t['entry_index']:.2f}, {t['entry_time'][11:16]})  {legs}  {tail}")
+    for k, s in opt.get("status", {}).items():
+        if s.get("note"):
+            print(f"  {k}: {s['note']}")
 
 
 def summarise(trades):
@@ -347,7 +371,7 @@ def summarise(trades):
 
 def cmd_report(args):
     acct = load_account()
-    all_trades = [t for rec in acct["days"].values() for t in rec.get("trades", [])]
+    all_trades = [t for rec in acct["days"].values() for t in day_trades(rec)]
     s = summarise(all_trades)
     equity = acct["start_capital"] + s["net"]
     lines = [
@@ -362,8 +386,14 @@ def cmd_report(args):
         "|---|---|---|---|---|---|---|---|",
     ]
     for d, rec in sorted(acct["days"].items()):
-        for t in rec.get("trades", []):
-            if t["status"] == "CLOSED":
+        for t in day_trades(rec):
+            if t.get("strategy"):  # option strategy: show the contract, lots and every exit leg
+                legs = "; ".join(f"{l['lots']}L {l['reason']} {l['premium']:.2f}" for l in t["legs"]) or "open"
+                net = f"{t['net_pnl']:,.2f}" if t["status"] == "CLOSED" else "-"
+                lines.append(f"| {d} | {t['strategy']} {t['symbol']} | {t['lots']} lots | "
+                             f"{t['entry_premium']:.2f} @ {t['entry_time'][11:16]} | {legs} | "
+                             f"{t.get('exit_reason', 'open')} | {net} | {t.get('r_multiple') or 0:+.2f} |")
+            elif t["status"] == "CLOSED":
                 lines.append(f"| {d} | {t['symbol']} | {t['qty']} | {t['entry']:.2f} @ {t['entry_time'][11:16]} | "
                              f"{t['exit']:.2f} @ {t['exit_time'][11:16]} | {t['exit_reason']} | "
                              f"{t['net_pnl']:,.2f} | {t['r_multiple']:+.2f} |")
