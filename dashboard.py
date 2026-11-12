@@ -263,10 +263,14 @@ def api_replay(date):
 def site_stocks(path):
     """The stock backtest fetches 50 charts, so it is rebuilt once a day only."""
     import backtest
+    import history
     try:
         with open(path, encoding="utf-8") as f:
             old = (json.load(f) or {}).get("stocks") or {}
-        if old.get("generated_for") == dt.datetime.now(IST).date().isoformat():
+        # rebuild anyway when the archive now reaches further back than the last build
+        oldest = (history.info("5m").get("NIFTY") or {}).get("first")
+        if old.get("generated_for") == dt.datetime.now(IST).date().isoformat() and \
+                (not oldest or (old.get("first") or "9999") <= oldest):
             return None
     except (OSError, ValueError):
         pass
