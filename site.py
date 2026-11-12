@@ -19,6 +19,7 @@ DOCS = os.path.join(HERE, "docs")
 DATA = os.path.join(DOCS, "data")
 CLOUD_LOG = os.path.join(paper.PAPER_DIR, "cloud.log")
 REPLAY_DAYS = 20
+REPLAY_VERSION = 2  # 2 = option strategies (ORB5, EMA9_21)
 
 
 def dump(path, obj):
@@ -64,12 +65,13 @@ def export():
         except Exception as e:
             print(f"bars {sym}: {e}")
 
-    # replays only change when the watchlist does, so build them once per watchlist
+    # replays only change when the watchlist or the rules do, so build them once per
+    # watchlist and REPLAY_VERSION (bump it whenever strategy rules change)
     marker = os.path.join(DATA, "replay", "_watchlist.json")
     wl = state["today"]["watchlist"]
     try:
         with open(marker, encoding="utf-8") as f:
-            same = json.load(f) == wl
+            same = json.load(f) == {"version": REPLAY_VERSION, "watchlist": wl}
     except (OSError, ValueError):
         same = False
     if wl and not same:
@@ -80,7 +82,7 @@ def export():
             rep["bars"] = {s: dashboard.api_bars(s, d)["bars"] for s in wl}
             dump(os.path.join(DATA, "replay", f"{d}.json"), rep)
         dump(os.path.join(DATA, "days.json"), {"days": days})
-        dump(marker, wl)
+        dump(marker, {"version": REPLAY_VERSION, "watchlist": wl})
     print(f"site exported: {DOCS}")
 
 
