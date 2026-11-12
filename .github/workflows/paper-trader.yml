@@ -1,0 +1,51 @@
+# Virtual-money paper trader. Runs every 5 minutes on weekdays, 08:30-16:25 IST
+# (03:00-10:55 UTC), and publishes the dashboard data to docs/ for GitHub Pages.
+# No broker, no real orders. Start/Stop = Enable/Disable this workflow in the Actions tab.
+name: Paper trader
+
+on:
+  schedule:
+    - cron: "*/5 3-10 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: paper-trader
+  cancel-in-progress: false
+
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Trade one step (virtual money)
+        run: |
+          mkdir -p paper
+          python -u paper.py tick 2>&1 | tee -a paper/cloud.log
+
+      - name: Publish dashboard data
+        run: python -u site.py
+
+      - name: Save results
+        run: |
+          git config user.name "paper-trader-bot"
+          git config user.email "paper-trader-bot@users.noreply.github.com"
+          git add -A paper docs nse-trader
+          if git diff --cached --quiet; then
+            echo "nothing changed"
+            exit 0
+          fi
+          git commit -m "paper: $(TZ=Asia/Kolkata date '+%Y-%m-%d %H:%M') IST"
+          for i in 1 2 3; do
+            git pull --rebase --autostash && git push && exit 0
+            sleep 5
+          done
+          exit 1

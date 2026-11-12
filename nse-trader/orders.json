@@ -1,0 +1,75 @@
+{
+  "ticket": "20261113-MOTHERSON-1",
+  "plan_ticket": "20261113-MOTHERSON-1",
+  "ticker": "MOTHERSON",
+  "segment": "CASH",
+  "instrument": "EQUITY",
+  "product": "MIS",
+  "side": "BUY",
+  "qty": 735,
+  "lots": null,
+  "lot_size": 1,
+  "entry": 170.0,
+  "stop": 167.05,
+  "target": 174.45,
+  "risk_per_share": 2.95,
+  "charges": {
+    "broker_profile": "generic-flat-20",
+    "schedule_date": "2026-11-01",
+    "buy": {
+      "broker_profile": "generic-flat-20",
+      "schedule_date": "2026-11-01",
+      "turnover": 124950.0,
+      "brokerage": 20.0,
+      "stt": 0.0,
+      "stamp": 3.75,
+      "exchange": 3.71,
+      "sebi": 0.12,
+      "ipft": 0.12,
+      "gst": 4.31,
+      "total": 32.02
+    },
+    "sell": {
+      "broker_profile": "generic-flat-20",
+      "schedule_date": "2026-11-01",
+      "turnover": 122781.75,
+      "brokerage": 20.0,
+      "stt": 30.7,
+      "stamp": 0.0,
+      "exchange": 3.65,
+      "sebi": 0.12,
+      "ipft": 0.12,
+      "gst": 4.3,
+      "total": 58.89
+    },
+    "total": 90.91
+  },
+  "broker": "generic",
+  "broker_profile": "generic-flat-20",
+  "broker_profile_rules": {
+    "name": "generic-flat-20",
+    "cash_intraday": {
+      "flat": 20.0
+    },
+    "cash_delivery": {
+      "flat": 20.0
+    },
+    "futures": {
+      "flat": 20.0
+    },
+    "options": {
+      "flat": 20.0
+    }
+  },
+  "broker_profile_file": null,
+  "gross_loss_at_stop": 2168.25,
+  "max_loss_at_stop": 2259.16,
+  "cost": 124950.0,
+  "margin_required": null,
+  "decided_by": "position_pct",
+  "capital": 500000.0,
+  "max_loss": 10000.0,
+  "flat_by": "15:15",
+  "created_ist": "2026-11-13T00:53:55+05:30",
+  "status": "AWAITING_RISK_CHECK"
+}

@@ -1,0 +1,67 @@
+{
+  "generated_ist": "2026-11-13T00:53:31+05:30",
+  "ticket": "20261113-MOTHERSON-1",
+  "ticker": "MOTHERSON",
+  "entry": 170.0,
+  "stop": 167.05,
+  "target": 175.9,
+  "sims": 10000,
+  "p_target": 0.0728,
+  "p_stop": 0.2384,
+  "p_none": 0.6888,
+  "avg_r": 0.1142,
+  "verdict": "INSUFFICIENT_HISTORY - fewer than 5 comparable historical triggers",
+  "historical": {
+    "sessions_checked": 60,
+    "setups_fired": 4,
+    "target": 0,
+    "stop": 1,
+    "none": 3,
+    "target_rate": 0.0,
+    "stop_rate": 0.25,
+    "average_r": -0.2271,
+    "examples": [
+      {
+        "date": "2026-08-18",
+        "trigger_ist": "09:45",
+        "result": "none",
+        "r": 0.136
+      },
+      {
+        "date": "2026-08-19",
+        "trigger_ist": "09:40",
+        "result": "none",
+        "r": 0.098
+      },
+      {
+        "date": "2026-08-20",
+        "trigger_ist": "11:20",
+        "result": "none",
+        "r": -0.142
+      },
+      {
+        "date": "2026-08-31",
+        "trigger_ist": "15:15",
+        "result": "stop",
+        "r": -1.0
+      }
+    ]
+  },
+  "monte_carlo": {
+    "sims": 10000,
+    "seed": 42,
+    "target": 728,
+    "stop": 2384,
+    "none": 6888,
+    "p_target": 0.0728,
+    "p_stop": 0.2384,
+    "p_none": 0.6888,
+    "avg_r": 0.1142
+  },
+  "limitations": [
+    "Uses delayed Yahoo 5-minute bars and only recent sessions.",
+    "Bootstrap resampling does not preserve news, regime or serial dependence.",
+    "If stop and target appear inside one 5-minute bar, stop is counted first.",
+    "Charges, slippage, gaps, circuit limits and rejected orders are not simulated."
+  ]
+}

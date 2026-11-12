@@ -1,0 +1,181 @@
+{
+  "generated_ist": "2026-11-13T00:50:40+05:30",
+  "mode": "daily",
+  "universe": "nifty100",
+  "scanned": 100,
+  "matched": 10,
+  "items": [
+    {
+      "symbol": "MOTHERSON",
+      "ltp": 169.69,
+      "chg_pct": 4.81,
+      "setup": "20D_BREAKOUT,BULL_FLAG,52W_HIGH_PROX",
+      "score": 100,
+      "note": "close above prior 20-day pivot 169.49; 7.2% impulse, 4.5% pullback; 2.1% below 52-week high",
+      "turnover_cr": 261.35,
+      "rsi14": 60.7,
+      "volume_ratio": 2.11,
+      "levels": {
+        "or_high": null,
+        "or_low": null,
+        "pivot": 169.49,
+        "stop_hint": 163.8
+      }
+    },
+    {
+      "symbol": "GAIL",
+      "ltp": 189.9,
+      "chg_pct": 1.01,
+      "setup": "20D_BREAKOUT,BULL_FLAG,52W_HIGH_PROX",
+      "score": 94,
+      "note": "close above prior 20-day pivot 188.90; 12.9% impulse, 0.5% pullback; 0.0% below 52-week high",
+      "turnover_cr": 176.47,
+      "rsi14": 74.6,
+      "volume_ratio": 1.29,
+      "levels": {
+        "or_high": null,
+        "or_low": null,
+        "pivot": 188.9,
+        "stop_hint": 185.6
+      }
+    },
+    {
+      "symbol": "KOTAKBANK",
+      "ltp": 487.7,
+      "chg_pct": 1.71,
+      "setup": "20D_BREAKOUT,BULL_FLAG,52W_HIGH_PROX",
+      "score": 92,
+      "note": "close above prior 20-day pivot 483.20; 8.5% impulse, 0.1% pullback; 0.7% below 52-week high",
+      "turnover_cr": 1105.74,
+      "rsi14": 75.0,
+      "volume_ratio": 1.03,
+      "levels": {
+        "or_high": null,
+        "or_low": null,
+        "pivot": 483.2,
+        "stop_hint": 477.1
+      }
+    },
+    {
+      "symbol": "AXISBANK",
+      "ltp": 1336.4,
+      "chg_pct": 1.96,
+      "setup": "20D_BREAKOUT,BULL_FLAG",
+      "score": 91,
+      "note": "close above prior 20-day pivot 1324.50; 7.2% impulse, 1.0% pullback",
+      "turnover_cr": 933.74,
+      "rsi14": 68.7,
+      "volume_ratio": 1.75,
+      "levels": {
+        "or_high": null,
+        "or_low": null,
+        "pivot": 1324.5,
+        "stop_hint": 1305.85
+      }
+    },
+    {
+      "symbol": "INDIGO",
+      "ltp": 5665.0,
+      "chg_pct": 4.33,
+      "setup": "20D_BREAKOUT,BULL_FLAG",
+      "score": 89,
+      "note": "close above prior 20-day pivot 5489.00; 16.8% impulse, 1.1% pullback",
+      "turnover_cr": 449.19,
+      "rsi14": 77.7,
+      "volume_ratio": 2.81,
+      "levels": {
+        "or_high": null,
+        "or_low": null,
+        "pivot": 5489.0,
+        "stop_hint": 5512.5
+      }
+    },
+    {
+      "symbol": "TRENT",
+      "ltp": 3222.7,
+      "chg_pct": 3.32,
+      "setup": "20D_BREAKOUT,BULL_FLAG",
+      "score": 89,
+      "note": "close above prior 20-day pivot 3133.50; 8.2% impulse, 0.3% pullback",
+      "turnover_cr": 318.32,
+      "rsi14": 72.2,
+      "volume_ratio": 1.58,
+      "levels": {
+        "or_high": null,
+        "or_low": null,
+        "pivot": 3133.5,
+        "stop_hint": 3137.3
+      }
+    },
+    {
+      "symbol": "IOC",
+      "ltp": 148.38,
+      "chg_pct": 1.04,
+      "setup": "20D_BREAKOUT,BULL_FLAG",
+      "score": 89,
+      "note": "close above prior 20-day pivot 149.08; 13.1% impulse, 0.3% pullback",
+      "turnover_cr": 189.09,
+      "rsi14": 77.2,
+      "volume_ratio": 1.5,
+      "levels": {
+        "or_high": null,
+        "or_low": null,
+        "pivot": 149.08,
+        "stop_hint": 145.0
+      }
+    },
+    {
+      "symbol": "PNB",
+      "ltp": 138.48,
+      "chg_pct": 4.77,
+      "setup": "20D_BREAKOUT,52W_HIGH_PROX",
+      "score": 82,
+      "note": "close above prior 20-day pivot 132.48; 0.4% below 52-week high",
+      "turnover_cr": 334.53,
+      "rsi14": 78.6,
+      "volume_ratio": 3.41,
+      "levels": {
+        "or_high": null,
+        "or_low": null,
+        "pivot": 132.48,
+        "stop_hint": 134.9
+      }
+    },
+    {
+      "symbol": "UNIONBANK",
+      "ltp": 202.19,
+      "chg_pct": 2.63,
+      "setup": "20D_BREAKOUT,52W_HIGH_PROX",
+      "score": 81,
+      "note": "close above prior 20-day pivot 197.05; 1.6% below 52-week high",
+      "turnover_cr": 348.14,
+      "rsi14": 74.5,
+      "volume_ratio": 1.92,
+      "levels": {
+        "or_high": null,
+        "or_low": null,
+        "pivot": 197.05,
+        "stop_hint": 197.1
+      }
+    },
+    {
+      "symbol": "TVSMOTOR",
+      "ltp": 4560.0,
+      "chg_pct": 1.2,
+      "setup": "20D_BREAKOUT,52W_HIGH_PROX",
+      "score": 81,
+      "note": "close above prior 20-day pivot 4505.90; 1.6% below 52-week high",
+      "turnover_cr": 324.28,
+      "rsi14": 74.5,
+      "volume_ratio": 1.94,
+      "levels": {
+        "or_high": null,
+        "or_low": null,
+        "pivot": 4505.9,
+        "stop_hint": 4443.45
+      }
+    }
+  ],
+  "errors": [],
+  "data_note": "Yahoo chart data may be delayed; confirm prices in your broker before acting."
+}

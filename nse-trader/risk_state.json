@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-13",
+  "verdicts": [
+    {
+      "ts_ist": "2026-11-13T00:54:03+05:30",
+      "ticket": "20261113-MOTHERSON-1",
+      "ticker": "MOTHERSON",
+      "verdict": "BLOCK",
+      "reasons": [
+        "market has not opened yet"
+      ],
+      "risk_inr": 2259.16
+    }
+  ],
+  "day_risk_inr": 0.0,
+  "trades_today": 0
+}

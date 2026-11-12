@@ -1,0 +1,320 @@
+{
+  "generated_ist": "2026-11-13T00:51:27+05:30",
+  "tickers": [
+    "MOTHERSON",
+    "GAIL",
+    "KOTAKBANK",
+    "AXISBANK",
+    "INDIGO",
+    "TRENT",
+    "IOC",
+    "PNB",
+    "UNIONBANK",
+    "TVSMOTOR"
+  ],
+  "cutoff_ist": "2026-11-11T00:51:27+05:30",
+  "items": [
+    {
+      "id": "5d7e8f569d84a842b9495550be3338eade1c27ac",
+      "ts_ist": "2026-11-12T21:58:12+05:30",
+      "ticker": "GAIL",
+      "source": "NSE filing",
+      "title": "GAIL (India) Limited has informed the Exchange regarding a press release dated November 12, 2026, titled \"Signing of MoU by GAIL (India) Limited & Krishak Bharati Cooperative Limited with Andhra Pradesh Economic Development Board for exploring the opportunity to setup a gas-based fertilizer project in the State of Andhra Pradesh\".",
+      "url": "https://nsearchives.nseindia.com/corporate/GAIL_12112026215805_PR12112026.pdf",
+      "tags": [
+        "other"
+      ],
+      "summary": "Press Release"
+    },
+    {
+      "id": "748c29254cdd69f49c027797e80fc769418ffcdf",
+      "ts_ist": "2026-11-12T20:00:05+05:30",
+      "ticker": "TVSMOTOR",
+      "source": "NSE filing",
+      "title": "TVS Motor Company Limited has informed the Exchange regarding a press release dated November 12, 2026, titled \"TVS MOTOR COMPANY STRENGTHENS ITS PRESENCE IN MAURITIUS LAUNCH OF TVS RONIN AND TVS NTORQ XP\".",
+      "url": "https://nsearchives.nseindia.com/corporate/TVSMOTOR_12112026195925_NSEBSERSGD.pdf",
+      "tags": [
+        "other"
+      ],
+      "summary": "Press Release"
+    },
+    {
+      "id": "5ea2d7b711e44ade5dad99539de349833dc9764c",
+      "ts_ist": "2026-11-12T18:03:45+05:30",
+      "ticker": "PNB",
+      "source": "The Economic Times",
+      "title": "Punjab National Bank among 4 stocks hitting 52-week highs; rally up to 22% in a month",
+      "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNTXJOSjkzSFc3b3dJZ05VRHZBa1VHc0JLeUYwRDc3WFRKTjBRUnhUQTU2VTRHTk1EaGQ5aVA0bklsYnFXWXl3X1FyVjZlTlZwS2YyZHFrQzl1MVdqODhoS0JtUzNMMkppRGI2SWtqbUhFM2N2TWNPRnhCbktKbnRXNzh3Z0p5NFRqZVo1YlpxcGNOdmdCOHhtRmpuNFMwTGxXUlY5TkZaSTk1OHY0YlZ6blJUM2RjUExFclhjSW13bHhkbHUwZHZWcWk1TEZOeFNVUTBWUWpCbmhaaDhaa0UzVzdickFFdGVwMVU4?oc=5",
+      "tags": [
+        "other"
+      ],
+      "summary": "Public headline via Google News RSS; open the source before relying on it."
+    },
+    {
+      "id": "368895164f82c258968841904947025d1368b8ca",
+      "ts_ist": "2026-11-12T17:39:40+05:30",
+      "ticker": "UNIONBANK",
+      "source": "InvestyWise",
+      "title": "Union Bank of India increases stake in Star Union Dai-ichi Life",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOUHY0Q0NNZzlHYmZyQXFNY3RDMFZ6UTQ0NkVieklwUnNRMTA0VEJTUTBlR1JCOTY4bEFWd01HS21VUU1ZbmIzZWFwWWpqcG1mbVZCRU04aUVrU1IwVmVyNS1SRERtaHBNNlJ6R3JMVnRaWWp6NkU5Y2RjcGo5cExZQkVOVXkzWjk5Qm9xaGM5NHNXTE1fSDB5bmpyS2JNRldIQnZMOQ?oc=5",
+      "tags": [
+        "other"
+      ],
+      "summary": "Public headline via Google News RSS; open the source before relying on it."
+    },
+    {
+      "id": "712e64d53437be0abee00ede45955b7c9e85d9e4",
+      "ts_ist": "2026-11-12T17:34:17+05:30",
+      "ticker": "GAIL",
+      "source": "NSE filing",
+      "title": "GAIL (India) Limited has informed the Exchange regarding a press release dated November 12, 2026, titled \"Signing of MoU between GAIL (India) Limited & Krishak Bharati Cooperative Limited for exploring the opportunity to setup a gas-based fertilizer project in the State of Andhra Pradesh\".",
+      "url": "https://nsearchives.nseindia.com/corporate/GAIL_12112026173405_PR12112026__2_.pdf",
+      "tags": [
+        "other"
+      ],
+      "summary": "Press Release"
+    },
+    {
+      "id": "efed5030391e5c6d1acd75746bf16a59f101d0d4",
+      "ts_ist": "2026-11-12T17:24:01+05:30",
+      "ticker": "UNIONBANK",
+      "source": "NSE filing",
+      "title": "Disclosure pertaining to investment in Star Union Dai-ichi Life Insurance Co. Ltd (SUD Life).",
+      "url": "https://nsearchives.nseindia.com/corporate/UNIONBANK_12112026172349_DISCLOSURE_SUD_LIFE.pdf",
+      "tags": [
+        "other"
+      ],
+      "summary": "General Updates"
+    },
+    {
+      "id": "faf02e927b5cbfc2e490120079387014e42d5529",
+      "ts_ist": "2026-11-12T15:56:29+05:30",
+      "ticker": "KOTAKBANK",
+      "source": "NSE filing",
+      "title": "Kotak Mahindra Bank Limited has informed the Exchange about intimation under Regulation 30 of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015",
+      "url": "https://nsearchives.nseindia.com/corporate/KMBLOMKAR_12112026155607_SEIntimation12112026.pdf",
+      "tags": [
+        "regulatory"
+      ],
+      "summary": "General Updates"
+    },
+    {
+      "id": "a0895b2694af5984b7a4c24bb75902f634206789",
+      "ts_ist": "2026-11-12T15:48:49+05:30",
+      "ticker": "GAIL",
+      "source": "NSE filing",
+      "title": "GAIL (India) Limited has informed the Exchange regarding a press release dated November 12, 2026, titled \"Awareness session for 300 TPD MunicipalSolid Waste (MSW) based Compressed Biogas (CBG) Plant in Bengaluru organised\".",
+      "url": "https://nsearchives.nseindia.com/corporate/GAIL_12112026154813_PR12112026.pdf",
+      "tags": [
+        "other"
+      ],
+      "summary": "Press Release"
+    },
+    {
+      "id": "c153023b6cb531c5f145b603f35c52ab17ac7116",
+      "ts_ist": "2026-11-12T13:42:00+05:30",
+      "ticker": "AXISBANK",
+      "source": "PSU Connect",
+      "title": "Axis Bank Limited Allots 220,144 Equity Shares under ESOP/RSU Scheme",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNeGpMX0NVU2tjTFY3V3dvMXJxMmRzYTdyaGpRTmJ1aUthblZiNkdBTWctTk03VmNvN19SRnA4M1NPeU1fOHNkVklRQUd1OVd5aXpaOHA4MTdoUmp5RHhNbTNEQXdyb2xBV29tY1VJcnU4VlJteEdndE8zeDlBOXRvWkNXOE9mT0lVSFFzb3p6Rm5MRHNJU2VOZmVkZ0duX3ZFMHFQNEZ3?oc=5",
+      "tags": [
+        "other"
+      ],
+      "summary": "Public headline via Google News RSS; open the source before relying on it."
+    },
+    {
+      "id": "db1c03208a0172e432db2367372abd31708fed97",
+      "ts_ist": "2026-11-12T11:00:14+05:30",
+      "ticker": "TRENT",
+      "source": "Upstox",
+      "title": "Trent Share Price",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1rMko0cG80WFpzNFh4clB2SXR6Zzh0QVpxdGlVdnh1QXo3aG9EVjh2d1EzUW1YZldSWDZCeGtySXZ1ZmJrbnNyZV9Gb2RtbzFtYWhKalVrRWpOMWJf?oc=5",
+      "tags": [
+        "other"
+      ],
+      "summary": "Public headline via Google News RSS; open the source before relying on it."
+    },
+    {
+      "id": "64b39378a1a66178fe802d46616c221c90bf9bf7",
+      "ts_ist": "2026-11-12T03:31:17+05:30",
+      "ticker": "AXISBANK",
+      "source": "Upstox",
+      "title": "Axis Bank Share Price - Live NSE: AXISBANK Stock Price & Chart",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1sRHdudklyeHpNVkNfMmpDYkhZLVo3VXBVUjByU0JkekxYNUVNMFphV0R5Vi1vQUd1YVBRU3llVDRCLTcwSnRTMnktT2VvaTVHVWZkSXB6Ylh2cnRpU0J6Y2pJOUVPRDQ?oc=5",
+      "tags": [
+        "other"
+      ],
+      "summary": "Public headline via Google News RSS; open the source before relying on it."
+    },
+    {
+      "id": "b114c5ca079e23aeecf244a3f395c7bce83f3300",
+      "ts_ist": "2026-11-11T20:30:39+05:30",
+      "ticker": "PNB",
+      "source": "Upstox",
+      "title": "PNB Share Price",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9WQkJNWC1Zd2FyaTR2VlF3bDg1bzAybHBMRGJmVkE0ekJhNjNtd2JNN0ZtalBieThrSGtKTEFZRHpONFd0RGNiQzNQN3pkVkFyUm8tYnhHU04yLVcyeEMzeVNWU1AyMUdJc1Fz?oc=5",
+      "tags": [
+        "other"
+      ],
+      "summary": "Public headline via Google News RSS; open the source before relying on it."
+    },
+    {
+      "id": "1aed4c2fa75860b46be8d32669bdc693042b309c",
+      "ts_ist": "2026-11-11T19:06:52+05:30",
+      "ticker": "AXISBANK",
+      "source": "NSE filing",
+      "title": "Axis Bank Limited has informed the Exchange about Schedule of meet",
+      "url": "https://nsearchives.nseindia.com/corporate/AXISBANK1_11112026190536_Advance_Intimation_Signed.pdf",
+      "tags": [
+        "other"
+      ],
+      "summary": "Analysts/Institutional Investor Meet/Con. Call Updates"
+    },
+    {
+      "id": "7ed4645f72dc3305c03baa150ad4cc844bd50f05",
+      "ts_ist": "2026-11-11T19:05:44+05:30",
+      "ticker": "AXISBANK",
+      "source": "NSE filing",
+      "title": "Axis Bank Limited has informed the Exchange regarding Allotment of 220144  Shares.",
+      "url": "https://nsearchives.nseindia.com/corporate/Kapil_11112026190524_SE11112026.pdf",
+      "tags": [
+        "other"
+      ],
+      "summary": "ESOP/ESOS/ESPS"
+    },
+    {
+      "id": "77e84330f7cc00e77c638cfc379a27311204fa46",
+      "ts_ist": "2026-11-11T19:01:00+05:30",
+      "ticker": "PNB",
+      "source": "Kalkine India",
+      "title": "Punjab National Bank (NSE:PNB) Discloses \u20b91.25 Lakh Penalty on Currency Chest Norms",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNRXAyaHA5LVo0WThublI1T3NGR1pZNDVLc0ZDdjJ1RnBrLWFrLTlFckpNZ1hqSV9Eb2loNEU0QUl1SGlDR25ZWkQ3bmNhRmZrQ0dYWS1EX1VfUFRlcGpaRmR6UVZzS05zOEswazh0aU02NUptc0VjaUVTNXJ5ZHozN2FUOExtM296YjI1Ymk5SjJacXh1bE9JbHFjRTVXalFfNTA3algxaUNteGQzajJId2xWekRJZXBMcnptSkdyWGFvdkxMM29RVG9MeGtGSXF1bTBQcw?oc=5",
+      "tags": [
+        "regulatory"
+      ],
+      "summary": "Public headline via Google News RSS; open the source before relying on it."
+    },
+    {
+      "id": "f299f8454963f5c8aabc1c09ceb825dd795143ed",
+      "ts_ist": "2026-11-11T18:53:58+05:30",
+      "ticker": "KOTAKBANK",
+      "source": "NSE filing",
+      "title": "Kotak Mahindra Bank Limited has informed the Exchange about Schedule of meet",
+      "url": "https://nsearchives.nseindia.com/corporate/KMBLOMKAR_11112026185337_SEIntimationAnalystInvestorMeetNov2026.pdf",
+      "tags": [
+        "other"
+      ],
+      "summary": "Analysts/Institutional Investor Meet/Con. Call Updates"
+    },
+    {
+      "id": "63e9b4b618c4444cf036860dd4e4384b52881d3f",
+      "ts_ist": "2026-11-11T15:36:55+05:30",
+      "ticker": "PNB",
+      "source": "NSE filing",
+      "title": "Punjab National Bank has informed the Exchange about Schedule of meet",
+      "url": "https://nsearchives.nseindia.com/corporate/pnb2_11112026152734_Intimation_Analyst_Meet_11112026_DS.pdf",
+      "tags": [
+        "other"
+      ],
+      "summary": "Analysts/Institutional Investor Meet/Con. Call Updates"
+    },
+    {
+      "id": "0e1dae69eae5b26938976fb546823ce3c776205e",
+      "ts_ist": "2026-11-11T15:36:55+05:30",
+      "ticker": "PNB",
+      "source": "NSE filing",
+      "title": "Punjab National Bank has informed the Exchange about Schedule of meet",
+      "url": "https://nsearchives.nseindia.com/corporate/pnb2_11112026152711_Intimation_Analyst_Meet_11112026_DS.pdf",
+      "tags": [
+        "other"
+      ],
+      "summary": "Analysts/Institutional Investor Meet/Con. Call Updates"
+    },
+    {
+      "id": "420199e45a5eee9c2e1fa43b1c5f2b549f6d4669",
+      "ts_ist": "2026-11-11T15:15:05+05:30",
+      "ticker": "TVSMOTOR",
+      "source": "NSE filing",
+      "title": "TVS Motor Company Limited has informed the Exchange regarding a press release dated November 11, 2026, titled \"TVS MOTOR EXPANDS ITS GLOBAL PORTFOLIO WITH TVS CALLISTO 110 LAUNCH IN ISTANBUL\".",
+      "url": "https://nsearchives.nseindia.com/corporate/TVSMOTOR_11112026151336_NSEBSECallisto110inturkey.pdf",
+      "tags": [
+        "other"
+      ],
+      "summary": "Press Release"
+    },
+    {
+      "id": "6bd5119996b48ab83361d074dde153bbcd0b1a44",
+      "ts_ist": "2026-11-11T15:11:11+05:30",
+      "ticker": "KOTAKBANK",
+      "source": "NSE filing",
+      "title": "Kotak Mahindra Bank Limited has informed the Exchange regarding allotment of 467180  Equity Shares.",
+      "url": "https://nsearchives.nseindia.com/corporate/KMBLOMKAR_11112026150402_Intimation_Allotment_of_Equity_Shares_under_ESOP_Schemes.pdf",
+      "tags": [
+        "other"
+      ],
+      "summary": "ESOP/ESOS/ESPS"
+    },
+    {
+      "id": "f19e0a17fac62a5064c05524bb41c8f2edfc446d",
+      "ts_ist": "2026-11-11T14:52:26+05:30",
+      "ticker": "PNB",
+      "source": "Business Standard",
+      "title": "Rentomojo climbs 10% to 52-wk high; what's behind gains as Q2 PAT dips 63%?",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPdlJUeGY1djF6cnhVWFRCaS1WSnhCa1JsRWs0RzFPWDVsRlJMc2pJMHFSN1RCbGkwVjN3Mk81ajBPMHZ5VmVHMHpOTGZUWmo1My1wZ2VyVU8xYnZPVnZsVzBJRnlmdmxNd3l6QUgzekZ4dnlrSm1uOUc5NHZLN1pXUGZxX09TQ21VSkRYQUR4NmVSZWkzeUR6OWhSalQ2cTdHTWJUdFA4bGZfenRxQ1NianU5VmRXSDN5U3F0Uks0QWU0ai13bG1yUGtVYVlQNUZOQ3JEc9IB2gFBVV95cUxQTGoyemk5OTRQNVNfeExhR3EzVnJKQ1M0TUljZnBoa2k4T3Bxc2Q4aFBjZ3ItQ185TExkWUFHQmRKQlJHY2YtQW9Sd1lGZXhOZ2t1SUVfTEdfT3FfaWlyNnR3YUt2UldZb2xiTkRfdG1RNS15Q1RMdENla28wMDRJcUhBeE1IdGwzdTdkWWQ4Z2xXb2J3ZlFsajZ2STdISnZ1ODliR0tiel9mS3RKbS1NVk51THBNVGhqWWVPc3BJdlRKNXlLTFkwSXVmZzZuZ1BxVU1PV3BwWWl5dw?oc=5",
+      "tags": [
+        "other"
+      ],
+      "summary": "Public headline via Google News RSS; open the source before relying on it."
+    },
+    {
+      "id": "07e838b2625848df9423f6f0ed25734f24aa889e",
+      "ts_ist": "2026-11-11T13:21:43+05:30",
+      "ticker": "PNB",
+      "source": "Business Standard",
+      "title": "Punjab National Bank share price soars 11% in two days; hits 52-week high",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQMURtSmhOMkNCbGdld3lxUTZ2YmNPSF9yV3NUemhvdTFGcU9KclZaNUhCYThiQU5BSkdKZWRVdGNtdWdEMEhSWlRYMzU2VG0zYnRNNm55QW5VWGlsVFVQN1Y1Tm1hbFpoQlk0NEdPanZXRlp3dzJSNmhaWlhoa3EyVjN4RDNuM210YWRWbG12ek1JaWJ4SG8zdUpFVVd4SEVQWGhzNzNDTEszMzMzcGQ1cTBuMFFhdmlUZl9VemdFZjBKXzdYZlpPSWJHbjlJSWw3N0VjYdIB2gFBVV95cUxORE8tOER6djk3UmdXV2NwRFBSMGVHZmt5V040d3lZUEZPdlBIdTNKaFpsYnRxZUV1QmNERktEc1ZXUjBOaEdEdkg5Tk5mNDBMU1N6VFRwakxZWlQwd1FHaTJTYmVjRDBBMjhmZmktanJSVHRmZ01NU0RVbENTT21NTk9nd1NseWdSZ28zR284TkdSMVVaUmdpaURFeDhiUkJ5ai00cE1jUElINU0yb3NKSE0yQ002SzQ5RnZVeHVkSXB3NGJYRUVhQ3EwR01Rc1c3QkxyVkw1WDdIQQ?oc=5",
+      "tags": [
+        "other"
+      ],
+      "summary": "Public headline via Google News RSS; open the source before relying on it."
+    },
+    {
+      "id": "56a72526f1f651ae299968fd1fbaff2b720a9454",
+      "ts_ist": "2026-11-11T12:27:51+05:30",
+      "ticker": "PNB",
+      "source": "Business Standard",
+      "title": "Nifty Bank index rallies 4% in two days, nears record high; here's why",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQYnRoeC1xR3NKRmxBOHRrWHRxS0dvaUsxREZmMFB3a3RvaTEtWGZxUHhGVlBvcDcxc2ZGZkdETXRlb3d6Y1NXUEg3YktBS2ZwWWR0bHdJV2J6ZDVIb2VfRXhGQ1owZ1R3ZHRZMzJOM3ZhVWVYVUNJeUpBelZHdGFlaW1VQzNPT09YdzFUR2JlN0NFNkFJS0ZtbU1pVFNjV2JQVWotTWJEckZGTzdLR3NYNlVLNWI2QTB2VHBFN01GNWEteDctdkg0RENkcGFxYTTSAdQBQVVfeXFMT1BMdUZnbE5mU2dOTUdXS0NvTGpkd1ROWGUtcTBBWl9MaWtYbjJSUHRjQW85QmFtbEt0d2hZODJCSWxYWVE2U2VQTVM0SFZoSDVWZWo0LXdmT1RETkc5UEZmYmpYUnJzc0tRSzU0N3NaMHVHZWh0eE5BWEpjell4RlpqN3FDNFh0SmIxRWYwSDJ0NFhwTDFHMFpMSFNHYzU2T20xMm9wMmYwVTJzMmVIVldnNnMzNjRkQVdxRjBOSlItdmpkZmhHVXh2bU56UTRaMms5bEw?oc=5",
+      "tags": [
+        "other"
+      ],
+      "summary": "Public headline via Google News RSS; open the source before relying on it."
+    },
+    {
+      "id": "803280e924068cdd91932a7feec559d501fe9ea7",
+      "ts_ist": "2026-11-11T09:57:01+05:30",
+      "ticker": "PNB",
+      "source": "Business Standard",
+      "title": "Bulls in action! Sensex zooms 1,400 pts intraday; oil, FII buying aid rally",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOQlBrN2ttTld4aEZ2bkpzeXRqTFVaR1FxZFNyeVdXN052TnV3MGZtZ0V5QWRUcXJlcGJJb2pRWlZmMy11UThQSTNKUVJxYi1CZm45SEdkOU1yZnp1dlhJOVdVODVrQkFYTlNWcVpJTFdMOEJBbkpuSDV5el9jZTJLYWtscVdEUzBqSW94WkVzemJ3RU04MmE4UWVXdHJ5czRxeVVSdnVZYk5VcG5BQjBVVTJHaDNiaGNDRVktZ3lZNWs2amRDbTJna2NZbzh6Tmk0dld4UmR30gHbAUFVX3lxTE5acWNsRUVJaXd1M3FhRnlXWkYxMXphTDlVbjBYUW5BcXE0X3FPNjVnSkQxeTEwS05WLV9zdGZrcEQ3cHlpMlFBNDV4WlRZaThaYllFbjBNbnB1LWJHQThnRTRPVnY5Sl9LTWJxTW1UU1VRdEhoUjMwaEdPbUw0eEtkREk5cGw5Rk94M2ZlZlhHSWxBd2ExQ2xLRkdFcWZuWllBR3lQUVgtZjNTdm5DQnc2OWpiYXRYYUw3ckpvYldsVVJvdGY4U2pfeU1hcko2b1hLUWJBbktzOUJOaw?oc=5",
+      "tags": [
+        "other"
+      ],
+      "summary": "Public headline via Google News RSS; open the source before relying on it."
+    },
+    {
+      "id": "2b3e669a513f00abca1d49acc2e2eebda1c7fe8d",
+      "ts_ist": "2026-11-11T09:50:20+05:30",
+      "ticker": "UNIONBANK",
+      "source": "The Economic Times",
+      "title": "Voltas - Union Bank of India among 5 stocks closing above VWAP",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOQl83NXFKVVZyQnYxYTJlc1h3RVhZLXFfSWhXSnlQVGFUZTViejl6SC1QdlIwV19XU045QUl5dDEzYk1pZXlCYkxiZXpaWVRuSXNoWE5JZU1DQWtXZVh1MGR5clY1N09JTml1VFYyMmFNVnNjQkVBODA4T2dxa2hHUVd5MmloMU9oUzItVHZCRjJQanMtVnNQcmVPNHptTFVudXNmbWpaTzFtX1B5S0RvS3dOLW9jcWxLUHBBYVNkMU5vMHNQd3I3eFhpUmY?oc=5",
+      "tags": [
+        "other"
+      ],
+      "summary": "Public headline via Google News RSS; open the source before relying on it."
+    }
+  ],
+  "errors": [],
+  "data_note": "NSE filings are primary; media headlines require opening the original source."
+}
