@@ -6,9 +6,9 @@
     python backtest.py --export docs/data/backtest.json
 
 Index options: the same code as the live book (options.py) replayed on every session in
-the bar archive, with the day routing (NIFTY Mon/Tue/Fri, SENSEX Wed/Thu) and the loss
-stops. ORB1 needs 1-minute candles, which free data keeps for ~30 days only; days without
-them run EMA9_21 alone and are flagged.
+the bar archive, with the weekly schedule (Mon/Fri NIFTY ORB1, Tue NIFTY SELL_TIME,
+Wed/Thu SENSEX EMA9_21) and the loss stops. ORB1 needs 1-minute candles: free data keeps
+~30 days, `python kite.py history --days 365` imports a year from Zerodha.
 
 Stocks: the stock ORB (paper.simulate_day) on every Nifty 50 stock each day, taking the
 first 3 breakouts - a fixed universe, so no hindsight from today's scan.
@@ -69,6 +69,7 @@ def detail(t):
     """Everything about one option trade, for the trade log and CSV."""
     return {
         "s": t["strategy"], "u": t["underlying"], "side": t["side"], "n": t["trade_no"],
+        "act": t.get("action", "BUY"), "win": t.get("window", ""),
         "contract": t["symbol"], "strike": t["strike"], "expiry": t["expiry"],
         "qty": t["qty"], "lots": t["lots"],
         "in": t["entry_time"][11:16], "in_idx": t["entry_index"], "in_prem": t["entry_premium"],
@@ -87,10 +88,15 @@ def run_stocks(start=None, end=None):
         universe = [s.strip() for s in f if s.strip() and not s.startswith("#")]
     charts = {}
     for s in universe:
+        # the archive (e.g. a year imported from Kite) topped up with Yahoo's last ~60 days
+        by_t = {b["t"]: b for b in history.load(s)}
         try:
-            charts[s] = _group(paper.nsemkt.yahoo_chart(s, interval="5m", range_="60d")["bars"])
+            for b in paper.nsemkt.yahoo_chart(s, interval="5m", range_="60d")["bars"]:
+                by_t[b["t"]] = b
         except Exception as e:
             print(f"stocks {s}: {e}")
+        if by_t:
+            charts[s] = _group([by_t[t] for t in sorted(by_t)])
     days = sorted({d for g in charts.values() for d in g})
     today = paper.now_ist().date()
     days = [d for d in days if d < today and (not start or d >= start) and (not end or d <= end)]
@@ -130,7 +136,8 @@ def export(path, index_days, stocks=None):
         "generated": paper.now_ist().isoformat(timespec="seconds"),
         "index": {"capital": options.OPT["capital"], "archive5": history.info("5m"),
                   "archive1": history.info("1m"), "days": index_days,
-                  "rules": {"orb1": options.OPT["orb1"], "trade_days": options.OPT["trade_days"],
+                  "rules": {"orb1": options.OPT["orb1"], "schedule": options.schedule_text(),
+                            "sell": {"lots": options.OPT["sell"]["lots"], "pair_stop": options.OPT["sell"]["pair_stop"]},
                             "day_loss_limit": options.OPT["day_loss_limit"],
                             "week_loss_limit": options.OPT["week_loss_limit"],
                             "month_loss_limit": options.OPT["month_loss_limit"]}},
@@ -138,7 +145,8 @@ def export(path, index_days, stocks=None):
     }
     if stocks is not None:
         days, n = stocks
-        payload["stocks"] = {"capital": paper.CONFIG["start_capital"], "universe": f"Nifty 50 ({n} stocks)",
+        first = days[0]["date"] if days else None
+        payload["stocks"] = {"capital": paper.CONFIG["start_capital"], "universe": f"Nifty 50 ({n} stocks)", "first": first,
                              "generated_for": paper.now_ist().date().isoformat(), "days": days}
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:

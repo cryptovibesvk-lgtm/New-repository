@@ -169,7 +169,8 @@ def api_state():
 def options_config():
     import options
     o = options.OPT
-    return {"orb1": o["orb1"], "ema_lots": o["ema_lots"], "ema_book": o["ema_book"], "trade_days": o["trade_days"],
+    return {"orb1": o["orb1"], "ema_lots": o["ema_lots"], "ema_book": o["ema_book"], "schedule": options.schedule_text(),
+            "sell_lots": o["sell"]["lots"], "sell_pair_stop": o["sell"]["pair_stop"],
             "max_trades": o["max_trades"], "points": o["points"],
             "entry_until": o["entry_until"].strftime("%H:%M"), "day_loss_limit": o["day_loss_limit"],
             "week_loss_limit": o["week_loss_limit"], "month_loss_limit": o["month_loss_limit"],

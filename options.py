@@ -1,7 +1,9 @@
 """Index option-buying strategies on NIFTY and SENSEX (virtual money only).
 
-Day routing: NIFTY trades on Monday, Tuesday and Friday; SENSEX on Wednesday and
-Thursday. Only that day's index is traded.
+Weekly schedule (only that day's strategy trades):
+    Monday, Friday     NIFTY  ORB1
+    Tuesday            NIFTY  SELL_TIME (NIFTY weekly expiry day)
+    Wednesday, Thursday SENSEX EMA9_21
 
 The option is priced with Black-Scholes using India VIX as the volatility, the ATM
 strike at entry and the time left to the weekly expiry, so premium, time decay and
@@ -23,8 +25,13 @@ EMA9_21   5-minute candles. The 9/21 EMA cross only arms the setup; the cross ca
           move the stop to break-even; the rest exits when a candle BODY closes across
           the 9 EMA. 5 lots, then 7 lots after a loss.
 
-Each strategy runs on its own: a winning trade ends that strategy for the day, a
-losing trade 1 allows trade 2, two losses end it. The option book has its own capital.
+SELL_TIME Tuesday only, NIFTY, same-day expiry. 09:16 sell the OTM1 CE and OTM1 PE
+          (2 lots each), buy back at 14:25. 14:30 sell the ATM CE and ATM PE (2 lots
+          each), buy back at 15:15. Added for capital protection: each pair is closed
+          early if its combined premium rises 50% above the premium collected.
+
+ORB1 and EMA9_21: a winning trade ends that strategy for the day, a losing trade 1
+allows trade 2, two losses end it. The option book has its own capital.
 """
 import datetime as dt
 import math
@@ -35,8 +42,14 @@ from paper import nsemkt, IST
 OPT = {
     "capital": 500000.0,              # NIFTY + SENSEX option book, separate from stocks
     "underlyings": ["NIFTY", "SENSEX"],
-    "strategies": ["ORB1", "EMA9_21"],
-    "trade_days": {"NIFTY": [0, 1, 4], "SENSEX": [2, 3]},   # Mon/Tue/Fri, Wed/Thu
+    "strategies": ["ORB1", "EMA9_21", "SELL_TIME"],
+    # weekday -> (index, strategy): Mon/Fri NIFTY ORB1, Tue NIFTY SELL_TIME, Wed/Thu SENSEX EMA9_21
+    "schedule": {0: ("NIFTY", "ORB1"), 1: ("NIFTY", "SELL_TIME"), 2: ("SENSEX", "EMA9_21"),
+                 3: ("SENSEX", "EMA9_21"), 4: ("NIFTY", "ORB1")},
+    "sell": {"lots": 2, "windows": [
+        {"name": "OTM1 09:16-14:25", "entry": dt.time(9, 16), "exit": dt.time(14, 25), "otm": 1},
+        {"name": "ATM 14:30-15:15", "entry": dt.time(14, 30), "exit": dt.time(15, 15), "otm": 0}],
+        "pair_stop": 0.5},       # close a pair if its combined premium rises 50% over the credit
     "strike_step": {"NIFTY": 50, "SENSEX": 100},
     "orb1": {
         "NIFTY": {"sl": 20, "qty": [195, 325], "early_trail": (20, -10)},
@@ -67,9 +80,17 @@ M1, M5 = dt.timedelta(minutes=1), dt.timedelta(minutes=5)
 DAY_NAMES = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 
 
+def plan_for_day(day):
+    """(index, strategy) scheduled for this date, or (None, None) on weekends."""
+    return OPT["schedule"].get(day.weekday(), (None, None))
+
+
 def index_for_day(day):
-    """Which index trades on this date (None on weekends)."""
-    return next((u for u, wds in OPT["trade_days"].items() if day.weekday() in wds), None)
+    return plan_for_day(day)[0]
+
+
+def schedule_text():
+    return {DAY_NAMES[d]: f"{u} {s}" for d, (u, s) in sorted(OPT["schedule"].items())}
 
 
 # ------------------------------------------------------------ option pricing
@@ -88,28 +109,46 @@ def bs_price(S, K, T, vol, kind, r=OPT["rate"]):
     return K * math.exp(-r * T) * _ncdf(-d2) - S * _ncdf(-d1)
 
 
-def expiry_for(und, day):
-    """Next weekly expiry; on expiry day itself use the following week (avoids
-    expiry-day decay). Exchange holiday shifts are not modelled."""
+def expiry_for(und, day, same_day=False):
+    """Next weekly expiry. Buying strategies skip to the following week on expiry day
+    (avoids expiry-day decay); the Tuesday sell strategy uses same_day=True to sell the
+    expiring weekly. Exchange holiday shifts are not modelled."""
     wd = OPT["expiry_weekday"][und]
-    ahead = (wd - day.weekday()) % 7 or 7
+    ahead = (wd - day.weekday()) % 7
+    if ahead == 0 and not same_day:
+        ahead = 7
     return day + dt.timedelta(days=ahead)
 
 
+SESSION_MIN = 375          # 09:15-15:30
+TRADING_YEAR_MIN = 252 * SESSION_MIN
+
+
 def years_to(expiry, t):
-    end = dt.datetime.combine(expiry, dt.time(15, 30), IST)
-    return max((end - t).total_seconds(), 60) / (365 * 24 * 3600)
+    """Time to expiry in trading time: market minutes left (today's remaining session
+    plus a full session for every weekday up to and including expiry) over a 252-day
+    year. Calendar time badly understates intraday movement, especially on expiry day."""
+    close = dt.datetime.combine(t.date(), dt.time(15, 30), IST)
+    left = max(0.0, min(SESSION_MIN, (close - t).total_seconds() / 60))
+    d = t.date() + dt.timedelta(days=1)
+    while d <= expiry:
+        if d.weekday() < 5:
+            left += SESSION_MIN
+        d += dt.timedelta(days=1)
+    return max(left, 1.0) / TRADING_YEAR_MIN
 
 
 def premium(und, kind, strike, expiry, S, t, vix):
     return max(0.05, bs_price(S, strike, years_to(expiry, t), vix / 100.0, kind))
 
 
-def option_charges(qty, buy_px, sells):
-    """One buy order for qty, one sell order per exit leg [(qty, px), ...]."""
-    total = nsemkt.broker_charges("FNO", "BUY", qty, buy_px, "OPT")["total"]
-    for q, px in sells:
-        total += nsemkt.broker_charges("FNO", "SELL", q, px, "OPT")["total"]
+def option_charges(qty, open_px, closes, action="BUY"):
+    """One opening order for qty, one closing order per exit leg [(qty, px), ...].
+    action BUY = bought then sold; SELL = sold (written) then bought back."""
+    close_side = "SELL" if action == "BUY" else "BUY"
+    total = nsemkt.broker_charges("FNO", action, qty, open_px, "OPT")["total"]
+    for q, px in closes:
+        total += nsemkt.broker_charges("FNO", close_side, q, px, "OPT")["total"]
     return round(total, 2)
 
 
@@ -138,8 +177,9 @@ def circuit_breaker(day, past):
 def paused_day(reason, day=None):
     status = {f"{s}:{u}": {"trades": 0, "done": True, "note": reason, "net": 0.0}
               for s in OPT["strategies"] for u in OPT["underlyings"]}
+    u, s = plan_for_day(day) if day else (None, None)
     return {"levels": {}, "trades": [], "notes": {}, "status": status, "ema": {}, "paused": reason,
-            "index_today": index_for_day(day) if day else None}
+            "index_today": u, "strategy_today": s, "schedule": schedule_text()}
 
 
 class Book:
@@ -168,7 +208,7 @@ def simulate_options_day(day, und5, und1, vix_bars, now=None):
     Deterministic and rebuilt from completed bars, like paper.simulate_day."""
     cutoff = now or dt.datetime.combine(day, dt.time(23, 59), IST)
     vix_at = _vix_lookup(vix_bars)
-    active = index_for_day(day)
+    active, active_strat = plan_for_day(day)
     levels, emas, prev_t, books, notes, today5, today1 = {}, {}, {}, {}, {}, {}, {}
     in_day = lambda b: b["t"].date() == day and dt.time(9, 15) <= b["t"].time() < dt.time(15, 30)
     for und in OPT["underlyings"]:
@@ -184,22 +224,28 @@ def simulate_options_day(day, und5, und1, vix_bars, now=None):
         prev_t[und] = {done5[i]["t"]: done5[i - 1]["t"] for i in range(1, len(done5))}
         for strat in OPT["strategies"]:
             books[(strat, und)] = Book(strat, und)
-            if und != active:
+            if (und, strat) != (active, active_strat):
+                days = [DAY_NAMES[d] for d, (u2, s2) in sorted(OPT["schedule"].items()) if (u2, s2) == (und, strat)]
                 books[(strat, und)].done = True
-                books[(strat, und)].note = (f"{und} trades on {'/'.join(DAY_NAMES[d] for d in OPT['trade_days'][und])} only "
-                                            f"- today ({DAY_NAMES[day.weekday()]}) is "
-                                            f"{active or 'no-trade day'}")
+                books[(strat, und)].note = (f"{und} {strat} runs on {'/'.join(days)} only - today "
+                                            f"({DAY_NAMES[day.weekday()]}) is {active or '-'} {active_strat or 'no trading'}"
+                                            if days else f"{und} {strat} is not in the schedule")
     orb_state = {u: {"prev_close": None} for u in OPT["underlyings"]}
     ema_state = {u: {"setup": None} for u in OPT["underlyings"]}
 
     # events in completion order: every 1-minute bar (ORB1), every 5-minute bar (EMA9_21)
     events = []
-    for und in OPT["underlyings"]:
-        if und != active:
-            continue
-        events += [(b["t"] + M1, 0, "1m", und, b) for b in today1[und]]
-        events += [(b["t"] + M5, 1, "5m", und, b) for b in today5[und]]
+    if active_strat == "ORB1":
+        events += [(b["t"] + M1, 0, "1m", active, b) for b in today1[active]]
+    elif active_strat == "EMA9_21":
+        events += [(b["t"] + M5, 1, "5m", active, b) for b in today5[active]]
     events.sort(key=lambda e: (e[0], e[1]))
+    if active_strat == "SELL_TIME":
+        bars = today1[active] or today5[active]   # 1-minute when available, else 5-minute
+        step = M1 if today1[active] else M5
+        books[("SELL_TIME", active)].trades = _sell_time(active, day, bars, step, vix_at, notes, cutoff)
+        books[("SELL_TIME", active)].done = all(t["status"] == "CLOSED" for t in books[("SELL_TIME", active)].trades) \
+            and cutoff >= dt.datetime.combine(day, dt.time(15, 16), IST)
 
     for done_at, _, res, und, bar in events:
         t = bar["t"]
@@ -262,6 +308,8 @@ def simulate_options_day(day, und5, und1, vix_bars, now=None):
         tr = bk.open_trade()
         if not tr:
             continue
+        if tr["strategy"] == "SELL_TIME":
+            continue          # its own exits are fixed times
         bars = today1[tr["underlying"]] if tr["strategy"] == "ORB1" else today5[tr["underlying"]]
         if not bars:
             continue
@@ -289,7 +337,7 @@ def simulate_options_day(day, und5, und1, vix_bars, now=None):
             last = e[max(day_ts)]
             ema_now[u] = {"ema9": round(last[0], 2), "ema21": round(last[1], 2), "setup": ema_state[u]["setup"]}
     return {"levels": levels, "trades": trades, "notes": notes, "status": status, "ema": ema_now,
-            "index_today": active}
+            "index_today": active, "strategy_today": active_strat, "schedule": schedule_text()}
 
 
 def _vix_lookup(vix_bars):
@@ -350,7 +398,7 @@ def _enter(strat, und, kind, bar, at, stop, n, vix, why):
     stop_prem = premium(und, kind, strike, expiry, stop, at, vix)
     pts = OPT["points"][und]
     return {
-        "strategy": strat, "underlying": und, "side": kind, "strike": strike,
+        "strategy": strat, "underlying": und, "side": kind, "strike": strike, "action": "BUY",
         "expiry": expiry.isoformat(), "symbol": f"{und} {strike} {kind}", "trade_no": n,
         "status": "OPEN", "why": why, "entry_time": at.isoformat(),
         "entry_index": round(bar["c"], 2), "entry_premium": round(entry_prem, 2), "vix": round(vix, 2),
@@ -428,12 +476,86 @@ def _close(tr):
     last = tr["legs"][-1]
     tr.update(exit_time=last["time"], exit_reason=last["reason"], exit_index=last["index"],
               exit=last["premium"])
-    tr["gross_pnl"] = round(sum((l["premium"] - tr["entry_premium"]) * l["qty"] for l in tr["legs"]), 2)
-    tr["charges"] = option_charges(tr["qty"], tr["entry_premium"], [(l["qty"], l["premium"]) for l in tr["legs"]])
+    sign = -1 if tr.get("action") == "SELL" else 1
+    tr["gross_pnl"] = round(sign * sum((l["premium"] - tr["entry_premium"]) * l["qty"] for l in tr["legs"]), 2)
+    tr["charges"] = option_charges(tr["qty"], tr["entry_premium"], [(l["qty"], l["premium"]) for l in tr["legs"]],
+                                   tr.get("action", "BUY"))
     tr["net_pnl"] = round(tr["gross_pnl"] - tr["charges"], 2)
     tr["r_multiple"] = round(tr["net_pnl"] / tr["risk_at_stop"], 2) if tr["risk_at_stop"] > 0 else None
     tr["entry"] = tr["entry_premium"]
     tr.pop("unrealised", None)
+
+
+def _sell_time(und, day, bars, step, vix_at, notes, cutoff):
+    """Tuesday NIFTY: sell a CE + PE pair per window at a fixed time, buy back at a fixed
+    time. Strikes from the index at entry: OTM1 = one strike out of the money each side."""
+    cfg, lot = OPT["sell"], paper.lot_size(und)
+    qty, k_step = cfg["lots"] * lot, OPT["strike_step"][und]
+    expiry = expiry_for(und, day, same_day=True)
+    slip = OPT["premium_slippage"]
+    done_at = lambda b: b["t"] + step
+    trades = []
+    for w in cfg["windows"]:
+        entry_bar = next((b for b in bars if done_at(b).time() >= w["entry"]), None)
+        if entry_bar is None:
+            continue
+        at = done_at(entry_bar)
+        if at.time() >= w["exit"]:
+            notes[f"SELL:{w['name']}"] = f"{w['name']}: no candle at {w['entry']:%H:%M}"
+            continue
+        S, vix = entry_bar["c"], vix_at(entry_bar["t"])
+        atm = int(round(S / k_step) * k_step)
+        strikes = {"CE": atm + w["otm"] * k_step, "PE": atm - w["otm"] * k_step}
+        pair = []
+        for kind, k in strikes.items():
+            prem = premium(und, kind, k, expiry, S, at, vix) * (1 - slip)   # selling: we receive a little less
+            pair.append({
+                "strategy": "SELL_TIME", "underlying": und, "side": kind, "action": "SELL", "strike": k,
+                "expiry": expiry.isoformat(), "symbol": f"{und} {k} {kind}", "trade_no": len(trades) // 2 + 1,
+                "window": w["name"], "status": "OPEN",
+                "why": f"{w['name']}: sell {'OTM1' if w['otm'] else 'ATM'} {kind} at {at:%H:%M}, index {S:.2f}",
+                "entry_time": at.isoformat(), "entry_index": round(S, 2), "entry_premium": round(prem, 2),
+                "vix": round(vix, 2), "lot": lot, "lots": cfg["lots"], "qty": qty, "qty_open": qty, "book_qty": 0,
+                "stop_index": None, "initial_stop": None, "sl_premium": round(prem * (1 + cfg["pair_stop"]), 2),
+                "partial_done": False, "protected": False, "best_points": 0.0, "stop_moves": [],
+                "risk_at_stop": round(prem * cfg["pair_stop"] * qty, 2), "legs": [],
+                "gross_pnl": 0.0, "charges": 0.0, "net_pnl": 0.0,
+            })
+        credit = sum(t["entry_premium"] for t in pair)
+        stop_level = credit * (1 + cfg["pair_stop"])
+        exit_at, reason = None, None
+        for b in bars:
+            t_done = done_at(b)
+            if t_done <= at:
+                continue
+            if t_done.time() > w["exit"]:
+                break
+            # worst case inside the candle: the CE is dearest at the high, the PE at the low
+            worst = max(sum(premium(und, x["side"], x["strike"], expiry, px, t_done, vix_at(b["t"])) for x in pair)
+                        for px in (b["h"], b["l"]))
+            if worst >= stop_level:
+                px = b["h"] if (sum(premium(und, x["side"], x["strike"], expiry, b["h"], t_done, vix_at(b["t"])) for x in pair)
+                                >= sum(premium(und, x["side"], x["strike"], expiry, b["l"], t_done, vix_at(b["t"])) for x in pair)) else b["l"]
+                exit_at, reason, exit_px = t_done, "PAIR_STOP_+50%", px
+                break
+            if t_done.time() >= w["exit"]:
+                exit_at, reason, exit_px = t_done, f"TIME_EXIT_{w['exit']:%H:%M}", b["c"]
+                break
+        for x in pair:
+            if exit_at is None:   # window still running: mark to the last completed candle
+                last = [b for b in bars if done_at(b) <= cutoff and done_at(b) > at]
+                if last:
+                    px = premium(und, x["side"], x["strike"], expiry, last[-1]["c"], done_at(last[-1]), vix_at(last[-1]["t"]))
+                    x["last_index"], x["last_premium"] = round(last[-1]["c"], 2), round(px, 2)
+                    x["unrealised"] = round((x["entry_premium"] - px) * qty, 2)
+                continue
+            buy_back = premium(und, x["side"], x["strike"], expiry, exit_px, exit_at, vix_at(exit_at)) * (1 + slip)
+            x["legs"].append({"time": exit_at.isoformat(), "qty": qty, "lots": cfg["lots"],
+                              "index": round(exit_px, 2), "premium": round(buy_back, 2), "reason": reason})
+            x["qty_open"] = 0
+            _close(x)
+        trades += pair
+    return trades
 
 
 # ------------------------------------------------------------ data helpers

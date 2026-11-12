@@ -6,6 +6,7 @@ Writes docs/index.html (a copy of dashboard.html) and docs/data/*.json with the
 same shapes the local dashboard API returns, so the page works without a server.
 """
 import datetime as dt
+import hashlib
 import json
 import os
 import shutil
@@ -19,7 +20,7 @@ DOCS = os.path.join(HERE, "docs")
 DATA = os.path.join(DOCS, "data")
 CLOUD_LOG = os.path.join(paper.PAPER_DIR, "cloud.log")
 REPLAY_DAYS = 20
-REPLAY_VERSION = 4  # 4 = ORB1 (1-minute) + day routing
+REPLAY_VERSION = 5  # 5 = weekly schedule incl. Tuesday SELL_TIME, trading-time pricing
 
 
 def dump(path, obj):
@@ -41,7 +42,12 @@ def tail_log(n=300):
 
 def export():
     os.makedirs(DOCS, exist_ok=True)
-    shutil.copyfile(os.path.join(HERE, "dashboard.html"), os.path.join(DOCS, "index.html"))
+    # stamp the page with a version so an old cached copy notices and reloads itself
+    with open(os.path.join(HERE, "dashboard.html"), encoding="utf-8") as f:
+        page = f.read()
+    version = hashlib.md5(page.encode("utf-8")).hexdigest()[:10]
+    with open(os.path.join(DOCS, "index.html"), "w", encoding="utf-8") as f:
+        f.write(page.replace("__APP_VERSION__", version))
     open(os.path.join(DOCS, ".nojekyll"), "w").close()
 
     state = dashboard.api_state()
@@ -54,7 +60,7 @@ def export():
         pass
     st["running"] = st.get("state") in dashboard.LIVE_STATES
     repo = os.environ.get("GITHUB_REPOSITORY", "")
-    state.update(status=st, log=tail_log(), static=True,
+    state.update(status=st, log=tail_log(), static=True, app_version=version,
                  exported_at=dt.datetime.now(IST).isoformat(timespec="seconds"),
                  actions_url=f"https://github.com/{repo}/actions" if repo else "")
     dump(os.path.join(DATA, "state.json"), state)

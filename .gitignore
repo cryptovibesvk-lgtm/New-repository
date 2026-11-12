@@ -3,4 +3,5 @@ __pycache__/
 paper/*.log
 !paper/cloud.log
 paper/*.tmp
+.nse_kite_token.json
 .claude/

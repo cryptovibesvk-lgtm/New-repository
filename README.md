@@ -12,16 +12,23 @@ position, ₹10,000 max loss per trade, ₹20,000 daily loss limit. Prices: Yaho
 
 ## Option strategies on NIFTY and SENSEX (`options.py`)
 
-**Day routing:** NIFTY trades on Monday, Tuesday and Friday; SENSEX on Wednesday and
-Thursday. Only that day's index takes trades. An ATM CE (up) or PE (down) is bought.
+**Weekly schedule** – only that day's strategy trades:
+
+| Day | Index | Strategy |
+|---|---|---|
+| Monday, Friday | NIFTY | ORB1 |
+| Tuesday (NIFTY expiry) | NIFTY | Tuesday sell (SELL_TIME) |
+| Wednesday, Thursday | SENSEX | EMA9_21 |
 
 - **ORB1 (1-minute candles)** – mark the first 1-minute candle (09:15) high and low. A
-  1-minute close above the high buys a CE, below the low buys a PE.
-  - NIFTY: stop 20 index points (~10 premium points). +20 → stop −10, +30 → break-even,
-    +40 → stop +10, then the stop follows every further 10 points. Qty 195, then 325
-    after a losing first trade.
-  - SENSEX: stop 30 index points. +30 → break-even, +40 → stop +10, then every further
-    10 points. Qty 200, then 300 after a losing first trade.
+  1-minute close above the high buys an ATM CE, below the low an ATM PE. Stop 20 index
+  points (~10 premium points); +20 → stop −10, +30 → break-even, +40 → stop +10, then the
+  stop follows every further 10 points. Qty 195, then 325 after a losing first trade.
+- **Tuesday sell (SELL_TIME)** – the expiring weekly. 09:16 sell the OTM1 CE and OTM1 PE
+  (one strike out of the money each side), 2 lots each, buy back at 14:25. 14:30 sell the
+  ATM CE and ATM PE, 2 lots each, buy back at 15:15. Added for capital protection: a pair
+  is closed early if its combined premium rises 50% above the premium collected. Needs
+  roughly ₹2–3L of margin.
 - **EMA9_21 (5-minute candles)** – the 9/21 EMA cross only arms the setup; the cross
   candle is never an entry. CE: a later candle whose wick comes back to the 9 EMA and
   whose body closes above it (a retest closing below is skipped). PE is the mirror.
@@ -29,34 +36,37 @@ Thursday. Only that day's index takes trades. An ATM CE (up) or PE (down) is bou
   stop to break-even; the rest exits only when a candle **body** closes across the 9 EMA.
   5 lots, then 7 lots after a loss.
 
-Each strategy runs on its own: a winning trade ends it for the day, a losing trade 1
-allows trade 2, two losses end it. No new entries after 14:30; square-off at 15:15.
+ORB1 and EMA9_21: a winning trade ends the strategy for the day, a losing trade 1 allows
+trade 2, two losses end it. No new entries after 14:30; square-off at 15:15.
 
 Capital: stocks ₹5L and the NIFTY + SENSEX option book ₹5L are separate books. Loss
-stops on the option book: ₹10,000 per day (also blocks a new trade whose risk would
-cross it), ₹15,000 per week, ₹30,000 per month – after a weekly/monthly stop the book
-pauses until the next week/month. On expiry day the next weekly expiry is used. NIFTY
-lot from NSE (65); SENSEX lot 20 (BSE, confirm it).
+stops on the option book: ₹10,000 per day, ₹15,000 per week, ₹30,000 per month. NIFTY
+lot from NSE (65).
 
-Premiums are **estimates** (Black-Scholes with India VIX, ATM strike, time to the weekly
-expiry: NIFTY Tuesday, SENSEX Thursday), not exchange quotes, plus 0.25% slippage per
-fill and option charges.
+Premiums are **estimates**: Black-Scholes with India VIX as the volatility, measured in
+trading time (market minutes left to expiry), plus 0.25% slippage per fill and option
+charges. Buying strategies use the next weekly expiry on expiry day; the Tuesday sell uses
+the expiring weekly.
 
 ## Backtest
 
-`backtest.py` replays the option strategies over every session in the bar archive
+`backtest.py` replays the option schedule over every session in the bar archive
 (`data/bars/` 5-minute, `data/bars1m/` 1-minute, written by `history.py`), and the stock
 ORB over all Nifty 50 stocks (first 3 breakouts a day – a fixed universe, so no hindsight).
 The dashboard's **Backtest** tab groups results by day / week / month / year for any date
-range, lists every trade (date, time, qty, entry, stop-loss, every exit, charges, net) and
-downloads it as CSV. Free Yahoo data only reaches back ~60 days (5-minute) and ~30 days
-(1-minute), so the archive grows by itself every trading day. To backtest a full year now,
-export candles (e.g. from Zerodha Kite) and import them:
+range, lists every trade (date, time, buy/sell, qty, entry, stop-loss, every exit,
+charges, net) and downloads it as CSV.
 
-    python history.py import nifty_1min.csv --symbol NIFTY --interval 1m
-    python history.py import nifty_5min.csv --symbol NIFTY
-    python history.py import sensex_1min.csv --symbol SENSEX --interval 1m
-    python history.py import indiavix_5min.csv --symbol INDIAVIX
+Free Yahoo data only reaches back ~60 days (5-minute) and ~30 days (1-minute). **For a
+full year, import from Zerodha Kite Connect** (read-only market data; needs a Kite Connect
+app with historical data). Set your keys in your own terminal, never in chat or git:
+
+    $env:KITE_API_KEY = "your_api_key"; $env:KITE_API_SECRET = "your_api_secret"
+    python kite.py login                       # sign in to Kite in the browser
+    python kite.py history --days 365 --stocks # NIFTY, SENSEX, VIX (1m + 5m) + Nifty 50 stocks
+    python site.py                             # rebuild the backtest, then commit and push
+
+CSV files from elsewhere work too: `python history.py import FILE --symbol NIFTY --interval 1m`.
 
 ## Set up (once)
 
