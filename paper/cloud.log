@@ -1,9 +1,3 @@
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Fri) is NIFTY ORB1
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-13 15:29 IST
 PAPER 2026-11-13  indices NIFTY, SENSEX  watchlist DLF, HINDALCO, INDIGO, PNB, TATACONSUM
   DLF          OR 757.95-763.45
   HINDALCO     OR 948.35-962.25
@@ -297,4 +291,10 @@ history SENSEX 5m: +1 bars
 history INDIAVIX 5m: +0 bars
 history NIFTY 1m: +0 bars
 history SENSEX 1m: +5 bars
+history INDIAVIX 1m: +0 bars
+history NIFTY 5m: +0 bars
+history SENSEX 5m: +0 bars
+history INDIAVIX 5m: +0 bars
+history NIFTY 1m: +0 bars
+history SENSEX 1m: +0 bars
 history INDIAVIX 1m: +0 bars
