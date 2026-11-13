@@ -43,22 +43,43 @@
           "symbol": "DLF",
           "status": "OPEN",
           "entry_time": "2026-11-13T09:30:00+05:30",
-          "entry": 765.95,
+          "entry": 767.3,
           "stop": 760.7,
-          "target": 773.85,
-          "qty": 163,
+          "target": 777.2,
+          "qty": 162,
           "segment": "CASH",
-          "margin": 124849.85,
+          "margin": 124302.6,
           "slippage_pct": 0.0005,
-          "risk_at_stop": 947.01,
+          "risk_at_stop": 1160.2,
           "or_high": 763.45,
           "or_low": 757.95,
           "or_mid": 760.7,
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 765.5499877929688,
-          "unrealised": -65.2
+          "last": 766.9000244140625,
+          "unrealised": -64.8
+        },
+        {
+          "symbol": "INDIGO",
+          "status": "OPEN",
+          "entry_time": "2026-11-13T09:30:00+05:30",
+          "entry": 5586.2,
+          "stop": 5563.0,
+          "target": 5621.0,
+          "qty": 22,
+          "segment": "CASH",
+          "margin": 122896.4,
+          "slippage_pct": 0.0005,
+          "risk_at_stop": 601.05,
+          "or_high": 5578.9,
+          "or_low": 5547.1,
+          "or_mid": 5563.0,
+          "gross_pnl": 0.0,
+          "charges": 0.0,
+          "net_pnl": 0.0,
+          "last": 5583.39990234375,
+          "unrealised": -61.6
         }
       ],
       "notes": {},
@@ -225,8 +246,8 @@
             "setup": null
           },
           "SENSEX": {
-            "ema9": 81643.66,
-            "ema21": 81762.02,
+            "ema9": 81542.01,
+            "ema21": 81691.95,
             "setup": null
           }
         },
@@ -240,7 +261,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-13T09:35:05+05:30",
+      "updated_at": "2026-11-13T09:36:05+05:30",
       "final": false
     }
   }
