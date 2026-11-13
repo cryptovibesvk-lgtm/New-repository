@@ -11,10 +11,15 @@
         "TATACONSUM"
       ],
       "scanned_at": "2026-11-13T08:54:10+05:30",
-      "ranges": {},
+      "ranges": {
+        "DLF": {
+          "or_high": 763.45,
+          "or_low": 757.95,
+          "or_mid": 760.7
+        }
+      },
       "trades": [],
       "notes": {
-        "DLF": "opening range incomplete",
         "HINDALCO": "opening range incomplete",
         "INDIGO": "opening range incomplete",
         "PNB": "opening range incomplete",
@@ -86,43 +91,55 @@
             "expiry": "2026-11-17",
             "symbol": "NIFTY 25100 PE",
             "trade_no": 2,
-            "status": "OPEN",
+            "status": "CLOSED",
             "why": "1-min close 25093.75 below first-minute low 25118.40",
             "entry_time": "2026-11-13T09:21:00+05:30",
             "entry_index": 25093.75,
-            "entry_premium": 170.89,
-            "vix": 16.25,
+            "entry_premium": 170.4,
+            "vix": 16.2,
             "lot": 65,
             "lots": 5.0,
             "qty": 325,
-            "qty_open": 325,
+            "qty_open": 0,
             "book_qty": 0,
             "stop_index": 25113.75,
             "initial_stop": 25113.75,
-            "sl_premium": 160.95,
+            "sl_premium": 160.46,
             "partial_index": 25063.75,
             "partial_done": false,
             "protected": false,
-            "best_points": 0.0,
+            "best_points": 16.15,
             "stop_moves": [],
-            "risk_at_stop": 3230.88,
-            "legs": [],
-            "gross_pnl": 0.0,
-            "charges": 0.0,
-            "net_pnl": 0.0,
-            "last_index": 25093.75,
-            "last_premium": 170.54,
-            "unrealised": -115.05
+            "risk_at_stop": 3230.17,
+            "legs": [
+              {
+                "time": "2026-11-13T09:25:00+05:30",
+                "qty": 325,
+                "lots": 5.0,
+                "index": 25113.75,
+                "premium": 159.78,
+                "reason": "STOP"
+              }
+            ],
+            "gross_pnl": -3451.5,
+            "charges": 171.88,
+            "net_pnl": -3623.38,
+            "exit_time": "2026-11-13T09:25:00+05:30",
+            "exit_reason": "STOP",
+            "exit_index": 25113.75,
+            "exit": 159.78,
+            "r_multiple": -1.12,
+            "entry": 170.4
           }
         ],
         "notes": {},
         "status": {
           "ORB1:NIFTY": {
             "trades": 2,
-            "done": false,
-            "note": "",
+            "done": true,
+            "note": "done for the day: 2 losing trades",
             "active": true,
-            "net": -2081.38
+            "net": -5704.76
           },
           "EMA9_21:NIFTY": {
             "trades": 0,
@@ -162,8 +179,8 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25242.37,
-            "ema21": 25250.92,
+            "ema9": 25216.58,
+            "ema21": 25238.42,
             "setup": null
           }
         },
@@ -177,7 +194,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-13T09:21:05+05:30",
+      "updated_at": "2026-11-13T09:25:05+05:30",
       "final": false
     }
   }

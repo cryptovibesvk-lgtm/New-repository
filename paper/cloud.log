@@ -203,3 +203,78 @@ history INDIAVIX 5m: +0 bars
 history NIFTY 1m: +1 bars
 history SENSEX 1m: +0 bars
 history INDIAVIX 1m: +1 bars
+--- tick 2026-11-13 09:22 IST
+PAPER 2026-11-13  indices NIFTY, SENSEX  watchlist DLF, HINDALCO, INDIGO, PNB, TATACONSUM
+  note DLF: opening range incomplete
+  note HINDALCO: opening range incomplete
+  note INDIGO: opening range incomplete
+  note PNB: opening range incomplete
+  note TATACONSUM: opening range incomplete
+  no stock trades yet
+  index today: NIFTY
+  NIFTY        first 1-min candle 25118.40-25201.90
+  ORB1     #1 BUY 195 NIFTY 25100 PE @ prem 160.71 (index 25118.25, SL 25138.25, 09:17)  195 STOP @ 25138.25 (prem 150.64)  net Rs -2,081.38
+  ORB1     #2 BUY 325 NIFTY 25100 PE @ prem 170.07 (index 25093.75, SL 25113.75, 09:21)    open, unrealised Rs 853.45
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Fri) is NIFTY ORB1
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-13 09:23 IST
+PAPER 2026-11-13  indices NIFTY, SENSEX  watchlist DLF, HINDALCO, INDIGO, PNB, TATACONSUM
+  note DLF: opening range incomplete
+  note HINDALCO: opening range incomplete
+  note INDIGO: opening range incomplete
+  note PNB: opening range incomplete
+  note TATACONSUM: opening range incomplete
+  no stock trades yet
+  index today: NIFTY
+  NIFTY        first 1-min candle 25118.40-25201.90
+  ORB1     #1 BUY 195 NIFTY 25100 PE @ prem 160.71 (index 25118.25, SL 25138.25, 09:17)  195 STOP @ 25138.25 (prem 150.64)  net Rs -2,081.38
+  ORB1     #2 BUY 325 NIFTY 25100 PE @ prem 170.18 (index 25093.75, SL 25113.75, 09:21)    open, unrealised Rs 1,662.82
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Fri) is NIFTY ORB1
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-13 09:24 IST
+PAPER 2026-11-13  indices NIFTY, SENSEX  watchlist DLF, HINDALCO, INDIGO, PNB, TATACONSUM
+  note DLF: opening range incomplete
+  note HINDALCO: opening range incomplete
+  note INDIGO: opening range incomplete
+  note PNB: opening range incomplete
+  note TATACONSUM: opening range incomplete
+  no stock trades yet
+  index today: NIFTY
+  NIFTY        first 1-min candle 25118.40-25201.90
+  ORB1     #1 BUY 195 NIFTY 25100 PE @ prem 160.71 (index 25118.25, SL 25138.25, 09:17)  195 STOP @ 25138.25 (prem 150.64)  net Rs -2,081.38
+  ORB1     #2 BUY 325 NIFTY 25100 PE @ prem 170.46 (index 25093.75, SL 25113.75, 09:21)    open, unrealised Rs -2,462.04
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Fri) is NIFTY ORB1
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-13 09:25 IST
+PAPER 2026-11-13  indices NIFTY, SENSEX  watchlist DLF, HINDALCO, INDIGO, PNB, TATACONSUM
+  DLF          OR 757.95-763.45
+  note HINDALCO: opening range incomplete
+  note INDIGO: opening range incomplete
+  note PNB: opening range incomplete
+  note TATACONSUM: opening range incomplete
+  no stock trades yet
+  index today: NIFTY
+  NIFTY        first 1-min candle 25118.40-25201.90
+  ORB1     #1 BUY 195 NIFTY 25100 PE @ prem 160.71 (index 25118.25, SL 25138.25, 09:17)  195 STOP @ 25138.25 (prem 150.64)  net Rs -2,081.38
+  ORB1     #2 BUY 325 NIFTY 25100 PE @ prem 170.40 (index 25093.75, SL 25113.75, 09:21)  325 STOP @ 25113.75 (prem 159.78)  net Rs -3,623.38
+  ORB1:NIFTY: done for the day: 2 losing trades
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Fri) is NIFTY ORB1
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+history NIFTY 5m: +1 bars
+history SENSEX 5m: +0 bars
+history INDIAVIX 5m: +1 bars
+history NIFTY 1m: +4 bars
+history SENSEX 1m: +0 bars
+history INDIAVIX 1m: +4 bars
