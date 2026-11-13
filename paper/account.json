@@ -76,12 +76,49 @@
             "exit": 150.64,
             "r_multiple": -1.13,
             "entry": 160.71
+          },
+          {
+            "strategy": "ORB1",
+            "underlying": "NIFTY",
+            "side": "PE",
+            "strike": 25100,
+            "action": "BUY",
+            "expiry": "2026-11-17",
+            "symbol": "NIFTY 25100 PE",
+            "trade_no": 2,
+            "status": "OPEN",
+            "why": "1-min close 25093.75 below first-minute low 25118.40",
+            "entry_time": "2026-11-13T09:21:00+05:30",
+            "entry_index": 25093.75,
+            "entry_premium": 170.89,
+            "vix": 16.25,
+            "lot": 65,
+            "lots": 5.0,
+            "qty": 325,
+            "qty_open": 325,
+            "book_qty": 0,
+            "stop_index": 25113.75,
+            "initial_stop": 25113.75,
+            "sl_premium": 160.95,
+            "partial_index": 25063.75,
+            "partial_done": false,
+            "protected": false,
+            "best_points": 0.0,
+            "stop_moves": [],
+            "risk_at_stop": 3230.88,
+            "legs": [],
+            "gross_pnl": 0.0,
+            "charges": 0.0,
+            "net_pnl": 0.0,
+            "last_index": 25093.75,
+            "last_premium": 170.54,
+            "unrealised": -115.05
           }
         ],
         "notes": {},
         "status": {
           "ORB1:NIFTY": {
-            "trades": 1,
+            "trades": 2,
             "done": false,
             "note": "",
             "active": true,
@@ -140,7 +177,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-13T09:20:05+05:30",
+      "updated_at": "2026-11-13T09:21:05+05:30",
       "final": false
     }
   }
