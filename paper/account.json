@@ -57,8 +57,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 764.4000244140625,
-          "unrealised": -469.8
+          "last": 764.5,
+          "unrealised": -453.6
         },
         {
           "symbol": "INDIGO",
@@ -266,13 +266,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25180.95,
-            "ema21": 25193.14,
+            "ema9": 25176.82,
+            "ema21": 25190.15,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 81673.44,
-            "ema21": 81703.03,
+            "ema9": 81660.27,
+            "ema21": 81691.32,
             "setup": null
           }
         },
@@ -286,7 +286,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-13T11:40:05+05:30",
+      "updated_at": "2026-11-13T11:45:05+05:30",
       "final": false
     }
   }
