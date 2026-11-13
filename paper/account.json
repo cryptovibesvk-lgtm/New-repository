@@ -135,7 +135,7 @@
             "why": "1-min close 25118.25 below first-minute low 25118.40",
             "entry_time": "2026-11-13T09:17:00+05:30",
             "entry_index": 25118.25,
-            "entry_premium": 160.68,
+            "entry_premium": 160.71,
             "vix": 16.35,
             "lot": 65,
             "lots": 3.0,
@@ -144,32 +144,32 @@
             "book_qty": 0,
             "stop_index": 25138.25,
             "initial_stop": 25138.25,
-            "sl_premium": 151.2,
+            "sl_premium": 151.23,
             "partial_index": 25088.25,
             "partial_done": false,
             "protected": false,
             "best_points": 10.4,
             "stop_moves": [],
-            "risk_at_stop": 1849.06,
+            "risk_at_stop": 1849.1,
             "legs": [
               {
                 "time": "2026-11-13T09:20:00+05:30",
                 "qty": 195,
                 "lots": 3.0,
                 "index": 25138.25,
-                "premium": 150.61,
+                "premium": 150.64,
                 "reason": "STOP"
               }
             ],
             "gross_pnl": -1963.65,
-            "charges": 117.71,
-            "net_pnl": -2081.36,
+            "charges": 117.73,
+            "net_pnl": -2081.38,
             "exit_time": "2026-11-13T09:20:00+05:30",
             "exit_reason": "STOP",
             "exit_index": 25138.25,
-            "exit": 150.61,
+            "exit": 150.64,
             "r_multiple": -1.13,
-            "entry": 160.68
+            "entry": 160.71
           },
           {
             "strategy": "ORB1",
@@ -228,7 +228,7 @@
             "done": true,
             "note": "done for the day: 2 losing trades",
             "active": true,
-            "net": -5704.74
+            "net": -5704.76
           },
           "EMA9_21:NIFTY": {
             "trades": 0,
@@ -268,13 +268,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25118.66,
-            "ema21": 25124.96,
+            "ema9": 25116.65,
+            "ema21": 25123.47,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 81481.5,
-            "ema21": 81473.9,
+            "ema9": 81475.01,
+            "ema21": 81471.44,
             "setup": null
           }
         },
@@ -288,7 +288,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-13T13:40:05+05:30",
+      "updated_at": "2026-11-13T13:45:05+05:30",
       "final": false
     }
   }
