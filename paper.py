@@ -502,8 +502,8 @@ def cmd_tick(args):
     if not rec.get("watchlist"):
         write_status("scanning", "Scanning Nifty 100 for today's watchlist")
         cmd_premarket(args)
-    if now.time() < dt.time(9, 20):
-        write_status("waiting", "Watchlist ready. Building the opening range (09:15-09:30)")
+    if now.time() < dt.time(9, 16):   # the first 1-minute candle (09:15) completes at 09:16
+        write_status("waiting", "Watchlist ready. Market opens 09:15 IST")
         return
     cmd_update(args)
     if now.time() >= dt.time(15, 36):

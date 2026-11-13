@@ -1,11 +1,18 @@
-# Virtual-money paper trader. Runs every 5 minutes on weekdays, 08:30-16:25 IST
-# (03:00-10:55 UTC), and publishes the dashboard data to docs/ for GitHub Pages.
-# No broker, no real orders. Start/Stop = Enable/Disable this workflow in the Actions tab.
+# Virtual-money paper trader. No broker, no real orders.
+#
+# GitHub's own schedule is best-effort: */5 runs are often late by 20-60 minutes or
+# skipped altogether, which is fatal for a 1-minute opening-range strategy. So one run
+# stays alive through the whole session (08:40-15:40 IST), ticks every minute and
+# publishes the site every 5 minutes (and at once whenever a trade opens or closes).
+# The schedule below only has to start it once: the extra entries are backups that wait
+# in the queue behind a running loop and take over if it ever stops.
+# Start/Stop = Enable/Disable this workflow in the Actions tab.
 name: Paper trader
 
 on:
   schedule:
-    - cron: "*/5 3-10 * * 1-5"
+    - cron: "5,20,35,50 3-9 * * 1-5"   # 08:35-15:20 IST, backups behind the loop
+    - cron: "10 10 * * 1-5"            # 15:40 IST: end-of-day journal if the loop missed it
   workflow_dispatch:
 
 permissions:
@@ -16,9 +23,9 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  tick:
+  trade:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 350
     steps:
       - uses: actions/checkout@v5
 
@@ -26,32 +33,52 @@ jobs:
         with:
           python-version: "3.12"
 
-      # One step does trade + publish + save. Every output file is regenerated
-      # from market data, so if another run pushed first we never merge: we
-      # reset to the newest commit, redo the step on top of it, and push again.
-      - name: Trade, publish and save (virtual money)
+      - name: Trade every minute, publish and save (virtual money)
         run: |
           git config user.name "paper-trader-bot"
           git config user.email "paper-trader-bot@users.noreply.github.com"
-          step() {
-            mkdir -p paper
+          mkdir -p paper
+          ist() { TZ=Asia/Kolkata date "$@"; }
+          signature() {   # changes when a trade opens, moves its stop or closes
+            python -c "import json,paper;r=paper.load_account()['days'].get(paper.now_ist().date().isoformat(),{});print(json.dumps([[t.get('status'),t.get('exit_reason'),t.get('stop'),len(t.get('exits') or [])] for t in paper.day_trades(r)],default=str))" 2>/dev/null
+          }
+          tick() { python -u paper.py tick 2>&1 | tee -a paper/cloud.log; }
+          publish() {
             python -u history.py update 2>&1 | tee -a paper/cloud.log
-            python -u paper.py tick 2>&1 | tee -a paper/cloud.log
             python -u site.py
             git add -A paper docs nse-trader data
-            if git diff --cached --quiet; then
-              echo "nothing changed"
-              return 1
-            fi
-            git commit -q -m "paper: $(TZ=Asia/Kolkata date '+%Y-%m-%d %H:%M') IST"
+            git diff --cached --quiet && return 0
+            git commit -q -m "paper: $(ist '+%Y-%m-%d %H:%M') IST"
+            for i in 1 2 3 4 5; do
+              git push -q origin HEAD:main && return 0
+              echo "another run saved first - redoing on the newest commit"
+              sleep $((i * 3))
+              git fetch -q origin main
+              git reset -q --hard origin/main
+              tick
+              python -u site.py
+              git add -A paper docs nse-trader data
+              git diff --cached --quiet && return 0
+              git commit -q -m "paper: $(ist '+%Y-%m-%d %H:%M') IST"
+            done
+            echo "could not save after 5 tries"
           }
-          for i in 1 2 3 4 5; do
-            step || exit 0
-            git push origin HEAD:main && exit 0
-            echo "another run saved first - redoing this step on the newest data"
-            sleep $((i * 3))
-            git fetch -q origin main
-            git reset -q --hard origin/main
+
+          started=$(date +%s); last_pub=0; last_sig=""
+          while :; do
+            hm=$(ist +%H%M); hm=$((10#$hm))
+            tick
+            sig=$(signature)
+            if [ "$sig" != "$last_sig" ] || [ $(( $(date +%s) - last_pub )) -ge 290 ]; then
+              publish
+              last_pub=$(date +%s); last_sig="$sig"
+            fi
+            # one tick outside market hours; otherwise keep going until 15:40 IST
+            if [ $hm -lt 840 ] || [ $hm -ge 1540 ]; then break; fi
+            if ! python -c "import sys,paper;sys.exit(0 if paper.nsemkt.is_trading_day(paper.now_ist().date()) else 1)"; then break; fi
+            # job limit is 6 hours: hand over to the queued backup run before that
+            if [ $(( $(date +%s) - started )) -ge $((335 * 60)) ]; then echo "handing over"; break; fi
+            # wake 5 seconds after the next minute, when the 1-minute candle is complete
+            sleep $(( 65 - 10#$(date +%S) ))
           done
-          echo "could not save after 5 tries"
-          exit 1
+          publish
