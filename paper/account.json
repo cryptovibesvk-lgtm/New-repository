@@ -57,8 +57,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 769.0,
-          "unrealised": 275.4
+          "last": 767.5,
+          "unrealised": 32.4
         },
         {
           "symbol": "INDIGO",
@@ -101,8 +101,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 1082.4000244140625,
-          "unrealised": -5.75
+          "last": 1083.9000244140625,
+          "unrealised": 166.75
         }
       ],
       "notes": {},
@@ -264,13 +264,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25216.21,
-            "ema21": 25213.44,
+            "ema9": 25217.91,
+            "ema21": 25214.46,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 81744.04,
-            "ema21": 81718.06,
+            "ema9": 81747.0,
+            "ema21": 81723.45,
             "setup": null
           }
         },
@@ -284,7 +284,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-13T10:50:05+05:30",
+      "updated_at": "2026-11-13T10:55:05+05:30",
       "final": false
     }
   }
