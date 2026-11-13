@@ -57,8 +57,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 767.2999877929688,
-          "unrealised": -0.0
+          "last": 766.6500244140625,
+          "unrealised": -105.3
         },
         {
           "symbol": "INDIGO",
@@ -85,7 +85,7 @@
         },
         {
           "symbol": "TATACONSUM",
-          "status": "OPEN",
+          "status": "CLOSED",
           "entry_time": "2026-11-13T09:35:00+05:30",
           "entry": 1082.45,
           "stop": 1078.95,
@@ -98,11 +98,13 @@
           "or_high": 1081.8,
           "or_low": 1076.1,
           "or_mid": 1078.95,
-          "gross_pnl": 0.0,
-          "charges": 0.0,
-          "net_pnl": 0.0,
-          "last": 1084.4000244140625,
-          "unrealised": 224.25
+          "gross_pnl": 603.75,
+          "charges": 91.54,
+          "net_pnl": 512.21,
+          "exit": 1087.7,
+          "exit_time": "2026-11-13T11:00:00+05:30",
+          "exit_reason": "TARGET",
+          "r_multiple": 1.04
         }
       ],
       "notes": {},
@@ -264,13 +266,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25214.26,
-            "ema21": 25213.12,
+            "ema9": 25209.23,
+            "ema21": 25210.93,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 81773.67,
-            "ema21": 81741.08,
+            "ema9": 81805.87,
+            "ema21": 81762.6,
             "setup": null
           }
         },
@@ -284,7 +286,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-13T11:00:05+05:30",
+      "updated_at": "2026-11-13T11:05:05+05:30",
       "final": false
     }
   }
