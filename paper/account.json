@@ -10,7 +10,120 @@
         "PNB",
         "TATACONSUM"
       ],
-      "scanned_at": "2026-11-13T08:54:10+05:30"
+      "scanned_at": "2026-11-13T08:54:10+05:30",
+      "ranges": {},
+      "trades": [],
+      "notes": {
+        "DLF": "opening range incomplete",
+        "HINDALCO": "opening range incomplete",
+        "INDIGO": "opening range incomplete",
+        "PNB": "opening range incomplete",
+        "TATACONSUM": "opening range incomplete"
+      },
+      "options": {
+        "levels": {
+          "NIFTY": {
+            "high": 25201.9,
+            "low": 25118.4
+          }
+        },
+        "trades": [
+          {
+            "strategy": "ORB1",
+            "underlying": "NIFTY",
+            "side": "PE",
+            "strike": 25100,
+            "action": "BUY",
+            "expiry": "2026-11-17",
+            "symbol": "NIFTY 25100 PE",
+            "trade_no": 1,
+            "status": "OPEN",
+            "why": "1-min close 25118.25 below first-minute low 25118.40",
+            "entry_time": "2026-11-13T09:17:00+05:30",
+            "entry_index": 25118.25,
+            "entry_premium": 163.3,
+            "vix": 16.59,
+            "lot": 65,
+            "lots": 3.0,
+            "qty": 195,
+            "qty_open": 195,
+            "book_qty": 0,
+            "stop_index": 25138.25,
+            "initial_stop": 25138.25,
+            "sl_premium": 153.8,
+            "partial_index": 25088.25,
+            "partial_done": false,
+            "protected": false,
+            "best_points": 0.0,
+            "stop_moves": [],
+            "risk_at_stop": 1852.51,
+            "legs": [],
+            "gross_pnl": 0.0,
+            "charges": 0.0,
+            "net_pnl": 0.0,
+            "last_index": 25118.25,
+            "last_premium": 162.97,
+            "unrealised": -65.07
+          }
+        ],
+        "notes": {},
+        "status": {
+          "ORB1:NIFTY": {
+            "trades": 1,
+            "done": false,
+            "note": "",
+            "active": true,
+            "net": 0.0
+          },
+          "EMA9_21:NIFTY": {
+            "trades": 0,
+            "done": true,
+            "note": "NIFTY EMA9_21 is not in the schedule",
+            "active": true,
+            "net": 0
+          },
+          "SELL_TIME:NIFTY": {
+            "trades": 0,
+            "done": true,
+            "note": "NIFTY SELL_TIME runs on Tue only - today (Fri) is NIFTY ORB1",
+            "active": true,
+            "net": 0
+          },
+          "ORB1:SENSEX": {
+            "trades": 0,
+            "done": true,
+            "note": "SENSEX ORB1 is not in the schedule",
+            "active": false,
+            "net": 0
+          },
+          "EMA9_21:SENSEX": {
+            "trades": 0,
+            "done": true,
+            "note": "SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1",
+            "active": false,
+            "net": 0
+          },
+          "SELL_TIME:SENSEX": {
+            "trades": 0,
+            "done": true,
+            "note": "SENSEX SELL_TIME is not in the schedule",
+            "active": false,
+            "net": 0
+          }
+        },
+        "ema": {},
+        "index_today": "NIFTY",
+        "strategy_today": "ORB1",
+        "schedule": {
+          "Mon": "NIFTY ORB1",
+          "Tue": "NIFTY SELL_TIME",
+          "Wed": "SENSEX EMA9_21",
+          "Thu": "SENSEX EMA9_21",
+          "Fri": "NIFTY ORB1"
+        }
+      },
+      "updated_at": "2026-11-13T09:17:05+05:30",
+      "final": false
     }
   }
 }
