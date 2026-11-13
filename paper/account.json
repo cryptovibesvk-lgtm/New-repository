@@ -1,0 +1,16 @@
+{
+  "start_capital": 500000.0,
+  "created": "2026-11-13T08:53:48+05:30",
+  "days": {
+    "2026-11-13": {
+      "watchlist": [
+        "DLF",
+        "HINDALCO",
+        "INDIGO",
+        "PNB",
+        "TATACONSUM"
+      ],
+      "scanned_at": "2026-11-13T08:54:10+05:30"
+    }
+  }
+}

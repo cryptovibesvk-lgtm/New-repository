@@ -28,3 +28,19 @@ history NIFTY 1m: +0 bars
 history SENSEX 1m: +0 bars
 history INDIAVIX 1m: +0 bars
 --- tick 2026-11-13 05:26 IST
+--- tick 2026-11-13 08:53 IST
+Scanning 100 NSE symbols (daily) ...
+MATCHES 5 (showing top 5)
+  DLF                769.30   +3.59%  score 100  20D_BREAKOUT,BULL_FLAG,52W_HIGH_PROX
+  HINDALCO           964.00   +0.18%  score  89  20D_BREAKOUT,BULL_FLAG
+  INDIGO            5665.00   +4.33%  score  89  20D_BREAKOUT,BULL_FLAG
+  PNB                141.79   +2.39%  score  82  20D_BREAKOUT,52W_HIGH_PROX
+  TATACONSUM        1093.00   +0.84%  score  76  20D_BREAKOUT,BULL_FLAG
+saved: nse-trader/watchlist.json
+watchlist 2026-11-13: DLF, HINDALCO, INDIGO, PNB, TATACONSUM
+history NIFTY 5m: +0 bars
+history SENSEX 5m: +0 bars
+history INDIAVIX 5m: +0 bars
+history NIFTY 1m: +0 bars
+history SENSEX 1m: +0 bars
+history INDIAVIX 1m: +0 bars
