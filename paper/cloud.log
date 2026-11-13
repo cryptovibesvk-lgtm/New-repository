@@ -1,79 +1,3 @@
-﻿--- tick 2026-11-13 01:30 IST
---- tick 2026-11-13 02:10 IST
---- tick 2026-11-13 02:19 IST
---- tick 2026-11-13 02:44 IST
---- tick 2026-11-13 03:22 IST
-history NIFTY: +0 bars
-history SENSEX: +0 bars
-history INDIAVIX: +0 bars
---- tick 2026-11-13 04:03 IST
-history NIFTY 5m: +0 bars
-history SENSEX 5m: +0 bars
-history INDIAVIX 5m: +0 bars
-history NIFTY 1m: +0 bars
-history SENSEX 1m: +0 bars
-history INDIAVIX 1m: +0 bars
---- tick 2026-11-13 04:42 IST
-history NIFTY 5m: +0 bars
-history SENSEX 5m: +0 bars
-history INDIAVIX 5m: +0 bars
-history NIFTY 1m: +0 bars
-history SENSEX 1m: +0 bars
-history INDIAVIX 1m: +0 bars
---- tick 2026-11-13 05:05 IST
-history NIFTY 5m: +0 bars
-history SENSEX 5m: +0 bars
-history INDIAVIX 5m: +0 bars
-history NIFTY 1m: +0 bars
-history SENSEX 1m: +0 bars
-history INDIAVIX 1m: +0 bars
---- tick 2026-11-13 05:26 IST
---- tick 2026-11-13 08:53 IST
-Scanning 100 NSE symbols (daily) ...
-MATCHES 5 (showing top 5)
-  DLF                769.30   +3.59%  score 100  20D_BREAKOUT,BULL_FLAG,52W_HIGH_PROX
-  HINDALCO           964.00   +0.18%  score  89  20D_BREAKOUT,BULL_FLAG
-  INDIGO            5665.00   +4.33%  score  89  20D_BREAKOUT,BULL_FLAG
-  PNB                141.79   +2.39%  score  82  20D_BREAKOUT,52W_HIGH_PROX
-  TATACONSUM        1093.00   +0.84%  score  76  20D_BREAKOUT,BULL_FLAG
-saved: nse-trader/watchlist.json
-watchlist 2026-11-13: DLF, HINDALCO, INDIGO, PNB, TATACONSUM
-history NIFTY 5m: +0 bars
-history SENSEX 5m: +0 bars
-history INDIAVIX 5m: +0 bars
-history NIFTY 1m: +0 bars
-history SENSEX 1m: +0 bars
-history INDIAVIX 1m: +0 bars
---- tick 2026-11-13 08:55 IST
---- tick 2026-11-13 08:56 IST
---- tick 2026-11-13 08:57 IST
---- tick 2026-11-13 08:58 IST
---- tick 2026-11-13 08:59 IST
---- tick 2026-11-13 09:00 IST
-history NIFTY 5m: +0 bars
-history SENSEX 5m: +0 bars
-history INDIAVIX 5m: +0 bars
-history NIFTY 1m: +0 bars
-history SENSEX 1m: +0 bars
-history INDIAVIX 1m: +0 bars
---- tick 2026-11-13 09:01 IST
---- tick 2026-11-13 09:02 IST
---- tick 2026-11-13 09:03 IST
---- tick 2026-11-13 09:04 IST
---- tick 2026-11-13 09:05 IST
-history NIFTY 5m: +0 bars
-history SENSEX 5m: +0 bars
-history INDIAVIX 5m: +0 bars
-history NIFTY 1m: +0 bars
-history SENSEX 1m: +0 bars
-history INDIAVIX 1m: +0 bars
---- tick 2026-11-13 09:06 IST
---- tick 2026-11-13 09:07 IST
---- tick 2026-11-13 09:08 IST
---- tick 2026-11-13 09:09 IST
---- tick 2026-11-13 09:10 IST
-history NIFTY 5m: +0 bars
-history SENSEX 5m: +0 bars
 history INDIAVIX 5m: +0 bars
 history NIFTY 1m: +0 bars
 history SENSEX 1m: +0 bars
@@ -278,3 +202,99 @@ history INDIAVIX 5m: +1 bars
 history NIFTY 1m: +4 bars
 history SENSEX 1m: +0 bars
 history INDIAVIX 1m: +4 bars
+--- tick 2026-11-13 09:26 IST
+PAPER 2026-11-13  indices NIFTY, SENSEX  watchlist DLF, HINDALCO, INDIGO, PNB, TATACONSUM
+  DLF          OR 757.95-763.45
+  HINDALCO     OR 953.30-962.25
+  INDIGO       OR 5547.10-5571.20
+  PNB          OR 141.44-143.67
+  note TATACONSUM: opening range incomplete
+  no stock trades yet
+  index today: NIFTY
+  NIFTY        first 1-min candle 25118.40-25201.90
+  ORB1     #1 BUY 195 NIFTY 25100 PE @ prem 160.71 (index 25118.25, SL 25138.25, 09:17)  195 STOP @ 25138.25 (prem 150.64)  net Rs -2,081.38
+  ORB1     #2 BUY 325 NIFTY 25100 PE @ prem 170.40 (index 25093.75, SL 25113.75, 09:21)  325 STOP @ 25113.75 (prem 159.78)  net Rs -3,623.38
+  ORB1:NIFTY: done for the day: 2 losing trades
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Fri) is NIFTY ORB1
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-13 09:27 IST
+PAPER 2026-11-13  indices NIFTY, SENSEX  watchlist DLF, HINDALCO, INDIGO, PNB, TATACONSUM
+  DLF          OR 757.95-763.45
+  HINDALCO     OR 953.30-962.25
+  INDIGO       OR 5547.10-5574.00
+  PNB          OR 141.44-143.67
+  TATACONSUM   OR 1076.10-1081.80
+  no stock trades yet
+  index today: NIFTY
+  NIFTY        first 1-min candle 25118.40-25201.90
+  ORB1     #1 BUY 195 NIFTY 25100 PE @ prem 160.71 (index 25118.25, SL 25138.25, 09:17)  195 STOP @ 25138.25 (prem 150.64)  net Rs -2,081.38
+  ORB1     #2 BUY 325 NIFTY 25100 PE @ prem 170.40 (index 25093.75, SL 25113.75, 09:21)  325 STOP @ 25113.75 (prem 159.78)  net Rs -3,623.38
+  ORB1:NIFTY: done for the day: 2 losing trades
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Fri) is NIFTY ORB1
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-13 09:28 IST
+PAPER 2026-11-13  indices NIFTY, SENSEX  watchlist DLF, HINDALCO, INDIGO, PNB, TATACONSUM
+  DLF          OR 757.95-763.45
+  HINDALCO     OR 951.60-962.25
+  INDIGO       OR 5547.10-5574.00
+  PNB          OR 141.44-143.67
+  TATACONSUM   OR 1076.10-1081.80
+  no stock trades yet
+  index today: NIFTY
+  NIFTY        first 1-min candle 25118.40-25201.90
+  ORB1     #1 BUY 195 NIFTY 25100 PE @ prem 160.71 (index 25118.25, SL 25138.25, 09:17)  195 STOP @ 25138.25 (prem 150.64)  net Rs -2,081.38
+  ORB1     #2 BUY 325 NIFTY 25100 PE @ prem 170.40 (index 25093.75, SL 25113.75, 09:21)  325 STOP @ 25113.75 (prem 159.78)  net Rs -3,623.38
+  ORB1:NIFTY: done for the day: 2 losing trades
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Fri) is NIFTY ORB1
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-13 09:29 IST
+PAPER 2026-11-13  indices NIFTY, SENSEX  watchlist DLF, HINDALCO, INDIGO, PNB, TATACONSUM
+  DLF          OR 757.95-763.45
+  HINDALCO     OR 949.50-962.25
+  INDIGO       OR 5547.10-5574.00
+  PNB          OR 141.44-143.67
+  TATACONSUM   OR 1076.10-1081.80
+  no stock trades yet
+  index today: NIFTY
+  NIFTY        first 1-min candle 25118.40-25201.90
+  ORB1     #1 BUY 195 NIFTY 25100 PE @ prem 160.71 (index 25118.25, SL 25138.25, 09:17)  195 STOP @ 25138.25 (prem 150.64)  net Rs -2,081.38
+  ORB1     #2 BUY 325 NIFTY 25100 PE @ prem 170.40 (index 25093.75, SL 25113.75, 09:21)  325 STOP @ 25113.75 (prem 159.78)  net Rs -3,623.38
+  ORB1:NIFTY: done for the day: 2 losing trades
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Fri) is NIFTY ORB1
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-13 09:30 IST
+PAPER 2026-11-13  indices NIFTY, SENSEX  watchlist DLF, HINDALCO, INDIGO, PNB, TATACONSUM
+  DLF          OR 757.95-763.45
+  HINDALCO     OR 948.35-962.25
+  INDIGO       OR 5547.10-5578.90
+  PNB          OR 141.44-143.67
+  TATACONSUM   OR 1076.10-1081.80
+  no stock trades yet
+  index today: NIFTY
+  NIFTY        first 1-min candle 25118.40-25201.90
+  ORB1     #1 BUY 195 NIFTY 25100 PE @ prem 160.71 (index 25118.25, SL 25138.25, 09:17)  195 STOP @ 25138.25 (prem 150.64)  net Rs -2,081.38
+  ORB1     #2 BUY 325 NIFTY 25100 PE @ prem 170.40 (index 25093.75, SL 25113.75, 09:21)  325 STOP @ 25113.75 (prem 159.78)  net Rs -3,623.38
+  ORB1:NIFTY: done for the day: 2 losing trades
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Fri) is NIFTY ORB1
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+history NIFTY 5m: +1 bars
+history SENSEX 5m: +1 bars
+history INDIAVIX 5m: +1 bars
+history NIFTY 1m: +5 bars
+history SENSEX 1m: +1 bars
+history INDIAVIX 1m: +5 bars

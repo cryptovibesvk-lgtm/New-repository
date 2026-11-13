@@ -16,15 +16,30 @@
           "or_high": 763.45,
           "or_low": 757.95,
           "or_mid": 760.7
+        },
+        "HINDALCO": {
+          "or_high": 962.25,
+          "or_low": 948.35,
+          "or_mid": 955.3
+        },
+        "INDIGO": {
+          "or_high": 5578.9,
+          "or_low": 5547.1,
+          "or_mid": 5563.0
+        },
+        "PNB": {
+          "or_high": 143.67,
+          "or_low": 141.44,
+          "or_mid": 142.56
+        },
+        "TATACONSUM": {
+          "or_high": 1081.8,
+          "or_low": 1076.1,
+          "or_mid": 1078.95
         }
       },
       "trades": [],
-      "notes": {
-        "HINDALCO": "opening range incomplete",
-        "INDIGO": "opening range incomplete",
-        "PNB": "opening range incomplete",
-        "TATACONSUM": "opening range incomplete"
-      },
+      "notes": {},
       "options": {
         "levels": {
           "NIFTY": {
@@ -179,8 +194,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25216.58,
-            "ema21": 25238.42,
+            "ema9": 25200.01,
+            "ema21": 25228.9,
+            "setup": null
+          },
+          "SENSEX": {
+            "ema9": 81758.31,
+            "ema21": 81830.37,
             "setup": null
           }
         },
@@ -194,7 +214,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-13T09:25:05+05:30",
+      "updated_at": "2026-11-13T09:30:05+05:30",
       "final": false
     }
   }
