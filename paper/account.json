@@ -41,7 +41,7 @@
       "trades": [
         {
           "symbol": "DLF",
-          "status": "OPEN",
+          "status": "CLOSED",
           "entry_time": "2026-11-13T09:30:00+05:30",
           "entry": 767.3,
           "stop": 760.7,
@@ -54,11 +54,13 @@
           "or_high": 763.45,
           "or_low": 757.95,
           "or_mid": 760.7,
-          "gross_pnl": 0.0,
-          "charges": 0.0,
-          "net_pnl": 0.0,
-          "last": 763.0499877929688,
-          "unrealised": -688.5
+          "gross_pnl": -1134.0,
+          "charges": 90.98,
+          "net_pnl": -1224.98,
+          "exit": 760.3,
+          "exit_time": "2026-11-13T12:15:00+05:30",
+          "exit_reason": "STOP",
+          "r_multiple": -1.06
         },
         {
           "symbol": "INDIGO",
@@ -266,13 +268,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25138.47,
-            "ema21": 25163.42,
+            "ema9": 25127.63,
+            "ema21": 25156.23,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 81575.98,
-            "ema21": 81615.0,
+            "ema9": 81555.5,
+            "ema21": 81598.04,
             "setup": null
           }
         },
@@ -286,7 +288,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-13T12:15:05+05:30",
+      "updated_at": "2026-11-13T12:20:05+05:30",
       "final": false
     }
   }
