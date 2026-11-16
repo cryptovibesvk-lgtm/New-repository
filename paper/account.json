@@ -346,8 +346,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 2154.89990234375,
-          "unrealised": -552.91
+          "last": 2149.10009765625,
+          "unrealised": -883.49
         },
         {
           "symbol": "KOTAKBANK",
@@ -367,8 +367,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 496.5,
-          "unrealised": 441.0
+          "last": 496.6499938964844,
+          "unrealised": 478.8
         }
       ],
       "notes": {},
@@ -479,18 +479,18 @@
                 "qty": 325,
                 "lots": 5.0,
                 "index": 25283.85,
-                "premium": 133.38,
+                "premium": 133.66,
                 "reason": "STOP"
               }
             ],
-            "gross_pnl": -3646.5,
-            "charges": 151.62,
-            "net_pnl": -3798.12,
+            "gross_pnl": -3555.5,
+            "charges": 151.79,
+            "net_pnl": -3707.29,
             "exit_time": "2026-11-16T10:09:00+05:30",
             "exit_reason": "STOP",
             "exit_index": 25283.85,
-            "exit": 133.38,
-            "r_multiple": -1.11,
+            "exit": 133.66,
+            "r_multiple": -1.08,
             "entry": 144.6
           }
         ],
@@ -501,7 +501,7 @@
             "done": true,
             "note": "done for the day: 2 losing trades",
             "active": true,
-            "net": -4384.7
+            "net": -4293.87
           },
           "EMA9_21:NIFTY": {
             "trades": 0,
@@ -541,13 +541,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25280.99,
-            "ema21": 25224.15,
+            "ema9": 25282.6,
+            "ema21": 25230.05,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 82194.67,
-            "ema21": 82036.3,
+            "ema9": 82232.26,
+            "ema21": 82082.37,
             "setup": null
           }
         },
@@ -561,7 +561,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-16T10:09:05+05:30",
+      "updated_at": "2026-11-16T10:14:05+05:30",
       "final": false
     }
   }
