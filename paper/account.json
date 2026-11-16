@@ -330,7 +330,7 @@
       "trades": [
         {
           "symbol": "BHARTIARTL",
-          "status": "OPEN",
+          "status": "CLOSED",
           "entry_time": "2026-11-16T09:30:00+05:30",
           "entry": 2164.6,
           "stop": 2139.35,
@@ -343,11 +343,13 @@
           "or_high": 2155.7,
           "or_low": 2123.0,
           "or_mid": 2139.35,
-          "gross_pnl": 0.0,
-          "charges": 0.0,
-          "net_pnl": 0.0,
-          "last": 2149.60009765625,
-          "unrealised": -854.99
+          "gross_pnl": -1117.2,
+          "charges": 90.66,
+          "net_pnl": -1207.86,
+          "exit": 2145.0,
+          "exit_time": "2026-11-16T15:15:05+05:30",
+          "exit_reason": "SQUARE_OFF_15:15",
+          "r_multiple": -0.79
         },
         {
           "symbol": "KOTAKBANK",
@@ -543,13 +545,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25217.41,
-            "ema21": 25220.23,
+            "ema9": 25217.93,
+            "ema21": 25219.98,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 81907.49,
-            "ema21": 81903.09,
+            "ema9": 81912.49,
+            "ema21": 81905.45,
             "setup": null
           }
         },
@@ -563,7 +565,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-16T15:14:25+05:30",
+      "updated_at": "2026-11-16T15:20:05+05:30",
       "final": false
     }
   }
