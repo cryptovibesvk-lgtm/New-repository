@@ -346,8 +346,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 2161.10009765625,
-          "unrealised": -199.49
+          "last": 2160.0,
+          "unrealised": -262.2
         },
         {
           "symbol": "KOTAKBANK",
@@ -543,13 +543,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25231.01,
-            "ema21": 25232.45,
+            "ema9": 25231.02,
+            "ema21": 25232.33,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 81955.54,
-            "ema21": 81973.95,
+            "ema9": 81953.21,
+            "ema21": 81969.55,
             "setup": null
           }
         },
@@ -563,7 +563,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-16T11:35:05+05:30",
+      "updated_at": "2026-11-16T11:40:05+05:30",
       "final": false
     }
   }
