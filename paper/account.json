@@ -346,8 +346,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 2163.60009765625,
-          "unrealised": -56.99
+          "last": 2159.5,
+          "unrealised": -290.7
         },
         {
           "symbol": "KOTAKBANK",
@@ -367,8 +367,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 497.1499938964844,
-          "unrealised": 604.8
+          "last": 497.29998779296875,
+          "unrealised": 642.6
         }
       ],
       "notes": {},
@@ -410,7 +410,7 @@
             "partial_index": 25328.45,
             "partial_done": false,
             "protected": true,
-            "best_points": 35.0,
+            "best_points": 39.15,
             "stop_moves": [
               {
                 "time": "2026-11-16T09:47:00+05:30",
@@ -428,9 +428,9 @@
             "gross_pnl": 0.0,
             "charges": 0.0,
             "net_pnl": 0.0,
-            "last_index": 25326.8,
-            "last_premium": 159.81,
-            "unrealised": 3135.8
+            "last_index": 25320.9,
+            "last_premium": 155.98,
+            "unrealised": 2388.56
           }
         ],
         "notes": {},
@@ -480,13 +480,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25265.21,
-            "ema21": 25206.18,
+            "ema9": 25276.35,
+            "ema21": 25216.61,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 82021.64,
-            "ema21": 81847.04,
+            "ema9": 82082.07,
+            "ema21": 81906.67,
             "setup": null
           }
         },
@@ -500,7 +500,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-16T09:55:05+05:30",
+      "updated_at": "2026-11-16T10:00:05+05:30",
       "final": false
     }
   }
