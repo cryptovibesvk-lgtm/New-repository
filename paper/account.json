@@ -393,7 +393,7 @@
             "expiry": "2026-11-17",
             "symbol": "NIFTY 25300 CE",
             "trade_no": 1,
-            "status": "OPEN",
+            "status": "CLOSED",
             "why": "1-min close 25298.45 above first-minute high 25292.70",
             "entry_time": "2026-11-16T09:45:00+05:30",
             "entry_index": 25298.45,
@@ -402,7 +402,7 @@
             "lot": 65,
             "lots": 3.0,
             "qty": 195,
-            "qty_open": 195,
+            "qty_open": 0,
             "book_qty": 0,
             "stop_index": 25298.45,
             "initial_stop": 25278.45,
@@ -424,13 +424,25 @@
               }
             ],
             "risk_at_stop": 2034.91,
-            "legs": [],
-            "gross_pnl": 0.0,
-            "charges": 0.0,
-            "net_pnl": 0.0,
-            "last_index": 25320.9,
-            "last_premium": 155.98,
-            "unrealised": 2388.56
+            "legs": [
+              {
+                "time": "2026-11-16T10:02:00+05:30",
+                "qty": 195,
+                "lots": 3.0,
+                "index": 25298.45,
+                "premium": 141.43,
+                "reason": "BREAKEVEN_STOP"
+              }
+            ],
+            "gross_pnl": -448.5,
+            "charges": 112.78,
+            "net_pnl": -561.28,
+            "exit_time": "2026-11-16T10:02:00+05:30",
+            "exit_reason": "BREAKEVEN_STOP",
+            "exit_index": 25298.45,
+            "exit": 141.43,
+            "r_multiple": -0.28,
+            "entry": 143.73
           }
         ],
         "notes": {},
@@ -440,7 +452,7 @@
             "done": false,
             "note": "",
             "active": true,
-            "net": 0.0
+            "net": -561.28
           },
           "EMA9_21:NIFTY": {
             "trades": 0,
@@ -485,8 +497,8 @@
             "setup": null
           },
           "SENSEX": {
-            "ema9": 82082.07,
-            "ema21": 81906.67,
+            "ema9": 82138.66,
+            "ema21": 81964.79,
             "setup": null
           }
         },
@@ -500,7 +512,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-16T10:00:05+05:30",
+      "updated_at": "2026-11-16T10:02:05+05:30",
       "final": false
     }
   }
