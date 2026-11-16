@@ -346,8 +346,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 2166.89990234375,
-          "unrealised": 131.09
+          "last": 2170.60009765625,
+          "unrealised": 342.01
         },
         {
           "symbol": "KOTAKBANK",
@@ -367,8 +367,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 494.29998779296875,
-          "unrealised": -113.4
+          "last": 495.75,
+          "unrealised": 252.0
         }
       ],
       "notes": {},
@@ -404,22 +404,28 @@
             "qty": 195,
             "qty_open": 195,
             "book_qty": 0,
-            "stop_index": 25278.45,
+            "stop_index": 25288.45,
             "initial_stop": 25278.45,
             "sl_premium": 133.3,
             "partial_index": 25328.45,
             "partial_done": false,
             "protected": false,
-            "best_points": 0.0,
-            "stop_moves": [],
+            "best_points": 21.8,
+            "stop_moves": [
+              {
+                "time": "2026-11-16T09:47:00+05:30",
+                "stop": 25288.45,
+                "why": "+20 pts -> stop -10"
+              }
+            ],
             "risk_at_stop": 2034.91,
             "legs": [],
             "gross_pnl": 0.0,
             "charges": 0.0,
             "net_pnl": 0.0,
-            "last_index": 25298.45,
-            "last_premium": 143.48,
-            "unrealised": -49.04
+            "last_index": 25314.9,
+            "last_premium": 152.18,
+            "unrealised": 1647.94
           }
         ],
         "notes": {},
@@ -469,13 +475,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25233.54,
-            "ema21": 25182.05,
+            "ema9": 25249.81,
+            "ema21": 25194.12,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 81880.47,
-            "ema21": 81721.65,
+            "ema9": 81947.29,
+            "ema21": 81782.02,
             "setup": null
           }
         },
@@ -489,7 +495,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-16T09:45:05+05:30",
+      "updated_at": "2026-11-16T09:50:06+05:30",
       "final": false
     }
   }
