@@ -346,8 +346,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 2170.60009765625,
-          "unrealised": 342.01
+          "last": 2163.60009765625,
+          "unrealised": -56.99
         },
         {
           "symbol": "KOTAKBANK",
@@ -367,8 +367,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 495.75,
-          "unrealised": 252.0
+          "last": 497.1499938964844,
+          "unrealised": 604.8
         }
       ],
       "notes": {},
@@ -404,18 +404,23 @@
             "qty": 195,
             "qty_open": 195,
             "book_qty": 0,
-            "stop_index": 25288.45,
+            "stop_index": 25298.45,
             "initial_stop": 25278.45,
             "sl_premium": 133.3,
             "partial_index": 25328.45,
             "partial_done": false,
-            "protected": false,
-            "best_points": 21.8,
+            "protected": true,
+            "best_points": 35.0,
             "stop_moves": [
               {
                 "time": "2026-11-16T09:47:00+05:30",
                 "stop": 25288.45,
                 "why": "+20 pts -> stop -10"
+              },
+              {
+                "time": "2026-11-16T09:51:00+05:30",
+                "stop": 25298.45,
+                "why": "+30 pts -> stop break-even"
               }
             ],
             "risk_at_stop": 2034.91,
@@ -423,9 +428,9 @@
             "gross_pnl": 0.0,
             "charges": 0.0,
             "net_pnl": 0.0,
-            "last_index": 25314.9,
-            "last_premium": 152.18,
-            "unrealised": 1647.94
+            "last_index": 25326.8,
+            "last_premium": 159.81,
+            "unrealised": 3135.8
           }
         ],
         "notes": {},
@@ -475,13 +480,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25249.81,
-            "ema21": 25194.12,
+            "ema9": 25265.21,
+            "ema21": 25206.18,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 81947.29,
-            "ema21": 81782.02,
+            "ema9": 82021.64,
+            "ema21": 81847.04,
             "setup": null
           }
         },
@@ -495,7 +500,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-16T09:50:06+05:30",
+      "updated_at": "2026-11-16T09:55:05+05:30",
       "final": false
     }
   }
