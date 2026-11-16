@@ -1,111 +1,5 @@
   EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Mon) is NIFTY ORB1
   SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-16 14:38 IST
-PAPER 2026-11-16  indices NIFTY, SENSEX  watchlist BHARTIARTL, KOTAKBANK, PNB, SBIN, BSE
-  BHARTIARTL   OR 2123.00-2155.70
-  KOTAKBANK    OR 490.60-494.45
-  PNB          OR 143.50-146.52
-  SBIN         OR 1083.90-1099.50
-  BSE          OR 3931.90-3969.40
-  OPEN   BHARTIARTL   BUY 57 @ 2164.60 (09:30)  stop 2139.35  target 2202.50  last 2151.40  unrealised Rs -752.41
-  CLOSED KOTAKBANK    BUY 252 @ 494.75 (09:35)  stop 492.50  target 498.15  -> STOP 492.25 (10:50)  net Rs -721.25
-  index today: NIFTY
-  NIFTY        first 1-min candle 25197.50-25292.70
-  SENSEX       first 1-min candle 81857.39-82185.53
-  ORB1     #1 BUY 195 NIFTY 25300 CE @ prem 143.73 (index 25298.45, SL 25278.45, 09:45)  195 BREAKEVEN_STOP @ 25298.45 (prem 141.30)  net Rs -586.58
-  ORB1     #2 BUY 325 NIFTY 25300 CE @ prem 144.60 (index 25303.85, SL 25283.85, 10:04)  325 STOP @ 25283.85 (prem 133.66)  net Rs -3,707.29
-  ORB1:NIFTY: done for the day: 2 losing trades
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Mon) is NIFTY ORB1
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Mon) is NIFTY ORB1
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-16 14:39 IST
-PAPER 2026-11-16  indices NIFTY, SENSEX  watchlist BHARTIARTL, KOTAKBANK, PNB, SBIN, BSE
-  BHARTIARTL   OR 2123.00-2155.70
-  KOTAKBANK    OR 490.60-494.45
-  PNB          OR 143.50-146.52
-  SBIN         OR 1083.90-1099.50
-  BSE          OR 3931.90-3969.40
-  OPEN   BHARTIARTL   BUY 57 @ 2164.60 (09:30)  stop 2139.35  target 2202.50  last 2151.40  unrealised Rs -752.41
-  CLOSED KOTAKBANK    BUY 252 @ 494.75 (09:35)  stop 492.50  target 498.15  -> STOP 492.25 (10:50)  net Rs -721.25
-  index today: NIFTY
-  NIFTY        first 1-min candle 25197.50-25292.70
-  SENSEX       first 1-min candle 81857.39-82185.53
-  ORB1     #1 BUY 195 NIFTY 25300 CE @ prem 143.73 (index 25298.45, SL 25278.45, 09:45)  195 BREAKEVEN_STOP @ 25298.45 (prem 141.30)  net Rs -586.58
-  ORB1     #2 BUY 325 NIFTY 25300 CE @ prem 144.60 (index 25303.85, SL 25283.85, 10:04)  325 STOP @ 25283.85 (prem 133.66)  net Rs -3,707.29
-  ORB1:NIFTY: done for the day: 2 losing trades
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Mon) is NIFTY ORB1
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Mon) is NIFTY ORB1
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-16 14:40 IST
-PAPER 2026-11-16  indices NIFTY, SENSEX  watchlist BHARTIARTL, KOTAKBANK, PNB, SBIN, BSE
-  BHARTIARTL   OR 2123.00-2155.70
-  KOTAKBANK    OR 490.60-494.45
-  PNB          OR 143.50-146.52
-  SBIN         OR 1083.90-1099.50
-  BSE          OR 3931.90-3969.40
-  OPEN   BHARTIARTL   BUY 57 @ 2164.60 (09:30)  stop 2139.35  target 2202.50  last 2154.30  unrealised Rs -587.10
-  CLOSED KOTAKBANK    BUY 252 @ 494.75 (09:35)  stop 492.50  target 498.15  -> STOP 492.25 (10:50)  net Rs -721.25
-  index today: NIFTY
-  NIFTY        first 1-min candle 25197.50-25292.70
-  SENSEX       first 1-min candle 81857.39-82185.53
-  ORB1     #1 BUY 195 NIFTY 25300 CE @ prem 143.73 (index 25298.45, SL 25278.45, 09:45)  195 BREAKEVEN_STOP @ 25298.45 (prem 141.30)  net Rs -586.58
-  ORB1     #2 BUY 325 NIFTY 25300 CE @ prem 144.60 (index 25303.85, SL 25283.85, 10:04)  325 STOP @ 25283.85 (prem 133.66)  net Rs -3,707.29
-  ORB1:NIFTY: done for the day: 2 losing trades
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Mon) is NIFTY ORB1
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Mon) is NIFTY ORB1
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-16 14:41 IST
-PAPER 2026-11-16  indices NIFTY, SENSEX  watchlist BHARTIARTL, KOTAKBANK, PNB, SBIN, BSE
-  BHARTIARTL   OR 2123.00-2155.70
-  KOTAKBANK    OR 490.60-494.45
-  PNB          OR 143.50-146.52
-  SBIN         OR 1083.90-1099.50
-  BSE          OR 3931.90-3969.40
-  OPEN   BHARTIARTL   BUY 57 @ 2164.60 (09:30)  stop 2139.35  target 2202.50  last 2154.30  unrealised Rs -587.10
-  CLOSED KOTAKBANK    BUY 252 @ 494.75 (09:35)  stop 492.50  target 498.15  -> STOP 492.25 (10:50)  net Rs -721.25
-  index today: NIFTY
-  NIFTY        first 1-min candle 25197.50-25292.70
-  SENSEX       first 1-min candle 81857.39-82185.53
-  ORB1     #1 BUY 195 NIFTY 25300 CE @ prem 143.73 (index 25298.45, SL 25278.45, 09:45)  195 BREAKEVEN_STOP @ 25298.45 (prem 141.30)  net Rs -586.58
-  ORB1     #2 BUY 325 NIFTY 25300 CE @ prem 144.60 (index 25303.85, SL 25283.85, 10:04)  325 STOP @ 25283.85 (prem 133.66)  net Rs -3,707.29
-  ORB1:NIFTY: done for the day: 2 losing trades
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Mon) is NIFTY ORB1
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Mon) is NIFTY ORB1
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
-history NIFTY 5m: +1 bars
-history SENSEX 5m: +2 bars
-history INDIAVIX 5m: +1 bars
-history NIFTY 1m: +5 bars
-history SENSEX 1m: +6 bars
-history INDIAVIX 1m: +5 bars
---- tick 2026-11-16 14:42 IST
-PAPER 2026-11-16  indices NIFTY, SENSEX  watchlist BHARTIARTL, KOTAKBANK, PNB, SBIN, BSE
-  BHARTIARTL   OR 2123.00-2155.70
-  KOTAKBANK    OR 490.60-494.45
-  PNB          OR 143.50-146.52
-  SBIN         OR 1083.90-1099.50
-  BSE          OR 3931.90-3969.40
-  OPEN   BHARTIARTL   BUY 57 @ 2164.60 (09:30)  stop 2139.35  target 2202.50  last 2154.30  unrealised Rs -587.10
-  CLOSED KOTAKBANK    BUY 252 @ 494.75 (09:35)  stop 492.50  target 498.15  -> STOP 492.25 (10:50)  net Rs -721.25
-  index today: NIFTY
-  NIFTY        first 1-min candle 25197.50-25292.70
-  SENSEX       first 1-min candle 81857.39-82185.53
-  ORB1     #1 BUY 195 NIFTY 25300 CE @ prem 143.73 (index 25298.45, SL 25278.45, 09:45)  195 BREAKEVEN_STOP @ 25298.45 (prem 141.30)  net Rs -586.58
-  ORB1     #2 BUY 325 NIFTY 25300 CE @ prem 144.60 (index 25303.85, SL 25283.85, 10:04)  325 STOP @ 25283.85 (prem 133.66)  net Rs -3,707.29
-  ORB1:NIFTY: done for the day: 2 losing trades
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Mon) is NIFTY ORB1
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Mon) is NIFTY ORB1
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
 --- tick 2026-11-16 14:43 IST
 PAPER 2026-11-16  indices NIFTY, SENSEX  watchlist BHARTIARTL, KOTAKBANK, PNB, SBIN, BSE
   BHARTIARTL   OR 2123.00-2155.70
@@ -280,6 +174,112 @@ PAPER 2026-11-16  indices NIFTY, SENSEX  watchlist BHARTIARTL, KOTAKBANK, PNB, S
   SBIN         OR 1083.90-1099.50
   BSE          OR 3931.90-3969.40
   OPEN   BHARTIARTL   BUY 57 @ 2164.60 (09:30)  stop 2139.35  target 2202.50  last 2152.00  unrealised Rs -718.20
+  CLOSED KOTAKBANK    BUY 252 @ 494.75 (09:35)  stop 492.50  target 498.15  -> STOP 492.25 (10:50)  net Rs -721.25
+  index today: NIFTY
+  NIFTY        first 1-min candle 25197.50-25292.70
+  SENSEX       first 1-min candle 81857.39-82185.53
+  ORB1     #1 BUY 195 NIFTY 25300 CE @ prem 143.73 (index 25298.45, SL 25278.45, 09:45)  195 BREAKEVEN_STOP @ 25298.45 (prem 141.30)  net Rs -586.58
+  ORB1     #2 BUY 325 NIFTY 25300 CE @ prem 144.60 (index 25303.85, SL 25283.85, 10:04)  325 STOP @ 25283.85 (prem 133.66)  net Rs -3,707.29
+  ORB1:NIFTY: done for the day: 2 losing trades
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Mon) is NIFTY ORB1
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Mon) is NIFTY ORB1
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+history NIFTY 5m: +1 bars
+history SENSEX 5m: +2 bars
+history INDIAVIX 5m: +1 bars
+history NIFTY 1m: +5 bars
+history SENSEX 1m: +6 bars
+history INDIAVIX 1m: +5 bars
+--- tick 2026-11-16 14:52 IST
+PAPER 2026-11-16  indices NIFTY, SENSEX  watchlist BHARTIARTL, KOTAKBANK, PNB, SBIN, BSE
+  BHARTIARTL   OR 2123.00-2155.70
+  KOTAKBANK    OR 490.60-494.45
+  PNB          OR 143.50-146.52
+  SBIN         OR 1083.90-1099.50
+  BSE          OR 3931.90-3969.40
+  OPEN   BHARTIARTL   BUY 57 @ 2164.60 (09:30)  stop 2139.35  target 2202.50  last 2152.00  unrealised Rs -718.20
+  CLOSED KOTAKBANK    BUY 252 @ 494.75 (09:35)  stop 492.50  target 498.15  -> STOP 492.25 (10:50)  net Rs -721.25
+  index today: NIFTY
+  NIFTY        first 1-min candle 25197.50-25292.70
+  SENSEX       first 1-min candle 81857.39-82185.53
+  ORB1     #1 BUY 195 NIFTY 25300 CE @ prem 143.73 (index 25298.45, SL 25278.45, 09:45)  195 BREAKEVEN_STOP @ 25298.45 (prem 141.30)  net Rs -586.58
+  ORB1     #2 BUY 325 NIFTY 25300 CE @ prem 144.60 (index 25303.85, SL 25283.85, 10:04)  325 STOP @ 25283.85 (prem 133.66)  net Rs -3,707.29
+  ORB1:NIFTY: done for the day: 2 losing trades
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Mon) is NIFTY ORB1
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Mon) is NIFTY ORB1
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-16 14:53 IST
+PAPER 2026-11-16  indices NIFTY, SENSEX  watchlist BHARTIARTL, KOTAKBANK, PNB, SBIN, BSE
+  BHARTIARTL   OR 2123.00-2155.70
+  KOTAKBANK    OR 490.60-494.45
+  PNB          OR 143.50-146.52
+  SBIN         OR 1083.90-1099.50
+  BSE          OR 3931.90-3969.40
+  OPEN   BHARTIARTL   BUY 57 @ 2164.60 (09:30)  stop 2139.35  target 2202.50  last 2152.00  unrealised Rs -718.20
+  CLOSED KOTAKBANK    BUY 252 @ 494.75 (09:35)  stop 492.50  target 498.15  -> STOP 492.25 (10:50)  net Rs -721.25
+  index today: NIFTY
+  NIFTY        first 1-min candle 25197.50-25292.70
+  SENSEX       first 1-min candle 81857.39-82185.53
+  ORB1     #1 BUY 195 NIFTY 25300 CE @ prem 143.73 (index 25298.45, SL 25278.45, 09:45)  195 BREAKEVEN_STOP @ 25298.45 (prem 141.30)  net Rs -586.58
+  ORB1     #2 BUY 325 NIFTY 25300 CE @ prem 144.60 (index 25303.85, SL 25283.85, 10:04)  325 STOP @ 25283.85 (prem 133.66)  net Rs -3,707.29
+  ORB1:NIFTY: done for the day: 2 losing trades
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Mon) is NIFTY ORB1
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Mon) is NIFTY ORB1
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-16 14:54 IST
+PAPER 2026-11-16  indices NIFTY, SENSEX  watchlist BHARTIARTL, KOTAKBANK, PNB, SBIN, BSE
+  BHARTIARTL   OR 2123.00-2155.70
+  KOTAKBANK    OR 490.60-494.45
+  PNB          OR 143.50-146.52
+  SBIN         OR 1083.90-1099.50
+  BSE          OR 3931.90-3969.40
+  OPEN   BHARTIARTL   BUY 57 @ 2164.60 (09:30)  stop 2139.35  target 2202.50  last 2152.00  unrealised Rs -718.20
+  CLOSED KOTAKBANK    BUY 252 @ 494.75 (09:35)  stop 492.50  target 498.15  -> STOP 492.25 (10:50)  net Rs -721.25
+  index today: NIFTY
+  NIFTY        first 1-min candle 25197.50-25292.70
+  SENSEX       first 1-min candle 81857.39-82185.53
+  ORB1     #1 BUY 195 NIFTY 25300 CE @ prem 143.73 (index 25298.45, SL 25278.45, 09:45)  195 BREAKEVEN_STOP @ 25298.45 (prem 141.30)  net Rs -586.58
+  ORB1     #2 BUY 325 NIFTY 25300 CE @ prem 144.60 (index 25303.85, SL 25283.85, 10:04)  325 STOP @ 25283.85 (prem 133.66)  net Rs -3,707.29
+  ORB1:NIFTY: done for the day: 2 losing trades
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Mon) is NIFTY ORB1
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Mon) is NIFTY ORB1
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-16 14:55 IST
+PAPER 2026-11-16  indices NIFTY, SENSEX  watchlist BHARTIARTL, KOTAKBANK, PNB, SBIN, BSE
+  BHARTIARTL   OR 2123.00-2155.70
+  KOTAKBANK    OR 490.60-494.45
+  PNB          OR 143.50-146.52
+  SBIN         OR 1083.90-1099.50
+  BSE          OR 3931.90-3969.40
+  OPEN   BHARTIARTL   BUY 57 @ 2164.60 (09:30)  stop 2139.35  target 2202.50  last 2152.80  unrealised Rs -672.60
+  CLOSED KOTAKBANK    BUY 252 @ 494.75 (09:35)  stop 492.50  target 498.15  -> STOP 492.25 (10:50)  net Rs -721.25
+  index today: NIFTY
+  NIFTY        first 1-min candle 25197.50-25292.70
+  SENSEX       first 1-min candle 81857.39-82185.53
+  ORB1     #1 BUY 195 NIFTY 25300 CE @ prem 143.73 (index 25298.45, SL 25278.45, 09:45)  195 BREAKEVEN_STOP @ 25298.45 (prem 141.30)  net Rs -586.58
+  ORB1     #2 BUY 325 NIFTY 25300 CE @ prem 144.60 (index 25303.85, SL 25283.85, 10:04)  325 STOP @ 25283.85 (prem 133.66)  net Rs -3,707.29
+  ORB1:NIFTY: done for the day: 2 losing trades
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Mon) is NIFTY ORB1
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Mon) is NIFTY ORB1
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-16 14:56 IST
+PAPER 2026-11-16  indices NIFTY, SENSEX  watchlist BHARTIARTL, KOTAKBANK, PNB, SBIN, BSE
+  BHARTIARTL   OR 2123.00-2155.70
+  KOTAKBANK    OR 490.60-494.45
+  PNB          OR 143.50-146.52
+  SBIN         OR 1083.90-1099.50
+  BSE          OR 3931.90-3969.40
+  OPEN   BHARTIARTL   BUY 57 @ 2164.60 (09:30)  stop 2139.35  target 2202.50  last 2152.80  unrealised Rs -672.60
   CLOSED KOTAKBANK    BUY 252 @ 494.75 (09:35)  stop 492.50  target 498.15  -> STOP 492.25 (10:50)  net Rs -721.25
   index today: NIFTY
   NIFTY        first 1-min candle 25197.50-25292.70
