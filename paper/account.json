@@ -346,8 +346,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 2163.300048828125,
-          "unrealised": -74.1
+          "last": 2166.89990234375,
+          "unrealised": 131.09
         },
         {
           "symbol": "KOTAKBANK",
@@ -367,8 +367,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 494.5,
-          "unrealised": -63.0
+          "last": 494.29998779296875,
+          "unrealised": -113.4
         }
       ],
       "notes": {},
@@ -383,15 +383,53 @@
             "low": 81857.39
           }
         },
-        "trades": [],
+        "trades": [
+          {
+            "strategy": "ORB1",
+            "underlying": "NIFTY",
+            "side": "CE",
+            "strike": 25300,
+            "action": "BUY",
+            "expiry": "2026-11-17",
+            "symbol": "NIFTY 25300 CE",
+            "trade_no": 1,
+            "status": "OPEN",
+            "why": "1-min close 25298.45 above first-minute high 25292.70",
+            "entry_time": "2026-11-16T09:45:00+05:30",
+            "entry_index": 25298.45,
+            "entry_premium": 143.73,
+            "vix": 15.65,
+            "lot": 65,
+            "lots": 3.0,
+            "qty": 195,
+            "qty_open": 195,
+            "book_qty": 0,
+            "stop_index": 25278.45,
+            "initial_stop": 25278.45,
+            "sl_premium": 133.3,
+            "partial_index": 25328.45,
+            "partial_done": false,
+            "protected": false,
+            "best_points": 0.0,
+            "stop_moves": [],
+            "risk_at_stop": 2034.91,
+            "legs": [],
+            "gross_pnl": 0.0,
+            "charges": 0.0,
+            "net_pnl": 0.0,
+            "last_index": 25298.45,
+            "last_premium": 143.48,
+            "unrealised": -49.04
+          }
+        ],
         "notes": {},
         "status": {
           "ORB1:NIFTY": {
-            "trades": 0,
+            "trades": 1,
             "done": false,
             "note": "",
             "active": true,
-            "net": 0
+            "net": 0.0
           },
           "EMA9_21:NIFTY": {
             "trades": 0,
@@ -431,13 +469,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25217.32,
-            "ema21": 25170.4,
+            "ema9": 25233.54,
+            "ema21": 25182.05,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 81865.06,
-            "ema21": 81700.8,
+            "ema9": 81880.47,
+            "ema21": 81721.65,
             "setup": null
           }
         },
@@ -451,7 +489,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-16T09:41:05+05:30",
+      "updated_at": "2026-11-16T09:45:05+05:30",
       "final": false
     }
   }
