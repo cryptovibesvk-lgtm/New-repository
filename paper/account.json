@@ -346,12 +346,12 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 2155.10009765625,
-          "unrealised": -541.49
+          "last": 2156.60009765625,
+          "unrealised": -455.99
         },
         {
           "symbol": "KOTAKBANK",
-          "status": "OPEN",
+          "status": "CLOSED",
           "entry_time": "2026-11-16T09:35:00+05:30",
           "entry": 494.75,
           "stop": 492.5,
@@ -364,11 +364,13 @@
           "or_high": 494.45,
           "or_low": 490.6,
           "or_mid": 492.53,
-          "gross_pnl": 0.0,
-          "charges": 0.0,
-          "net_pnl": 0.0,
-          "last": 493.20001220703125,
-          "unrealised": -390.6
+          "gross_pnl": -630.0,
+          "charges": 91.25,
+          "net_pnl": -721.25,
+          "exit": 492.25,
+          "exit_time": "2026-11-16T10:50:00+05:30",
+          "exit_reason": "STOP",
+          "r_multiple": -1.1
         }
       ],
       "notes": {},
@@ -541,13 +543,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25246.85,
-            "ema21": 25239.1,
+            "ema9": 25238.8,
+            "ema21": 25236.15,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 82017.45,
-            "ema21": 82065.15,
+            "ema9": 82005.97,
+            "ema21": 82055.96,
             "setup": null
           }
         },
@@ -561,7 +563,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-16T10:54:05+05:30",
+      "updated_at": "2026-11-16T10:55:05+05:30",
       "final": false
     }
   }
