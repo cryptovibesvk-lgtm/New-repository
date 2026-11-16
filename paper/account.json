@@ -290,6 +290,148 @@
       },
       "updated_at": "2026-11-13T16:34:01+05:30",
       "final": true
+    },
+    "2026-11-16": {
+      "watchlist": [
+        "BHARTIARTL",
+        "KOTAKBANK",
+        "PNB",
+        "SBIN",
+        "BSE"
+      ],
+      "scanned_at": "2026-11-16T09:38:54+05:30",
+      "ranges": {
+        "BHARTIARTL": {
+          "or_high": 2155.7,
+          "or_low": 2123.0,
+          "or_mid": 2139.35
+        },
+        "KOTAKBANK": {
+          "or_high": 494.45,
+          "or_low": 490.6,
+          "or_mid": 492.53
+        },
+        "PNB": {
+          "or_high": 146.52,
+          "or_low": 143.5,
+          "or_mid": 145.01
+        },
+        "SBIN": {
+          "or_high": 1099.5,
+          "or_low": 1083.9,
+          "or_mid": 1091.7
+        },
+        "BSE": {
+          "or_high": 3969.4,
+          "or_low": 3931.9,
+          "or_mid": 3950.65
+        }
+      },
+      "trades": [
+        {
+          "symbol": "BHARTIARTL",
+          "status": "OPEN",
+          "entry_time": "2026-11-16T09:30:00+05:30",
+          "entry": 2164.6,
+          "stop": 2139.35,
+          "target": 2202.5,
+          "qty": 57,
+          "segment": "CASH",
+          "margin": 123382.2,
+          "slippage_pct": 0.0005,
+          "risk_at_stop": 1529.82,
+          "or_high": 2155.7,
+          "or_low": 2123.0,
+          "or_mid": 2139.35,
+          "gross_pnl": 0.0,
+          "charges": 0.0,
+          "net_pnl": 0.0,
+          "last": 2163.5,
+          "unrealised": -62.7
+        }
+      ],
+      "notes": {},
+      "options": {
+        "levels": {
+          "NIFTY": {
+            "high": 25292.7,
+            "low": 25197.5
+          },
+          "SENSEX": {
+            "high": 82185.53,
+            "low": 81857.39
+          }
+        },
+        "trades": [],
+        "notes": {},
+        "status": {
+          "ORB1:NIFTY": {
+            "trades": 0,
+            "done": false,
+            "note": "",
+            "active": true,
+            "net": 0
+          },
+          "EMA9_21:NIFTY": {
+            "trades": 0,
+            "done": true,
+            "note": "NIFTY EMA9_21 is not in the schedule",
+            "active": true,
+            "net": 0
+          },
+          "SELL_TIME:NIFTY": {
+            "trades": 0,
+            "done": true,
+            "note": "NIFTY SELL_TIME runs on Tue only - today (Mon) is NIFTY ORB1",
+            "active": true,
+            "net": 0
+          },
+          "ORB1:SENSEX": {
+            "trades": 0,
+            "done": true,
+            "note": "SENSEX ORB1 is not in the schedule",
+            "active": false,
+            "net": 0
+          },
+          "EMA9_21:SENSEX": {
+            "trades": 0,
+            "done": true,
+            "note": "SENSEX EMA9_21 runs on Wed/Thu only - today (Mon) is NIFTY ORB1",
+            "active": false,
+            "net": 0
+          },
+          "SELL_TIME:SENSEX": {
+            "trades": 0,
+            "done": true,
+            "note": "SENSEX SELL_TIME is not in the schedule",
+            "active": false,
+            "net": 0
+          }
+        },
+        "ema": {
+          "NIFTY": {
+            "ema9": 25199.07,
+            "ema21": 25158.42,
+            "setup": null
+          },
+          "SENSEX": {
+            "ema9": 81773.19,
+            "ema21": 81631.82,
+            "setup": null
+          }
+        },
+        "index_today": "NIFTY",
+        "strategy_today": "ORB1",
+        "schedule": {
+          "Mon": "NIFTY ORB1",
+          "Tue": "NIFTY SELL_TIME",
+          "Wed": "SENSEX EMA9_21",
+          "Thu": "SENSEX EMA9_21",
+          "Fri": "NIFTY ORB1"
+        }
+      },
+      "updated_at": "2026-11-16T09:38:54+05:30",
+      "final": false
     }
   }
 }

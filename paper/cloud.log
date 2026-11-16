@@ -1,34 +1,3 @@
-  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-13 15:34 IST
-PAPER 2026-11-13  indices NIFTY, SENSEX  watchlist DLF, HINDALCO, INDIGO, PNB, TATACONSUM
-  DLF          OR 757.95-763.45
-  HINDALCO     OR 948.35-962.25
-  INDIGO       OR 5547.10-5578.90
-  PNB          OR 141.44-143.67
-  TATACONSUM   OR 1076.10-1081.80
-  CLOSED DLF          BUY 162 @ 767.30 (09:30)  stop 760.70  target 777.20  -> STOP 760.30 (12:15)  net Rs -1,224.98
-  CLOSED INDIGO       BUY 22 @ 5586.20 (09:30)  stop 5563.00  target 5621.00  -> TARGET 5621.00 (09:45)  net Rs 674.58
-  CLOSED TATACONSUM   BUY 115 @ 1082.45 (09:35)  stop 1078.95  target 1087.70  -> TARGET 1087.70 (11:00)  net Rs 512.21
-  index today: NIFTY
-  NIFTY        first 1-min candle 25118.40-25201.90
-  SENSEX       first 1-min candle 81459.42-81813.42
-  ORB1     #1 BUY 195 NIFTY 25100 PE @ prem 160.71 (index 25118.25, SL 25138.25, 09:17)  195 STOP @ 25138.25 (prem 150.64)  net Rs -2,081.38
-  ORB1     #2 BUY 325 NIFTY 25100 PE @ prem 170.40 (index 25093.75, SL 25113.75, 09:21)  325 STOP @ 25113.75 (prem 159.78)  net Rs -3,623.38
-  ORB1:NIFTY: done for the day: 2 losing trades
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Fri) is NIFTY ORB1
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-13 15:35 IST
-PAPER 2026-11-13  indices NIFTY, SENSEX  watchlist DLF, HINDALCO, INDIGO, PNB, TATACONSUM
-  DLF          OR 757.95-763.45
-  HINDALCO     OR 948.35-962.25
-  INDIGO       OR 5547.10-5578.90
-  PNB          OR 141.44-143.67
-  TATACONSUM   OR 1076.10-1081.80
-  CLOSED DLF          BUY 162 @ 767.30 (09:30)  stop 760.70  target 777.20  -> STOP 760.30 (12:15)  net Rs -1,224.98
   CLOSED INDIGO       BUY 22 @ 5586.20 (09:30)  stop 5563.00  target 5621.00  -> TARGET 5621.00 (09:45)  net Rs 674.58
   CLOSED TATACONSUM   BUY 115 @ 1082.45 (09:35)  stop 1078.95  target 1087.70  -> TARGET 1087.70 (11:00)  net Rs 512.21
   index today: NIFTY
@@ -298,3 +267,34 @@ history INDIAVIX 5m: +0 bars
 history NIFTY 1m: +0 bars
 history SENSEX 1m: +0 bars
 history INDIAVIX 1m: +0 bars
+--- tick 2026-11-16 09:38 IST
+Scanning 100 NSE symbols (daily) ...
+MATCHES 5 (showing top 5)
+  BHARTIARTL        2167.90   +2.94%  score  92  20D_BREAKOUT,BULL_FLAG,52W_HIGH_PROX
+  KOTAKBANK          493.85   +1.08%  score  92  20D_BREAKOUT,BULL_FLAG,52W_HIGH_PROX
+  PNB                145.65   +1.99%  score  92  20D_BREAKOUT,BULL_FLAG,52W_HIGH_PROX
+  SBIN              1095.00   +1.39%  score  76  20D_BREAKOUT,BULL_FLAG
+  BSE               3949.70   +0.30%  score  76  20D_BREAKOUT,BULL_FLAG
+saved: nse-trader/watchlist.json
+watchlist 2026-11-16: BHARTIARTL, KOTAKBANK, PNB, SBIN, BSE
+PAPER 2026-11-16  indices NIFTY, SENSEX  watchlist BHARTIARTL, KOTAKBANK, PNB, SBIN, BSE
+  BHARTIARTL   OR 2123.00-2155.70
+  KOTAKBANK    OR 490.60-494.45
+  PNB          OR 143.50-146.52
+  SBIN         OR 1083.90-1099.50
+  BSE          OR 3931.90-3969.40
+  OPEN   BHARTIARTL   BUY 57 @ 2164.60 (09:30)  stop 2139.35  target 2202.50  last 2163.50  unrealised Rs -62.70
+  index today: NIFTY
+  NIFTY        first 1-min candle 25197.50-25292.70
+  SENSEX       first 1-min candle 81857.39-82185.53
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Mon) is NIFTY ORB1
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Mon) is NIFTY ORB1
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+history NIFTY 5m: +4 bars
+history SENSEX 5m: +3 bars
+history INDIAVIX 5m: +4 bars
+history NIFTY 1m: +23 bars
+history SENSEX 1m: +9 bars
+history INDIAVIX 1m: +23 bars

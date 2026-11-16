@@ -1,93 +1,93 @@
 {
-  "generated_ist": "2026-11-13T08:54:10+05:30",
+  "generated_ist": "2026-11-16T09:38:54+05:30",
   "mode": "daily",
   "universe": "nifty100",
   "scanned": 100,
   "matched": 5,
   "items": [
     {
-      "symbol": "DLF",
-      "ltp": 769.3,
-      "chg_pct": 3.59,
+      "symbol": "BHARTIARTL",
+      "ltp": 2167.9,
+      "chg_pct": 2.94,
       "setup": "20D_BREAKOUT,BULL_FLAG,52W_HIGH_PROX",
-      "score": 100,
-      "note": "close above prior 20-day pivot 759.40; 13.9% impulse, 1.8% pullback; 0.6% below 52-week high",
-      "turnover_cr": 216.16,
-      "rsi14": 74.7,
-      "volume_ratio": 1.66,
+      "score": 92,
+      "note": "close above prior 20-day pivot 2122.90; 12.0% impulse, 0.7% pullback; 0.3% below 52-week high",
+      "turnover_cr": 2318.37,
+      "rsi14": 74.6,
+      "volume_ratio": 0.18,
       "levels": {
         "or_high": null,
         "or_low": null,
-        "pivot": 759.4,
-        "stop_hint": 750.25
+        "pivot": 2122.9,
+        "stop_hint": 2120.95
       }
     },
     {
-      "symbol": "HINDALCO",
-      "ltp": 964.0,
-      "chg_pct": 0.18,
-      "setup": "20D_BREAKOUT,BULL_FLAG",
-      "score": 89,
-      "note": "close above prior 20-day pivot 967.70; 8.4% impulse, 0.6% pullback",
-      "turnover_cr": 499.25,
-      "rsi14": 63.5,
-      "volume_ratio": 2.47,
+      "symbol": "KOTAKBANK",
+      "ltp": 493.85,
+      "chg_pct": 1.08,
+      "setup": "20D_BREAKOUT,BULL_FLAG,52W_HIGH_PROX",
+      "score": 92,
+      "note": "close above prior 20-day pivot 494.05; 14.8% impulse, 1.1% pullback; 0.1% below 52-week high",
+      "turnover_cr": 1115.07,
+      "rsi14": 75.8,
+      "volume_ratio": 0.06,
       "levels": {
         "or_high": null,
         "or_low": null,
-        "pivot": 967.7,
-        "stop_hint": 938.55
-      }
-    },
-    {
-      "symbol": "INDIGO",
-      "ltp": 5665.0,
-      "chg_pct": 4.33,
-      "setup": "20D_BREAKOUT,BULL_FLAG",
-      "score": 89,
-      "note": "close above prior 20-day pivot 5489.00; 16.8% impulse, 1.1% pullback",
-      "turnover_cr": 449.19,
-      "rsi14": 77.7,
-      "volume_ratio": 2.81,
-      "levels": {
-        "or_high": null,
-        "or_low": null,
-        "pivot": 5489.0,
-        "stop_hint": 5512.5
+        "pivot": 494.05,
+        "stop_hint": 483.9
       }
     },
     {
       "symbol": "PNB",
-      "ltp": 141.79,
-      "chg_pct": 2.39,
-      "setup": "20D_BREAKOUT,52W_HIGH_PROX",
-      "score": 82,
-      "note": "close above prior 20-day pivot 139.00; 1.4% below 52-week high",
-      "turnover_cr": 394.54,
-      "rsi14": 80.9,
-      "volume_ratio": 2.23,
+      "ltp": 145.65,
+      "chg_pct": 1.99,
+      "setup": "20D_BREAKOUT,BULL_FLAG,52W_HIGH_PROX",
+      "score": 92,
+      "note": "close above prior 20-day pivot 145.14; 19.5% impulse, 0.7% pullback; 0.7% below 52-week high",
+      "turnover_cr": 471.23,
+      "rsi14": 83.2,
+      "volume_ratio": 0.52,
       "levels": {
         "or_high": null,
         "or_low": null,
-        "pivot": 139.0,
-        "stop_hint": 138.0
+        "pivot": 145.14,
+        "stop_hint": 141.85
       }
     },
     {
-      "symbol": "TATACONSUM",
-      "ltp": 1093.0,
-      "chg_pct": 0.84,
+      "symbol": "SBIN",
+      "ltp": 1095.0,
+      "chg_pct": 1.39,
       "setup": "20D_BREAKOUT,BULL_FLAG",
       "score": 76,
-      "note": "close above prior 20-day pivot 1093.00; 12.4% impulse, 0.2% pullback",
-      "turnover_cr": 213.74,
-      "rsi14": 71.7,
-      "volume_ratio": 0.78,
+      "note": "close above prior 20-day pivot 1090.70; 13.6% impulse, 0.8% pullback",
+      "turnover_cr": 1570.76,
+      "rsi14": 74.4,
+      "volume_ratio": 0.22,
       "levels": {
         "or_high": null,
         "or_low": null,
-        "pivot": 1093.0,
-        "stop_hint": 1068.6
+        "pivot": 1090.7,
+        "stop_hint": 1072.1
+      }
+    },
+    {
+      "symbol": "BSE",
+      "ltp": 3949.7,
+      "chg_pct": 0.3,
+      "setup": "20D_BREAKOUT,BULL_FLAG",
+      "score": 76,
+      "note": "close above prior 20-day pivot 3955.00; 22.4% impulse, 0.4% pullback",
+      "turnover_cr": 1468.38,
+      "rsi14": 75.0,
+      "volume_ratio": 0.12,
+      "levels": {
+        "or_high": null,
+        "or_low": null,
+        "pivot": 3955.0,
+        "stop_hint": 3846.75
       }
     }
   ],
