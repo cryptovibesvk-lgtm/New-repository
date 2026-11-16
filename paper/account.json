@@ -346,8 +346,29 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 2163.5,
-          "unrealised": -62.7
+          "last": 2163.300048828125,
+          "unrealised": -74.1
+        },
+        {
+          "symbol": "KOTAKBANK",
+          "status": "OPEN",
+          "entry_time": "2026-11-16T09:35:00+05:30",
+          "entry": 494.75,
+          "stop": 492.5,
+          "target": 498.15,
+          "qty": 252,
+          "segment": "CASH",
+          "margin": 124677.0,
+          "slippage_pct": 0.0005,
+          "risk_at_stop": 658.27,
+          "or_high": 494.45,
+          "or_low": 490.6,
+          "or_mid": 492.53,
+          "gross_pnl": 0.0,
+          "charges": 0.0,
+          "net_pnl": 0.0,
+          "last": 494.5,
+          "unrealised": -63.0
         }
       ],
       "notes": {},
@@ -410,13 +431,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25199.07,
-            "ema21": 25158.42,
+            "ema9": 25217.32,
+            "ema21": 25170.4,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 81773.19,
-            "ema21": 81631.82,
+            "ema9": 81865.06,
+            "ema21": 81700.8,
             "setup": null
           }
         },
@@ -430,7 +451,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-16T09:38:54+05:30",
+      "updated_at": "2026-11-16T09:41:05+05:30",
       "final": false
     }
   }
