@@ -1,139 +1,3 @@
-                                        ^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: unsupported format string passed to NoneType.__format__
---- tick 2026-11-17 14:59 IST
-PAPER 2026-11-17  indices NIFTY, SENSEX  watchlist PNB, SBIN, BSE, CANBK, ASIANPAINT
-  PNB          OR 144.32-148.65
-  SBIN         OR 1092.00-1101.40
-  BSE          OR 3936.30-3980.00
-  CANBK        OR 132.20-134.30
-  ASIANPAINT   OR 2610.30-2637.60
-  OPEN   CANBK        BUY 924 @ 134.70 (09:30)  stop 133.25  target 136.90  last 134.15  unrealised Rs -508.21
-  CLOSED BSE          BUY 31 @ 3988.70 (09:35)  stop 3958.15  target 4034.55  -> STOP 3956.15 (10:00)  net Rs -1,099.83
-  OPEN   PNB          BUY 833 @ 149.35 (09:35)  stop 146.45  target 153.70  last 149.66  unrealised Rs 258.23
-  index today: NIFTY
-  NIFTY        first 1-min candle 25269.20-25329.05
-  SENSEX       first 1-min candle 82108.13-82255.90
-Traceback (most recent call last):
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 564, in <module>
-    main()
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 559, in main
-    {"premarket": cmd_premarket, "update": cmd_update, "run": cmd_run, "report": cmd_report,
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 508, in cmd_tick
-    cmd_update(args)
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 338, in cmd_update
-    print_day(day.isoformat(), rec)
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 367, in print_day
-    f"(index {t['entry_index']:.2f}, SL {t['initial_stop']:.2f}, {t['entry_time'][11:16]})  {legs}  {tail}")
-                                        ^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: unsupported format string passed to NoneType.__format__
---- tick 2026-11-17 15:00 IST
-PAPER 2026-11-17  indices NIFTY, SENSEX  watchlist PNB, SBIN, BSE, CANBK, ASIANPAINT
-  PNB          OR 144.32-148.65
-  SBIN         OR 1092.00-1101.40
-  BSE          OR 3936.30-3980.00
-  CANBK        OR 132.20-134.30
-  ASIANPAINT   OR 2610.30-2637.60
-  OPEN   CANBK        BUY 924 @ 134.70 (09:30)  stop 133.25  target 136.90  last 134.11  unrealised Rs -545.16
-  CLOSED BSE          BUY 31 @ 3988.70 (09:35)  stop 3958.15  target 4034.55  -> STOP 3956.15 (10:00)  net Rs -1,099.83
-  OPEN   PNB          BUY 833 @ 149.35 (09:35)  stop 146.45  target 153.70  last 149.67  unrealised Rs 266.56
-  index today: NIFTY
-  NIFTY        first 1-min candle 25269.20-25329.05
-  SENSEX       first 1-min candle 82108.13-82255.90
-Traceback (most recent call last):
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 564, in <module>
-    main()
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 559, in main
-    {"premarket": cmd_premarket, "update": cmd_update, "run": cmd_run, "report": cmd_report,
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 508, in cmd_tick
-    cmd_update(args)
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 338, in cmd_update
-    print_day(day.isoformat(), rec)
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 367, in print_day
-    f"(index {t['entry_index']:.2f}, SL {t['initial_stop']:.2f}, {t['entry_time'][11:16]})  {legs}  {tail}")
-                                        ^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: unsupported format string passed to NoneType.__format__
---- tick 2026-11-17 15:01 IST
-PAPER 2026-11-17  indices NIFTY, SENSEX  watchlist PNB, SBIN, BSE, CANBK, ASIANPAINT
-  PNB          OR 144.32-148.65
-  SBIN         OR 1092.00-1101.40
-  BSE          OR 3936.30-3980.00
-  CANBK        OR 132.20-134.30
-  ASIANPAINT   OR 2610.30-2637.60
-  OPEN   CANBK        BUY 924 @ 134.70 (09:30)  stop 133.25  target 136.90  last 134.11  unrealised Rs -545.16
-  CLOSED BSE          BUY 31 @ 3988.70 (09:35)  stop 3958.15  target 4034.55  -> STOP 3956.15 (10:00)  net Rs -1,099.83
-  OPEN   PNB          BUY 833 @ 149.35 (09:35)  stop 146.45  target 153.70  last 149.57  unrealised Rs 183.27
-  index today: NIFTY
-  NIFTY        first 1-min candle 25269.20-25329.05
-  SENSEX       first 1-min candle 82108.13-82255.90
-Traceback (most recent call last):
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 564, in <module>
-    main()
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 559, in main
-    {"premarket": cmd_premarket, "update": cmd_update, "run": cmd_run, "report": cmd_report,
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 508, in cmd_tick
-    cmd_update(args)
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 338, in cmd_update
-    print_day(day.isoformat(), rec)
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 367, in print_day
-    f"(index {t['entry_index']:.2f}, SL {t['initial_stop']:.2f}, {t['entry_time'][11:16]})  {legs}  {tail}")
-                                        ^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: unsupported format string passed to NoneType.__format__
---- tick 2026-11-17 15:02 IST
-PAPER 2026-11-17  indices NIFTY, SENSEX  watchlist PNB, SBIN, BSE, CANBK, ASIANPAINT
-  PNB          OR 144.32-148.65
-  SBIN         OR 1092.00-1101.40
-  BSE          OR 3936.30-3980.00
-  CANBK        OR 132.20-134.30
-  ASIANPAINT   OR 2610.30-2637.60
-  OPEN   CANBK        BUY 924 @ 134.70 (09:30)  stop 133.25  target 136.90  last 134.11  unrealised Rs -545.16
-  CLOSED BSE          BUY 31 @ 3988.70 (09:35)  stop 3958.15  target 4034.55  -> STOP 3956.15 (10:00)  net Rs -1,099.83
-  OPEN   PNB          BUY 833 @ 149.35 (09:35)  stop 146.45  target 153.70  last 149.57  unrealised Rs 183.27
-  index today: NIFTY
-  NIFTY        first 1-min candle 25269.20-25329.05
-  SENSEX       first 1-min candle 82108.13-82255.90
-Traceback (most recent call last):
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 564, in <module>
-    main()
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 559, in main
-    {"premarket": cmd_premarket, "update": cmd_update, "run": cmd_run, "report": cmd_report,
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 508, in cmd_tick
-    cmd_update(args)
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 338, in cmd_update
-    print_day(day.isoformat(), rec)
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 367, in print_day
-    f"(index {t['entry_index']:.2f}, SL {t['initial_stop']:.2f}, {t['entry_time'][11:16]})  {legs}  {tail}")
-                                        ^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: unsupported format string passed to NoneType.__format__
---- tick 2026-11-17 15:03 IST
-PAPER 2026-11-17  indices NIFTY, SENSEX  watchlist PNB, SBIN, BSE, CANBK, ASIANPAINT
-  PNB          OR 144.32-148.65
-  SBIN         OR 1092.00-1101.40
-  BSE          OR 3936.30-3980.00
-  CANBK        OR 132.20-134.30
-  ASIANPAINT   OR 2610.30-2637.60
-  OPEN   CANBK        BUY 924 @ 134.70 (09:30)  stop 133.25  target 136.90  last 134.11  unrealised Rs -545.16
-  CLOSED BSE          BUY 31 @ 3988.70 (09:35)  stop 3958.15  target 4034.55  -> STOP 3956.15 (10:00)  net Rs -1,099.83
-  OPEN   PNB          BUY 833 @ 149.35 (09:35)  stop 146.45  target 153.70  last 149.57  unrealised Rs 183.27
-  index today: NIFTY
-  NIFTY        first 1-min candle 25269.20-25329.05
-  SENSEX       first 1-min candle 82108.13-82255.90
-Traceback (most recent call last):
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 564, in <module>
-    main()
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 559, in main
-    {"premarket": cmd_premarket, "update": cmd_update, "run": cmd_run, "report": cmd_report,
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 508, in cmd_tick
-    cmd_update(args)
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 338, in cmd_update
-    print_day(day.isoformat(), rec)
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 367, in print_day
-    f"(index {t['entry_index']:.2f}, SL {t['initial_stop']:.2f}, {t['entry_time'][11:16]})  {legs}  {tail}")
-                                        ^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: unsupported format string passed to NoneType.__format__
---- tick 2026-11-17 15:04 IST
-PAPER 2026-11-17  indices NIFTY, SENSEX  watchlist PNB, SBIN, BSE, CANBK, ASIANPAINT
-  PNB          OR 144.32-148.65
-  SBIN         OR 1092.00-1101.40
   BSE          OR 3936.30-3980.00
   CANBK        OR 132.20-134.30
   ASIANPAINT   OR 2610.30-2637.60
@@ -276,6 +140,142 @@ PAPER 2026-11-17  indices NIFTY, SENSEX  watchlist PNB, SBIN, BSE, CANBK, ASIANP
   OPEN   CANBK        BUY 924 @ 134.70 (09:30)  stop 133.25  target 136.90  last 133.92  unrealised Rs -720.72
   CLOSED BSE          BUY 31 @ 3988.70 (09:35)  stop 3958.15  target 4034.55  -> STOP 3956.15 (10:00)  net Rs -1,099.83
   OPEN   PNB          BUY 833 @ 149.35 (09:35)  stop 146.45  target 153.70  last 149.45  unrealised Rs 83.30
+  index today: NIFTY
+  NIFTY        first 1-min candle 25269.20-25329.05
+  SENSEX       first 1-min candle 82108.13-82255.90
+Traceback (most recent call last):
+  File "/home/runner/work/New-repository/New-repository/paper.py", line 564, in <module>
+    main()
+  File "/home/runner/work/New-repository/New-repository/paper.py", line 559, in main
+    {"premarket": cmd_premarket, "update": cmd_update, "run": cmd_run, "report": cmd_report,
+  File "/home/runner/work/New-repository/New-repository/paper.py", line 508, in cmd_tick
+    cmd_update(args)
+  File "/home/runner/work/New-repository/New-repository/paper.py", line 338, in cmd_update
+    print_day(day.isoformat(), rec)
+  File "/home/runner/work/New-repository/New-repository/paper.py", line 367, in print_day
+    f"(index {t['entry_index']:.2f}, SL {t['initial_stop']:.2f}, {t['entry_time'][11:16]})  {legs}  {tail}")
+                                        ^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+history NIFTY 5m: +1 bars
+history SENSEX 5m: +2 bars
+history INDIAVIX 5m: +1 bars
+history NIFTY 1m: +5 bars
+history SENSEX 1m: +6 bars
+history INDIAVIX 1m: +5 bars
+--- tick 2026-11-17 15:10 IST
+PAPER 2026-11-17  indices NIFTY, SENSEX  watchlist PNB, SBIN, BSE, CANBK, ASIANPAINT
+  PNB          OR 144.32-148.65
+  SBIN         OR 1092.00-1101.40
+  BSE          OR 3936.30-3980.00
+  CANBK        OR 132.20-134.30
+  ASIANPAINT   OR 2610.30-2637.60
+  OPEN   CANBK        BUY 924 @ 134.70 (09:30)  stop 133.25  target 136.90  last 133.66  unrealised Rs -960.96
+  CLOSED BSE          BUY 31 @ 3988.70 (09:35)  stop 3958.15  target 4034.55  -> STOP 3956.15 (10:00)  net Rs -1,099.83
+  OPEN   PNB          BUY 833 @ 149.35 (09:35)  stop 146.45  target 153.70  last 149.50  unrealised Rs 124.95
+  index today: NIFTY
+  NIFTY        first 1-min candle 25269.20-25329.05
+  SENSEX       first 1-min candle 82108.13-82255.90
+Traceback (most recent call last):
+  File "/home/runner/work/New-repository/New-repository/paper.py", line 564, in <module>
+    main()
+  File "/home/runner/work/New-repository/New-repository/paper.py", line 559, in main
+    {"premarket": cmd_premarket, "update": cmd_update, "run": cmd_run, "report": cmd_report,
+  File "/home/runner/work/New-repository/New-repository/paper.py", line 508, in cmd_tick
+    cmd_update(args)
+  File "/home/runner/work/New-repository/New-repository/paper.py", line 338, in cmd_update
+    print_day(day.isoformat(), rec)
+  File "/home/runner/work/New-repository/New-repository/paper.py", line 367, in print_day
+    f"(index {t['entry_index']:.2f}, SL {t['initial_stop']:.2f}, {t['entry_time'][11:16]})  {legs}  {tail}")
+                                        ^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+--- tick 2026-11-17 15:11 IST
+PAPER 2026-11-17  indices NIFTY, SENSEX  watchlist PNB, SBIN, BSE, CANBK, ASIANPAINT
+  PNB          OR 144.32-148.65
+  SBIN         OR 1092.00-1101.40
+  BSE          OR 3936.30-3980.00
+  CANBK        OR 132.20-134.30
+  ASIANPAINT   OR 2610.30-2637.60
+  OPEN   CANBK        BUY 924 @ 134.70 (09:30)  stop 133.25  target 136.90  last 133.66  unrealised Rs -960.96
+  CLOSED BSE          BUY 31 @ 3988.70 (09:35)  stop 3958.15  target 4034.55  -> STOP 3956.15 (10:00)  net Rs -1,099.83
+  OPEN   PNB          BUY 833 @ 149.35 (09:35)  stop 146.45  target 153.70  last 149.50  unrealised Rs 124.95
+  index today: NIFTY
+  NIFTY        first 1-min candle 25269.20-25329.05
+  SENSEX       first 1-min candle 82108.13-82255.90
+Traceback (most recent call last):
+  File "/home/runner/work/New-repository/New-repository/paper.py", line 564, in <module>
+    main()
+  File "/home/runner/work/New-repository/New-repository/paper.py", line 559, in main
+    {"premarket": cmd_premarket, "update": cmd_update, "run": cmd_run, "report": cmd_report,
+  File "/home/runner/work/New-repository/New-repository/paper.py", line 508, in cmd_tick
+    cmd_update(args)
+  File "/home/runner/work/New-repository/New-repository/paper.py", line 338, in cmd_update
+    print_day(day.isoformat(), rec)
+  File "/home/runner/work/New-repository/New-repository/paper.py", line 367, in print_day
+    f"(index {t['entry_index']:.2f}, SL {t['initial_stop']:.2f}, {t['entry_time'][11:16]})  {legs}  {tail}")
+                                        ^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+--- tick 2026-11-17 15:12 IST
+PAPER 2026-11-17  indices NIFTY, SENSEX  watchlist PNB, SBIN, BSE, CANBK, ASIANPAINT
+  PNB          OR 144.32-148.65
+  SBIN         OR 1092.00-1101.40
+  BSE          OR 3936.30-3980.00
+  CANBK        OR 132.20-134.30
+  ASIANPAINT   OR 2610.30-2637.60
+  OPEN   CANBK        BUY 924 @ 134.70 (09:30)  stop 133.25  target 136.90  last 133.66  unrealised Rs -960.96
+  CLOSED BSE          BUY 31 @ 3988.70 (09:35)  stop 3958.15  target 4034.55  -> STOP 3956.15 (10:00)  net Rs -1,099.83
+  OPEN   PNB          BUY 833 @ 149.35 (09:35)  stop 146.45  target 153.70  last 149.50  unrealised Rs 124.95
+  index today: NIFTY
+  NIFTY        first 1-min candle 25269.20-25329.05
+  SENSEX       first 1-min candle 82108.13-82255.90
+Traceback (most recent call last):
+  File "/home/runner/work/New-repository/New-repository/paper.py", line 564, in <module>
+    main()
+  File "/home/runner/work/New-repository/New-repository/paper.py", line 559, in main
+    {"premarket": cmd_premarket, "update": cmd_update, "run": cmd_run, "report": cmd_report,
+  File "/home/runner/work/New-repository/New-repository/paper.py", line 508, in cmd_tick
+    cmd_update(args)
+  File "/home/runner/work/New-repository/New-repository/paper.py", line 338, in cmd_update
+    print_day(day.isoformat(), rec)
+  File "/home/runner/work/New-repository/New-repository/paper.py", line 367, in print_day
+    f"(index {t['entry_index']:.2f}, SL {t['initial_stop']:.2f}, {t['entry_time'][11:16]})  {legs}  {tail}")
+                                        ^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+--- tick 2026-11-17 15:13 IST
+PAPER 2026-11-17  indices NIFTY, SENSEX  watchlist PNB, SBIN, BSE, CANBK, ASIANPAINT
+  PNB          OR 144.32-148.65
+  SBIN         OR 1092.00-1101.40
+  BSE          OR 3936.30-3980.00
+  CANBK        OR 132.20-134.30
+  ASIANPAINT   OR 2610.30-2637.60
+  OPEN   CANBK        BUY 924 @ 134.70 (09:30)  stop 133.25  target 136.90  last 133.66  unrealised Rs -960.96
+  CLOSED BSE          BUY 31 @ 3988.70 (09:35)  stop 3958.15  target 4034.55  -> STOP 3956.15 (10:00)  net Rs -1,099.83
+  OPEN   PNB          BUY 833 @ 149.35 (09:35)  stop 146.45  target 153.70  last 149.50  unrealised Rs 124.95
+  index today: NIFTY
+  NIFTY        first 1-min candle 25269.20-25329.05
+  SENSEX       first 1-min candle 82108.13-82255.90
+Traceback (most recent call last):
+  File "/home/runner/work/New-repository/New-repository/paper.py", line 564, in <module>
+    main()
+  File "/home/runner/work/New-repository/New-repository/paper.py", line 559, in main
+    {"premarket": cmd_premarket, "update": cmd_update, "run": cmd_run, "report": cmd_report,
+  File "/home/runner/work/New-repository/New-repository/paper.py", line 508, in cmd_tick
+    cmd_update(args)
+  File "/home/runner/work/New-repository/New-repository/paper.py", line 338, in cmd_update
+    print_day(day.isoformat(), rec)
+  File "/home/runner/work/New-repository/New-repository/paper.py", line 367, in print_day
+    f"(index {t['entry_index']:.2f}, SL {t['initial_stop']:.2f}, {t['entry_time'][11:16]})  {legs}  {tail}")
+                                        ^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+--- tick 2026-11-17 15:14 IST
+PAPER 2026-11-17  indices NIFTY, SENSEX  watchlist PNB, SBIN, BSE, CANBK, ASIANPAINT
+  PNB          OR 144.32-148.65
+  SBIN         OR 1092.00-1101.40
+  BSE          OR 3936.30-3980.00
+  CANBK        OR 132.20-134.30
+  ASIANPAINT   OR 2610.30-2637.60
+  OPEN   CANBK        BUY 924 @ 134.70 (09:30)  stop 133.25  target 136.90  last 133.66  unrealised Rs -960.96
+  CLOSED BSE          BUY 31 @ 3988.70 (09:35)  stop 3958.15  target 4034.55  -> STOP 3956.15 (10:00)  net Rs -1,099.83
+  OPEN   PNB          BUY 833 @ 149.35 (09:35)  stop 146.45  target 153.70  last 149.50  unrealised Rs 124.95
   index today: NIFTY
   NIFTY        first 1-min candle 25269.20-25329.05
   SENSEX       first 1-min candle 82108.13-82255.90
