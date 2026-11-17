@@ -1,9 +1,3 @@
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 559, in main
-    {"premarket": cmd_premarket, "update": cmd_update, "run": cmd_run, "report": cmd_report,
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 508, in cmd_tick
-    cmd_update(args)
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 338, in cmd_update
-    print_day(day.isoformat(), rec)
   File "/home/runner/work/New-repository/New-repository/paper.py", line 367, in print_day
     f"(index {t['entry_index']:.2f}, SL {t['initial_stop']:.2f}, {t['entry_time'][11:16]})  {legs}  {tail}")
                                         ^^^^^^^^^^^^^^^^^^^^^^^
@@ -297,4 +291,10 @@ history SENSEX 5m: +1 bars
 history INDIAVIX 5m: +0 bars
 history NIFTY 1m: +0 bars
 history SENSEX 1m: +5 bars
+history INDIAVIX 1m: +0 bars
+history NIFTY 5m: +0 bars
+history SENSEX 5m: +0 bars
+history INDIAVIX 5m: +0 bars
+history NIFTY 1m: +0 bars
+history SENSEX 1m: +0 bars
 history INDIAVIX 1m: +0 bars
