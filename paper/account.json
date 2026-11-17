@@ -623,8 +623,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 135.0,
-          "unrealised": 277.2
+          "last": 135.05999755859375,
+          "unrealised": 332.64
         },
         {
           "symbol": "BSE",
@@ -667,8 +667,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 149.61000061035156,
-          "unrealised": 216.58
+          "last": 149.85000610351562,
+          "unrealised": 416.51
         }
       ],
       "notes": {},
@@ -694,7 +694,7 @@
             "symbol": "NIFTY 25350 CE",
             "trade_no": 1,
             "window": "OTM1 09:16-14:25",
-            "status": "OPEN",
+            "status": "CLOSED",
             "why": "OTM1 09:16-14:25: sell OTM1 CE at 09:16, index 25322.55",
             "entry_time": "2026-11-17T09:16:00+05:30",
             "entry_index": 25322.55,
@@ -703,7 +703,7 @@
             "lot": 65,
             "lots": 2,
             "qty": 130,
-            "qty_open": 130,
+            "qty_open": 0,
             "book_qty": 0,
             "stop_index": null,
             "initial_stop": null,
@@ -713,13 +713,25 @@
             "best_points": 0.0,
             "stop_moves": [],
             "risk_at_stop": 5578.98,
-            "legs": [],
-            "gross_pnl": 0.0,
-            "charges": 0.0,
-            "net_pnl": 0.0,
-            "last_index": 25446.7,
-            "last_premium": 107.82,
-            "unrealised": -2858.5
+            "legs": [
+              {
+                "time": "2026-11-17T14:25:00+05:30",
+                "qty": 130,
+                "lots": 2,
+                "index": 25457.6,
+                "premium": 116.46,
+                "reason": "TIME_EXIT_14:25"
+              }
+            ],
+            "gross_pnl": -3981.9,
+            "charges": 75.45,
+            "net_pnl": -4057.35,
+            "exit_time": "2026-11-17T14:25:00+05:30",
+            "exit_reason": "TIME_EXIT_14:25",
+            "exit_index": 25457.6,
+            "exit": 116.46,
+            "r_multiple": -0.73,
+            "entry": 85.83
           },
           {
             "strategy": "SELL_TIME",
@@ -731,7 +743,7 @@
             "symbol": "NIFTY 25250 PE",
             "trade_no": 1,
             "window": "OTM1 09:16-14:25",
-            "status": "OPEN",
+            "status": "CLOSED",
             "why": "OTM1 09:16-14:25: sell OTM1 PE at 09:16, index 25322.55",
             "entry_time": "2026-11-17T09:16:00+05:30",
             "entry_index": 25322.55,
@@ -740,7 +752,7 @@
             "lot": 65,
             "lots": 2,
             "qty": 130,
-            "qty_open": 130,
+            "qty_open": 0,
             "book_qty": 0,
             "stop_index": null,
             "initial_stop": null,
@@ -750,13 +762,25 @@
             "best_points": 0.0,
             "stop_moves": [],
             "risk_at_stop": 3992.08,
-            "legs": [],
-            "gross_pnl": 0.0,
-            "charges": 0.0,
-            "net_pnl": 0.0,
-            "last_index": 25446.7,
-            "last_premium": 1.19,
-            "unrealised": 7830.02
+            "legs": [
+              {
+                "time": "2026-11-17T14:25:00+05:30",
+                "qty": 130,
+                "lots": 2,
+                "index": 25457.6,
+                "premium": 0.75,
+                "reason": "TIME_EXIT_14:25"
+              }
+            ],
+            "gross_pnl": 7887.1,
+            "charges": 62.57,
+            "net_pnl": 7824.53,
+            "exit_time": "2026-11-17T14:25:00+05:30",
+            "exit_reason": "TIME_EXIT_14:25",
+            "exit_index": 25457.6,
+            "exit": 0.75,
+            "r_multiple": 1.96,
+            "entry": 61.42
           }
         ],
         "notes": {},
@@ -780,7 +804,7 @@
             "done": false,
             "note": "",
             "active": true,
-            "net": 0.0
+            "net": 3767.18
           },
           "ORB1:SENSEX": {
             "trades": 0,
@@ -806,13 +830,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25443.87,
-            "ema21": 25436.41,
+            "ema9": 25446.62,
+            "ema21": 25438.34,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 82759.21,
-            "ema21": 82710.9,
+            "ema9": 82777.32,
+            "ema21": 82723.98,
             "setup": null
           }
         },
@@ -826,7 +850,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-17T14:21:05+05:30",
+      "updated_at": "2026-11-17T14:25:05+05:30",
       "final": false
     }
   }
