@@ -567,6 +567,172 @@
       },
       "updated_at": "2026-11-16T16:57:44+05:30",
       "final": true
+    },
+    "2026-11-17": {
+      "watchlist": [
+        "PNB",
+        "SBIN",
+        "BSE",
+        "CANBK",
+        "ASIANPAINT"
+      ],
+      "scanned_at": "2026-11-17T09:23:05+05:30",
+      "ranges": {},
+      "trades": [],
+      "notes": {
+        "PNB": "opening range incomplete",
+        "SBIN": "opening range incomplete",
+        "BSE": "opening range incomplete",
+        "CANBK": "opening range incomplete",
+        "ASIANPAINT": "opening range incomplete"
+      },
+      "options": {
+        "levels": {
+          "NIFTY": {
+            "high": 25329.05,
+            "low": 25269.2
+          }
+        },
+        "trades": [
+          {
+            "strategy": "SELL_TIME",
+            "underlying": "NIFTY",
+            "side": "CE",
+            "action": "SELL",
+            "strike": 25350,
+            "expiry": "2026-11-17",
+            "symbol": "NIFTY 25350 CE",
+            "trade_no": 1,
+            "window": "OTM1 09:16-14:25",
+            "status": "OPEN",
+            "why": "OTM1 09:16-14:25: sell OTM1 CE at 09:16, index 25322.55",
+            "entry_time": "2026-11-17T09:16:00+05:30",
+            "entry_index": 25322.55,
+            "entry_premium": 85.83,
+            "vix": 15.12,
+            "lot": 65,
+            "lots": 2,
+            "qty": 130,
+            "qty_open": 130,
+            "book_qty": 0,
+            "stop_index": null,
+            "initial_stop": null,
+            "sl_premium": 128.75,
+            "partial_done": false,
+            "protected": false,
+            "best_points": 0.0,
+            "stop_moves": [],
+            "risk_at_stop": 5578.98,
+            "legs": [],
+            "gross_pnl": 0.0,
+            "charges": 0.0,
+            "net_pnl": 0.0,
+            "last_index": 25326.15,
+            "last_premium": 88.04,
+            "unrealised": -286.75
+          },
+          {
+            "strategy": "SELL_TIME",
+            "underlying": "NIFTY",
+            "side": "PE",
+            "action": "SELL",
+            "strike": 25250,
+            "expiry": "2026-11-17",
+            "symbol": "NIFTY 25250 PE",
+            "trade_no": 1,
+            "window": "OTM1 09:16-14:25",
+            "status": "OPEN",
+            "why": "OTM1 09:16-14:25: sell OTM1 PE at 09:16, index 25322.55",
+            "entry_time": "2026-11-17T09:16:00+05:30",
+            "entry_index": 25322.55,
+            "entry_premium": 61.42,
+            "vix": 15.12,
+            "lot": 65,
+            "lots": 2,
+            "qty": 130,
+            "qty_open": 130,
+            "book_qty": 0,
+            "stop_index": null,
+            "initial_stop": null,
+            "sl_premium": 92.13,
+            "partial_done": false,
+            "protected": false,
+            "best_points": 0.0,
+            "stop_moves": [],
+            "risk_at_stop": 3992.08,
+            "legs": [],
+            "gross_pnl": 0.0,
+            "charges": 0.0,
+            "net_pnl": 0.0,
+            "last_index": 25326.15,
+            "last_premium": 60.63,
+            "unrealised": 102.66
+          }
+        ],
+        "notes": {},
+        "status": {
+          "ORB1:NIFTY": {
+            "trades": 0,
+            "done": true,
+            "note": "NIFTY ORB1 runs on Mon/Fri only - today (Tue) is NIFTY SELL_TIME",
+            "active": true,
+            "net": 0
+          },
+          "EMA9_21:NIFTY": {
+            "trades": 0,
+            "done": true,
+            "note": "NIFTY EMA9_21 is not in the schedule",
+            "active": true,
+            "net": 0
+          },
+          "SELL_TIME:NIFTY": {
+            "trades": 2,
+            "done": false,
+            "note": "",
+            "active": true,
+            "net": 0.0
+          },
+          "ORB1:SENSEX": {
+            "trades": 0,
+            "done": true,
+            "note": "SENSEX ORB1 is not in the schedule",
+            "active": false,
+            "net": 0
+          },
+          "EMA9_21:SENSEX": {
+            "trades": 0,
+            "done": true,
+            "note": "SENSEX EMA9_21 runs on Wed/Thu only - today (Tue) is NIFTY SELL_TIME",
+            "active": false,
+            "net": 0
+          },
+          "SELL_TIME:SENSEX": {
+            "trades": 0,
+            "done": true,
+            "note": "SENSEX SELL_TIME is not in the schedule",
+            "active": false,
+            "net": 0
+          }
+        },
+        "ema": {
+          "NIFTY": {
+            "ema9": 25255.21,
+            "ema21": 25237.18,
+            "setup": null
+          }
+        },
+        "index_today": "NIFTY",
+        "strategy_today": "SELL_TIME",
+        "schedule": {
+          "Mon": "NIFTY ORB1",
+          "Tue": "NIFTY SELL_TIME",
+          "Wed": "SENSEX EMA9_21",
+          "Thu": "SENSEX EMA9_21",
+          "Fri": "NIFTY ORB1"
+        }
+      },
+      "updated_at": "2026-11-17T09:23:05+05:30",
+      "final": false
     }
   }
 }
