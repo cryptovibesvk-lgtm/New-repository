@@ -667,8 +667,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 149.69000244140625,
-          "unrealised": 283.22
+          "last": 149.66000366210938,
+          "unrealised": 258.23
         }
       ],
       "notes": {},
@@ -815,9 +815,9 @@
             "gross_pnl": 0.0,
             "charges": 0.0,
             "net_pnl": 0.0,
-            "last_index": 25435.2,
-            "last_premium": 23.88,
-            "unrealised": 2984.35
+            "last_index": 25421.85,
+            "last_premium": 17.37,
+            "unrealised": 3831.36
           },
           {
             "strategy": "SELL_TIME",
@@ -852,9 +852,9 @@
             "gross_pnl": 0.0,
             "charges": 0.0,
             "net_pnl": 0.0,
-            "last_index": 25435.2,
-            "last_premium": 38.07,
-            "unrealised": -767.21
+            "last_index": 25421.85,
+            "last_premium": 44.96,
+            "unrealised": -1662.47
           }
         ],
         "notes": {},
@@ -909,8 +909,8 @@
             "setup": null
           },
           "SENSEX": {
-            "ema9": 82758.9,
-            "ema21": 82750.49,
+            "ema9": 82746.25,
+            "ema21": 82745.72,
             "setup": null
           }
         },
@@ -924,7 +924,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-17T14:55:05+05:30",
+      "updated_at": "2026-11-17T14:58:05+05:30",
       "final": false
     }
   }
