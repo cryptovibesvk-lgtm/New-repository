@@ -699,10 +699,10 @@
             "trade_no": 1,
             "window": "OTM1 09:16-14:25",
             "status": "CLOSED",
-            "why": "OTM1 09:16-14:25: sell OTM1 CE at 09:16, index 25322.55",
+            "why": "OTM1 09:16-14:25: sell OTM1 CE at 09:16, index 25323.65",
             "entry_time": "2026-11-17T09:16:00+05:30",
-            "entry_index": 25322.55,
-            "entry_premium": 85.83,
+            "entry_index": 25323.65,
+            "entry_premium": 86.34,
             "vix": 15.12,
             "lot": 65,
             "lots": 2,
@@ -711,12 +711,12 @@
             "book_qty": 0,
             "stop_index": null,
             "initial_stop": null,
-            "sl_premium": 128.75,
+            "sl_premium": 129.52,
             "partial_done": false,
             "protected": false,
             "best_points": 0.0,
             "stop_moves": [],
-            "risk_at_stop": 5578.98,
+            "risk_at_stop": 5612.36,
             "legs": [
               {
                 "time": "2026-11-17T14:25:00+05:30",
@@ -727,15 +727,15 @@
                 "reason": "TIME_EXIT_14:25"
               }
             ],
-            "gross_pnl": -3987.1,
-            "charges": 75.45,
-            "net_pnl": -4062.55,
+            "gross_pnl": -3920.8,
+            "charges": 75.58,
+            "net_pnl": -3996.38,
             "exit_time": "2026-11-17T14:25:00+05:30",
             "exit_reason": "TIME_EXIT_14:25",
             "exit_index": 25457.6,
             "exit": 116.5,
-            "r_multiple": -0.73,
-            "entry": 85.83
+            "r_multiple": -0.71,
+            "entry": 86.34
           },
           {
             "strategy": "SELL_TIME",
@@ -748,10 +748,10 @@
             "trade_no": 1,
             "window": "OTM1 09:16-14:25",
             "status": "CLOSED",
-            "why": "OTM1 09:16-14:25: sell OTM1 PE at 09:16, index 25322.55",
+            "why": "OTM1 09:16-14:25: sell OTM1 PE at 09:16, index 25323.65",
             "entry_time": "2026-11-17T09:16:00+05:30",
-            "entry_index": 25322.55,
-            "entry_premium": 61.42,
+            "entry_index": 25323.65,
+            "entry_premium": 61.01,
             "vix": 15.12,
             "lot": 65,
             "lots": 2,
@@ -760,12 +760,12 @@
             "book_qty": 0,
             "stop_index": null,
             "initial_stop": null,
-            "sl_premium": 92.13,
+            "sl_premium": 91.52,
             "partial_done": false,
             "protected": false,
             "best_points": 0.0,
             "stop_moves": [],
-            "risk_at_stop": 3992.08,
+            "risk_at_stop": 3965.81,
             "legs": [
               {
                 "time": "2026-11-17T14:25:00+05:30",
@@ -776,15 +776,15 @@
                 "reason": "TIME_EXIT_14:25"
               }
             ],
-            "gross_pnl": 7887.1,
-            "charges": 62.57,
-            "net_pnl": 7824.53,
+            "gross_pnl": 7833.8,
+            "charges": 62.47,
+            "net_pnl": 7771.33,
             "exit_time": "2026-11-17T14:25:00+05:30",
             "exit_reason": "TIME_EXIT_14:25",
             "exit_index": 25457.6,
             "exit": 0.75,
             "r_multiple": 1.96,
-            "entry": 61.42
+            "entry": 61.01
           },
           {
             "strategy": "SELL_TIME",
@@ -820,19 +820,19 @@
                 "time": "2026-11-17T15:15:00+05:30",
                 "qty": 130,
                 "lots": 2,
-                "index": 25417.8,
-                "premium": 7.82,
+                "index": 25418.95,
+                "premium": 8.13,
                 "reason": "TIME_EXIT_15:15"
               }
             ],
-            "gross_pnl": 5072.6,
-            "charges": 59.35,
-            "net_pnl": 5013.25,
+            "gross_pnl": 5032.3,
+            "charges": 59.37,
+            "net_pnl": 4972.93,
             "exit_time": "2026-11-17T15:15:00+05:30",
             "exit_reason": "TIME_EXIT_15:15",
-            "exit_index": 25417.8,
-            "exit": 7.82,
-            "r_multiple": 1.65,
+            "exit_index": 25418.95,
+            "exit": 8.13,
+            "r_multiple": 1.63,
             "entry": 46.84
           },
           {
@@ -869,19 +869,19 @@
                 "time": "2026-11-17T15:15:00+05:30",
                 "qty": 130,
                 "lots": 2,
-                "index": 25417.8,
-                "premium": 39.84,
+                "index": 25418.95,
+                "premium": 38.99,
                 "reason": "TIME_EXIT_15:15"
               }
             ],
-            "gross_pnl": -997.1,
-            "charges": 57.56,
-            "net_pnl": -1054.66,
+            "gross_pnl": -886.6,
+            "charges": 57.51,
+            "net_pnl": -944.11,
             "exit_time": "2026-11-17T15:15:00+05:30",
             "exit_reason": "TIME_EXIT_15:15",
-            "exit_index": 25417.8,
-            "exit": 39.84,
-            "r_multiple": -0.5,
+            "exit_index": 25418.95,
+            "exit": 38.99,
+            "r_multiple": -0.45,
             "entry": 32.17
           }
         ],
@@ -906,7 +906,7 @@
             "done": true,
             "note": "",
             "active": true,
-            "net": 7720.57
+            "net": 7803.77
           },
           "ORB1:SENSEX": {
             "trades": 0,
@@ -932,13 +932,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25413.89,
-            "ema21": 25424.51,
+            "ema9": 25414.02,
+            "ema21": 25424.61,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 82621.21,
-            "ema21": 82654.63,
+            "ema9": 82603.4,
+            "ema21": 82643.5,
             "setup": null
           }
         },
@@ -952,7 +952,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-17T15:40:31+05:30",
+      "updated_at": "2026-11-17T16:05:58+05:30",
       "final": true
     }
   }
