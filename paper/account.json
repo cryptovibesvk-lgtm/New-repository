@@ -623,8 +623,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 135.85000610351562,
-          "unrealised": 1062.61
+          "last": 136.2100067138672,
+          "unrealised": 1395.25
         },
         {
           "symbol": "BSE",
@@ -644,8 +644,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 3968.800048828125,
-          "unrealised": -616.9
+          "last": 3964.699951171875,
+          "unrealised": -744.0
         },
         {
           "symbol": "PNB",
@@ -665,8 +665,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 149.39999389648438,
-          "unrealised": 41.64
+          "last": 150.39999389648438,
+          "unrealised": 874.64
         }
       ],
       "notes": {},
@@ -715,9 +715,9 @@
             "gross_pnl": 0.0,
             "charges": 0.0,
             "net_pnl": 0.0,
-            "last_index": 25379.3,
-            "last_premium": 110.0,
-            "unrealised": -3142.11
+            "last_index": 25372.6,
+            "last_premium": 104.59,
+            "unrealised": -2439.05
           },
           {
             "strategy": "SELL_TIME",
@@ -752,9 +752,9 @@
             "gross_pnl": 0.0,
             "charges": 0.0,
             "net_pnl": 0.0,
-            "last_index": 25379.3,
-            "last_premium": 39.1,
-            "unrealised": 2901.27
+            "last_index": 25372.6,
+            "last_premium": 39.61,
+            "unrealised": 2834.87
           }
         ],
         "notes": {},
@@ -804,13 +804,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25327.57,
-            "ema21": 25287.78,
+            "ema9": 25336.58,
+            "ema21": 25295.49,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 82192.75,
-            "ema21": 82124.7,
+            "ema9": 82227.69,
+            "ema21": 82153.7,
             "setup": null
           }
         },
@@ -824,7 +824,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-17T09:55:05+05:30",
+      "updated_at": "2026-11-17T10:00:05+05:30",
       "final": false
     }
   }
