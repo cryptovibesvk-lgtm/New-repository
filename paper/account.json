@@ -604,7 +604,29 @@
           "or_mid": 2623.95
         }
       },
-      "trades": [],
+      "trades": [
+        {
+          "symbol": "CANBK",
+          "status": "OPEN",
+          "entry_time": "2026-11-17T09:30:00+05:30",
+          "entry": 134.7,
+          "stop": 133.25,
+          "target": 136.9,
+          "qty": 924,
+          "segment": "CASH",
+          "margin": 124462.8,
+          "slippage_pct": 0.0005,
+          "risk_at_stop": 1430.78,
+          "or_high": 134.3,
+          "or_low": 132.2,
+          "or_mid": 133.25,
+          "gross_pnl": 0.0,
+          "charges": 0.0,
+          "net_pnl": 0.0,
+          "last": 134.60000610351562,
+          "unrealised": -92.39
+        }
+      ],
       "notes": {},
       "options": {
         "levels": {
@@ -651,9 +673,9 @@
             "gross_pnl": 0.0,
             "charges": 0.0,
             "net_pnl": 0.0,
-            "last_index": 25305.85,
-            "last_premium": 77.74,
-            "unrealised": 1052.15
+            "last_index": 25303.65,
+            "last_premium": 76.45,
+            "unrealised": 1219.11
           },
           {
             "strategy": "SELL_TIME",
@@ -688,9 +710,9 @@
             "gross_pnl": 0.0,
             "charges": 0.0,
             "net_pnl": 0.0,
-            "last_index": 25305.85,
-            "last_premium": 67.5,
-            "unrealised": -790.58
+            "last_index": 25303.65,
+            "last_premium": 68.07,
+            "unrealised": -864.91
           }
         ],
         "notes": {},
@@ -740,13 +762,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25278.83,
-            "ema21": 25251.68,
+            "ema9": 25283.79,
+            "ema21": 25256.41,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 82108.25,
-            "ema21": 82011.74,
+            "ema9": 82148.73,
+            "ema21": 82038.95,
             "setup": null
           }
         },
@@ -760,7 +782,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-17T09:34:05+05:30",
+      "updated_at": "2026-11-17T09:35:05+05:30",
       "final": false
     }
   }
