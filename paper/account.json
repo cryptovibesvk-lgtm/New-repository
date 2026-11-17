@@ -600,8 +600,8 @@
         },
         "ASIANPAINT": {
           "or_high": 2637.6,
-          "or_low": 2611.7,
-          "or_mid": 2624.65
+          "or_low": 2610.3,
+          "or_mid": 2623.95
         }
       },
       "trades": [],
@@ -611,6 +611,10 @@
           "NIFTY": {
             "high": 25329.05,
             "low": 25269.2
+          },
+          "SENSEX": {
+            "high": 82255.9,
+            "low": 82108.13
           }
         },
         "trades": [
@@ -647,9 +651,9 @@
             "gross_pnl": 0.0,
             "charges": 0.0,
             "net_pnl": 0.0,
-            "last_index": 25328.95,
-            "last_premium": 87.89,
-            "unrealised": -267.42
+            "last_index": 25305.85,
+            "last_premium": 77.74,
+            "unrealised": 1052.15
           },
           {
             "strategy": "SELL_TIME",
@@ -684,9 +688,9 @@
             "gross_pnl": 0.0,
             "charges": 0.0,
             "net_pnl": 0.0,
-            "last_index": 25328.95,
-            "last_premium": 58.31,
-            "unrealised": 404.02
+            "last_index": 25305.85,
+            "last_premium": 67.5,
+            "unrealised": -790.58
           }
         ],
         "notes": {},
@@ -736,8 +740,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25268.06,
-            "ema21": 25244.66,
+            "ema9": 25278.83,
+            "ema21": 25251.68,
+            "setup": null
+          },
+          "SENSEX": {
+            "ema9": 82108.25,
+            "ema21": 82011.74,
             "setup": null
           }
         },
@@ -751,7 +760,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-17T09:29:05+05:30",
+      "updated_at": "2026-11-17T09:34:05+05:30",
       "final": false
     }
   }
