@@ -577,15 +577,35 @@
         "ASIANPAINT"
       ],
       "scanned_at": "2026-11-17T09:23:05+05:30",
-      "ranges": {},
-      "trades": [],
-      "notes": {
-        "PNB": "opening range incomplete",
-        "SBIN": "opening range incomplete",
-        "BSE": "opening range incomplete",
-        "CANBK": "opening range incomplete",
-        "ASIANPAINT": "opening range incomplete"
+      "ranges": {
+        "PNB": {
+          "or_high": 148.65,
+          "or_low": 144.32,
+          "or_mid": 146.49
+        },
+        "SBIN": {
+          "or_high": 1101.4,
+          "or_low": 1092.0,
+          "or_mid": 1096.7
+        },
+        "BSE": {
+          "or_high": 3980.0,
+          "or_low": 3936.3,
+          "or_mid": 3958.15
+        },
+        "CANBK": {
+          "or_high": 134.3,
+          "or_low": 132.2,
+          "or_mid": 133.25
+        },
+        "ASIANPAINT": {
+          "or_high": 2637.6,
+          "or_low": 2611.7,
+          "or_mid": 2624.65
+        }
       },
+      "trades": [],
+      "notes": {},
       "options": {
         "levels": {
           "NIFTY": {
@@ -627,9 +647,9 @@
             "gross_pnl": 0.0,
             "charges": 0.0,
             "net_pnl": 0.0,
-            "last_index": 25326.15,
-            "last_premium": 88.04,
-            "unrealised": -286.75
+            "last_index": 25328.95,
+            "last_premium": 87.89,
+            "unrealised": -267.42
           },
           {
             "strategy": "SELL_TIME",
@@ -664,9 +684,9 @@
             "gross_pnl": 0.0,
             "charges": 0.0,
             "net_pnl": 0.0,
-            "last_index": 25326.15,
-            "last_premium": 60.63,
-            "unrealised": 102.66
+            "last_index": 25328.95,
+            "last_premium": 58.31,
+            "unrealised": 404.02
           }
         ],
         "notes": {},
@@ -716,8 +736,8 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25255.21,
-            "ema21": 25237.18,
+            "ema9": 25268.06,
+            "ema21": 25244.66,
             "setup": null
           }
         },
@@ -731,7 +751,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-17T09:23:05+05:30",
+      "updated_at": "2026-11-17T09:29:05+05:30",
       "final": false
     }
   }
