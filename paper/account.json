@@ -623,8 +623,50 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 134.60000610351562,
-          "unrealised": -92.39
+          "last": 135.38999938964844,
+          "unrealised": 637.56
+        },
+        {
+          "symbol": "BSE",
+          "status": "OPEN",
+          "entry_time": "2026-11-17T09:35:00+05:30",
+          "entry": 3988.7,
+          "stop": 3958.15,
+          "target": 4034.55,
+          "qty": 31,
+          "segment": "CASH",
+          "margin": 123649.7,
+          "slippage_pct": 0.0005,
+          "risk_at_stop": 1037.85,
+          "or_high": 3980.0,
+          "or_low": 3936.3,
+          "or_mid": 3958.15,
+          "gross_pnl": 0.0,
+          "charges": 0.0,
+          "net_pnl": 0.0,
+          "last": 3986.699951171875,
+          "unrealised": -62.0
+        },
+        {
+          "symbol": "PNB",
+          "status": "OPEN",
+          "entry_time": "2026-11-17T09:35:00+05:30",
+          "entry": 149.35,
+          "stop": 146.45,
+          "target": 153.7,
+          "qty": 833,
+          "segment": "CASH",
+          "margin": 124408.55,
+          "slippage_pct": 0.0005,
+          "risk_at_stop": 2506.35,
+          "or_high": 148.65,
+          "or_low": 144.32,
+          "or_mid": 146.49,
+          "gross_pnl": 0.0,
+          "charges": 0.0,
+          "net_pnl": 0.0,
+          "last": 149.22999572753906,
+          "unrealised": -99.96
         }
       ],
       "notes": {},
@@ -673,9 +715,9 @@
             "gross_pnl": 0.0,
             "charges": 0.0,
             "net_pnl": 0.0,
-            "last_index": 25303.65,
-            "last_premium": 76.45,
-            "unrealised": 1219.11
+            "last_index": 25328.35,
+            "last_premium": 86.82,
+            "unrealised": -128.86
           },
           {
             "strategy": "SELL_TIME",
@@ -710,9 +752,9 @@
             "gross_pnl": 0.0,
             "charges": 0.0,
             "net_pnl": 0.0,
-            "last_index": 25303.65,
-            "last_premium": 68.07,
-            "unrealised": -864.91
+            "last_index": 25328.35,
+            "last_premium": 57.95,
+            "unrealised": 451.17
           }
         ],
         "notes": {},
@@ -762,13 +804,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25283.79,
-            "ema21": 25256.41,
+            "ema9": 25292.7,
+            "ema21": 25262.95,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 82148.73,
-            "ema21": 82038.95,
+            "ema9": 82172.06,
+            "ema21": 82068.2,
             "setup": null
           }
         },
@@ -782,7 +824,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-17T09:35:05+05:30",
+      "updated_at": "2026-11-17T09:40:05+05:30",
       "final": false
     }
   }
