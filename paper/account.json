@@ -607,7 +607,7 @@
       "trades": [
         {
           "symbol": "CANBK",
-          "status": "OPEN",
+          "status": "CLOSED",
           "entry_time": "2026-11-17T09:30:00+05:30",
           "entry": 134.7,
           "stop": 133.25,
@@ -620,11 +620,13 @@
           "or_high": 134.3,
           "or_low": 132.2,
           "or_mid": 133.25,
-          "gross_pnl": 0.0,
-          "charges": 0.0,
-          "net_pnl": 0.0,
-          "last": 134.0,
-          "unrealised": -646.8
+          "gross_pnl": -739.2,
+          "charges": 91.15,
+          "net_pnl": -830.35,
+          "exit": 133.9,
+          "exit_time": "2026-11-17T15:15:00+05:30",
+          "exit_reason": "SQUARE_OFF_15:15",
+          "r_multiple": -0.58
         },
         {
           "symbol": "BSE",
@@ -651,7 +653,7 @@
         },
         {
           "symbol": "PNB",
-          "status": "OPEN",
+          "status": "CLOSED",
           "entry_time": "2026-11-17T09:35:00+05:30",
           "entry": 149.35,
           "stop": 146.45,
@@ -664,11 +666,13 @@
           "or_high": 148.65,
           "or_low": 144.32,
           "or_mid": 146.49,
-          "gross_pnl": 0.0,
-          "charges": 0.0,
-          "net_pnl": 0.0,
-          "last": 149.89999389648438,
-          "unrealised": 458.14
+          "gross_pnl": 374.85,
+          "charges": 91.45,
+          "net_pnl": 283.4,
+          "exit": 149.8,
+          "exit_time": "2026-11-17T15:15:05+05:30",
+          "exit_reason": "SQUARE_OFF_15:15",
+          "r_multiple": 0.11
         }
       ],
       "notes": {},
@@ -817,18 +821,18 @@
                 "qty": 130,
                 "lots": 2,
                 "index": 25417.8,
-                "premium": 7.88,
+                "premium": 7.82,
                 "reason": "TIME_EXIT_15:15"
               }
             ],
-            "gross_pnl": 5064.8,
+            "gross_pnl": 5072.6,
             "charges": 59.35,
-            "net_pnl": 5005.45,
+            "net_pnl": 5013.25,
             "exit_time": "2026-11-17T15:15:00+05:30",
             "exit_reason": "TIME_EXIT_15:15",
             "exit_index": 25417.8,
-            "exit": 7.88,
-            "r_multiple": 1.64,
+            "exit": 7.82,
+            "r_multiple": 1.65,
             "entry": 46.84
           },
           {
@@ -866,18 +870,18 @@
                 "qty": 130,
                 "lots": 2,
                 "index": 25417.8,
-                "premium": 39.9,
+                "premium": 39.84,
                 "reason": "TIME_EXIT_15:15"
               }
             ],
-            "gross_pnl": -1004.9,
-            "charges": 57.57,
-            "net_pnl": -1062.47,
+            "gross_pnl": -997.1,
+            "charges": 57.56,
+            "net_pnl": -1054.66,
             "exit_time": "2026-11-17T15:15:00+05:30",
             "exit_reason": "TIME_EXIT_15:15",
             "exit_index": 25417.8,
-            "exit": 39.9,
-            "r_multiple": -0.51,
+            "exit": 39.84,
+            "r_multiple": -0.5,
             "entry": 32.17
           }
         ],
@@ -899,10 +903,10 @@
           },
           "SELL_TIME:NIFTY": {
             "trades": 4,
-            "done": false,
+            "done": true,
             "note": "",
             "active": true,
-            "net": 7704.96
+            "net": 7720.57
           },
           "ORB1:SENSEX": {
             "trades": 0,
@@ -928,13 +932,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25424.73,
-            "ema21": 25431.41,
+            "ema9": 25422.38,
+            "ema21": 25429.74,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 82668.39,
-            "ema21": 82701.11,
+            "ema9": 82640.42,
+            "ema21": 82681.62,
             "setup": null
           }
         },
@@ -948,7 +952,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-17T15:15:05+05:30",
+      "updated_at": "2026-11-17T15:20:05+05:30",
       "final": false
     }
   }
