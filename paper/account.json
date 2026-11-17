@@ -623,8 +623,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 135.77999877929688,
-          "unrealised": 997.92
+          "last": 135.39999389648438,
+          "unrealised": 646.79
         },
         {
           "symbol": "BSE",
@@ -667,8 +667,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 149.72000122070312,
-          "unrealised": 308.21
+          "last": 149.49000549316406,
+          "unrealised": 116.62
         }
       ],
       "notes": {},
@@ -717,9 +717,9 @@
             "gross_pnl": 0.0,
             "charges": 0.0,
             "net_pnl": 0.0,
-            "last_index": 25494.85,
-            "last_premium": 170.07,
-            "unrealised": -10950.92
+            "last_index": 25476.85,
+            "last_premium": 155.34,
+            "unrealised": -9035.82
           },
           {
             "strategy": "SELL_TIME",
@@ -754,9 +754,9 @@
             "gross_pnl": 0.0,
             "charges": 0.0,
             "net_pnl": 0.0,
-            "last_index": 25494.85,
-            "last_premium": 7.31,
-            "unrealised": 7034.23
+            "last_index": 25476.85,
+            "last_premium": 8.64,
+            "unrealised": 6861.74
           }
         ],
         "notes": {},
@@ -806,13 +806,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25450.84,
-            "ema21": 25421.23,
+            "ema9": 25457.68,
+            "ema21": 25427.02,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 82708.62,
-            "ema21": 82660.09,
+            "ema9": 82713.1,
+            "ema21": 82670.55,
             "setup": null
           }
         },
@@ -826,7 +826,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-17T12:01:05+05:30",
+      "updated_at": "2026-11-17T12:06:05+05:30",
       "final": false
     }
   }
