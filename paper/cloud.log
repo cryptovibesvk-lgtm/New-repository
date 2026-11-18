@@ -1,89 +1,3 @@
-history INDIAVIX 1m: +0 bars
---- tick 2026-11-18 09:24 IST
-Scanning 100 NSE symbols (daily) ...
-MATCHES 5 (showing top 5)
-  MAZDOCK           1852.70   +0.31%  score  61  BULL_FLAG,RECLAIM_20MA
-  APOLLOHOSP        8813.00   +0.48%  score  59  20D_BREAKOUT,52W_HIGH_PROX
-  ICICIBANK         1606.80   +0.51%  score  58  BULL_FLAG,52W_HIGH_PROX
-  BHARTIARTL        2142.60   +0.20%  score  58  BULL_FLAG,52W_HIGH_PROX
-  DRREDDY           1381.50   +0.26%  score  58  BULL_FLAG,52W_HIGH_PROX
-saved: nse-trader/watchlist.json
-watchlist 2026-11-18: MAZDOCK, APOLLOHOSP, ICICIBANK, BHARTIARTL, DRREDDY
-PAPER 2026-11-18  indices NIFTY, SENSEX  watchlist MAZDOCK, APOLLOHOSP, ICICIBANK, BHARTIARTL, DRREDDY
-  note MAZDOCK: opening range incomplete
-  note APOLLOHOSP: opening range incomplete
-  note ICICIBANK: opening range incomplete
-  note BHARTIARTL: opening range incomplete
-  note DRREDDY: opening range incomplete
-  no stock trades yet
-  index today: SENSEX
-  NIFTY        first 1-min candle 25292.20-25368.75
-  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
-history NIFTY 5m: +1 bars
-history SENSEX 5m: +0 bars
-history INDIAVIX 5m: +1 bars
-history NIFTY 1m: +9 bars
-history SENSEX 1m: +0 bars
-history INDIAVIX 1m: +9 bars
---- tick 2026-11-18 09:26 IST
-PAPER 2026-11-18  indices NIFTY, SENSEX  watchlist MAZDOCK, APOLLOHOSP, ICICIBANK, BHARTIARTL, DRREDDY
-  MAZDOCK      OR 1837.10-1860.00
-  APOLLOHOSP   OR 8795.50-8897.00
-  ICICIBANK    OR 1601.60-1610.00
-  BHARTIARTL   OR 2138.60-2155.00
-  note DRREDDY: opening range incomplete
-  no stock trades yet
-  index today: SENSEX
-  NIFTY        first 1-min candle 25292.20-25368.75
-  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-18 09:27 IST
-PAPER 2026-11-18  indices NIFTY, SENSEX  watchlist MAZDOCK, APOLLOHOSP, ICICIBANK, BHARTIARTL, DRREDDY
-  MAZDOCK      OR 1837.10-1860.00
-  APOLLOHOSP   OR 8784.00-8897.00
-  ICICIBANK    OR 1601.60-1610.00
-  BHARTIARTL   OR 2138.60-2155.00
-  DRREDDY      OR 1381.00-1386.80
-  no stock trades yet
-  index today: SENSEX
-  NIFTY        first 1-min candle 25292.20-25368.75
-  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-18 09:28 IST
-PAPER 2026-11-18  indices NIFTY, SENSEX  watchlist MAZDOCK, APOLLOHOSP, ICICIBANK, BHARTIARTL, DRREDDY
-  MAZDOCK      OR 1837.10-1860.00
-  APOLLOHOSP   OR 8784.00-8897.00
-  ICICIBANK    OR 1601.60-1610.00
-  BHARTIARTL   OR 2138.60-2155.00
-  DRREDDY      OR 1380.40-1386.80
-  no stock trades yet
-  index today: SENSEX
-  NIFTY        first 1-min candle 25292.20-25368.75
-  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-18 09:29 IST
-PAPER 2026-11-18  indices NIFTY, SENSEX  watchlist MAZDOCK, APOLLOHOSP, ICICIBANK, BHARTIARTL, DRREDDY
-  MAZDOCK      OR 1837.10-1860.00
-  APOLLOHOSP   OR 8784.00-8897.00
-  ICICIBANK    OR 1601.60-1610.00
-  BHARTIARTL   OR 2138.60-2155.00
-  DRREDDY      OR 1380.40-1386.80
-  no stock trades yet
-  index today: SENSEX
-  NIFTY        first 1-min candle 25292.20-25368.75
   ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
   EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
   SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
@@ -277,6 +191,92 @@ PAPER 2026-11-18  indices NIFTY, SENSEX  watchlist MAZDOCK, APOLLOHOSP, ICICIBAN
   ORB1:SENSEX: SENSEX ORB1 is not in the schedule
   SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
 --- tick 2026-11-18 09:41 IST
+PAPER 2026-11-18  indices NIFTY, SENSEX  watchlist MAZDOCK, APOLLOHOSP, ICICIBANK, BHARTIARTL, DRREDDY
+  MAZDOCK      OR 1837.10-1860.00
+  APOLLOHOSP   OR 8784.00-8897.00
+  ICICIBANK    OR 1601.60-1610.00
+  BHARTIARTL   OR 2138.60-2155.00
+  DRREDDY      OR 1380.40-1386.80
+  no stock trades yet
+  index today: SENSEX
+  NIFTY        first 1-min candle 25292.20-25368.75
+  SENSEX       first 1-min candle 82268.61-82508.46
+  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+history NIFTY 5m: +1 bars
+history SENSEX 5m: +2 bars
+history INDIAVIX 5m: +1 bars
+history NIFTY 1m: +5 bars
+history SENSEX 1m: +6 bars
+history INDIAVIX 1m: +5 bars
+--- tick 2026-11-18 09:42 IST
+PAPER 2026-11-18  indices NIFTY, SENSEX  watchlist MAZDOCK, APOLLOHOSP, ICICIBANK, BHARTIARTL, DRREDDY
+  MAZDOCK      OR 1837.10-1860.00
+  APOLLOHOSP   OR 8784.00-8897.00
+  ICICIBANK    OR 1601.60-1610.00
+  BHARTIARTL   OR 2138.60-2155.00
+  DRREDDY      OR 1380.40-1386.80
+  no stock trades yet
+  index today: SENSEX
+  NIFTY        first 1-min candle 25292.20-25368.75
+  SENSEX       first 1-min candle 82268.61-82508.46
+  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-18 09:43 IST
+PAPER 2026-11-18  indices NIFTY, SENSEX  watchlist MAZDOCK, APOLLOHOSP, ICICIBANK, BHARTIARTL, DRREDDY
+  MAZDOCK      OR 1837.10-1860.00
+  APOLLOHOSP   OR 8784.00-8897.00
+  ICICIBANK    OR 1601.60-1610.00
+  BHARTIARTL   OR 2138.60-2155.00
+  DRREDDY      OR 1380.40-1386.80
+  no stock trades yet
+  index today: SENSEX
+  NIFTY        first 1-min candle 25292.20-25368.75
+  SENSEX       first 1-min candle 82268.61-82508.46
+  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-18 09:44 IST
+PAPER 2026-11-18  indices NIFTY, SENSEX  watchlist MAZDOCK, APOLLOHOSP, ICICIBANK, BHARTIARTL, DRREDDY
+  MAZDOCK      OR 1837.10-1860.00
+  APOLLOHOSP   OR 8784.00-8897.00
+  ICICIBANK    OR 1601.60-1610.00
+  BHARTIARTL   OR 2138.60-2155.00
+  DRREDDY      OR 1380.40-1386.80
+  no stock trades yet
+  index today: SENSEX
+  NIFTY        first 1-min candle 25292.20-25368.75
+  SENSEX       first 1-min candle 82268.61-82508.46
+  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-18 09:45 IST
+PAPER 2026-11-18  indices NIFTY, SENSEX  watchlist MAZDOCK, APOLLOHOSP, ICICIBANK, BHARTIARTL, DRREDDY
+  MAZDOCK      OR 1837.10-1860.00
+  APOLLOHOSP   OR 8784.00-8897.00
+  ICICIBANK    OR 1601.60-1610.00
+  BHARTIARTL   OR 2138.60-2155.00
+  DRREDDY      OR 1380.40-1386.80
+  no stock trades yet
+  index today: SENSEX
+  NIFTY        first 1-min candle 25292.20-25368.75
+  SENSEX       first 1-min candle 82268.61-82508.46
+  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-18 09:46 IST
 PAPER 2026-11-18  indices NIFTY, SENSEX  watchlist MAZDOCK, APOLLOHOSP, ICICIBANK, BHARTIARTL, DRREDDY
   MAZDOCK      OR 1837.10-1860.00
   APOLLOHOSP   OR 8784.00-8897.00
