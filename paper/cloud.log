@@ -14,107 +14,6 @@
   ORB1:SENSEX: SENSEX ORB1 is not in the schedule
   EMA9_21:SENSEX: done for the day: 2 losing trades
   SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-18 14:12 IST
-PAPER 2026-11-18  indices NIFTY, SENSEX  watchlist MAZDOCK, APOLLOHOSP, ICICIBANK, BHARTIARTL, DRREDDY
-  MAZDOCK      OR 1837.10-1860.00
-  APOLLOHOSP   OR 8784.00-8897.00
-  ICICIBANK    OR 1601.60-1610.00
-  BHARTIARTL   OR 2138.60-2155.00
-  DRREDDY      OR 1380.40-1386.80
-  CLOSED DRREDDY      BUY 89 @ 1388.70 (11:10)  stop 1383.60  target 1396.35  -> TARGET 1396.35 (12:15)  net Rs 589.60
-  index today: SENSEX
-  NIFTY        first 1-min candle 25292.20-25368.75
-  SENSEX       first 1-min candle 82268.61-82508.46
-  EMA9_21  #1 BUY 100 SENSEX 82200 CE @ prem 437.99 (index 82210.21, SL 82137.81, 11:30)  100 STOP @ 82137.81 (prem 397.51)  net Rs -4,191.27
-  EMA9_21  #2 BUY 140 SENSEX 82200 CE @ prem 415.25 (index 82170.13, SL 82132.35, 11:36)  140 EMA9_CLOSE @ 82134.39 (prem 394.71)  net Rs -3,055.11
-  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: done for the day: 2 losing trades
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-18 14:13 IST
-PAPER 2026-11-18  indices NIFTY, SENSEX  watchlist MAZDOCK, APOLLOHOSP, ICICIBANK, BHARTIARTL, DRREDDY
-  MAZDOCK      OR 1837.10-1860.00
-  APOLLOHOSP   OR 8784.00-8897.00
-  ICICIBANK    OR 1601.60-1610.00
-  BHARTIARTL   OR 2138.60-2155.00
-  DRREDDY      OR 1380.40-1386.80
-  CLOSED DRREDDY      BUY 89 @ 1388.70 (11:10)  stop 1383.60  target 1396.35  -> TARGET 1396.35 (12:15)  net Rs 589.60
-  index today: SENSEX
-  NIFTY        first 1-min candle 25292.20-25368.75
-  SENSEX       first 1-min candle 82268.61-82508.46
-  EMA9_21  #1 BUY 100 SENSEX 82200 CE @ prem 437.99 (index 82210.21, SL 82137.81, 11:30)  100 STOP @ 82137.81 (prem 397.51)  net Rs -4,191.27
-  EMA9_21  #2 BUY 140 SENSEX 82200 CE @ prem 415.25 (index 82170.13, SL 82132.35, 11:36)  140 EMA9_CLOSE @ 82134.39 (prem 394.71)  net Rs -3,055.11
-  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: done for the day: 2 losing trades
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-18 14:14 IST
-PAPER 2026-11-18  indices NIFTY, SENSEX  watchlist MAZDOCK, APOLLOHOSP, ICICIBANK, BHARTIARTL, DRREDDY
-  MAZDOCK      OR 1837.10-1860.00
-  APOLLOHOSP   OR 8784.00-8897.00
-  ICICIBANK    OR 1601.60-1610.00
-  BHARTIARTL   OR 2138.60-2155.00
-  DRREDDY      OR 1380.40-1386.80
-  CLOSED DRREDDY      BUY 89 @ 1388.70 (11:10)  stop 1383.60  target 1396.35  -> TARGET 1396.35 (12:15)  net Rs 589.60
-  index today: SENSEX
-  NIFTY        first 1-min candle 25292.20-25368.75
-  SENSEX       first 1-min candle 82268.61-82508.46
-  EMA9_21  #1 BUY 100 SENSEX 82200 CE @ prem 437.99 (index 82210.21, SL 82137.81, 11:30)  100 STOP @ 82137.81 (prem 397.51)  net Rs -4,191.27
-  EMA9_21  #2 BUY 140 SENSEX 82200 CE @ prem 415.25 (index 82170.13, SL 82132.35, 11:36)  140 EMA9_CLOSE @ 82134.39 (prem 394.71)  net Rs -3,055.11
-  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: done for the day: 2 losing trades
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-18 14:15 IST
-PAPER 2026-11-18  indices NIFTY, SENSEX  watchlist MAZDOCK, APOLLOHOSP, ICICIBANK, BHARTIARTL, DRREDDY
-  MAZDOCK      OR 1837.10-1860.00
-  APOLLOHOSP   OR 8784.00-8897.00
-  ICICIBANK    OR 1601.60-1610.00
-  BHARTIARTL   OR 2138.60-2155.00
-  DRREDDY      OR 1380.40-1386.80
-  CLOSED DRREDDY      BUY 89 @ 1388.70 (11:10)  stop 1383.60  target 1396.35  -> TARGET 1396.35 (12:15)  net Rs 589.60
-  index today: SENSEX
-  NIFTY        first 1-min candle 25292.20-25368.75
-  SENSEX       first 1-min candle 82268.61-82508.46
-  EMA9_21  #1 BUY 100 SENSEX 82200 CE @ prem 437.99 (index 82210.21, SL 82137.81, 11:30)  100 STOP @ 82137.81 (prem 397.51)  net Rs -4,191.27
-  EMA9_21  #2 BUY 140 SENSEX 82200 CE @ prem 415.25 (index 82170.13, SL 82132.35, 11:36)  140 EMA9_CLOSE @ 82134.39 (prem 394.71)  net Rs -3,055.11
-  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: done for the day: 2 losing trades
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
-history NIFTY 5m: +1 bars
-history SENSEX 5m: +2 bars
-history INDIAVIX 5m: +1 bars
-history NIFTY 1m: +5 bars
-history SENSEX 1m: +6 bars
-history INDIAVIX 1m: +5 bars
---- tick 2026-11-18 14:16 IST
-PAPER 2026-11-18  indices NIFTY, SENSEX  watchlist MAZDOCK, APOLLOHOSP, ICICIBANK, BHARTIARTL, DRREDDY
-  MAZDOCK      OR 1837.10-1860.00
-  APOLLOHOSP   OR 8784.00-8897.00
-  ICICIBANK    OR 1601.60-1610.00
-  BHARTIARTL   OR 2138.60-2155.00
-  DRREDDY      OR 1380.40-1386.80
-  CLOSED DRREDDY      BUY 89 @ 1388.70 (11:10)  stop 1383.60  target 1396.35  -> TARGET 1396.35 (12:15)  net Rs 589.60
-  index today: SENSEX
-  NIFTY        first 1-min candle 25292.20-25368.75
-  SENSEX       first 1-min candle 82268.61-82508.46
-  EMA9_21  #1 BUY 100 SENSEX 82200 CE @ prem 437.99 (index 82210.21, SL 82137.81, 11:30)  100 STOP @ 82137.81 (prem 397.51)  net Rs -4,191.27
-  EMA9_21  #2 BUY 140 SENSEX 82200 CE @ prem 415.25 (index 82170.13, SL 82132.35, 11:36)  140 EMA9_CLOSE @ 82134.39 (prem 394.71)  net Rs -3,055.11
-  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: done for the day: 2 losing trades
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
 --- tick 2026-11-18 14:17 IST
 PAPER 2026-11-18  indices NIFTY, SENSEX  watchlist MAZDOCK, APOLLOHOSP, ICICIBANK, BHARTIARTL, DRREDDY
   MAZDOCK      OR 1837.10-1860.00
@@ -274,6 +173,107 @@ PAPER 2026-11-18  indices NIFTY, SENSEX  watchlist MAZDOCK, APOLLOHOSP, ICICIBAN
   EMA9_21:SENSEX: done for the day: 2 losing trades
   SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
 --- tick 2026-11-18 14:25 IST
+PAPER 2026-11-18  indices NIFTY, SENSEX  watchlist MAZDOCK, APOLLOHOSP, ICICIBANK, BHARTIARTL, DRREDDY
+  MAZDOCK      OR 1837.10-1860.00
+  APOLLOHOSP   OR 8784.00-8897.00
+  ICICIBANK    OR 1601.60-1610.00
+  BHARTIARTL   OR 2138.60-2155.00
+  DRREDDY      OR 1380.40-1386.80
+  CLOSED DRREDDY      BUY 89 @ 1388.70 (11:10)  stop 1383.60  target 1396.35  -> TARGET 1396.35 (12:15)  net Rs 589.60
+  index today: SENSEX
+  NIFTY        first 1-min candle 25292.20-25368.75
+  SENSEX       first 1-min candle 82268.61-82508.46
+  EMA9_21  #1 BUY 100 SENSEX 82200 CE @ prem 437.99 (index 82210.21, SL 82137.81, 11:30)  100 STOP @ 82137.81 (prem 397.51)  net Rs -4,191.27
+  EMA9_21  #2 BUY 140 SENSEX 82200 CE @ prem 415.25 (index 82170.13, SL 82132.35, 11:36)  140 EMA9_CLOSE @ 82134.39 (prem 394.71)  net Rs -3,055.11
+  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: done for the day: 2 losing trades
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+history NIFTY 5m: +1 bars
+history SENSEX 5m: +2 bars
+history INDIAVIX 5m: +1 bars
+history NIFTY 1m: +5 bars
+history SENSEX 1m: +6 bars
+history INDIAVIX 1m: +5 bars
+--- tick 2026-11-18 14:26 IST
+PAPER 2026-11-18  indices NIFTY, SENSEX  watchlist MAZDOCK, APOLLOHOSP, ICICIBANK, BHARTIARTL, DRREDDY
+  MAZDOCK      OR 1837.10-1860.00
+  APOLLOHOSP   OR 8784.00-8897.00
+  ICICIBANK    OR 1601.60-1610.00
+  BHARTIARTL   OR 2138.60-2155.00
+  DRREDDY      OR 1380.40-1386.80
+  CLOSED DRREDDY      BUY 89 @ 1388.70 (11:10)  stop 1383.60  target 1396.35  -> TARGET 1396.35 (12:15)  net Rs 589.60
+  index today: SENSEX
+  NIFTY        first 1-min candle 25292.20-25368.75
+  SENSEX       first 1-min candle 82268.61-82508.46
+  EMA9_21  #1 BUY 100 SENSEX 82200 CE @ prem 437.99 (index 82210.21, SL 82137.81, 11:30)  100 STOP @ 82137.81 (prem 397.51)  net Rs -4,191.27
+  EMA9_21  #2 BUY 140 SENSEX 82200 CE @ prem 415.25 (index 82170.13, SL 82132.35, 11:36)  140 EMA9_CLOSE @ 82134.39 (prem 394.71)  net Rs -3,055.11
+  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: done for the day: 2 losing trades
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-18 14:27 IST
+PAPER 2026-11-18  indices NIFTY, SENSEX  watchlist MAZDOCK, APOLLOHOSP, ICICIBANK, BHARTIARTL, DRREDDY
+  MAZDOCK      OR 1837.10-1860.00
+  APOLLOHOSP   OR 8784.00-8897.00
+  ICICIBANK    OR 1601.60-1610.00
+  BHARTIARTL   OR 2138.60-2155.00
+  DRREDDY      OR 1380.40-1386.80
+  CLOSED DRREDDY      BUY 89 @ 1388.70 (11:10)  stop 1383.60  target 1396.35  -> TARGET 1396.35 (12:15)  net Rs 589.60
+  index today: SENSEX
+  NIFTY        first 1-min candle 25292.20-25368.75
+  SENSEX       first 1-min candle 82268.61-82508.46
+  EMA9_21  #1 BUY 100 SENSEX 82200 CE @ prem 437.99 (index 82210.21, SL 82137.81, 11:30)  100 STOP @ 82137.81 (prem 397.51)  net Rs -4,191.27
+  EMA9_21  #2 BUY 140 SENSEX 82200 CE @ prem 415.25 (index 82170.13, SL 82132.35, 11:36)  140 EMA9_CLOSE @ 82134.39 (prem 394.71)  net Rs -3,055.11
+  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: done for the day: 2 losing trades
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-18 14:28 IST
+PAPER 2026-11-18  indices NIFTY, SENSEX  watchlist MAZDOCK, APOLLOHOSP, ICICIBANK, BHARTIARTL, DRREDDY
+  MAZDOCK      OR 1837.10-1860.00
+  APOLLOHOSP   OR 8784.00-8897.00
+  ICICIBANK    OR 1601.60-1610.00
+  BHARTIARTL   OR 2138.60-2155.00
+  DRREDDY      OR 1380.40-1386.80
+  CLOSED DRREDDY      BUY 89 @ 1388.70 (11:10)  stop 1383.60  target 1396.35  -> TARGET 1396.35 (12:15)  net Rs 589.60
+  index today: SENSEX
+  NIFTY        first 1-min candle 25292.20-25368.75
+  SENSEX       first 1-min candle 82268.61-82508.46
+  EMA9_21  #1 BUY 100 SENSEX 82200 CE @ prem 437.99 (index 82210.21, SL 82137.81, 11:30)  100 STOP @ 82137.81 (prem 397.51)  net Rs -4,191.27
+  EMA9_21  #2 BUY 140 SENSEX 82200 CE @ prem 415.25 (index 82170.13, SL 82132.35, 11:36)  140 EMA9_CLOSE @ 82134.39 (prem 394.71)  net Rs -3,055.11
+  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: done for the day: 2 losing trades
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-18 14:29 IST
+PAPER 2026-11-18  indices NIFTY, SENSEX  watchlist MAZDOCK, APOLLOHOSP, ICICIBANK, BHARTIARTL, DRREDDY
+  MAZDOCK      OR 1837.10-1860.00
+  APOLLOHOSP   OR 8784.00-8897.00
+  ICICIBANK    OR 1601.60-1610.00
+  BHARTIARTL   OR 2138.60-2155.00
+  DRREDDY      OR 1380.40-1386.80
+  CLOSED DRREDDY      BUY 89 @ 1388.70 (11:10)  stop 1383.60  target 1396.35  -> TARGET 1396.35 (12:15)  net Rs 589.60
+  index today: SENSEX
+  NIFTY        first 1-min candle 25292.20-25368.75
+  SENSEX       first 1-min candle 82268.61-82508.46
+  EMA9_21  #1 BUY 100 SENSEX 82200 CE @ prem 437.99 (index 82210.21, SL 82137.81, 11:30)  100 STOP @ 82137.81 (prem 397.51)  net Rs -4,191.27
+  EMA9_21  #2 BUY 140 SENSEX 82200 CE @ prem 415.25 (index 82170.13, SL 82132.35, 11:36)  140 EMA9_CLOSE @ 82134.39 (prem 394.71)  net Rs -3,055.11
+  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: done for the day: 2 losing trades
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-18 14:30 IST
 PAPER 2026-11-18  indices NIFTY, SENSEX  watchlist MAZDOCK, APOLLOHOSP, ICICIBANK, BHARTIARTL, DRREDDY
   MAZDOCK      OR 1837.10-1860.00
   APOLLOHOSP   OR 8784.00-8897.00
