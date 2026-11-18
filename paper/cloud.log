@@ -1,100 +1,3 @@
-  SENSEX       first 1-min candle 82108.13-82255.90
-Traceback (most recent call last):
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 564, in <module>
-    main()
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 559, in main
-    {"premarket": cmd_premarket, "update": cmd_update, "run": cmd_run, "report": cmd_report,
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 508, in cmd_tick
-    cmd_update(args)
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 338, in cmd_update
-    print_day(day.isoformat(), rec)
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 367, in print_day
-    f"(index {t['entry_index']:.2f}, SL {t['initial_stop']:.2f}, {t['entry_time'][11:16]})  {legs}  {tail}")
-                                        ^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: unsupported format string passed to NoneType.__format__
-history NIFTY 5m: +0 bars
-history SENSEX 5m: +1 bars
-history INDIAVIX 5m: +0 bars
-history NIFTY 1m: +0 bars
-history SENSEX 1m: +5 bars
-history INDIAVIX 1m: +0 bars
---- tick 2026-11-17 15:36 IST
-PAPER 2026-11-17  indices NIFTY, SENSEX  watchlist PNB, SBIN, BSE, CANBK, ASIANPAINT
-  PNB          OR 144.32-148.65
-  SBIN         OR 1092.00-1101.40
-  BSE          OR 3936.30-3980.00
-  CANBK        OR 132.20-134.30
-  ASIANPAINT   OR 2610.30-2637.60
-  CLOSED CANBK        BUY 924 @ 134.70 (09:30)  stop 133.25  target 136.90  -> SQUARE_OFF_15:15 133.90 (15:15)  net Rs -830.35
-  CLOSED BSE          BUY 31 @ 3988.70 (09:35)  stop 3958.15  target 4034.55  -> STOP 3956.15 (10:00)  net Rs -1,099.83
-  CLOSED PNB          BUY 833 @ 149.35 (09:35)  stop 146.45  target 153.70  -> SQUARE_OFF_15:15 149.80 (15:15)  net Rs 283.40
-  index today: NIFTY
-  NIFTY        first 1-min candle 25269.20-25329.05
-  SENSEX       first 1-min candle 82108.13-82255.90
-Traceback (most recent call last):
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 564, in <module>
-    main()
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 559, in main
-    {"premarket": cmd_premarket, "update": cmd_update, "run": cmd_run, "report": cmd_report,
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 508, in cmd_tick
-    cmd_update(args)
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 338, in cmd_update
-    print_day(day.isoformat(), rec)
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 367, in print_day
-    f"(index {t['entry_index']:.2f}, SL {t['initial_stop']:.2f}, {t['entry_time'][11:16]})  {legs}  {tail}")
-                                        ^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: unsupported format string passed to NoneType.__format__
---- tick 2026-11-17 15:37 IST
-PAPER 2026-11-17  indices NIFTY, SENSEX  watchlist PNB, SBIN, BSE, CANBK, ASIANPAINT
-  PNB          OR 144.32-148.65
-  SBIN         OR 1092.00-1101.40
-  BSE          OR 3936.30-3980.00
-  CANBK        OR 132.20-134.30
-  ASIANPAINT   OR 2610.30-2637.60
-  CLOSED CANBK        BUY 924 @ 134.70 (09:30)  stop 133.25  target 136.90  -> SQUARE_OFF_15:15 133.90 (15:15)  net Rs -830.35
-  CLOSED BSE          BUY 31 @ 3988.70 (09:35)  stop 3958.15  target 4034.55  -> STOP 3956.15 (10:00)  net Rs -1,099.83
-  CLOSED PNB          BUY 833 @ 149.35 (09:35)  stop 146.45  target 153.70  -> SQUARE_OFF_15:15 149.80 (15:15)  net Rs 283.40
-  index today: NIFTY
-  NIFTY        first 1-min candle 25269.20-25329.05
-  SENSEX       first 1-min candle 82108.13-82255.90
-Traceback (most recent call last):
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 564, in <module>
-    main()
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 559, in main
-    {"premarket": cmd_premarket, "update": cmd_update, "run": cmd_run, "report": cmd_report,
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 508, in cmd_tick
-    cmd_update(args)
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 338, in cmd_update
-    print_day(day.isoformat(), rec)
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 367, in print_day
-    f"(index {t['entry_index']:.2f}, SL {t['initial_stop']:.2f}, {t['entry_time'][11:16]})  {legs}  {tail}")
-                                        ^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: unsupported format string passed to NoneType.__format__
---- tick 2026-11-17 15:38 IST
-PAPER 2026-11-17  indices NIFTY, SENSEX  watchlist PNB, SBIN, BSE, CANBK, ASIANPAINT
-  PNB          OR 144.32-148.65
-  SBIN         OR 1092.00-1101.40
-  BSE          OR 3936.30-3980.00
-  CANBK        OR 132.20-134.30
-  ASIANPAINT   OR 2610.30-2637.60
-  CLOSED CANBK        BUY 924 @ 134.70 (09:30)  stop 133.25  target 136.90  -> SQUARE_OFF_15:15 133.90 (15:15)  net Rs -830.35
-  CLOSED BSE          BUY 31 @ 3988.70 (09:35)  stop 3958.15  target 4034.55  -> STOP 3956.15 (10:00)  net Rs -1,099.83
-  CLOSED PNB          BUY 833 @ 149.35 (09:35)  stop 146.45  target 153.70  -> SQUARE_OFF_15:15 149.80 (15:15)  net Rs 283.40
-  index today: NIFTY
-  NIFTY        first 1-min candle 25269.20-25329.05
-  SENSEX       first 1-min candle 82108.13-82255.90
-Traceback (most recent call last):
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 564, in <module>
-    main()
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 559, in main
-    {"premarket": cmd_premarket, "update": cmd_update, "run": cmd_run, "report": cmd_report,
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 508, in cmd_tick
-    cmd_update(args)
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 338, in cmd_update
-    print_day(day.isoformat(), rec)
-  File "/home/runner/work/New-repository/New-repository/paper.py", line 367, in print_day
-    f"(index {t['entry_index']:.2f}, SL {t['initial_stop']:.2f}, {t['entry_time'][11:16]})  {legs}  {tail}")
-                                        ^^^^^^^^^^^^^^^^^^^^^^^
 TypeError: unsupported format string passed to NoneType.__format__
 --- tick 2026-11-17 15:39 IST
 PAPER 2026-11-17  indices NIFTY, SENSEX  watchlist PNB, SBIN, BSE, CANBK, ASIANPAINT
@@ -298,3 +201,100 @@ history INDIAVIX 5m: +1 bars
 history NIFTY 1m: +9 bars
 history SENSEX 1m: +0 bars
 history INDIAVIX 1m: +9 bars
+--- tick 2026-11-18 09:26 IST
+PAPER 2026-11-18  indices NIFTY, SENSEX  watchlist MAZDOCK, APOLLOHOSP, ICICIBANK, BHARTIARTL, DRREDDY
+  MAZDOCK      OR 1837.10-1860.00
+  APOLLOHOSP   OR 8795.50-8897.00
+  ICICIBANK    OR 1601.60-1610.00
+  BHARTIARTL   OR 2138.60-2155.00
+  note DRREDDY: opening range incomplete
+  no stock trades yet
+  index today: SENSEX
+  NIFTY        first 1-min candle 25292.20-25368.75
+  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-18 09:27 IST
+PAPER 2026-11-18  indices NIFTY, SENSEX  watchlist MAZDOCK, APOLLOHOSP, ICICIBANK, BHARTIARTL, DRREDDY
+  MAZDOCK      OR 1837.10-1860.00
+  APOLLOHOSP   OR 8784.00-8897.00
+  ICICIBANK    OR 1601.60-1610.00
+  BHARTIARTL   OR 2138.60-2155.00
+  DRREDDY      OR 1381.00-1386.80
+  no stock trades yet
+  index today: SENSEX
+  NIFTY        first 1-min candle 25292.20-25368.75
+  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-18 09:28 IST
+PAPER 2026-11-18  indices NIFTY, SENSEX  watchlist MAZDOCK, APOLLOHOSP, ICICIBANK, BHARTIARTL, DRREDDY
+  MAZDOCK      OR 1837.10-1860.00
+  APOLLOHOSP   OR 8784.00-8897.00
+  ICICIBANK    OR 1601.60-1610.00
+  BHARTIARTL   OR 2138.60-2155.00
+  DRREDDY      OR 1380.40-1386.80
+  no stock trades yet
+  index today: SENSEX
+  NIFTY        first 1-min candle 25292.20-25368.75
+  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-18 09:29 IST
+PAPER 2026-11-18  indices NIFTY, SENSEX  watchlist MAZDOCK, APOLLOHOSP, ICICIBANK, BHARTIARTL, DRREDDY
+  MAZDOCK      OR 1837.10-1860.00
+  APOLLOHOSP   OR 8784.00-8897.00
+  ICICIBANK    OR 1601.60-1610.00
+  BHARTIARTL   OR 2138.60-2155.00
+  DRREDDY      OR 1380.40-1386.80
+  no stock trades yet
+  index today: SENSEX
+  NIFTY        first 1-min candle 25292.20-25368.75
+  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-18 09:30 IST
+PAPER 2026-11-18  indices NIFTY, SENSEX  watchlist MAZDOCK, APOLLOHOSP, ICICIBANK, BHARTIARTL, DRREDDY
+  MAZDOCK      OR 1837.10-1860.00
+  APOLLOHOSP   OR 8784.00-8897.00
+  ICICIBANK    OR 1601.60-1610.00
+  BHARTIARTL   OR 2138.60-2155.00
+  DRREDDY      OR 1380.40-1386.80
+  no stock trades yet
+  index today: SENSEX
+  NIFTY        first 1-min candle 25292.20-25368.75
+  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-18 09:31 IST
+PAPER 2026-11-18  indices NIFTY, SENSEX  watchlist MAZDOCK, APOLLOHOSP, ICICIBANK, BHARTIARTL, DRREDDY
+  MAZDOCK      OR 1837.10-1860.00
+  APOLLOHOSP   OR 8784.00-8897.00
+  ICICIBANK    OR 1601.60-1610.00
+  BHARTIARTL   OR 2138.60-2155.00
+  DRREDDY      OR 1380.40-1386.80
+  no stock trades yet
+  index today: SENSEX
+  NIFTY        first 1-min candle 25292.20-25368.75
+  SENSEX       first 1-min candle 82268.61-82508.46
+  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+history NIFTY 5m: +2 bars
+history SENSEX 5m: +2 bars
+history INDIAVIX 5m: +2 bars
+history NIFTY 1m: +7 bars
+history SENSEX 1m: +2 bars
+history INDIAVIX 1m: +7 bars

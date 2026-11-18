@@ -964,20 +964,44 @@
         "DRREDDY"
       ],
       "scanned_at": "2026-11-18T09:24:48+05:30",
-      "ranges": {},
-      "trades": [],
-      "notes": {
-        "MAZDOCK": "opening range incomplete",
-        "APOLLOHOSP": "opening range incomplete",
-        "ICICIBANK": "opening range incomplete",
-        "BHARTIARTL": "opening range incomplete",
-        "DRREDDY": "opening range incomplete"
+      "ranges": {
+        "MAZDOCK": {
+          "or_high": 1860.0,
+          "or_low": 1837.1,
+          "or_mid": 1848.55
+        },
+        "APOLLOHOSP": {
+          "or_high": 8897.0,
+          "or_low": 8784.0,
+          "or_mid": 8840.5
+        },
+        "ICICIBANK": {
+          "or_high": 1610.0,
+          "or_low": 1601.6,
+          "or_mid": 1605.8
+        },
+        "BHARTIARTL": {
+          "or_high": 2155.0,
+          "or_low": 2138.6,
+          "or_mid": 2146.8
+        },
+        "DRREDDY": {
+          "or_high": 1386.8,
+          "or_low": 1380.4,
+          "or_mid": 1383.6
+        }
       },
+      "trades": [],
+      "notes": {},
       "options": {
         "levels": {
           "NIFTY": {
             "high": 25368.75,
             "low": 25292.2
+          },
+          "SENSEX": {
+            "high": 82508.46,
+            "low": 82268.61
           }
         },
         "trades": [],
@@ -1028,8 +1052,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25402.33,
-            "ema21": 25418.29,
+            "ema9": 25374.69,
+            "ema21": 25402.59,
+            "setup": null
+          },
+          "SENSEX": {
+            "ema9": 82570.41,
+            "ema21": 82620.6,
             "setup": null
           }
         },
@@ -1043,7 +1072,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-18T09:24:48+05:30",
+      "updated_at": "2026-11-18T09:31:05+05:30",
       "final": false
     }
   }
