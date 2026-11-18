@@ -1,9 +1,9 @@
 # Paper trading journal (virtual money)
 
-Stocks book: Rs 500,000 -> **Rs 498,032.70** (-0.39%), 5 trades  
-NIFTY + SENSEX options book: Rs 500,000 -> **Rs 490,001.37** (-2.00%), 4 trades  
-All closed trades: 9  |  wins 2 (22%)  |  avg R -0.49  |  charges Rs 1,009.58  
-Exits: target 2, stop 5, 15:15 square-off 1
+Stocks book: Rs 500,000 -> **Rs 496,975.52** (-0.60%), 9 trades  
+NIFTY + SENSEX options book: Rs 500,000 -> **Rs 490,558.76** (-1.89%), 10 trades  
+All closed trades: 19  |  wins 6 (32%)  |  avg R -0.24  |  charges Rs 1,951.92  
+Exits: target 3, stop 7, 15:15 square-off 3
 
 | Date | Stock | Qty | Entry | Exit | Reason | Net P&L | R |
 |---|---|---|---|---|---|---|---|
@@ -16,5 +16,15 @@ Exits: target 2, stop 5, 15:15 square-off 1
 | 2026-11-16 | KOTAKBANK | 252 | 494.75 @ 09:35 | 492.25 @ 10:50 | STOP | -721.25 | -1.10 |
 | 2026-11-16 | ORB1 NIFTY 25300 CE | 195 | 143.73 @ 09:45 | 195 BREAKEVEN_STOP 141.30 | BREAKEVEN_STOP | -586.58 | -0.29 |
 | 2026-11-16 | ORB1 NIFTY 25300 CE | 325 | 144.60 @ 10:04 | 325 STOP 133.66 | STOP | -3,707.29 | -1.08 |
+| 2026-11-17 | CANBK | 924 | 134.70 @ 09:30 | 133.90 @ 15:15 | SQUARE_OFF_15:15 | -830.35 | -0.58 |
+| 2026-11-17 | BSE | 31 | 3988.70 @ 09:35 | 3956.15 @ 10:00 | STOP | -1,099.83 | -1.06 |
+| 2026-11-17 | PNB | 833 | 149.35 @ 09:35 | 149.80 @ 15:15 | SQUARE_OFF_15:15 | 283.40 | +0.11 |
+| 2026-11-17 | SELL_TIME NIFTY 25350 CE | 130 | 86.34 @ 09:16 | 130 TIME_EXIT_14:25 116.50 | TIME_EXIT_14:25 | -3,996.38 | -0.71 |
+| 2026-11-17 | SELL_TIME NIFTY 25250 PE | 130 | 61.01 @ 09:16 | 130 TIME_EXIT_14:25 0.75 | TIME_EXIT_14:25 | 7,771.33 | +1.96 |
+| 2026-11-17 | SELL_TIME NIFTY 25450 CE | 130 | 46.84 @ 14:30 | 130 TIME_EXIT_15:15 8.13 | TIME_EXIT_15:15 | 4,972.93 | +1.63 |
+| 2026-11-17 | SELL_TIME NIFTY 25450 PE | 130 | 32.17 @ 14:30 | 130 TIME_EXIT_15:15 38.99 | TIME_EXIT_15:15 | -944.11 | -0.45 |
+| 2026-11-18 | DRREDDY | 89 | 1388.70 @ 11:10 | 1396.35 @ 12:15 | TARGET | 589.60 | +1.08 |
+| 2026-11-18 | EMA9_21 SENSEX 82200 CE | 100 | 437.99 @ 11:30 | 100 STOP 397.51 | STOP | -4,191.27 | -1.11 |
+| 2026-11-18 | EMA9_21 SENSEX 82200 CE | 140 | 415.25 @ 11:36 | 140 EMA9_CLOSE 394.71 | EMA9_CLOSE | -3,055.11 | -1.10 |
 
 Virtual fills on delayed Yahoo 5-minute bars with 0.05% slippage per side. Not financial advice.

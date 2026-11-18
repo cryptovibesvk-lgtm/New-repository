@@ -1180,9 +1180,9 @@
             "setup": null
           },
           "SENSEX": {
-            "ema9": 82032.14,
-            "ema21": 82049.18,
-            "setup": "PE"
+            "ema9": 82126.24,
+            "ema21": 82090.4,
+            "setup": "CE"
           }
         },
         "index_today": "SENSEX",
@@ -1195,8 +1195,8 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-18T15:31:05+05:30",
-      "final": false
+      "updated_at": "2026-11-18T15:36:06+05:30",
+      "final": true
     }
   }
 }
