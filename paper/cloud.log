@@ -1,9 +1,3 @@
-  ICICIBANK    OR 1601.60-1610.00
-  BHARTIARTL   OR 2138.60-2155.00
-  DRREDDY      OR 1380.40-1386.80
-  CLOSED DRREDDY      BUY 89 @ 1388.70 (11:10)  stop 1383.60  target 1396.35  -> TARGET 1396.35 (12:15)  net Rs 589.60
-  index today: SENSEX
-  NIFTY        first 1-min candle 25292.20-25368.75
   SENSEX       first 1-min candle 82268.61-82508.46
   EMA9_21  #1 BUY 100 SENSEX 82200 CE @ prem 437.99 (index 82210.21, SL 82137.81, 11:30)  100 STOP @ 82137.81 (prem 397.51)  net Rs -4,191.27
   EMA9_21  #2 BUY 140 SENSEX 82200 CE @ prem 415.25 (index 82170.13, SL 82132.35, 11:36)  140 EMA9_CLOSE @ 82134.39 (prem 394.71)  net Rs -3,055.11
@@ -292,6 +286,12 @@ NIFTY + SENSEX options book: Rs 500,000 -> **Rs 490,558.76** (-1.89%), 10 trades
 All closed trades: 19  |  wins 6 (32%)  |  avg R -0.24  |  charges Rs 1,951.92  
 Exits: target 3, stop 7, 15:15 square-off 3
 journal: /home/runner/work/New-repository/New-repository/paper/journal.md
+history NIFTY 5m: +0 bars
+history SENSEX 5m: +0 bars
+history INDIAVIX 5m: +0 bars
+history NIFTY 1m: +0 bars
+history SENSEX 1m: +0 bars
+history INDIAVIX 1m: +0 bars
 history NIFTY 5m: +0 bars
 history SENSEX 5m: +0 bars
 history INDIAVIX 5m: +0 bars
