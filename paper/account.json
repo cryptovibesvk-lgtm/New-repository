@@ -994,7 +994,7 @@
       "trades": [
         {
           "symbol": "DRREDDY",
-          "status": "OPEN",
+          "status": "CLOSED",
           "entry_time": "2026-11-18T11:10:00+05:30",
           "entry": 1388.7,
           "stop": 1383.6,
@@ -1007,11 +1007,13 @@
           "or_high": 1386.8,
           "or_low": 1380.4,
           "or_mid": 1383.6,
-          "gross_pnl": 0.0,
-          "charges": 0.0,
-          "net_pnl": 0.0,
-          "last": 1388.5,
-          "unrealised": -17.8
+          "gross_pnl": 680.85,
+          "charges": 91.25,
+          "net_pnl": 589.6,
+          "exit": 1396.35,
+          "exit_time": "2026-11-18T12:15:00+05:30",
+          "exit_reason": "TARGET",
+          "r_multiple": 1.08
         }
       ],
       "notes": {},
@@ -1173,13 +1175,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25247.05,
-            "ema21": 25256.93,
+            "ema9": 25246.38,
+            "ema21": 25255.73,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 82131.23,
-            "ema21": 82137.62,
+            "ema9": 82109.25,
+            "ema21": 82125.24,
             "setup": "PE"
           }
         },
@@ -1193,7 +1195,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-18T12:15:05+05:30",
+      "updated_at": "2026-11-18T12:20:05+05:30",
       "final": false
     }
   }
