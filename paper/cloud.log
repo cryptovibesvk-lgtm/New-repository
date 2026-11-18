@@ -1,9 +1,3 @@
-  EMA9_21  #2 BUY 140 SENSEX 82200 CE @ prem 415.25 (index 82170.13, SL 82132.35, 11:36)  140 EMA9_CLOSE @ 82134.39 (prem 394.71)  net Rs -3,055.11
-  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: done for the day: 2 losing trades
   SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
 --- tick 2026-11-18 15:31 IST
 PAPER 2026-11-18  indices NIFTY, SENSEX  watchlist MAZDOCK, APOLLOHOSP, ICICIBANK, BHARTIARTL, DRREDDY
@@ -297,4 +291,10 @@ history SENSEX 5m: +1 bars
 history INDIAVIX 5m: +0 bars
 history NIFTY 1m: +0 bars
 history SENSEX 1m: +5 bars
+history INDIAVIX 1m: +0 bars
+history NIFTY 5m: +0 bars
+history SENSEX 5m: +0 bars
+history INDIAVIX 5m: +0 bars
+history NIFTY 1m: +0 bars
+history SENSEX 1m: +0 bars
 history INDIAVIX 1m: +0 bars
