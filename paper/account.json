@@ -1234,7 +1234,29 @@
           "or_mid": 1832.4
         }
       },
-      "trades": [],
+      "trades": [
+        {
+          "symbol": "BANKBARODA",
+          "status": "OPEN",
+          "entry_time": "2026-11-19T09:30:00+05:30",
+          "entry": 279.05,
+          "stop": 276.15,
+          "target": 283.4,
+          "qty": 445,
+          "segment": "CASH",
+          "margin": 124177.25,
+          "slippage_pct": 0.0005,
+          "risk_at_stop": 1381.39,
+          "or_high": 278.2,
+          "or_low": 274.18,
+          "or_mid": 276.19,
+          "gross_pnl": 0.0,
+          "charges": 0.0,
+          "net_pnl": 0.0,
+          "last": 278.8800048828125,
+          "unrealised": -75.65
+        }
+      ],
       "notes": {},
       "options": {
         "levels": {
@@ -1295,13 +1317,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25188.87,
-            "ema21": 25205.59,
+            "ema9": 25179.32,
+            "ema21": 25199.73,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 82036.2,
-            "ema21": 82049.75,
+            "ema9": 82041.42,
+            "ema21": 82051.93,
             "setup": "PE"
           }
         },
@@ -1315,7 +1337,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-19T09:31:05+05:30",
+      "updated_at": "2026-11-19T09:35:05+05:30",
       "final": false
     }
   }
