@@ -7,117 +7,6 @@
   ORB1:SENSEX: SENSEX ORB1 is not in the schedule
   EMA9_21:SENSEX: done for the day: 2 losing trades
   SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-19 13:43 IST
-PAPER 2026-11-19  indices NIFTY, SENSEX  watchlist PNB, ITC, BANKBARODA, GAIL, MAZDOCK
-  PNB          OR 149.81-153.44
-  ITC          OR 296.90-299.70
-  BANKBARODA   OR 274.18-278.20
-  GAIL         OR 190.05-191.47
-  MAZDOCK      OR 1818.50-1846.30
-  CLOSED BANKBARODA   BUY 445 @ 279.05 (09:30)  stop 276.15  target 283.40  -> TARGET 283.40 (10:20)  net Rs 1,843.93
-  CLOSED GAIL         BUY 648 @ 191.70 (09:40)  stop 190.75  target 193.15  -> STOP 190.65 (10:40)  net Rs -771.48
-  OPEN   MAZDOCK      BUY 67 @ 1850.95 (09:40)  stop 1832.40  target 1878.80  last 1842.90  unrealised Rs -539.35
-  index today: SENSEX
-  NIFTY        first 1-min candle 25154.75-25206.05
-  SENSEX       first 1-min candle 81883.54-82039.48
-  EMA9_21  #1 BUY 100 SENSEX 82200 CE @ prem 866.54 (index 82201.15, SL 82102.45, 10:40)  100 EMA9_CLOSE @ 82153.48 (prem 837.26)  net Rs -3,175.02
-  EMA9_21  #2 BUY 140 SENSEX 82200 CE @ prem 868.18 (index 82209.98, SL 82153.48, 10:45)  140 EMA9_CLOSE @ 82207.26 (prem 860.35)  net Rs -1,429.46
-  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Thu) is SENSEX EMA9_21
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Thu) is SENSEX EMA9_21
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: done for the day: 2 losing trades
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-19 13:44 IST
-PAPER 2026-11-19  indices NIFTY, SENSEX  watchlist PNB, ITC, BANKBARODA, GAIL, MAZDOCK
-  PNB          OR 149.81-153.44
-  ITC          OR 296.90-299.70
-  BANKBARODA   OR 274.18-278.20
-  GAIL         OR 190.05-191.47
-  MAZDOCK      OR 1818.50-1846.30
-  CLOSED BANKBARODA   BUY 445 @ 279.05 (09:30)  stop 276.15  target 283.40  -> TARGET 283.40 (10:20)  net Rs 1,843.93
-  CLOSED GAIL         BUY 648 @ 191.70 (09:40)  stop 190.75  target 193.15  -> STOP 190.65 (10:40)  net Rs -771.48
-  OPEN   MAZDOCK      BUY 67 @ 1850.95 (09:40)  stop 1832.40  target 1878.80  last 1842.90  unrealised Rs -539.35
-  index today: SENSEX
-  NIFTY        first 1-min candle 25154.75-25206.05
-  SENSEX       first 1-min candle 81883.54-82039.48
-  EMA9_21  #1 BUY 100 SENSEX 82200 CE @ prem 866.54 (index 82201.15, SL 82102.45, 10:40)  100 EMA9_CLOSE @ 82153.48 (prem 837.26)  net Rs -3,175.02
-  EMA9_21  #2 BUY 140 SENSEX 82200 CE @ prem 868.18 (index 82209.98, SL 82153.48, 10:45)  140 EMA9_CLOSE @ 82207.26 (prem 860.35)  net Rs -1,429.46
-  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Thu) is SENSEX EMA9_21
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Thu) is SENSEX EMA9_21
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: done for the day: 2 losing trades
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-19 13:45 IST
-PAPER 2026-11-19  indices NIFTY, SENSEX  watchlist PNB, ITC, BANKBARODA, GAIL, MAZDOCK
-  PNB          OR 149.81-153.44
-  ITC          OR 296.90-299.70
-  BANKBARODA   OR 274.18-278.20
-  GAIL         OR 190.05-191.47
-  MAZDOCK      OR 1818.50-1846.30
-  CLOSED BANKBARODA   BUY 445 @ 279.05 (09:30)  stop 276.15  target 283.40  -> TARGET 283.40 (10:20)  net Rs 1,843.93
-  CLOSED GAIL         BUY 648 @ 191.70 (09:40)  stop 190.75  target 193.15  -> STOP 190.65 (10:40)  net Rs -771.48
-  OPEN   MAZDOCK      BUY 67 @ 1850.95 (09:40)  stop 1832.40  target 1878.80  last 1841.60  unrealised Rs -626.45
-  index today: SENSEX
-  NIFTY        first 1-min candle 25154.75-25206.05
-  SENSEX       first 1-min candle 81883.54-82039.48
-  EMA9_21  #1 BUY 100 SENSEX 82200 CE @ prem 866.54 (index 82201.15, SL 82102.45, 10:40)  100 EMA9_CLOSE @ 82153.48 (prem 837.26)  net Rs -3,175.02
-  EMA9_21  #2 BUY 140 SENSEX 82200 CE @ prem 868.18 (index 82209.98, SL 82153.48, 10:45)  140 EMA9_CLOSE @ 82207.26 (prem 860.35)  net Rs -1,429.46
-  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Thu) is SENSEX EMA9_21
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Thu) is SENSEX EMA9_21
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: done for the day: 2 losing trades
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
-history NIFTY 5m: +1 bars
-history SENSEX 5m: +2 bars
-history INDIAVIX 5m: +1 bars
-history NIFTY 1m: +5 bars
-history SENSEX 1m: +6 bars
-history INDIAVIX 1m: +5 bars
---- tick 2026-11-19 13:46 IST
-PAPER 2026-11-19  indices NIFTY, SENSEX  watchlist PNB, ITC, BANKBARODA, GAIL, MAZDOCK
-  PNB          OR 149.81-153.44
-  ITC          OR 296.90-299.70
-  BANKBARODA   OR 274.18-278.20
-  GAIL         OR 190.05-191.47
-  MAZDOCK      OR 1818.50-1846.30
-  CLOSED BANKBARODA   BUY 445 @ 279.05 (09:30)  stop 276.15  target 283.40  -> TARGET 283.40 (10:20)  net Rs 1,843.93
-  CLOSED GAIL         BUY 648 @ 191.70 (09:40)  stop 190.75  target 193.15  -> STOP 190.65 (10:40)  net Rs -771.48
-  OPEN   MAZDOCK      BUY 67 @ 1850.95 (09:40)  stop 1832.40  target 1878.80  last 1841.60  unrealised Rs -626.45
-  index today: SENSEX
-  NIFTY        first 1-min candle 25154.75-25206.05
-  SENSEX       first 1-min candle 81883.54-82039.48
-  EMA9_21  #1 BUY 100 SENSEX 82200 CE @ prem 866.54 (index 82201.15, SL 82102.45, 10:40)  100 EMA9_CLOSE @ 82153.48 (prem 837.26)  net Rs -3,175.02
-  EMA9_21  #2 BUY 140 SENSEX 82200 CE @ prem 868.18 (index 82209.98, SL 82153.48, 10:45)  140 EMA9_CLOSE @ 82207.26 (prem 860.35)  net Rs -1,429.46
-  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Thu) is SENSEX EMA9_21
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Thu) is SENSEX EMA9_21
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: done for the day: 2 losing trades
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-19 13:47 IST
-PAPER 2026-11-19  indices NIFTY, SENSEX  watchlist PNB, ITC, BANKBARODA, GAIL, MAZDOCK
-  PNB          OR 149.81-153.44
-  ITC          OR 296.90-299.70
-  BANKBARODA   OR 274.18-278.20
-  GAIL         OR 190.05-191.47
-  MAZDOCK      OR 1818.50-1846.30
-  CLOSED BANKBARODA   BUY 445 @ 279.05 (09:30)  stop 276.15  target 283.40  -> TARGET 283.40 (10:20)  net Rs 1,843.93
-  CLOSED GAIL         BUY 648 @ 191.70 (09:40)  stop 190.75  target 193.15  -> STOP 190.65 (10:40)  net Rs -771.48
-  OPEN   MAZDOCK      BUY 67 @ 1850.95 (09:40)  stop 1832.40  target 1878.80  last 1841.60  unrealised Rs -626.45
-  index today: SENSEX
-  NIFTY        first 1-min candle 25154.75-25206.05
-  SENSEX       first 1-min candle 81883.54-82039.48
-  EMA9_21  #1 BUY 100 SENSEX 82200 CE @ prem 866.54 (index 82201.15, SL 82102.45, 10:40)  100 EMA9_CLOSE @ 82153.48 (prem 837.26)  net Rs -3,175.02
-  EMA9_21  #2 BUY 140 SENSEX 82200 CE @ prem 868.18 (index 82209.98, SL 82153.48, 10:45)  140 EMA9_CLOSE @ 82207.26 (prem 860.35)  net Rs -1,429.46
-  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Thu) is SENSEX EMA9_21
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Thu) is SENSEX EMA9_21
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: done for the day: 2 losing trades
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
 --- tick 2026-11-19 13:48 IST
 PAPER 2026-11-19  indices NIFTY, SENSEX  watchlist PNB, ITC, BANKBARODA, GAIL, MAZDOCK
   PNB          OR 149.81-153.44
@@ -281,6 +170,117 @@ PAPER 2026-11-19  indices NIFTY, SENSEX  watchlist PNB, ITC, BANKBARODA, GAIL, M
   CLOSED BANKBARODA   BUY 445 @ 279.05 (09:30)  stop 276.15  target 283.40  -> TARGET 283.40 (10:20)  net Rs 1,843.93
   CLOSED GAIL         BUY 648 @ 191.70 (09:40)  stop 190.75  target 193.15  -> STOP 190.65 (10:40)  net Rs -771.48
   OPEN   MAZDOCK      BUY 67 @ 1850.95 (09:40)  stop 1832.40  target 1878.80  last 1837.50  unrealised Rs -901.15
+  index today: SENSEX
+  NIFTY        first 1-min candle 25154.75-25206.05
+  SENSEX       first 1-min candle 81883.54-82039.48
+  EMA9_21  #1 BUY 100 SENSEX 82200 CE @ prem 866.54 (index 82201.15, SL 82102.45, 10:40)  100 EMA9_CLOSE @ 82153.48 (prem 837.26)  net Rs -3,175.02
+  EMA9_21  #2 BUY 140 SENSEX 82200 CE @ prem 868.18 (index 82209.98, SL 82153.48, 10:45)  140 EMA9_CLOSE @ 82207.26 (prem 860.35)  net Rs -1,429.46
+  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Thu) is SENSEX EMA9_21
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Thu) is SENSEX EMA9_21
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: done for the day: 2 losing trades
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+history NIFTY 5m: +1 bars
+history SENSEX 5m: +2 bars
+history INDIAVIX 5m: +1 bars
+history NIFTY 1m: +5 bars
+history SENSEX 1m: +6 bars
+history INDIAVIX 1m: +5 bars
+--- tick 2026-11-19 13:56 IST
+PAPER 2026-11-19  indices NIFTY, SENSEX  watchlist PNB, ITC, BANKBARODA, GAIL, MAZDOCK
+  PNB          OR 149.81-153.44
+  ITC          OR 296.90-299.70
+  BANKBARODA   OR 274.18-278.20
+  GAIL         OR 190.05-191.47
+  MAZDOCK      OR 1818.50-1846.30
+  CLOSED BANKBARODA   BUY 445 @ 279.05 (09:30)  stop 276.15  target 283.40  -> TARGET 283.40 (10:20)  net Rs 1,843.93
+  CLOSED GAIL         BUY 648 @ 191.70 (09:40)  stop 190.75  target 193.15  -> STOP 190.65 (10:40)  net Rs -771.48
+  OPEN   MAZDOCK      BUY 67 @ 1850.95 (09:40)  stop 1832.40  target 1878.80  last 1837.50  unrealised Rs -901.15
+  index today: SENSEX
+  NIFTY        first 1-min candle 25154.75-25206.05
+  SENSEX       first 1-min candle 81883.54-82039.48
+  EMA9_21  #1 BUY 100 SENSEX 82200 CE @ prem 866.54 (index 82201.15, SL 82102.45, 10:40)  100 EMA9_CLOSE @ 82153.48 (prem 837.26)  net Rs -3,175.02
+  EMA9_21  #2 BUY 140 SENSEX 82200 CE @ prem 868.18 (index 82209.98, SL 82153.48, 10:45)  140 EMA9_CLOSE @ 82207.26 (prem 860.35)  net Rs -1,429.46
+  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Thu) is SENSEX EMA9_21
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Thu) is SENSEX EMA9_21
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: done for the day: 2 losing trades
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-19 13:57 IST
+PAPER 2026-11-19  indices NIFTY, SENSEX  watchlist PNB, ITC, BANKBARODA, GAIL, MAZDOCK
+  PNB          OR 149.81-153.44
+  ITC          OR 296.90-299.70
+  BANKBARODA   OR 274.18-278.20
+  GAIL         OR 190.05-191.47
+  MAZDOCK      OR 1818.50-1846.30
+  CLOSED BANKBARODA   BUY 445 @ 279.05 (09:30)  stop 276.15  target 283.40  -> TARGET 283.40 (10:20)  net Rs 1,843.93
+  CLOSED GAIL         BUY 648 @ 191.70 (09:40)  stop 190.75  target 193.15  -> STOP 190.65 (10:40)  net Rs -771.48
+  OPEN   MAZDOCK      BUY 67 @ 1850.95 (09:40)  stop 1832.40  target 1878.80  last 1837.50  unrealised Rs -901.15
+  index today: SENSEX
+  NIFTY        first 1-min candle 25154.75-25206.05
+  SENSEX       first 1-min candle 81883.54-82039.48
+  EMA9_21  #1 BUY 100 SENSEX 82200 CE @ prem 866.54 (index 82201.15, SL 82102.45, 10:40)  100 EMA9_CLOSE @ 82153.48 (prem 837.26)  net Rs -3,175.02
+  EMA9_21  #2 BUY 140 SENSEX 82200 CE @ prem 868.18 (index 82209.98, SL 82153.48, 10:45)  140 EMA9_CLOSE @ 82207.26 (prem 860.35)  net Rs -1,429.46
+  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Thu) is SENSEX EMA9_21
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Thu) is SENSEX EMA9_21
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: done for the day: 2 losing trades
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-19 13:58 IST
+PAPER 2026-11-19  indices NIFTY, SENSEX  watchlist PNB, ITC, BANKBARODA, GAIL, MAZDOCK
+  PNB          OR 149.81-153.44
+  ITC          OR 296.90-299.70
+  BANKBARODA   OR 274.18-278.20
+  GAIL         OR 190.05-191.47
+  MAZDOCK      OR 1818.50-1846.30
+  CLOSED BANKBARODA   BUY 445 @ 279.05 (09:30)  stop 276.15  target 283.40  -> TARGET 283.40 (10:20)  net Rs 1,843.93
+  CLOSED GAIL         BUY 648 @ 191.70 (09:40)  stop 190.75  target 193.15  -> STOP 190.65 (10:40)  net Rs -771.48
+  OPEN   MAZDOCK      BUY 67 @ 1850.95 (09:40)  stop 1832.40  target 1878.80  last 1837.50  unrealised Rs -901.15
+  index today: SENSEX
+  NIFTY        first 1-min candle 25154.75-25206.05
+  SENSEX       first 1-min candle 81883.54-82039.48
+  EMA9_21  #1 BUY 100 SENSEX 82200 CE @ prem 866.54 (index 82201.15, SL 82102.45, 10:40)  100 EMA9_CLOSE @ 82153.48 (prem 837.26)  net Rs -3,175.02
+  EMA9_21  #2 BUY 140 SENSEX 82200 CE @ prem 868.18 (index 82209.98, SL 82153.48, 10:45)  140 EMA9_CLOSE @ 82207.26 (prem 860.35)  net Rs -1,429.46
+  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Thu) is SENSEX EMA9_21
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Thu) is SENSEX EMA9_21
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: done for the day: 2 losing trades
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-19 13:59 IST
+PAPER 2026-11-19  indices NIFTY, SENSEX  watchlist PNB, ITC, BANKBARODA, GAIL, MAZDOCK
+  PNB          OR 149.81-153.44
+  ITC          OR 296.90-299.70
+  BANKBARODA   OR 274.18-278.20
+  GAIL         OR 190.05-191.47
+  MAZDOCK      OR 1818.50-1846.30
+  CLOSED BANKBARODA   BUY 445 @ 279.05 (09:30)  stop 276.15  target 283.40  -> TARGET 283.40 (10:20)  net Rs 1,843.93
+  CLOSED GAIL         BUY 648 @ 191.70 (09:40)  stop 190.75  target 193.15  -> STOP 190.65 (10:40)  net Rs -771.48
+  OPEN   MAZDOCK      BUY 67 @ 1850.95 (09:40)  stop 1832.40  target 1878.80  last 1837.50  unrealised Rs -901.15
+  index today: SENSEX
+  NIFTY        first 1-min candle 25154.75-25206.05
+  SENSEX       first 1-min candle 81883.54-82039.48
+  EMA9_21  #1 BUY 100 SENSEX 82200 CE @ prem 866.54 (index 82201.15, SL 82102.45, 10:40)  100 EMA9_CLOSE @ 82153.48 (prem 837.26)  net Rs -3,175.02
+  EMA9_21  #2 BUY 140 SENSEX 82200 CE @ prem 868.18 (index 82209.98, SL 82153.48, 10:45)  140 EMA9_CLOSE @ 82207.26 (prem 860.35)  net Rs -1,429.46
+  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Thu) is SENSEX EMA9_21
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Thu) is SENSEX EMA9_21
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: done for the day: 2 losing trades
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-19 14:00 IST
+PAPER 2026-11-19  indices NIFTY, SENSEX  watchlist PNB, ITC, BANKBARODA, GAIL, MAZDOCK
+  PNB          OR 149.81-153.44
+  ITC          OR 296.90-299.70
+  BANKBARODA   OR 274.18-278.20
+  GAIL         OR 190.05-191.47
+  MAZDOCK      OR 1818.50-1846.30
+  CLOSED BANKBARODA   BUY 445 @ 279.05 (09:30)  stop 276.15  target 283.40  -> TARGET 283.40 (10:20)  net Rs 1,843.93
+  CLOSED GAIL         BUY 648 @ 191.70 (09:40)  stop 190.75  target 193.15  -> STOP 190.65 (10:40)  net Rs -771.48
+  OPEN   MAZDOCK      BUY 67 @ 1850.95 (09:40)  stop 1832.40  target 1878.80  last 1845.40  unrealised Rs -371.85
   index today: SENSEX
   NIFTY        first 1-min candle 25154.75-25206.05
   SENSEX       first 1-min candle 81883.54-82039.48
