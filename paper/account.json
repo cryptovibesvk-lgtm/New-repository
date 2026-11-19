@@ -1276,8 +1276,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 191.8699951171875,
-          "unrealised": 110.16
+          "last": 191.63999938964844,
+          "unrealised": -38.88
         },
         {
           "symbol": "MAZDOCK",
@@ -1297,8 +1297,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 1841.5,
-          "unrealised": -633.15
+          "last": 1839.300048828125,
+          "unrealised": -780.55
         }
       ],
       "notes": {},
@@ -1363,13 +1363,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25261.93,
-            "ema21": 25240.21,
+            "ema9": 25259.28,
+            "ema21": 25240.98,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 82180.13,
-            "ema21": 82104.59,
+            "ema9": 82197.62,
+            "ema21": 82126.18,
             "setup": "CE"
           }
         },
@@ -1383,7 +1383,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-19T10:25:05+05:30",
+      "updated_at": "2026-11-19T10:30:05+05:30",
       "final": false
     }
   }
