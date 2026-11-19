@@ -1269,47 +1269,9 @@
             "low": 81883.54
           }
         },
-        "trades": [
-          {
-            "strategy": "EMA9_21",
-            "underlying": "SENSEX",
-            "side": "PE",
-            "strike": 82000,
-            "action": "BUY",
-            "expiry": "2026-11-26",
-            "symbol": "SENSEX 82000 PE",
-            "trade_no": 1,
-            "status": "OPEN",
-            "why": "retest of 9 EMA 82024.4 after bearish cross, closed below",
-            "entry_time": "2026-11-19T09:25:05+05:30",
-            "entry_index": 82019.94,
-            "entry_premium": 731.87,
-            "vix": 15.91,
-            "lot": 20,
-            "lots": 5.0,
-            "qty": 100,
-            "qty_open": 100,
-            "book_qty": 60,
-            "stop_index": 82049.94,
-            "initial_stop": 82049.94,
-            "sl_premium": 716.15,
-            "partial_index": 81919.94,
-            "partial_done": false,
-            "protected": false,
-            "best_points": 87.43,
-            "stop_moves": [],
-            "risk_at_stop": 1571.94,
-            "legs": [],
-            "gross_pnl": 0.0,
-            "charges": 0.0,
-            "net_pnl": 0.0,
-            "last_index": 81932.51,
-            "last_premium": 772.16,
-            "unrealised": 4028.83
-          }
-        ],
+        "trades": [],
         "notes": {
-          "EMA9_21:SENSEX:0920": "09:20 EMA9_21 SENSEX PE skipped: stop 234 pts > max 130"
+          "EMA9_21:SENSEX:0920": "09:20 EMA9_21 SENSEX PE skipped: stop 323 pts > max 130"
         },
         "status": {
           "ORB1:NIFTY": {
@@ -1341,11 +1303,11 @@
             "net": 0
           },
           "EMA9_21:SENSEX": {
-            "trades": 1,
+            "trades": 0,
             "done": false,
             "note": "",
             "active": true,
-            "net": 0.0
+            "net": 0
           },
           "SELL_TIME:SENSEX": {
             "trades": 0,
@@ -1362,8 +1324,8 @@
             "setup": null
           },
           "SENSEX": {
-            "ema9": 82006.0,
-            "ema21": 82032.44,
+            "ema9": 81964.7,
+            "ema21": 82009.32,
             "setup": "PE"
           }
         },
@@ -1377,7 +1339,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-19T09:36:05+05:30",
+      "updated_at": "2026-11-19T09:37:05+05:30",
       "final": false
     }
   }
