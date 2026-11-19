@@ -1253,8 +1253,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 280.1099853515625,
-          "unrealised": 471.69
+          "last": 280.8699951171875,
+          "unrealised": 809.9
         },
         {
           "symbol": "GAIL",
@@ -1274,8 +1274,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 191.60000610351562,
-          "unrealised": -64.8
+          "last": 191.77999877929688,
+          "unrealised": 51.84
         },
         {
           "symbol": "MAZDOCK",
@@ -1295,8 +1295,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 1850.0,
-          "unrealised": -63.65
+          "last": 1858.800048828125,
+          "unrealised": 525.95
         }
       ],
       "notes": {},
@@ -1361,13 +1361,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25189.09,
-            "ema21": 25200.67,
+            "ema9": 25202.69,
+            "ema21": 25205.8,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 81867.56,
-            "ema21": 81949.43,
+            "ema9": 81838.33,
+            "ema21": 81921.65,
             "setup": "PE"
           }
         },
@@ -1381,7 +1381,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-19T09:45:05+05:30",
+      "updated_at": "2026-11-19T09:50:05+05:30",
       "final": false
     }
   }
