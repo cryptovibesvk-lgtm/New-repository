@@ -1260,7 +1260,7 @@
         },
         {
           "symbol": "GAIL",
-          "status": "OPEN",
+          "status": "CLOSED",
           "entry_time": "2026-11-19T09:40:00+05:30",
           "entry": 191.7,
           "stop": 190.75,
@@ -1273,11 +1273,13 @@
           "or_high": 191.47,
           "or_low": 190.05,
           "or_mid": 190.76,
-          "gross_pnl": 0.0,
-          "charges": 0.0,
-          "net_pnl": 0.0,
-          "last": 191.47999572753906,
-          "unrealised": -142.56
+          "gross_pnl": -680.4,
+          "charges": 91.08,
+          "net_pnl": -771.48,
+          "exit": 190.65,
+          "exit_time": "2026-11-19T10:40:00+05:30",
+          "exit_reason": "STOP",
+          "r_multiple": -1.09
         },
         {
           "symbol": "MAZDOCK",
@@ -1297,8 +1299,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 1841.5,
-          "unrealised": -633.15
+          "last": 1843.199951171875,
+          "unrealised": -519.25
         }
       ],
       "notes": {},
@@ -1363,13 +1365,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25264.81,
-            "ema21": 25246.75,
+            "ema9": 25268.28,
+            "ema21": 25249.97,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 82248.58,
-            "ema21": 82195.39,
+            "ema9": 82204.3,
+            "ema21": 82182.55,
             "setup": "CE"
           }
         },
@@ -1383,7 +1385,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-19T10:40:05+05:30",
+      "updated_at": "2026-11-19T10:45:06+05:30",
       "final": false
     }
   }
