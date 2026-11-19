@@ -1,93 +1,93 @@
 {
-  "generated_ist": "2026-11-18T09:24:48+05:30",
+  "generated_ist": "2026-11-19T09:25:40+05:30",
   "mode": "daily",
   "universe": "nifty100",
   "scanned": 100,
   "matched": 5,
   "items": [
     {
-      "symbol": "MAZDOCK",
-      "ltp": 1852.7,
-      "chg_pct": 0.31,
-      "setup": "BULL_FLAG,RECLAIM_20MA",
-      "score": 61,
-      "note": "9.9% impulse, 4.2% pullback; reclaimed 20DMA 1838.80",
-      "turnover_cr": 200.64,
-      "rsi14": 41.5,
-      "volume_ratio": 0.06,
+      "symbol": "PNB",
+      "ltp": 153.3,
+      "chg_pct": 2.49,
+      "setup": "20D_BREAKOUT,BULL_FLAG,52W_HIGH_PROX",
+      "score": 92,
+      "note": "close above prior 20-day pivot 152.59; 26.1% impulse, 1.4% pullback; 0.1% below 52-week high",
+      "turnover_cr": 519.88,
+      "rsi14": 86.1,
+      "volume_ratio": 0.21,
       "levels": {
         "or_high": null,
         "or_low": null,
-        "pivot": 2092.0,
-        "stop_hint": 1794.1
+        "pivot": 152.59,
+        "stop_hint": 149.25
       }
     },
     {
-      "symbol": "APOLLOHOSP",
-      "ltp": 8813.0,
-      "chg_pct": 0.48,
-      "setup": "20D_BREAKOUT,52W_HIGH_PROX",
-      "score": 59,
-      "note": "close above prior 20-day pivot 8786.50; 2.8% below 52-week high",
-      "turnover_cr": 460.4,
-      "rsi14": 65.1,
+      "symbol": "ITC",
+      "ltp": 298.3,
+      "chg_pct": 0.57,
+      "setup": "20D_BREAKOUT,BULL_FLAG",
+      "score": 76,
+      "note": "close above prior 20-day pivot 298.00; 14.4% impulse, 0.1% pullback",
+      "turnover_cr": 640.64,
+      "rsi14": 73.4,
+      "volume_ratio": 0.14,
+      "levels": {
+        "or_high": null,
+        "or_low": null,
+        "pivot": 298.0,
+        "stop_hint": 291.75
+      }
+    },
+    {
+      "symbol": "BANKBARODA",
+      "ltp": 277.97,
+      "chg_pct": 1.26,
+      "setup": "20D_BREAKOUT,BULL_FLAG",
+      "score": 76,
+      "note": "close above prior 20-day pivot 276.85; 19.4% impulse, 0.8% pullback",
+      "turnover_cr": 337.87,
+      "rsi14": 74.7,
       "volume_ratio": 0.18,
       "levels": {
         "or_high": null,
         "or_low": null,
-        "pivot": 8786.5,
-        "stop_hint": 8612.1
+        "pivot": 276.85,
+        "stop_hint": 271.8
       }
     },
     {
-      "symbol": "ICICIBANK",
-      "ltp": 1606.8,
-      "chg_pct": 0.51,
-      "setup": "BULL_FLAG,52W_HIGH_PROX",
-      "score": 58,
-      "note": "16.5% impulse, 1.1% pullback; 0.6% below 52-week high",
-      "turnover_cr": 2826.04,
-      "rsi14": 78.0,
-      "volume_ratio": 0.08,
+      "symbol": "GAIL",
+      "ltp": 190.59,
+      "chg_pct": 0.31,
+      "setup": "20D_BREAKOUT,52W_HIGH_PROX",
+      "score": 64,
+      "note": "close above prior 20-day pivot 191.35; 0.5% below 52-week high",
+      "turnover_cr": 186.07,
+      "rsi14": 71.7,
+      "volume_ratio": 0.15,
       "levels": {
         "or_high": null,
         "or_low": null,
-        "pivot": 1616.0,
-        "stop_hint": 1576.75
+        "pivot": 191.35,
+        "stop_hint": 186.75
       }
     },
     {
-      "symbol": "BHARTIARTL",
-      "ltp": 2142.6,
-      "chg_pct": 0.2,
-      "setup": "BULL_FLAG,52W_HIGH_PROX",
-      "score": 58,
-      "note": "9.8% impulse, 1.6% pullback; 1.5% below 52-week high",
-      "turnover_cr": 2074.24,
-      "rsi14": 70.9,
+      "symbol": "MAZDOCK",
+      "ltp": 1839.9,
+      "chg_pct": 0.96,
+      "setup": "BULL_FLAG,RECLAIM_20MA",
+      "score": 61,
+      "note": "11.2% impulse, 5.4% pullback; reclaimed 20DMA 1829.41",
+      "turnover_cr": 200.9,
+      "rsi14": 41.0,
       "volume_ratio": 0.06,
       "levels": {
         "or_high": null,
         "or_low": null,
-        "pivot": 2172.3,
-        "stop_hint": 2098.55
-      }
-    },
-    {
-      "symbol": "DRREDDY",
-      "ltp": 1381.5,
-      "chg_pct": 0.26,
-      "setup": "BULL_FLAG,52W_HIGH_PROX",
-      "score": 58,
-      "note": "7.1% impulse, 1.9% pullback; 2.4% below 52-week high",
-      "turnover_cr": 294.59,
-      "rsi14": 70.7,
-      "volume_ratio": 0.01,
-      "levels": {
-        "or_high": null,
-        "or_low": null,
-        "pivot": 1404.0,
-        "stop_hint": 1356.35
+        "pivot": 2059.7,
+        "stop_hint": 1782.3
       }
     }
   ],

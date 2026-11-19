@@ -1197,6 +1197,97 @@
       },
       "updated_at": "2026-11-18T16:38:38+05:30",
       "final": true
+    },
+    "2026-11-19": {
+      "watchlist": [
+        "PNB",
+        "ITC",
+        "BANKBARODA",
+        "GAIL",
+        "MAZDOCK"
+      ],
+      "scanned_at": "2026-11-19T09:25:40+05:30",
+      "ranges": {},
+      "trades": [],
+      "notes": {
+        "PNB": "opening range incomplete",
+        "ITC": "opening range incomplete",
+        "BANKBARODA": "opening range incomplete",
+        "GAIL": "opening range incomplete",
+        "MAZDOCK": "opening range incomplete"
+      },
+      "options": {
+        "levels": {
+          "NIFTY": {
+            "high": 25206.05,
+            "low": 25154.75
+          }
+        },
+        "trades": [],
+        "notes": {},
+        "status": {
+          "ORB1:NIFTY": {
+            "trades": 0,
+            "done": true,
+            "note": "NIFTY ORB1 runs on Mon/Fri only - today (Thu) is SENSEX EMA9_21",
+            "active": false,
+            "net": 0
+          },
+          "EMA9_21:NIFTY": {
+            "trades": 0,
+            "done": true,
+            "note": "NIFTY EMA9_21 is not in the schedule",
+            "active": false,
+            "net": 0
+          },
+          "SELL_TIME:NIFTY": {
+            "trades": 0,
+            "done": true,
+            "note": "NIFTY SELL_TIME runs on Tue only - today (Thu) is SENSEX EMA9_21",
+            "active": false,
+            "net": 0
+          },
+          "ORB1:SENSEX": {
+            "trades": 0,
+            "done": true,
+            "note": "SENSEX ORB1 is not in the schedule",
+            "active": true,
+            "net": 0
+          },
+          "EMA9_21:SENSEX": {
+            "trades": 0,
+            "done": false,
+            "note": "",
+            "active": true,
+            "net": 0
+          },
+          "SELL_TIME:SENSEX": {
+            "trades": 0,
+            "done": true,
+            "note": "SENSEX SELL_TIME is not in the schedule",
+            "active": true,
+            "net": 0
+          }
+        },
+        "ema": {
+          "NIFTY": {
+            "ema9": 25207.01,
+            "ema21": 25214.52,
+            "setup": null
+          }
+        },
+        "index_today": "SENSEX",
+        "strategy_today": "EMA9_21",
+        "schedule": {
+          "Mon": "NIFTY ORB1",
+          "Tue": "NIFTY SELL_TIME",
+          "Wed": "SENSEX EMA9_21",
+          "Thu": "SENSEX EMA9_21",
+          "Fri": "NIFTY ORB1"
+        }
+      },
+      "updated_at": "2026-11-19T09:25:40+05:30",
+      "final": false
     }
   }
 }
