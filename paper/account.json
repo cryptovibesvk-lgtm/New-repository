@@ -1299,8 +1299,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 1845.699951171875,
-          "unrealised": -351.75
+          "last": 1842.0,
+          "unrealised": -599.65
         }
       ],
       "notes": {},
@@ -1375,10 +1375,10 @@
             "symbol": "SENSEX 82200 CE",
             "trade_no": 2,
             "status": "OPEN",
-            "why": "retest of 9 EMA 82193.3 after bullish cross, closed above",
-            "entry_time": "2026-11-19T10:45:04+05:30",
-            "entry_index": 82204.95,
-            "entry_premium": 865.49,
+            "why": "retest of 9 EMA 82194.3 after bullish cross, closed above",
+            "entry_time": "2026-11-19T10:45:00+05:30",
+            "entry_index": 82209.98,
+            "entry_premium": 868.18,
             "vix": 16.11,
             "lot": 20,
             "lots": 7.0,
@@ -1387,20 +1387,20 @@
             "book_qty": 100,
             "stop_index": 82153.48,
             "initial_stop": 82153.48,
-            "sl_premium": 836.31,
-            "partial_index": 82304.95,
+            "sl_premium": 836.32,
+            "partial_index": 82309.98,
             "partial_done": false,
             "protected": false,
             "best_points": 0.0,
             "stop_moves": [],
-            "risk_at_stop": 4085.67,
+            "risk_at_stop": 4459.8,
             "legs": [],
             "gross_pnl": 0.0,
             "charges": 0.0,
             "net_pnl": 0.0,
-            "last_index": 82204.95,
-            "last_premium": 864.4,
-            "unrealised": -152.73
+            "last_index": 82207.26,
+            "last_premium": 863.57,
+            "unrealised": -645.19
           }
         ],
         "notes": {
@@ -1452,13 +1452,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25282.79,
-            "ema21": 25260.07,
+            "ema9": 25284.8,
+            "ema21": 25263.05,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 82193.29,
-            "ema21": 82183.73,
+            "ema9": 82198.59,
+            "ema21": 82188.0,
             "setup": "CE"
           }
         },
@@ -1472,7 +1472,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-19T10:55:05+05:30",
+      "updated_at": "2026-11-19T11:00:05+05:30",
       "final": false
     }
   }
