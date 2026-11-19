@@ -1315,7 +1315,57 @@
             "low": 81883.54
           }
         },
-        "trades": [],
+        "trades": [
+          {
+            "strategy": "EMA9_21",
+            "underlying": "SENSEX",
+            "side": "CE",
+            "strike": 82200,
+            "action": "BUY",
+            "expiry": "2026-11-26",
+            "symbol": "SENSEX 82200 CE",
+            "trade_no": 1,
+            "status": "CLOSED",
+            "why": "retest of 9 EMA 82194.7 after bullish cross, closed above",
+            "entry_time": "2026-11-19T10:40:00+05:30",
+            "entry_index": 82201.6,
+            "entry_premium": 866.78,
+            "vix": 16.15,
+            "lot": 20,
+            "lots": 5.0,
+            "qty": 100,
+            "qty_open": 0,
+            "book_qty": 60,
+            "stop_index": 82102.45,
+            "initial_stop": 82102.45,
+            "sl_premium": 813.1,
+            "partial_index": 82301.6,
+            "partial_done": false,
+            "protected": false,
+            "best_points": 0.0,
+            "stop_moves": [],
+            "risk_at_stop": 5368.3,
+            "legs": [
+              {
+                "time": "2026-11-19T10:40:04+05:30",
+                "qty": 100,
+                "lots": 5.0,
+                "index": 82153.48,
+                "premium": 837.26,
+                "reason": "EMA9_CLOSE"
+              }
+            ],
+            "gross_pnl": -2952.0,
+            "charges": 247.03,
+            "net_pnl": -3199.03,
+            "exit_time": "2026-11-19T10:40:04+05:30",
+            "exit_reason": "EMA9_CLOSE",
+            "exit_index": 82153.48,
+            "exit": 837.26,
+            "r_multiple": -0.6,
+            "entry": 866.78
+          }
+        ],
         "notes": {
           "EMA9_21:SENSEX:0920": "09:20 EMA9_21 SENSEX PE skipped: stop 305 pts > max 130"
         },
@@ -1349,11 +1399,11 @@
             "net": 0
           },
           "EMA9_21:SENSEX": {
-            "trades": 0,
+            "trades": 1,
             "done": false,
             "note": "",
             "active": true,
-            "net": 0
+            "net": -3199.03
           },
           "SELL_TIME:SENSEX": {
             "trades": 0,
@@ -1370,8 +1420,8 @@
             "setup": null
           },
           "SENSEX": {
-            "ema9": 82185.07,
-            "ema21": 82177.37,
+            "ema9": 82190.43,
+            "ema21": 82181.64,
             "setup": "CE"
           }
         },
@@ -1385,7 +1435,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-19T10:50:06+05:30",
+      "updated_at": "2026-11-19T10:54:05+05:30",
       "final": false
     }
   }
