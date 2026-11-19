@@ -1467,13 +1467,13 @@
         "ema": {
           "NIFTY": {
             "ema9": 25489.5,
-            "ema21": 25459.42,
+            "ema21": 25459.41,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 82792.95,
-            "ema21": 82806.93,
-            "setup": "PE"
+            "ema9": 82838.71,
+            "ema21": 82826.46,
+            "setup": "CE"
           }
         },
         "index_today": "SENSEX",
@@ -1486,7 +1486,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-19T15:40:32+05:30",
+      "updated_at": "2026-11-19T16:11:51+05:30",
       "final": true
     }
   }
