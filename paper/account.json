@@ -1276,8 +1276,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 191.63999938964844,
-          "unrealised": -38.88
+          "last": 191.60000610351562,
+          "unrealised": -64.8
         },
         {
           "symbol": "MAZDOCK",
@@ -1297,8 +1297,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 1839.300048828125,
-          "unrealised": -780.55
+          "last": 1841.800048828125,
+          "unrealised": -613.05
         }
       ],
       "notes": {},
@@ -1313,45 +1313,7 @@
             "low": 81883.54
           }
         },
-        "trades": [
-          {
-            "strategy": "EMA9_21",
-            "underlying": "SENSEX",
-            "side": "CE",
-            "strike": 82300,
-            "action": "BUY",
-            "expiry": "2026-11-26",
-            "symbol": "SENSEX 82300 CE",
-            "trade_no": 1,
-            "status": "OPEN",
-            "why": "retest of 9 EMA 82216.9 after bullish cross, closed above",
-            "entry_time": "2026-11-19T10:20:00+05:30",
-            "entry_index": 82327.76,
-            "entry_premium": 889.57,
-            "vix": 16.22,
-            "lot": 20,
-            "lots": 5.0,
-            "qty": 100,
-            "qty_open": 100,
-            "book_qty": 60,
-            "stop_index": 82206.99,
-            "initial_stop": 82206.99,
-            "sl_premium": 824.21,
-            "partial_index": 82427.76,
-            "partial_done": false,
-            "protected": false,
-            "best_points": 0.0,
-            "stop_moves": [],
-            "risk_at_stop": 6535.43,
-            "legs": [],
-            "gross_pnl": 0.0,
-            "charges": 0.0,
-            "net_pnl": 0.0,
-            "last_index": 82323.77,
-            "last_premium": 885.42,
-            "unrealised": -415.12
-          }
-        ],
+        "trades": [],
         "notes": {
           "EMA9_21:SENSEX:0920": "09:20 EMA9_21 SENSEX PE skipped: stop 305 pts > max 130"
         },
@@ -1385,11 +1347,11 @@
             "net": 0
           },
           "EMA9_21:SENSEX": {
-            "trades": 1,
+            "trades": 0,
             "done": false,
             "note": "",
             "active": true,
-            "net": 0.0
+            "net": 0
           },
           "SELL_TIME:SENSEX": {
             "trades": 0,
@@ -1401,13 +1363,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25259.28,
-            "ema21": 25240.98,
+            "ema9": 25260.89,
+            "ema21": 25243.37,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 82259.5,
-            "ema21": 82182.51,
+            "ema9": 82265.62,
+            "ema21": 82191.39,
             "setup": "CE"
           }
         },
@@ -1421,7 +1383,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-19T10:34:05+05:30",
+      "updated_at": "2026-11-19T10:35:05+05:30",
       "final": false
     }
   }
