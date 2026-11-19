@@ -1,9 +1,9 @@
 # Paper trading journal (virtual money)
 
-Stocks book: Rs 500,000 -> **Rs 496,975.52** (-0.60%), 9 trades  
-NIFTY + SENSEX options book: Rs 500,000 -> **Rs 490,558.76** (-1.89%), 10 trades  
-All closed trades: 19  |  wins 6 (32%)  |  avg R -0.24  |  charges Rs 1,951.92  
-Exits: target 3, stop 7, 15:15 square-off 3
+Stocks book: Rs 500,000 -> **Rs 497,909.88** (-0.42%), 12 trades  
+NIFTY + SENSEX options book: Rs 500,000 -> **Rs 485,954.28** (-2.81%), 12 trades  
+All closed trades: 24  |  wins 7 (29%)  |  avg R -0.23  |  charges Rs 2,806.29  
+Exits: target 4, stop 8, 15:15 square-off 4
 
 | Date | Stock | Qty | Entry | Exit | Reason | Net P&L | R |
 |---|---|---|---|---|---|---|---|
@@ -26,5 +26,10 @@ Exits: target 3, stop 7, 15:15 square-off 3
 | 2026-11-18 | DRREDDY | 89 | 1388.70 @ 11:10 | 1396.35 @ 12:15 | TARGET | 589.60 | +1.08 |
 | 2026-11-18 | EMA9_21 SENSEX 82200 CE | 100 | 437.99 @ 11:30 | 100 STOP 397.51 | STOP | -4,191.27 | -1.11 |
 | 2026-11-18 | EMA9_21 SENSEX 82200 CE | 140 | 415.25 @ 11:36 | 140 EMA9_CLOSE 394.71 | EMA9_CLOSE | -3,055.11 | -1.10 |
+| 2026-11-19 | BANKBARODA | 445 | 279.05 @ 09:30 | 283.40 @ 10:20 | TARGET | 1,843.93 | +1.33 |
+| 2026-11-19 | GAIL | 648 | 191.70 @ 09:40 | 190.65 @ 10:40 | STOP | -771.48 | -1.09 |
+| 2026-11-19 | MAZDOCK | 67 | 1850.95 @ 09:40 | 1850.25 @ 15:15 | SQUARE_OFF_15:15 | -138.09 | -0.10 |
+| 2026-11-19 | EMA9_21 SENSEX 82200 CE | 100 | 866.54 @ 10:40 | 100 EMA9_CLOSE 837.26 | EMA9_CLOSE | -3,175.02 | -0.59 |
+| 2026-11-19 | EMA9_21 SENSEX 82200 CE | 140 | 868.18 @ 10:45 | 140 EMA9_CLOSE 860.35 | EMA9_CLOSE | -1,429.46 | -0.32 |
 
 Virtual fills on delayed Yahoo 5-minute bars with 0.05% slippage per side. Not financial advice.
