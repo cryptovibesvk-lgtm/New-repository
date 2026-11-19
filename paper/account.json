@@ -1299,8 +1299,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 1844.9000244140625,
-          "unrealised": -405.35
+          "last": 1845.699951171875,
+          "unrealised": -351.75
         }
       ],
       "notes": {},
@@ -1326,10 +1326,10 @@
             "symbol": "SENSEX 82200 CE",
             "trade_no": 1,
             "status": "CLOSED",
-            "why": "retest of 9 EMA 82194.7 after bullish cross, closed above",
+            "why": "retest of 9 EMA 82194.6 after bullish cross, closed above",
             "entry_time": "2026-11-19T10:40:00+05:30",
-            "entry_index": 82201.6,
-            "entry_premium": 866.78,
+            "entry_index": 82201.15,
+            "entry_premium": 866.54,
             "vix": 16.15,
             "lot": 20,
             "lots": 5.0,
@@ -1339,12 +1339,12 @@
             "stop_index": 82102.45,
             "initial_stop": 82102.45,
             "sl_premium": 813.1,
-            "partial_index": 82301.6,
+            "partial_index": 82301.15,
             "partial_done": false,
             "protected": false,
             "best_points": 0.0,
             "stop_moves": [],
-            "risk_at_stop": 5368.3,
+            "risk_at_stop": 5344.25,
             "legs": [
               {
                 "time": "2026-11-19T10:40:04+05:30",
@@ -1355,15 +1355,52 @@
                 "reason": "EMA9_CLOSE"
               }
             ],
-            "gross_pnl": -2952.0,
-            "charges": 247.03,
-            "net_pnl": -3199.03,
+            "gross_pnl": -2928.0,
+            "charges": 247.02,
+            "net_pnl": -3175.02,
             "exit_time": "2026-11-19T10:40:04+05:30",
             "exit_reason": "EMA9_CLOSE",
             "exit_index": 82153.48,
             "exit": 837.26,
-            "r_multiple": -0.6,
-            "entry": 866.78
+            "r_multiple": -0.59,
+            "entry": 866.54
+          },
+          {
+            "strategy": "EMA9_21",
+            "underlying": "SENSEX",
+            "side": "CE",
+            "strike": 82200,
+            "action": "BUY",
+            "expiry": "2026-11-26",
+            "symbol": "SENSEX 82200 CE",
+            "trade_no": 2,
+            "status": "OPEN",
+            "why": "retest of 9 EMA 82193.3 after bullish cross, closed above",
+            "entry_time": "2026-11-19T10:45:04+05:30",
+            "entry_index": 82204.95,
+            "entry_premium": 865.49,
+            "vix": 16.11,
+            "lot": 20,
+            "lots": 7.0,
+            "qty": 140,
+            "qty_open": 140,
+            "book_qty": 100,
+            "stop_index": 82153.48,
+            "initial_stop": 82153.48,
+            "sl_premium": 836.31,
+            "partial_index": 82304.95,
+            "partial_done": false,
+            "protected": false,
+            "best_points": 0.0,
+            "stop_moves": [],
+            "risk_at_stop": 4085.67,
+            "legs": [],
+            "gross_pnl": 0.0,
+            "charges": 0.0,
+            "net_pnl": 0.0,
+            "last_index": 82204.95,
+            "last_premium": 864.4,
+            "unrealised": -152.73
           }
         ],
         "notes": {
@@ -1399,11 +1436,11 @@
             "net": 0
           },
           "EMA9_21:SENSEX": {
-            "trades": 1,
+            "trades": 2,
             "done": false,
             "note": "",
             "active": true,
-            "net": -3199.03
+            "net": -3175.02
           },
           "SELL_TIME:SENSEX": {
             "trades": 0,
@@ -1415,13 +1452,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25274.94,
-            "ema21": 25254.66,
+            "ema9": 25282.79,
+            "ema21": 25260.07,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 82190.43,
-            "ema21": 82181.64,
+            "ema9": 82193.29,
+            "ema21": 82183.73,
             "setup": "CE"
           }
         },
@@ -1435,7 +1472,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-19T10:54:05+05:30",
+      "updated_at": "2026-11-19T10:55:05+05:30",
       "final": false
     }
   }
