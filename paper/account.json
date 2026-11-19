@@ -1283,7 +1283,7 @@
         },
         {
           "symbol": "MAZDOCK",
-          "status": "OPEN",
+          "status": "CLOSED",
           "entry_time": "2026-11-19T09:40:00+05:30",
           "entry": 1850.95,
           "stop": 1832.4,
@@ -1296,11 +1296,13 @@
           "or_high": 1846.3,
           "or_low": 1818.5,
           "or_mid": 1832.4,
-          "gross_pnl": 0.0,
-          "charges": 0.0,
-          "net_pnl": 0.0,
-          "last": 1851.199951171875,
-          "unrealised": 16.75
+          "gross_pnl": -46.9,
+          "charges": 91.19,
+          "net_pnl": -138.09,
+          "exit": 1850.25,
+          "exit_time": "2026-11-19T15:15:03+05:30",
+          "exit_reason": "SQUARE_OFF_15:15",
+          "r_multiple": -0.1
         }
       ],
       "notes": {},
@@ -1464,13 +1466,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25471.82,
-            "ema21": 25443.48,
+            "ema9": 25478.2,
+            "ema21": 25448.95,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 82818.6,
-            "ema21": 82796.52,
+            "ema9": 82837.73,
+            "ema21": 82808.13,
             "setup": "CE"
           }
         },
@@ -1484,7 +1486,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-19T15:17:05+05:30",
+      "updated_at": "2026-11-19T15:20:05+05:30",
       "final": false
     }
   }
