@@ -1207,20 +1207,44 @@
         "MAZDOCK"
       ],
       "scanned_at": "2026-11-19T09:25:40+05:30",
-      "ranges": {},
-      "trades": [],
-      "notes": {
-        "PNB": "opening range incomplete",
-        "ITC": "opening range incomplete",
-        "BANKBARODA": "opening range incomplete",
-        "GAIL": "opening range incomplete",
-        "MAZDOCK": "opening range incomplete"
+      "ranges": {
+        "PNB": {
+          "or_high": 153.44,
+          "or_low": 149.81,
+          "or_mid": 151.62
+        },
+        "ITC": {
+          "or_high": 299.7,
+          "or_low": 296.9,
+          "or_mid": 298.3
+        },
+        "BANKBARODA": {
+          "or_high": 278.2,
+          "or_low": 274.18,
+          "or_mid": 276.19
+        },
+        "GAIL": {
+          "or_high": 191.47,
+          "or_low": 190.05,
+          "or_mid": 190.76
+        },
+        "MAZDOCK": {
+          "or_high": 1846.3,
+          "or_low": 1818.5,
+          "or_mid": 1832.4
+        }
       },
+      "trades": [],
+      "notes": {},
       "options": {
         "levels": {
           "NIFTY": {
             "high": 25206.05,
             "low": 25154.75
+          },
+          "SENSEX": {
+            "high": 82039.48,
+            "low": 81883.54
           }
         },
         "trades": [],
@@ -1271,9 +1295,14 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25207.01,
-            "ema21": 25214.52,
+            "ema9": 25188.87,
+            "ema21": 25205.59,
             "setup": null
+          },
+          "SENSEX": {
+            "ema9": 82036.2,
+            "ema21": 82049.75,
+            "setup": "PE"
           }
         },
         "index_today": "SENSEX",
@@ -1286,7 +1315,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-19T09:25:40+05:30",
+      "updated_at": "2026-11-19T09:31:05+05:30",
       "final": false
     }
   }
