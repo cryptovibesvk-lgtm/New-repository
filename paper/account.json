@@ -1237,7 +1237,7 @@
       "trades": [
         {
           "symbol": "BANKBARODA",
-          "status": "OPEN",
+          "status": "CLOSED",
           "entry_time": "2026-11-19T09:30:00+05:30",
           "entry": 279.05,
           "stop": 276.15,
@@ -1250,11 +1250,13 @@
           "or_high": 278.2,
           "or_low": 274.18,
           "or_mid": 276.19,
-          "gross_pnl": 0.0,
-          "charges": 0.0,
-          "net_pnl": 0.0,
-          "last": 282.75,
-          "unrealised": 1646.5
+          "gross_pnl": 1935.75,
+          "charges": 91.82,
+          "net_pnl": 1843.93,
+          "exit": 283.4,
+          "exit_time": "2026-11-19T10:20:00+05:30",
+          "exit_reason": "TARGET",
+          "r_multiple": 1.33
         },
         {
           "symbol": "GAIL",
@@ -1274,8 +1276,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 191.89999389648438,
-          "unrealised": 129.6
+          "last": 191.8699951171875,
+          "unrealised": 110.16
         },
         {
           "symbol": "MAZDOCK",
@@ -1295,8 +1297,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 1845.5,
-          "unrealised": -365.15
+          "last": 1841.5,
+          "unrealised": -633.15
         }
       ],
       "notes": {},
@@ -1361,13 +1363,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25259.38,
-            "ema21": 25237.02,
+            "ema9": 25261.93,
+            "ema21": 25240.21,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 82161.83,
-            "ema21": 82082.06,
+            "ema9": 82180.13,
+            "ema21": 82104.59,
             "setup": "CE"
           }
         },
@@ -1381,7 +1383,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-19T10:20:05+05:30",
+      "updated_at": "2026-11-19T10:25:05+05:30",
       "final": false
     }
   }
