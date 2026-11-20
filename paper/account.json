@@ -1544,8 +1544,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 9050.5,
-          "unrealised": -228.15
+          "last": 9040.0,
+          "unrealised": -364.65
         },
         {
           "symbol": "BANKBARODA",
@@ -1569,6 +1569,27 @@
           "exit_time": "2026-11-20T09:35:00+05:30",
           "exit_reason": "STOP",
           "r_multiple": -1.05
+        },
+        {
+          "symbol": "KOTAKBANK",
+          "status": "OPEN",
+          "entry_time": "2026-11-20T09:40:00+05:30",
+          "entry": 506.6,
+          "stop": 502.5,
+          "target": 512.75,
+          "qty": 245,
+          "segment": "CASH",
+          "margin": 124117.0,
+          "slippage_pct": 0.0005,
+          "risk_at_stop": 1095.45,
+          "or_high": 505.55,
+          "or_low": 499.5,
+          "or_mid": 502.52,
+          "gross_pnl": 0.0,
+          "charges": 0.0,
+          "net_pnl": 0.0,
+          "last": 506.29998779296875,
+          "unrealised": -73.5
         }
       ],
       "notes": {},
@@ -1687,13 +1708,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25466.42,
-            "ema21": 25457.82,
+            "ema9": 25470.86,
+            "ema21": 25460.63,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 82843.22,
-            "ema21": 82834.52,
+            "ema9": 82820.02,
+            "ema21": 82824.25,
             "setup": null
           }
         },
@@ -1707,7 +1728,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-20T09:40:05+05:30",
+      "updated_at": "2026-11-20T09:45:05+05:30",
       "final": false
     }
   }
