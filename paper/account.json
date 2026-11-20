@@ -1544,8 +1544,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 9225.0,
-          "unrealised": 2040.35
+          "last": 9238.0,
+          "unrealised": 2209.35
         },
         {
           "symbol": "BANKBARODA",
@@ -1710,13 +1710,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25746.57,
-            "ema21": 25731.68,
+            "ema9": 25751.44,
+            "ema21": 25735.25,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 83852.29,
-            "ema21": 83830.36,
+            "ema9": 83840.21,
+            "ema21": 83828.54,
             "setup": null
           }
         },
@@ -1730,7 +1730,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-20T14:50:05+05:30",
+      "updated_at": "2026-11-20T14:55:05+05:30",
       "final": false
     }
   }
