@@ -1528,7 +1528,7 @@
       "trades": [
         {
           "symbol": "APOLLOHOSP",
-          "status": "OPEN",
+          "status": "CLOSED",
           "entry_time": "2026-11-20T09:30:00+05:30",
           "entry": 9068.05,
           "stop": 8923.25,
@@ -1541,11 +1541,13 @@
           "or_high": 9015.0,
           "or_low": 8831.5,
           "or_mid": 8923.25,
-          "gross_pnl": 0.0,
-          "charges": 0.0,
-          "net_pnl": 0.0,
-          "last": 9190.0,
-          "unrealised": 1585.35
+          "gross_pnl": 1525.55,
+          "charges": 89.47,
+          "net_pnl": 1436.08,
+          "exit": 9185.4,
+          "exit_time": "2026-11-20T15:15:00+05:30",
+          "exit_reason": "SQUARE_OFF_15:15",
+          "r_multiple": 0.73
         },
         {
           "symbol": "BANKBARODA",
@@ -1710,13 +1712,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25772.62,
-            "ema21": 25751.55,
+            "ema9": 25775.05,
+            "ema21": 25754.57,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 83866.31,
-            "ema21": 83846.35,
+            "ema9": 83911.68,
+            "ema21": 83872.56,
             "setup": null
           }
         },
@@ -1730,7 +1732,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-20T15:15:05+05:30",
+      "updated_at": "2026-11-20T15:20:05+05:30",
       "final": false
     }
   }
