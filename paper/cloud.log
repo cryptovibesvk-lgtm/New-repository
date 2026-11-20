@@ -1,111 +1,5 @@
   EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
   SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-20 10:12 IST
-PAPER 2026-11-20  indices NIFTY, SENSEX  watchlist ICICIBANK, KOTAKBANK, APOLLOHOSP, BANKBARODA, HINDUNILVR
-  ICICIBANK    OR 1602.00-1614.80
-  KOTAKBANK    OR 499.50-505.55
-  APOLLOHOSP   OR 8831.50-9015.00
-  BANKBARODA   OR 281.75-285.35
-  HINDUNILVR   OR 2041.10-2062.00
-  OPEN   APOLLOHOSP   BUY 13 @ 9068.05 (09:30)  stop 8923.25  target 9285.25  last 9147.50  unrealised Rs 1,032.85
-  CLOSED BANKBARODA   BUY 435 @ 286.10 (09:30)  stop 283.55  target 289.95  -> STOP 283.40 (09:35)  net Rs -1,265.52
-  OPEN   KOTAKBANK    BUY 245 @ 506.35 (09:40)  stop 502.50  target 512.15  last 504.55  unrealised Rs -441.00
-  index today: NIFTY
-  NIFTY        first 1-min candle 25353.85-25418.40
-  SENSEX       first 1-min candle 82479.52-82726.27
-  ORB1     #1 BUY 195 NIFTY 25450 CE @ prem 190.94 (index 25435.75, SL 25415.75, 09:17)  195 TRAIL_STOP @ 25455.75 (prem 200.02)  net Rs 1,631.73
-  ORB1:NIFTY: done for the day: trade made money
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Fri) is NIFTY ORB1
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-20 10:13 IST
-PAPER 2026-11-20  indices NIFTY, SENSEX  watchlist ICICIBANK, KOTAKBANK, APOLLOHOSP, BANKBARODA, HINDUNILVR
-  ICICIBANK    OR 1602.00-1614.80
-  KOTAKBANK    OR 499.50-505.55
-  APOLLOHOSP   OR 8831.50-9015.00
-  BANKBARODA   OR 281.75-285.35
-  HINDUNILVR   OR 2041.10-2062.00
-  OPEN   APOLLOHOSP   BUY 13 @ 9068.05 (09:30)  stop 8923.25  target 9285.25  last 9147.50  unrealised Rs 1,032.85
-  CLOSED BANKBARODA   BUY 435 @ 286.10 (09:30)  stop 283.55  target 289.95  -> STOP 283.40 (09:35)  net Rs -1,265.52
-  OPEN   KOTAKBANK    BUY 245 @ 506.35 (09:40)  stop 502.50  target 512.15  last 504.55  unrealised Rs -441.00
-  index today: NIFTY
-  NIFTY        first 1-min candle 25353.85-25418.40
-  SENSEX       first 1-min candle 82479.52-82726.27
-  ORB1     #1 BUY 195 NIFTY 25450 CE @ prem 190.94 (index 25435.75, SL 25415.75, 09:17)  195 TRAIL_STOP @ 25455.75 (prem 200.02)  net Rs 1,631.73
-  ORB1:NIFTY: done for the day: trade made money
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Fri) is NIFTY ORB1
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-20 10:14 IST
-PAPER 2026-11-20  indices NIFTY, SENSEX  watchlist ICICIBANK, KOTAKBANK, APOLLOHOSP, BANKBARODA, HINDUNILVR
-  ICICIBANK    OR 1602.00-1614.80
-  KOTAKBANK    OR 499.50-505.55
-  APOLLOHOSP   OR 8831.50-9015.00
-  BANKBARODA   OR 281.75-285.35
-  HINDUNILVR   OR 2041.10-2062.00
-  OPEN   APOLLOHOSP   BUY 13 @ 9068.05 (09:30)  stop 8923.25  target 9285.25  last 9147.50  unrealised Rs 1,032.85
-  CLOSED BANKBARODA   BUY 435 @ 286.10 (09:30)  stop 283.55  target 289.95  -> STOP 283.40 (09:35)  net Rs -1,265.52
-  OPEN   KOTAKBANK    BUY 245 @ 506.35 (09:40)  stop 502.50  target 512.15  last 504.55  unrealised Rs -441.00
-  index today: NIFTY
-  NIFTY        first 1-min candle 25353.85-25418.40
-  SENSEX       first 1-min candle 82479.52-82726.27
-  ORB1     #1 BUY 195 NIFTY 25450 CE @ prem 190.94 (index 25435.75, SL 25415.75, 09:17)  195 TRAIL_STOP @ 25455.75 (prem 200.02)  net Rs 1,631.73
-  ORB1:NIFTY: done for the day: trade made money
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Fri) is NIFTY ORB1
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-20 10:15 IST
-PAPER 2026-11-20  indices NIFTY, SENSEX  watchlist ICICIBANK, KOTAKBANK, APOLLOHOSP, BANKBARODA, HINDUNILVR
-  ICICIBANK    OR 1602.00-1614.80
-  KOTAKBANK    OR 499.50-505.55
-  APOLLOHOSP   OR 8831.50-9015.00
-  BANKBARODA   OR 281.75-285.35
-  HINDUNILVR   OR 2041.10-2062.00
-  OPEN   APOLLOHOSP   BUY 13 @ 9068.05 (09:30)  stop 8923.25  target 9285.25  last 9180.00  unrealised Rs 1,455.35
-  CLOSED BANKBARODA   BUY 435 @ 286.10 (09:30)  stop 283.55  target 289.95  -> STOP 283.40 (09:35)  net Rs -1,265.52
-  OPEN   KOTAKBANK    BUY 245 @ 506.35 (09:40)  stop 502.50  target 512.15  last 504.75  unrealised Rs -392.00
-  index today: NIFTY
-  NIFTY        first 1-min candle 25353.85-25418.40
-  SENSEX       first 1-min candle 82479.52-82726.27
-  ORB1     #1 BUY 195 NIFTY 25450 CE @ prem 190.94 (index 25435.75, SL 25415.75, 09:17)  195 TRAIL_STOP @ 25455.75 (prem 200.02)  net Rs 1,631.73
-  ORB1:NIFTY: done for the day: trade made money
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Fri) is NIFTY ORB1
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
-history NIFTY 5m: +1 bars
-history SENSEX 5m: +2 bars
-history INDIAVIX 5m: +1 bars
-history NIFTY 1m: +5 bars
-history SENSEX 1m: +6 bars
-history INDIAVIX 1m: +5 bars
---- tick 2026-11-20 10:16 IST
-PAPER 2026-11-20  indices NIFTY, SENSEX  watchlist ICICIBANK, KOTAKBANK, APOLLOHOSP, BANKBARODA, HINDUNILVR
-  ICICIBANK    OR 1602.00-1614.80
-  KOTAKBANK    OR 499.50-505.55
-  APOLLOHOSP   OR 8831.50-9015.00
-  BANKBARODA   OR 281.75-285.35
-  HINDUNILVR   OR 2041.10-2062.00
-  OPEN   APOLLOHOSP   BUY 13 @ 9068.05 (09:30)  stop 8923.25  target 9285.25  last 9180.00  unrealised Rs 1,455.35
-  CLOSED BANKBARODA   BUY 435 @ 286.10 (09:30)  stop 283.55  target 289.95  -> STOP 283.40 (09:35)  net Rs -1,265.52
-  OPEN   KOTAKBANK    BUY 245 @ 506.35 (09:40)  stop 502.50  target 512.15  last 504.75  unrealised Rs -392.00
-  index today: NIFTY
-  NIFTY        first 1-min candle 25353.85-25418.40
-  SENSEX       first 1-min candle 82479.52-82726.27
-  ORB1     #1 BUY 195 NIFTY 25450 CE @ prem 190.94 (index 25435.75, SL 25415.75, 09:17)  195 TRAIL_STOP @ 25455.75 (prem 200.02)  net Rs 1,631.73
-  ORB1:NIFTY: done for the day: trade made money
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Fri) is NIFTY ORB1
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
 --- tick 2026-11-20 10:17 IST
 PAPER 2026-11-20  indices NIFTY, SENSEX  watchlist ICICIBANK, KOTAKBANK, APOLLOHOSP, BANKBARODA, HINDUNILVR
   ICICIBANK    OR 1602.00-1614.80
@@ -282,6 +176,112 @@ PAPER 2026-11-20  indices NIFTY, SENSEX  watchlist ICICIBANK, KOTAKBANK, APOLLOH
   OPEN   APOLLOHOSP   BUY 13 @ 9068.05 (09:30)  stop 8923.25  target 9285.25  last 9137.50  unrealised Rs 902.85
   CLOSED BANKBARODA   BUY 435 @ 286.10 (09:30)  stop 283.55  target 289.95  -> STOP 283.40 (09:35)  net Rs -1,265.52
   OPEN   KOTAKBANK    BUY 245 @ 506.35 (09:40)  stop 502.50  target 512.15  last 504.35  unrealised Rs -490.00
+  index today: NIFTY
+  NIFTY        first 1-min candle 25353.85-25418.40
+  SENSEX       first 1-min candle 82479.52-82726.27
+  ORB1     #1 BUY 195 NIFTY 25450 CE @ prem 190.94 (index 25435.75, SL 25415.75, 09:17)  195 TRAIL_STOP @ 25455.75 (prem 200.02)  net Rs 1,631.73
+  ORB1:NIFTY: done for the day: trade made money
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Fri) is NIFTY ORB1
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+history NIFTY 5m: +1 bars
+history SENSEX 5m: +2 bars
+history INDIAVIX 5m: +1 bars
+history NIFTY 1m: +5 bars
+history SENSEX 1m: +6 bars
+history INDIAVIX 1m: +5 bars
+--- tick 2026-11-20 10:26 IST
+PAPER 2026-11-20  indices NIFTY, SENSEX  watchlist ICICIBANK, KOTAKBANK, APOLLOHOSP, BANKBARODA, HINDUNILVR
+  ICICIBANK    OR 1602.00-1614.80
+  KOTAKBANK    OR 499.50-505.55
+  APOLLOHOSP   OR 8831.50-9015.00
+  BANKBARODA   OR 281.75-285.35
+  HINDUNILVR   OR 2041.10-2062.00
+  OPEN   APOLLOHOSP   BUY 13 @ 9068.05 (09:30)  stop 8923.25  target 9285.25  last 9137.50  unrealised Rs 902.85
+  CLOSED BANKBARODA   BUY 435 @ 286.10 (09:30)  stop 283.55  target 289.95  -> STOP 283.40 (09:35)  net Rs -1,265.52
+  OPEN   KOTAKBANK    BUY 245 @ 506.35 (09:40)  stop 502.50  target 512.15  last 504.35  unrealised Rs -490.00
+  index today: NIFTY
+  NIFTY        first 1-min candle 25353.85-25418.40
+  SENSEX       first 1-min candle 82479.52-82726.27
+  ORB1     #1 BUY 195 NIFTY 25450 CE @ prem 190.94 (index 25435.75, SL 25415.75, 09:17)  195 TRAIL_STOP @ 25455.75 (prem 200.02)  net Rs 1,631.73
+  ORB1:NIFTY: done for the day: trade made money
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Fri) is NIFTY ORB1
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-20 10:27 IST
+PAPER 2026-11-20  indices NIFTY, SENSEX  watchlist ICICIBANK, KOTAKBANK, APOLLOHOSP, BANKBARODA, HINDUNILVR
+  ICICIBANK    OR 1602.00-1614.80
+  KOTAKBANK    OR 499.50-505.55
+  APOLLOHOSP   OR 8831.50-9015.00
+  BANKBARODA   OR 281.75-285.35
+  HINDUNILVR   OR 2041.10-2062.00
+  OPEN   APOLLOHOSP   BUY 13 @ 9068.05 (09:30)  stop 8923.25  target 9285.25  last 9137.50  unrealised Rs 902.85
+  CLOSED BANKBARODA   BUY 435 @ 286.10 (09:30)  stop 283.55  target 289.95  -> STOP 283.40 (09:35)  net Rs -1,265.52
+  OPEN   KOTAKBANK    BUY 245 @ 506.35 (09:40)  stop 502.50  target 512.15  last 504.35  unrealised Rs -490.00
+  index today: NIFTY
+  NIFTY        first 1-min candle 25353.85-25418.40
+  SENSEX       first 1-min candle 82479.52-82726.27
+  ORB1     #1 BUY 195 NIFTY 25450 CE @ prem 190.94 (index 25435.75, SL 25415.75, 09:17)  195 TRAIL_STOP @ 25455.75 (prem 200.02)  net Rs 1,631.73
+  ORB1:NIFTY: done for the day: trade made money
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Fri) is NIFTY ORB1
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-20 10:28 IST
+PAPER 2026-11-20  indices NIFTY, SENSEX  watchlist ICICIBANK, KOTAKBANK, APOLLOHOSP, BANKBARODA, HINDUNILVR
+  ICICIBANK    OR 1602.00-1614.80
+  KOTAKBANK    OR 499.50-505.55
+  APOLLOHOSP   OR 8831.50-9015.00
+  BANKBARODA   OR 281.75-285.35
+  HINDUNILVR   OR 2041.10-2062.00
+  OPEN   APOLLOHOSP   BUY 13 @ 9068.05 (09:30)  stop 8923.25  target 9285.25  last 9137.50  unrealised Rs 902.85
+  CLOSED BANKBARODA   BUY 435 @ 286.10 (09:30)  stop 283.55  target 289.95  -> STOP 283.40 (09:35)  net Rs -1,265.52
+  OPEN   KOTAKBANK    BUY 245 @ 506.35 (09:40)  stop 502.50  target 512.15  last 504.35  unrealised Rs -490.00
+  index today: NIFTY
+  NIFTY        first 1-min candle 25353.85-25418.40
+  SENSEX       first 1-min candle 82479.52-82726.27
+  ORB1     #1 BUY 195 NIFTY 25450 CE @ prem 190.94 (index 25435.75, SL 25415.75, 09:17)  195 TRAIL_STOP @ 25455.75 (prem 200.02)  net Rs 1,631.73
+  ORB1:NIFTY: done for the day: trade made money
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Fri) is NIFTY ORB1
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-20 10:29 IST
+PAPER 2026-11-20  indices NIFTY, SENSEX  watchlist ICICIBANK, KOTAKBANK, APOLLOHOSP, BANKBARODA, HINDUNILVR
+  ICICIBANK    OR 1602.00-1614.80
+  KOTAKBANK    OR 499.50-505.55
+  APOLLOHOSP   OR 8831.50-9015.00
+  BANKBARODA   OR 281.75-285.35
+  HINDUNILVR   OR 2041.10-2062.00
+  OPEN   APOLLOHOSP   BUY 13 @ 9068.05 (09:30)  stop 8923.25  target 9285.25  last 9137.50  unrealised Rs 902.85
+  CLOSED BANKBARODA   BUY 435 @ 286.10 (09:30)  stop 283.55  target 289.95  -> STOP 283.40 (09:35)  net Rs -1,265.52
+  OPEN   KOTAKBANK    BUY 245 @ 506.35 (09:40)  stop 502.50  target 512.15  last 504.35  unrealised Rs -490.00
+  index today: NIFTY
+  NIFTY        first 1-min candle 25353.85-25418.40
+  SENSEX       first 1-min candle 82479.52-82726.27
+  ORB1     #1 BUY 195 NIFTY 25450 CE @ prem 190.94 (index 25435.75, SL 25415.75, 09:17)  195 TRAIL_STOP @ 25455.75 (prem 200.02)  net Rs 1,631.73
+  ORB1:NIFTY: done for the day: trade made money
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Fri) is NIFTY ORB1
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-20 10:30 IST
+PAPER 2026-11-20  indices NIFTY, SENSEX  watchlist ICICIBANK, KOTAKBANK, APOLLOHOSP, BANKBARODA, HINDUNILVR
+  ICICIBANK    OR 1602.00-1614.80
+  KOTAKBANK    OR 499.50-505.55
+  APOLLOHOSP   OR 8831.50-9015.00
+  BANKBARODA   OR 281.75-285.35
+  HINDUNILVR   OR 2041.10-2062.00
+  OPEN   APOLLOHOSP   BUY 13 @ 9068.05 (09:30)  stop 8923.25  target 9285.25  last 9133.00  unrealised Rs 844.35
+  CLOSED BANKBARODA   BUY 435 @ 286.10 (09:30)  stop 283.55  target 289.95  -> STOP 283.40 (09:35)  net Rs -1,265.52
+  OPEN   KOTAKBANK    BUY 245 @ 506.35 (09:40)  stop 502.50  target 512.15  last 504.65  unrealised Rs -416.50
   index today: NIFTY
   NIFTY        first 1-min candle 25353.85-25418.40
   SENSEX       first 1-min candle 82479.52-82726.27
