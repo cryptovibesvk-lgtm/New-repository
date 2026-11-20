@@ -1498,15 +1498,35 @@
         "HINDUNILVR"
       ],
       "scanned_at": "2026-11-20T09:23:52+05:30",
-      "ranges": {},
-      "trades": [],
-      "notes": {
-        "ICICIBANK": "opening range incomplete",
-        "KOTAKBANK": "opening range incomplete",
-        "APOLLOHOSP": "opening range incomplete",
-        "BANKBARODA": "opening range incomplete",
-        "HINDUNILVR": "opening range incomplete"
+      "ranges": {
+        "ICICIBANK": {
+          "or_high": 1614.8,
+          "or_low": 1602.0,
+          "or_mid": 1608.4
+        },
+        "KOTAKBANK": {
+          "or_high": 505.55,
+          "or_low": 499.5,
+          "or_mid": 502.52
+        },
+        "APOLLOHOSP": {
+          "or_high": 9015.0,
+          "or_low": 8831.5,
+          "or_mid": 8923.25
+        },
+        "BANKBARODA": {
+          "or_high": 285.35,
+          "or_low": 281.75,
+          "or_mid": 283.55
+        },
+        "HINDUNILVR": {
+          "or_high": 2062.0,
+          "or_low": 2041.9,
+          "or_mid": 2051.95
+        }
       },
+      "trades": [],
+      "notes": {},
       "options": {
         "levels": {
           "NIFTY": {
@@ -1618,8 +1638,8 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25482.8,
-            "ema21": 25459.1,
+            "ema9": 25479.19,
+            "ema21": 25459.62,
             "setup": null
           }
         },
@@ -1633,7 +1653,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-20T09:23:52+05:30",
+      "updated_at": "2026-11-20T09:29:05+05:30",
       "final": false
     }
   }
