@@ -1,9 +1,9 @@
 # Paper trading journal (virtual money)
 
-Stocks book: Rs 500,000 -> **Rs 497,909.88** (-0.42%), 12 trades  
-NIFTY + SENSEX options book: Rs 500,000 -> **Rs 485,954.28** (-2.81%), 12 trades  
-All closed trades: 24  |  wins 7 (29%)  |  avg R -0.23  |  charges Rs 2,806.29  
-Exits: target 4, stop 8, 15:15 square-off 4
+Stocks book: Rs 500,000 -> **Rs 499,409.82** (-0.12%), 15 trades  
+NIFTY + SENSEX options book: Rs 500,000 -> **Rs 487,586.01** (-2.48%), 13 trades  
+All closed trades: 28  |  wins 10 (36%)  |  avg R -0.13  |  charges Rs 3,217.27  
+Exits: target 5, stop 9, 15:15 square-off 5
 
 | Date | Stock | Qty | Entry | Exit | Reason | Net P&L | R |
 |---|---|---|---|---|---|---|---|
@@ -31,5 +31,9 @@ Exits: target 4, stop 8, 15:15 square-off 4
 | 2026-11-19 | MAZDOCK | 67 | 1850.95 @ 09:40 | 1850.25 @ 15:15 | SQUARE_OFF_15:15 | -138.09 | -0.10 |
 | 2026-11-19 | EMA9_21 SENSEX 82200 CE | 100 | 866.54 @ 10:40 | 100 EMA9_CLOSE 837.26 | EMA9_CLOSE | -3,175.02 | -0.59 |
 | 2026-11-19 | EMA9_21 SENSEX 82200 CE | 140 | 868.18 @ 10:45 | 140 EMA9_CLOSE 860.35 | EMA9_CLOSE | -1,429.46 | -0.32 |
+| 2026-11-20 | APOLLOHOSP | 13 | 9068.05 @ 09:30 | 9185.40 @ 15:15 | SQUARE_OFF_15:15 | 1,436.08 | +0.73 |
+| 2026-11-20 | BANKBARODA | 435 | 286.10 @ 09:30 | 283.40 @ 09:35 | STOP | -1,265.52 | -1.05 |
+| 2026-11-20 | KOTAKBANK | 245 | 506.35 @ 09:40 | 512.15 @ 12:30 | TARGET | 1,329.38 | +1.29 |
+| 2026-11-20 | ORB1 NIFTY 25450 CE | 195 | 190.94 @ 09:17 | 195 TRAIL_STOP 200.02 | TRAIL_STOP | 1,631.73 | +0.80 |
 
 Virtual fills on delayed Yahoo 5-minute bars with 0.05% slippage per side. Not financial advice.
