@@ -1,9 +1,9 @@
 # Paper trading journal (virtual money)
 
-Stocks book: Rs 500,000 -> **Rs 499,409.82** (-0.12%), 15 trades  
-NIFTY + SENSEX options book: Rs 500,000 -> **Rs 487,586.01** (-2.48%), 13 trades  
-All closed trades: 28  |  wins 10 (36%)  |  avg R -0.13  |  charges Rs 3,217.27  
-Exits: target 5, stop 9, 15:15 square-off 5
+Stocks book: Rs 500,000 -> **Rs 498,761.22** (-0.25%), 16 trades  
+NIFTY + SENSEX options book: Rs 500,000 -> **Rs 506,526.64** (+1.31%), 14 trades  
+All closed trades: 30  |  wins 11 (37%)  |  avg R +0.17  |  charges Rs 3,470.09  
+Exits: target 5, stop 9, 15:15 square-off 6
 
 | Date | Stock | Qty | Entry | Exit | Reason | Net P&L | R |
 |---|---|---|---|---|---|---|---|
@@ -35,5 +35,7 @@ Exits: target 5, stop 9, 15:15 square-off 5
 | 2026-11-20 | BANKBARODA | 435 | 286.10 @ 09:30 | 283.40 @ 09:35 | STOP | -1,265.52 | -1.05 |
 | 2026-11-20 | KOTAKBANK | 245 | 506.35 @ 09:40 | 512.15 @ 12:30 | TARGET | 1,329.38 | +1.29 |
 | 2026-11-20 | ORB1 NIFTY 25450 CE | 195 | 190.94 @ 09:17 | 195 TRAIL_STOP 200.02 | TRAIL_STOP | 1,631.73 | +0.80 |
+| 2026-11-23 | DLF | 157 | 793.60 @ 11:15 | 790.05 @ 15:15 | SQUARE_OFF_15:15 | -648.60 | -0.76 |
+| 2026-11-23 | ORB1 NIFTY 25900 PE | 195 | 168.03 @ 09:18 | 195 TRAIL_STOP 265.99 | TRAIL_STOP | 18,940.63 | +9.49 |
 
 Virtual fills on delayed Yahoo 5-minute bars with 0.05% slippage per side. Not financial advice.
