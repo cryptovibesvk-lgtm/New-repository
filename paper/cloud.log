@@ -4,102 +4,6 @@
   ORB1:SENSEX: SENSEX ORB1 is not in the schedule
   EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Mon) is NIFTY ORB1
   SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-23 11:11 IST
-PAPER 2026-11-23  indices NIFTY, SENSEX  watchlist BAJAJFINSV, GODREJCP, APOLLOHOSP, EICHERMOT, DLF
-  BAJAJFINSV   OR 1892.30-1914.60
-  GODREJCP     OR 925.90-933.45
-  APOLLOHOSP   OR 9280.00-9410.00
-  EICHERMOT    OR 8128.00-8264.50
-  DLF          OR 785.00-792.50
-  no stock trades yet
-  index today: NIFTY
-  NIFTY        first 1-min candle 25889.60-25991.95
-  SENSEX       first 1-min candle 84338.37-84656.72
-  ORB1     #1 BUY 195 NIFTY 25900 PE @ prem 168.03 (index 25882.75, SL 25902.75, 09:18)  195 TRAIL_STOP @ 25702.75 (prem 265.99)  net Rs 18,940.63
-  ORB1:NIFTY: done for the day: trade made money
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Mon) is NIFTY ORB1
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Mon) is NIFTY ORB1
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-23 11:12 IST
-PAPER 2026-11-23  indices NIFTY, SENSEX  watchlist BAJAJFINSV, GODREJCP, APOLLOHOSP, EICHERMOT, DLF
-  BAJAJFINSV   OR 1892.30-1914.60
-  GODREJCP     OR 925.90-933.45
-  APOLLOHOSP   OR 9280.00-9410.00
-  EICHERMOT    OR 8128.00-8264.50
-  DLF          OR 785.00-792.50
-  no stock trades yet
-  index today: NIFTY
-  NIFTY        first 1-min candle 25889.60-25991.95
-  SENSEX       first 1-min candle 84338.37-84656.72
-  ORB1     #1 BUY 195 NIFTY 25900 PE @ prem 168.03 (index 25882.75, SL 25902.75, 09:18)  195 TRAIL_STOP @ 25702.75 (prem 265.99)  net Rs 18,940.63
-  ORB1:NIFTY: done for the day: trade made money
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Mon) is NIFTY ORB1
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Mon) is NIFTY ORB1
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-23 11:13 IST
-PAPER 2026-11-23  indices NIFTY, SENSEX  watchlist BAJAJFINSV, GODREJCP, APOLLOHOSP, EICHERMOT, DLF
-  BAJAJFINSV   OR 1892.30-1914.60
-  GODREJCP     OR 925.90-933.45
-  APOLLOHOSP   OR 9280.00-9410.00
-  EICHERMOT    OR 8128.00-8264.50
-  DLF          OR 785.00-792.50
-  no stock trades yet
-  index today: NIFTY
-  NIFTY        first 1-min candle 25889.60-25991.95
-  SENSEX       first 1-min candle 84338.37-84656.72
-  ORB1     #1 BUY 195 NIFTY 25900 PE @ prem 168.03 (index 25882.75, SL 25902.75, 09:18)  195 TRAIL_STOP @ 25702.75 (prem 265.99)  net Rs 18,940.63
-  ORB1:NIFTY: done for the day: trade made money
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Mon) is NIFTY ORB1
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Mon) is NIFTY ORB1
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
-history NIFTY 5m: +1 bars
-history SENSEX 5m: +2 bars
-history INDIAVIX 5m: +1 bars
-history NIFTY 1m: +5 bars
-history SENSEX 1m: +6 bars
-history INDIAVIX 1m: +5 bars
---- tick 2026-11-23 11:14 IST
-PAPER 2026-11-23  indices NIFTY, SENSEX  watchlist BAJAJFINSV, GODREJCP, APOLLOHOSP, EICHERMOT, DLF
-  BAJAJFINSV   OR 1892.30-1914.60
-  GODREJCP     OR 925.90-933.45
-  APOLLOHOSP   OR 9280.00-9410.00
-  EICHERMOT    OR 8128.00-8264.50
-  DLF          OR 785.00-792.50
-  no stock trades yet
-  index today: NIFTY
-  NIFTY        first 1-min candle 25889.60-25991.95
-  SENSEX       first 1-min candle 84338.37-84656.72
-  ORB1     #1 BUY 195 NIFTY 25900 PE @ prem 168.03 (index 25882.75, SL 25902.75, 09:18)  195 TRAIL_STOP @ 25702.75 (prem 265.99)  net Rs 18,940.63
-  ORB1:NIFTY: done for the day: trade made money
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Mon) is NIFTY ORB1
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Mon) is NIFTY ORB1
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-23 11:15 IST
-PAPER 2026-11-23  indices NIFTY, SENSEX  watchlist BAJAJFINSV, GODREJCP, APOLLOHOSP, EICHERMOT, DLF
-  BAJAJFINSV   OR 1892.30-1914.60
-  GODREJCP     OR 925.90-933.45
-  APOLLOHOSP   OR 9280.00-9410.00
-  EICHERMOT    OR 8128.00-8264.50
-  DLF          OR 785.00-792.50
-  no stock trades yet
-  index today: NIFTY
-  NIFTY        first 1-min candle 25889.60-25991.95
-  SENSEX       first 1-min candle 84338.37-84656.72
-  ORB1     #1 BUY 195 NIFTY 25900 PE @ prem 168.03 (index 25882.75, SL 25902.75, 09:18)  195 TRAIL_STOP @ 25702.75 (prem 265.99)  net Rs 18,940.63
-  ORB1:NIFTY: done for the day: trade made money
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Mon) is NIFTY ORB1
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Mon) is NIFTY ORB1
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
 --- tick 2026-11-23 11:16 IST
 PAPER 2026-11-23  indices NIFTY, SENSEX  watchlist BAJAJFINSV, GODREJCP, APOLLOHOSP, EICHERMOT, DLF
   BAJAJFINSV   OR 1892.30-1914.60
@@ -282,6 +186,102 @@ PAPER 2026-11-23  indices NIFTY, SENSEX  watchlist BAJAJFINSV, GODREJCP, APOLLOH
   EICHERMOT    OR 8128.00-8264.50
   DLF          OR 785.00-792.50
   OPEN   DLF          BUY 157 @ 793.60 (11:15)  stop 788.75  target 800.90  last 793.80  unrealised Rs 31.40
+  index today: NIFTY
+  NIFTY        first 1-min candle 25889.60-25991.95
+  SENSEX       first 1-min candle 84338.37-84656.72
+  ORB1     #1 BUY 195 NIFTY 25900 PE @ prem 168.03 (index 25882.75, SL 25902.75, 09:18)  195 TRAIL_STOP @ 25702.75 (prem 265.99)  net Rs 18,940.63
+  ORB1:NIFTY: done for the day: trade made money
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Mon) is NIFTY ORB1
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Mon) is NIFTY ORB1
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+history NIFTY 5m: +1 bars
+history SENSEX 5m: +2 bars
+history INDIAVIX 5m: +1 bars
+history NIFTY 1m: +5 bars
+history SENSEX 1m: +6 bars
+history INDIAVIX 1m: +5 bars
+--- tick 2026-11-23 11:26 IST
+PAPER 2026-11-23  indices NIFTY, SENSEX  watchlist BAJAJFINSV, GODREJCP, APOLLOHOSP, EICHERMOT, DLF
+  BAJAJFINSV   OR 1892.30-1914.60
+  GODREJCP     OR 925.90-933.45
+  APOLLOHOSP   OR 9280.00-9410.00
+  EICHERMOT    OR 8128.00-8264.50
+  DLF          OR 785.00-792.50
+  OPEN   DLF          BUY 157 @ 793.60 (11:15)  stop 788.75  target 800.90  last 793.80  unrealised Rs 31.40
+  index today: NIFTY
+  NIFTY        first 1-min candle 25889.60-25991.95
+  SENSEX       first 1-min candle 84338.37-84656.72
+  ORB1     #1 BUY 195 NIFTY 25900 PE @ prem 168.03 (index 25882.75, SL 25902.75, 09:18)  195 TRAIL_STOP @ 25702.75 (prem 265.99)  net Rs 18,940.63
+  ORB1:NIFTY: done for the day: trade made money
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Mon) is NIFTY ORB1
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Mon) is NIFTY ORB1
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-23 11:27 IST
+PAPER 2026-11-23  indices NIFTY, SENSEX  watchlist BAJAJFINSV, GODREJCP, APOLLOHOSP, EICHERMOT, DLF
+  BAJAJFINSV   OR 1892.30-1914.60
+  GODREJCP     OR 925.90-933.45
+  APOLLOHOSP   OR 9280.00-9410.00
+  EICHERMOT    OR 8128.00-8264.50
+  DLF          OR 785.00-792.50
+  OPEN   DLF          BUY 157 @ 793.60 (11:15)  stop 788.75  target 800.90  last 793.80  unrealised Rs 31.40
+  index today: NIFTY
+  NIFTY        first 1-min candle 25889.60-25991.95
+  SENSEX       first 1-min candle 84338.37-84656.72
+  ORB1     #1 BUY 195 NIFTY 25900 PE @ prem 168.03 (index 25882.75, SL 25902.75, 09:18)  195 TRAIL_STOP @ 25702.75 (prem 265.99)  net Rs 18,940.63
+  ORB1:NIFTY: done for the day: trade made money
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Mon) is NIFTY ORB1
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Mon) is NIFTY ORB1
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-23 11:28 IST
+PAPER 2026-11-23  indices NIFTY, SENSEX  watchlist BAJAJFINSV, GODREJCP, APOLLOHOSP, EICHERMOT, DLF
+  BAJAJFINSV   OR 1892.30-1914.60
+  GODREJCP     OR 925.90-933.45
+  APOLLOHOSP   OR 9280.00-9410.00
+  EICHERMOT    OR 8128.00-8264.50
+  DLF          OR 785.00-792.50
+  OPEN   DLF          BUY 157 @ 793.60 (11:15)  stop 788.75  target 800.90  last 793.80  unrealised Rs 31.40
+  index today: NIFTY
+  NIFTY        first 1-min candle 25889.60-25991.95
+  SENSEX       first 1-min candle 84338.37-84656.72
+  ORB1     #1 BUY 195 NIFTY 25900 PE @ prem 168.03 (index 25882.75, SL 25902.75, 09:18)  195 TRAIL_STOP @ 25702.75 (prem 265.99)  net Rs 18,940.63
+  ORB1:NIFTY: done for the day: trade made money
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Mon) is NIFTY ORB1
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Mon) is NIFTY ORB1
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-23 11:29 IST
+PAPER 2026-11-23  indices NIFTY, SENSEX  watchlist BAJAJFINSV, GODREJCP, APOLLOHOSP, EICHERMOT, DLF
+  BAJAJFINSV   OR 1892.30-1914.60
+  GODREJCP     OR 925.90-933.45
+  APOLLOHOSP   OR 9280.00-9410.00
+  EICHERMOT    OR 8128.00-8264.50
+  DLF          OR 785.00-792.50
+  OPEN   DLF          BUY 157 @ 793.60 (11:15)  stop 788.75  target 800.90  last 793.80  unrealised Rs 31.40
+  index today: NIFTY
+  NIFTY        first 1-min candle 25889.60-25991.95
+  SENSEX       first 1-min candle 84338.37-84656.72
+  ORB1     #1 BUY 195 NIFTY 25900 PE @ prem 168.03 (index 25882.75, SL 25902.75, 09:18)  195 TRAIL_STOP @ 25702.75 (prem 265.99)  net Rs 18,940.63
+  ORB1:NIFTY: done for the day: trade made money
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Mon) is NIFTY ORB1
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Mon) is NIFTY ORB1
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-23 11:30 IST
+PAPER 2026-11-23  indices NIFTY, SENSEX  watchlist BAJAJFINSV, GODREJCP, APOLLOHOSP, EICHERMOT, DLF
+  BAJAJFINSV   OR 1892.30-1914.60
+  GODREJCP     OR 925.90-933.45
+  APOLLOHOSP   OR 9280.00-9410.00
+  EICHERMOT    OR 8128.00-8264.50
+  DLF          OR 785.00-792.50
+  OPEN   DLF          BUY 157 @ 793.60 (11:15)  stop 788.75  target 800.90  last 794.00  unrealised Rs 62.80
   index today: NIFTY
   NIFTY        first 1-min candle 25889.60-25991.95
   SENSEX       first 1-min candle 84338.37-84656.72
