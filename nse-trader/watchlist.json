@@ -1,93 +1,93 @@
 {
-  "generated_ist": "2026-11-20T09:23:52+05:30",
+  "generated_ist": "2026-11-23T09:32:06+05:30",
   "mode": "daily",
   "universe": "nifty100",
   "scanned": 100,
   "matched": 5,
   "items": [
     {
-      "symbol": "ICICIBANK",
-      "ltp": 1612.4,
-      "chg_pct": 0.22,
-      "setup": "20D_BREAKOUT,BULL_FLAG,52W_HIGH_PROX",
-      "score": 92,
-      "note": "close above prior 20-day pivot 1616.00; 16.5% impulse, 0.4% pullback; 0.2% below 52-week high",
-      "turnover_cr": 2669.13,
-      "rsi14": 78.6,
-      "volume_ratio": 0.1,
-      "levels": {
-        "or_high": null,
-        "or_low": null,
-        "pivot": 1616.0,
-        "stop_hint": 1583.35
-      }
-    },
-    {
-      "symbol": "KOTAKBANK",
-      "ltp": 505.15,
-      "chg_pct": 2.08,
-      "setup": "20D_BREAKOUT,BULL_FLAG,52W_HIGH_PROX",
-      "score": 92,
-      "note": "close above prior 20-day pivot 503.05; 13.6% impulse, 1.0% pullback; 0.1% below 52-week high",
-      "turnover_cr": 1098.21,
-      "rsi14": 77.9,
-      "volume_ratio": 0.08,
-      "levels": {
-        "or_high": null,
-        "or_low": null,
-        "pivot": 503.05,
-        "stop_hint": 495.05
-      }
-    },
-    {
-      "symbol": "APOLLOHOSP",
-      "ltp": 8937.5,
-      "chg_pct": 2.28,
-      "setup": "20D_BREAKOUT,BULL_FLAG,52W_HIGH_PROX",
-      "score": 92,
-      "note": "close above prior 20-day pivot 8898.50; 8.5% impulse, 1.8% pullback; 1.5% below 52-week high",
-      "turnover_cr": 470.5,
-      "rsi14": 65.7,
-      "volume_ratio": 0.17,
-      "levels": {
-        "or_high": null,
-        "or_low": null,
-        "pivot": 8898.5,
-        "stop_hint": 8741.05
-      }
-    },
-    {
-      "symbol": "BANKBARODA",
-      "ltp": 284.94,
-      "chg_pct": 3.8,
+      "symbol": "BAJAJFINSV",
+      "ltp": 1898.1,
+      "chg_pct": 0.32,
       "setup": "20D_BREAKOUT,BULL_FLAG",
       "score": 76,
-      "note": "close above prior 20-day pivot 276.85; 19.4% impulse, 0.8% pullback",
-      "turnover_cr": 346.34,
-      "rsi14": 77.7,
-      "volume_ratio": 0.12,
+      "note": "close above prior 20-day pivot 1913.40; 14.3% impulse, 0.7% pullback",
+      "turnover_cr": 208.1,
+      "rsi14": 65.5,
+      "volume_ratio": 0.13,
       "levels": {
         "or_high": null,
         "or_low": null,
-        "pivot": 276.85,
-        "stop_hint": 278.4
+        "pivot": 1913.4,
+        "stop_hint": 1855.6
       }
     },
     {
-      "symbol": "HINDUNILVR",
-      "ltp": 2048.0,
-      "chg_pct": 2.76,
+      "symbol": "GODREJCP",
+      "ltp": 930.15,
+      "chg_pct": 1.16,
       "setup": "20D_BREAKOUT,BULL_FLAG",
       "score": 76,
-      "note": "close above prior 20-day pivot 2027.00; 11.6% impulse, 1.7% pullback",
-      "turnover_cr": 315.96,
-      "rsi14": 67.0,
+      "note": "close above prior 20-day pivot 931.90; 13.9% impulse, 1.3% pullback",
+      "turnover_cr": 143.13,
+      "rsi14": 68.4,
       "volume_ratio": 0.05,
       "levels": {
         "or_high": null,
         "or_low": null,
-        "pivot": 2027.0,
-        "stop_hint": 2006.05
+        "pivot": 931.9,
+        "stop_hint": 907.65
+      }
+    },
+    {
+      "symbol": "APOLLOHOSP",
+      "ltp": 9338.5,
+      "chg_pct": 1.51,
+      "setup": "20D_BREAKOUT,52W_HIGH_PROX",
+      "score": 64,
+      "note": "close above prior 20-day pivot 9282.50; 0.8% below 52-week high",
+      "turnover_cr": 538.01,
+      "rsi14": 72.6,
+      "volume_ratio": 0.3,
+      "levels": {
+        "or_high": null,
+        "or_low": null,
+        "pivot": 9282.5,
+        "stop_hint": 9119.05
+      }
+    },
+    {
+      "symbol": "EICHERMOT",
+      "ltp": 8163.0,
+      "chg_pct": 0.62,
+      "setup": "20D_BREAKOUT,52W_HIGH_PROX",
+      "score": 64,
+      "note": "close above prior 20-day pivot 8149.00; 1.4% below 52-week high",
+      "turnover_cr": 469.21,
+      "rsi14": 71.0,
+      "volume_ratio": 0.18,
+      "levels": {
+        "or_high": null,
+        "or_low": null,
+        "pivot": 8149.0,
+        "stop_hint": 7954.55
+      }
+    },
+    {
+      "symbol": "DLF",
+      "ltp": 789.55,
+      "chg_pct": 0.58,
+      "setup": "20D_BREAKOUT,52W_HIGH_PROX",
+      "score": 64,
+      "note": "close above prior 20-day pivot 792.00; 0.5% below 52-week high",
+      "turnover_cr": 236.26,
+      "rsi14": 74.6,
+      "volume_ratio": 0.07,
+      "levels": {
+        "or_high": null,
+        "or_low": null,
+        "pivot": 792.0,
+        "stop_hint": 771.5
       }
     }
   ],
