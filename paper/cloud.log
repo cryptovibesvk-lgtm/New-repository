@@ -1,9 +1,3 @@
-  ORB1     #1 BUY 195 NIFTY 25900 PE @ prem 168.03 (index 25882.75, SL 25902.75, 09:18)  195 TRAIL_STOP @ 25702.75 (prem 265.99)  net Rs 18,940.63
-  ORB1:NIFTY: done for the day: trade made money
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Mon) is NIFTY ORB1
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Mon) is NIFTY ORB1
   SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
 history NIFTY 5m: +1 bars
 history SENSEX 5m: +1 bars
@@ -292,6 +286,12 @@ NIFTY + SENSEX options book: Rs 500,000 -> **Rs 506,526.64** (+1.31%), 14 trades
 All closed trades: 30  |  wins 11 (37%)  |  avg R +0.17  |  charges Rs 3,470.09  
 Exits: target 5, stop 9, 15:15 square-off 6
 journal: /home/runner/work/New-repository/New-repository/paper/journal.md
+history NIFTY 5m: +0 bars
+history SENSEX 5m: +0 bars
+history INDIAVIX 5m: +0 bars
+history NIFTY 1m: +0 bars
+history SENSEX 1m: +0 bars
+history INDIAVIX 1m: +0 bars
 history NIFTY 5m: +0 bars
 history SENSEX 5m: +0 bars
 history INDIAVIX 5m: +0 bars
