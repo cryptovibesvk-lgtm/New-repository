@@ -1771,7 +1771,29 @@
           "or_mid": 788.75
         }
       },
-      "trades": [],
+      "trades": [
+        {
+          "symbol": "DLF",
+          "status": "OPEN",
+          "entry_time": "2026-11-23T11:15:00+05:30",
+          "entry": 793.6,
+          "stop": 788.75,
+          "target": 800.9,
+          "qty": 157,
+          "segment": "CASH",
+          "margin": 124595.2,
+          "slippage_pct": 0.0005,
+          "risk_at_stop": 852.64,
+          "or_high": 792.5,
+          "or_low": 785.0,
+          "or_mid": 788.75,
+          "gross_pnl": 0.0,
+          "charges": 0.0,
+          "net_pnl": 0.0,
+          "last": 793.2000122070312,
+          "unrealised": -62.8
+        }
+      ],
       "notes": {},
       "options": {
         "levels": {
@@ -1933,13 +1955,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25582.45,
-            "ema21": 25617.37,
+            "ema9": 25584.74,
+            "ema21": 25615.24,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 83172.77,
-            "ema21": 83260.01,
+            "ema9": 83132.28,
+            "ema21": 83232.48,
             "setup": null
           }
         },
@@ -1953,7 +1975,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-23T11:18:05+05:30",
+      "updated_at": "2026-11-23T11:20:05+05:30",
       "final": false
     }
   }
