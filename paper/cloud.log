@@ -1,32 +1,3 @@
---- tick 2026-11-23 15:29 IST
-PAPER 2026-11-23  indices NIFTY, SENSEX  watchlist BAJAJFINSV, GODREJCP, APOLLOHOSP, EICHERMOT, DLF
-  BAJAJFINSV   OR 1892.30-1914.60
-  GODREJCP     OR 925.90-933.45
-  APOLLOHOSP   OR 9280.00-9410.00
-  EICHERMOT    OR 8128.00-8264.50
-  DLF          OR 785.00-792.50
-  CLOSED DLF          BUY 157 @ 793.60 (11:15)  stop 788.75  target 800.90  -> SQUARE_OFF_15:15 790.05 (15:15)  net Rs -648.60
-  index today: NIFTY
-  NIFTY        first 1-min candle 25889.60-25991.95
-  SENSEX       first 1-min candle 84338.37-84656.72
-  ORB1     #1 BUY 195 NIFTY 25900 PE @ prem 168.03 (index 25882.75, SL 25902.75, 09:18)  195 TRAIL_STOP @ 25702.75 (prem 265.99)  net Rs 18,940.63
-  ORB1:NIFTY: done for the day: trade made money
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Mon) is NIFTY ORB1
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Mon) is NIFTY ORB1
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-23 15:30 IST
-PAPER 2026-11-23  indices NIFTY, SENSEX  watchlist BAJAJFINSV, GODREJCP, APOLLOHOSP, EICHERMOT, DLF
-  BAJAJFINSV   OR 1892.30-1914.60
-  GODREJCP     OR 925.90-933.45
-  APOLLOHOSP   OR 9280.00-9410.00
-  EICHERMOT    OR 8128.00-8264.50
-  DLF          OR 785.00-792.50
-  CLOSED DLF          BUY 157 @ 793.60 (11:15)  stop 788.75  target 800.90  -> SQUARE_OFF_15:15 790.05 (15:15)  net Rs -648.60
-  index today: NIFTY
-  NIFTY        first 1-min candle 25889.60-25991.95
-  SENSEX       first 1-min candle 84338.37-84656.72
   ORB1     #1 BUY 195 NIFTY 25900 PE @ prem 168.03 (index 25882.75, SL 25902.75, 09:18)  195 TRAIL_STOP @ 25702.75 (prem 265.99)  net Rs 18,940.63
   ORB1:NIFTY: done for the day: trade made money
   EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
@@ -292,6 +263,35 @@ history INDIAVIX 5m: +0 bars
 history NIFTY 1m: +0 bars
 history SENSEX 1m: +5 bars
 history INDIAVIX 1m: +0 bars
+history NIFTY 5m: +0 bars
+history SENSEX 5m: +0 bars
+history INDIAVIX 5m: +0 bars
+history NIFTY 1m: +0 bars
+history SENSEX 1m: +0 bars
+history INDIAVIX 1m: +0 bars
+--- tick 2026-11-23 16:42 IST
+PAPER 2026-11-23  indices NIFTY, SENSEX  watchlist BAJAJFINSV, GODREJCP, APOLLOHOSP, EICHERMOT, DLF
+  BAJAJFINSV   OR 1892.30-1914.60
+  GODREJCP     OR 925.90-933.45
+  APOLLOHOSP   OR 9280.00-9410.00
+  EICHERMOT    OR 8128.00-8264.50
+  DLF          OR 785.00-792.50
+  CLOSED DLF          BUY 157 @ 793.60 (11:15)  stop 788.75  target 800.90  -> SQUARE_OFF_15:15 790.05 (15:15)  net Rs -648.60
+  index today: NIFTY
+  NIFTY        first 1-min candle 25889.60-25991.95
+  SENSEX       first 1-min candle 84338.37-84656.72
+  ORB1     #1 BUY 195 NIFTY 25900 PE @ prem 168.03 (index 25882.75, SL 25902.75, 09:18)  195 TRAIL_STOP @ 25702.75 (prem 265.99)  net Rs 18,940.63
+  ORB1:NIFTY: done for the day: trade made money
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Mon) is NIFTY ORB1
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Mon) is NIFTY ORB1
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+Stocks book: Rs 500,000 -> **Rs 498,761.22** (-0.25%), 16 trades  
+NIFTY + SENSEX options book: Rs 500,000 -> **Rs 506,526.64** (+1.31%), 14 trades  
+All closed trades: 30  |  wins 11 (37%)  |  avg R +0.17  |  charges Rs 3,470.09  
+Exits: target 5, stop 9, 15:15 square-off 6
+journal: /home/runner/work/New-repository/New-repository/paper/journal.md
 history NIFTY 5m: +0 bars
 history SENSEX 5m: +0 bars
 history INDIAVIX 5m: +0 bars
