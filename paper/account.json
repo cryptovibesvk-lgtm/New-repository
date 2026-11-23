@@ -1871,18 +1871,18 @@
                 "qty": 195,
                 "lots": 3.0,
                 "index": 25702.75,
-                "premium": 274.05,
+                "premium": 265.99,
                 "reason": "TRAIL_STOP"
               }
             ],
-            "gross_pnl": 20673.9,
-            "charges": 164.59,
-            "net_pnl": 20509.31,
+            "gross_pnl": 19102.2,
+            "charges": 161.57,
+            "net_pnl": 18940.63,
             "exit_time": "2026-11-23T09:31:00+05:30",
             "exit_reason": "TRAIL_STOP",
             "exit_index": 25702.75,
-            "exit": 274.05,
-            "r_multiple": 10.27,
+            "exit": 265.99,
+            "r_multiple": 9.49,
             "entry": 168.03
           }
         ],
@@ -1893,7 +1893,7 @@
             "done": true,
             "note": "done for the day: trade made money",
             "active": true,
-            "net": 20509.31
+            "net": 18940.63
           },
           "EMA9_21:NIFTY": {
             "trades": 0,
@@ -1933,13 +1933,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25770.84,
-            "ema21": 25762.74,
+            "ema9": 25731.3,
+            "ema21": 25745.5,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 84126.82,
-            "ema21": 84005.44,
+            "ema9": 84105.59,
+            "ema21": 84011.43,
             "setup": null
           }
         },
@@ -1953,7 +1953,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-23T09:32:06+05:30",
+      "updated_at": "2026-11-23T09:38:05+05:30",
       "final": false
     }
   }
