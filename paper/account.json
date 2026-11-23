@@ -1962,8 +1962,8 @@
             "setup": null
           },
           "SENSEX": {
-            "ema9": 82502.23,
-            "ema21": 82566.52,
+            "ema9": 82492.63,
+            "ema21": 82556.31,
             "setup": null
           }
         },
@@ -1977,8 +1977,8 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-23T15:30:05+05:30",
-      "final": false
+      "updated_at": "2026-11-23T15:35:05+05:30",
+      "final": true
     }
   }
 }
