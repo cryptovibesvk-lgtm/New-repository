@@ -1,9 +1,3 @@
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Mon) is NIFTY ORB1
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-23 15:32 IST
-PAPER 2026-11-23  indices NIFTY, SENSEX  watchlist BAJAJFINSV, GODREJCP, APOLLOHOSP, EICHERMOT, DLF
-  BAJAJFINSV   OR 1892.30-1914.60
   GODREJCP     OR 925.90-933.45
   APOLLOHOSP   OR 9280.00-9410.00
   EICHERMOT    OR 8128.00-8264.50
@@ -292,6 +286,12 @@ history SENSEX 1m: +0 bars
 history INDIAVIX 1m: +0 bars
 --- tick 2026-11-24 10:33 IST
 not a trading day
+history NIFTY 5m: +0 bars
+history SENSEX 5m: +0 bars
+history INDIAVIX 5m: +0 bars
+history NIFTY 1m: +0 bars
+history SENSEX 1m: +0 bars
+history INDIAVIX 1m: +0 bars
 history NIFTY 5m: +0 bars
 history SENSEX 5m: +0 bars
 history INDIAVIX 5m: +0 bars
