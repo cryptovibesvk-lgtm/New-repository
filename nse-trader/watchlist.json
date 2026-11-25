@@ -1,93 +1,93 @@
 {
-  "generated_ist": "2026-11-23T09:32:06+05:30",
+  "generated_ist": "2026-11-25T09:30:31+05:30",
   "mode": "daily",
   "universe": "nifty100",
   "scanned": 100,
   "matched": 5,
   "items": [
     {
-      "symbol": "BAJAJFINSV",
-      "ltp": 1898.1,
-      "chg_pct": 0.32,
+      "symbol": "BAJAJHLDNG",
+      "ltp": 11714.0,
+      "chg_pct": 1.5,
+      "setup": "20D_BREAKOUT,BULL_FLAG,52W_HIGH_PROX",
+      "score": 88,
+      "note": "close above prior 20-day pivot 11769.00; 13.3% impulse, 1.6% pullback; 1.2% below 52-week high",
+      "turnover_cr": 41.22,
+      "rsi14": 63.1,
+      "volume_ratio": 0.14,
+      "levels": {
+        "or_high": null,
+        "or_low": null,
+        "pivot": 11769.0,
+        "stop_hint": 11402.95
+      }
+    },
+    {
+      "symbol": "BAJFINANCE",
+      "ltp": 1126.3,
+      "chg_pct": 2.81,
       "setup": "20D_BREAKOUT,BULL_FLAG",
       "score": 76,
-      "note": "close above prior 20-day pivot 1913.40; 14.3% impulse, 0.7% pullback",
-      "turnover_cr": 208.1,
-      "rsi14": 65.5,
-      "volume_ratio": 0.13,
+      "note": "close above prior 20-day pivot 1130.50; 17.5% impulse, 2.8% pullback",
+      "turnover_cr": 1085.19,
+      "rsi14": 65.2,
+      "volume_ratio": 0.24,
       "levels": {
         "or_high": null,
         "or_low": null,
-        "pivot": 1913.4,
-        "stop_hint": 1855.6
+        "pivot": 1130.5,
+        "stop_hint": 1094.75
       }
     },
     {
-      "symbol": "GODREJCP",
-      "ltp": 930.15,
-      "chg_pct": 1.16,
+      "symbol": "ITC",
+      "ltp": 305.3,
+      "chg_pct": 1.43,
       "setup": "20D_BREAKOUT,BULL_FLAG",
       "score": 76,
-      "note": "close above prior 20-day pivot 931.90; 13.9% impulse, 1.3% pullback",
-      "turnover_cr": 143.13,
-      "rsi14": 68.4,
-      "volume_ratio": 0.05,
+      "note": "close above prior 20-day pivot 303.50; 13.3% impulse, 0.3% pullback",
+      "turnover_cr": 699.08,
+      "rsi14": 75.4,
+      "volume_ratio": 0.19,
       "levels": {
         "or_high": null,
         "or_low": null,
-        "pivot": 931.9,
-        "stop_hint": 907.65
+        "pivot": 303.5,
+        "stop_hint": 298.75
       }
     },
     {
-      "symbol": "APOLLOHOSP",
-      "ltp": 9338.5,
-      "chg_pct": 1.51,
-      "setup": "20D_BREAKOUT,52W_HIGH_PROX",
-      "score": 64,
-      "note": "close above prior 20-day pivot 9282.50; 0.8% below 52-week high",
-      "turnover_cr": 538.01,
-      "rsi14": 72.6,
-      "volume_ratio": 0.3,
+      "symbol": "TRENT",
+      "ltp": 3268.2,
+      "chg_pct": 1.88,
+      "setup": "20D_BREAKOUT,BULL_FLAG",
+      "score": 76,
+      "note": "close above prior 20-day pivot 3280.00; 7.6% impulse, 2.1% pullback",
+      "turnover_cr": 328.55,
+      "rsi14": 67.5,
+      "volume_ratio": 0.1,
       "levels": {
         "or_high": null,
         "or_low": null,
-        "pivot": 9282.5,
-        "stop_hint": 9119.05
+        "pivot": 3280.0,
+        "stop_hint": 3186.2
       }
     },
     {
-      "symbol": "EICHERMOT",
-      "ltp": 8163.0,
-      "chg_pct": 0.62,
-      "setup": "20D_BREAKOUT,52W_HIGH_PROX",
-      "score": 64,
-      "note": "close above prior 20-day pivot 8149.00; 1.4% below 52-week high",
-      "turnover_cr": 469.21,
-      "rsi14": 71.0,
-      "volume_ratio": 0.18,
+      "symbol": "TATACONSUM",
+      "ltp": 1169.0,
+      "chg_pct": 3.18,
+      "setup": "20D_BREAKOUT,BULL_FLAG",
+      "score": 76,
+      "note": "close above prior 20-day pivot 1158.80; 12.6% impulse, 2.2% pullback",
+      "turnover_cr": 217.54,
+      "rsi14": 73.3,
+      "volume_ratio": 0.2,
       "levels": {
         "or_high": null,
         "or_low": null,
-        "pivot": 8149.0,
-        "stop_hint": 7954.55
-      }
-    },
-    {
-      "symbol": "DLF",
-      "ltp": 789.55,
-      "chg_pct": 0.58,
-      "setup": "20D_BREAKOUT,52W_HIGH_PROX",
-      "score": 64,
-      "note": "close above prior 20-day pivot 792.00; 0.5% below 52-week high",
-      "turnover_cr": 236.26,
-      "rsi14": 74.6,
-      "volume_ratio": 0.07,
-      "levels": {
-        "or_high": null,
-        "or_low": null,
-        "pivot": 792.0,
-        "stop_hint": 771.5
+        "pivot": 1158.8,
+        "stop_hint": 1143.4
       }
     }
   ],
