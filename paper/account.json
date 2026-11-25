@@ -2032,13 +2032,13 @@
           "or_high": 1169.1,
           "or_low": 1153.4,
           "or_mid": 1161.25,
-          "gross_pnl": 943.4,
-          "charges": 91.49,
-          "net_pnl": 851.91,
-          "exit": 1179.4,
-          "exit_time": "2026-11-25T15:10:00+05:30",
+          "gross_pnl": 1558.2,
+          "charges": 91.67,
+          "net_pnl": 1466.53,
+          "exit": 1185.2,
+          "exit_time": "2026-11-25T15:25:00+05:30",
           "exit_reason": "SQUARE_OFF_15:15",
-          "r_multiple": 0.8
+          "r_multiple": 1.37
         },
         {
           "symbol": "ITC",
@@ -2267,8 +2267,8 @@
             "setup": null
           },
           "SENSEX": {
-            "ema9": 83943.32,
-            "ema21": 83883.89,
+            "ema9": 83942.31,
+            "ema21": 83888.84,
             "setup": "CE"
           }
         },
@@ -2282,7 +2282,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-25T15:40:28+05:30",
+      "updated_at": "2026-11-25T16:32:16+05:30",
       "final": true
     }
   }
