@@ -2035,8 +2035,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 1175.4000244140625,
-          "unrealised": 519.4
+          "last": 1177.199951171875,
+          "unrealised": 710.19
         },
         {
           "symbol": "ITC",
@@ -2056,8 +2056,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 309.29998779296875,
-          "unrealised": 994.7
+          "last": 310.25,
+          "unrealised": 1380.4
         },
         {
           "symbol": "TRENT",
@@ -2077,8 +2077,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 3316.39990234375,
-          "unrealised": 1030.45
+          "last": 3320.0,
+          "unrealised": 1163.65
         }
       ],
       "notes": {},
@@ -2256,13 +2256,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25814.87,
-            "ema21": 25740.64,
+            "ema9": 25827.61,
+            "ema21": 25753.18,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 84019.22,
-            "ema21": 83926.48,
+            "ema9": 84048.42,
+            "ema21": 83956.25,
             "setup": "CE"
           }
         },
@@ -2276,7 +2276,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-25T10:55:05+05:30",
+      "updated_at": "2026-11-25T11:00:05+05:30",
       "final": false
     }
   }
