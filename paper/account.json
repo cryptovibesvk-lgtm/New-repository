@@ -2072,45 +2072,7 @@
             "low": 83413.39
           }
         },
-        "trades": [
-          {
-            "strategy": "EMA9_21",
-            "underlying": "SENSEX",
-            "side": "CE",
-            "strike": 83800,
-            "action": "BUY",
-            "expiry": "2026-11-26",
-            "symbol": "SENSEX 83800 CE",
-            "trade_no": 1,
-            "status": "OPEN",
-            "why": "retest of 9 EMA 83765.9 after bullish cross, closed above",
-            "entry_time": "2026-11-25T09:50:00+05:30",
-            "entry_index": 83821.95,
-            "entry_premium": 531.03,
-            "vix": 17.11,
-            "lot": 20,
-            "lots": 5.0,
-            "qty": 100,
-            "qty_open": 100,
-            "book_qty": 60,
-            "stop_index": 83767.59,
-            "initial_stop": 83767.59,
-            "sl_premium": 501.74,
-            "partial_index": 83921.95,
-            "partial_done": false,
-            "protected": false,
-            "best_points": 8.38,
-            "stop_moves": [],
-            "risk_at_stop": 2929.27,
-            "legs": [],
-            "gross_pnl": 0.0,
-            "charges": 0.0,
-            "net_pnl": 0.0,
-            "last_index": 83830.33,
-            "last_premium": 535.57,
-            "unrealised": 454.14
-          }
-        ],
+        "trades": [],
         "notes": {},
         "status": {
           "ORB1:NIFTY": {
@@ -2142,11 +2104,11 @@
             "net": 0
           },
           "EMA9_21:SENSEX": {
-            "trades": 1,
+            "trades": 0,
             "done": false,
             "note": "",
             "active": true,
-            "net": 0.0
+            "net": 0
           },
           "SELL_TIME:SENSEX": {
             "trades": 0,
@@ -2163,8 +2125,8 @@
             "setup": null
           },
           "SENSEX": {
-            "ema9": 83783.17,
-            "ema21": 83540.63,
+            "ema9": 83761.56,
+            "ema21": 83550.82,
             "setup": "CE"
           }
         },
@@ -2178,7 +2140,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-25T10:01:05+05:30",
+      "updated_at": "2026-11-25T10:02:05+05:30",
       "final": false
     }
   }
