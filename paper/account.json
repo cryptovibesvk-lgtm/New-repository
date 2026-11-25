@@ -2131,7 +2131,7 @@
             "expiry": "2026-11-26",
             "symbol": "SENSEX 83800 CE",
             "trade_no": 2,
-            "status": "OPEN",
+            "status": "CLOSED",
             "why": "retest of 9 EMA 83779.3 after bullish cross, closed above",
             "entry_time": "2026-11-25T09:55:05+05:30",
             "entry_index": 83786.43,
@@ -2140,7 +2140,7 @@
             "lot": 20,
             "lots": 7.0,
             "qty": 140,
-            "qty_open": 40,
+            "qty_open": 0,
             "book_qty": 100,
             "stop_index": 83786.43,
             "initial_stop": 83745.8,
@@ -2165,14 +2165,25 @@
                 "index": 83886.43,
                 "premium": 572.18,
                 "reason": "PARTIAL_+100"
+              },
+              {
+                "time": "2026-11-25T10:05:00+05:30",
+                "qty": 40,
+                "lots": 2.0,
+                "index": 83794.23,
+                "premium": 520.99,
+                "reason": "EMA9_CLOSE"
               }
             ],
-            "gross_pnl": 0.0,
-            "charges": 0.0,
-            "net_pnl": 0.0,
-            "last_index": 83852.51,
-            "last_premium": 553.53,
-            "unrealised": 5842.34
+            "gross_pnl": 4540.8,
+            "charges": 253.81,
+            "net_pnl": 4286.99,
+            "exit_time": "2026-11-25T10:05:00+05:30",
+            "exit_reason": "EMA9_CLOSE",
+            "exit_index": 83794.23,
+            "exit": 520.99,
+            "r_multiple": 1.4,
+            "entry": 525.12
           }
         ],
         "notes": {
@@ -2209,10 +2220,10 @@
           },
           "EMA9_21:SENSEX": {
             "trades": 2,
-            "done": false,
-            "note": "",
+            "done": true,
+            "note": "done for the day: trade made money",
             "active": true,
-            "net": -2330.95
+            "net": 1956.04
           },
           "SELL_TIME:SENSEX": {
             "trades": 0,
@@ -2229,8 +2240,8 @@
             "setup": null
           },
           "SENSEX": {
-            "ema9": 83843.29,
-            "ema21": 83741.82,
+            "ema9": 83822.98,
+            "ema21": 83740.47,
             "setup": "CE"
           }
         },
@@ -2244,7 +2255,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-25T10:18:05+05:30",
+      "updated_at": "2026-11-25T10:19:05+05:30",
       "final": false
     }
   }
