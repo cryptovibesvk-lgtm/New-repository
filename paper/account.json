@@ -2021,22 +2021,22 @@
           "symbol": "TATACONSUM",
           "status": "OPEN",
           "entry_time": "2026-11-25T09:30:00+05:30",
-          "entry": 1169.8,
+          "entry": 1170.5,
           "stop": 1161.25,
-          "target": 1182.65,
+          "target": 1184.4,
           "qty": 106,
           "segment": "CASH",
-          "margin": 123998.8,
+          "margin": 124073.0,
           "slippage_pct": 0.0005,
-          "risk_at_stop": 997.24,
+          "risk_at_stop": 1071.44,
           "or_high": 1169.1,
           "or_low": 1153.4,
           "or_mid": 1161.25,
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 1169.199951171875,
-          "unrealised": -63.61
+          "last": 1169.0,
+          "unrealised": -159.0
         }
       ],
       "notes": {},
@@ -2099,13 +2099,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25602.22,
-            "ema21": 25515.85,
+            "ema9": 25632.71,
+            "ema21": 25537.56,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 83082.14,
-            "ema21": 82825.32,
+            "ema9": 83331.19,
+            "ema21": 82990.16,
             "setup": "CE"
           }
         },
@@ -2119,7 +2119,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-25T09:35:05+05:30",
+      "updated_at": "2026-11-25T09:40:05+05:30",
       "final": false
     }
   }
