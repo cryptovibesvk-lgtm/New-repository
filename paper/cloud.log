@@ -1,9 +1,3 @@
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: done for the day: trade made money
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-25 15:29 IST
 PAPER 2026-11-25  indices NIFTY, SENSEX  watchlist BAJAJHLDNG, BAJFINANCE, ITC, TRENT, TATACONSUM
   BAJAJHLDNG   OR 11707.00-11836.00
   BAJFINANCE   OR 1114.95-1136.30
@@ -297,4 +291,10 @@ history SENSEX 5m: +1 bars
 history INDIAVIX 5m: +0 bars
 history NIFTY 1m: +0 bars
 history SENSEX 1m: +5 bars
+history INDIAVIX 1m: +0 bars
+history NIFTY 5m: +0 bars
+history SENSEX 5m: +0 bars
+history INDIAVIX 5m: +0 bars
+history NIFTY 1m: +0 bars
+history SENSEX 1m: +0 bars
 history INDIAVIX 1m: +0 bars
