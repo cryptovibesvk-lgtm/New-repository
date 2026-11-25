@@ -2035,8 +2035,29 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 1174.9000244140625,
-          "unrealised": 466.4
+          "last": 1170.199951171875,
+          "unrealised": -31.81
+        },
+        {
+          "symbol": "ITC",
+          "status": "OPEN",
+          "entry_time": "2026-11-25T09:55:00+05:30",
+          "entry": 306.85,
+          "stop": 303.55,
+          "target": 311.8,
+          "qty": 406,
+          "segment": "CASH",
+          "margin": 124581.1,
+          "slippage_pct": 0.0005,
+          "risk_at_stop": 1430.82,
+          "or_high": 306.2,
+          "or_low": 300.9,
+          "or_mid": 303.55,
+          "gross_pnl": 0.0,
+          "charges": 0.0,
+          "net_pnl": 0.0,
+          "last": 306.6499938964844,
+          "unrealised": -81.2
         }
       ],
       "notes": {},
@@ -2051,45 +2072,7 @@
             "low": 83413.39
           }
         },
-        "trades": [
-          {
-            "strategy": "EMA9_21",
-            "underlying": "SENSEX",
-            "side": "CE",
-            "strike": 83800,
-            "action": "BUY",
-            "expiry": "2026-11-26",
-            "symbol": "SENSEX 83800 CE",
-            "trade_no": 1,
-            "status": "OPEN",
-            "why": "retest of 9 EMA 83751.3 after bullish cross, closed above",
-            "entry_time": "2026-11-25T09:49:05+05:30",
-            "entry_index": 83763.37,
-            "entry_premium": 500.84,
-            "vix": 17.1,
-            "lot": 20,
-            "lots": 5.0,
-            "qty": 100,
-            "qty_open": 100,
-            "book_qty": 60,
-            "stop_index": 83733.37,
-            "initial_stop": 83733.37,
-            "sl_premium": 484.6,
-            "partial_index": 83863.37,
-            "partial_done": false,
-            "protected": false,
-            "best_points": 0.0,
-            "stop_moves": [],
-            "risk_at_stop": 1623.84,
-            "legs": [],
-            "gross_pnl": 0.0,
-            "charges": 0.0,
-            "net_pnl": 0.0,
-            "last_index": 83763.37,
-            "last_premium": 501.47,
-            "unrealised": 62.62
-          }
-        ],
+        "trades": [],
         "notes": {},
         "status": {
           "ORB1:NIFTY": {
@@ -2121,11 +2104,11 @@
             "net": 0
           },
           "EMA9_21:SENSEX": {
-            "trades": 1,
+            "trades": 0,
             "done": false,
             "note": "",
             "active": true,
-            "net": 0.0
+            "net": 0
           },
           "SELL_TIME:SENSEX": {
             "trades": 0,
@@ -2137,13 +2120,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25691.21,
-            "ema21": 25590.7,
+            "ema9": 25707.58,
+            "ema21": 25607.28,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 83751.34,
-            "ema21": 83449.44,
+            "ema9": 83760.38,
+            "ema21": 83480.99,
             "setup": "CE"
           }
         },
@@ -2157,7 +2140,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-25T09:59:05+05:30",
+      "updated_at": "2026-11-25T10:00:05+05:30",
       "final": false
     }
   }
