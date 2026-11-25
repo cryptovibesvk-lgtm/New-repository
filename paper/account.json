@@ -2019,7 +2019,7 @@
       "trades": [
         {
           "symbol": "TATACONSUM",
-          "status": "OPEN",
+          "status": "CLOSED",
           "entry_time": "2026-11-25T09:30:00+05:30",
           "entry": 1170.5,
           "stop": 1161.25,
@@ -2032,11 +2032,13 @@
           "or_high": 1169.1,
           "or_low": 1153.4,
           "or_mid": 1161.25,
-          "gross_pnl": 0.0,
-          "charges": 0.0,
-          "net_pnl": 0.0,
-          "last": 1181.300048828125,
-          "unrealised": 1144.81
+          "gross_pnl": 943.4,
+          "charges": 91.49,
+          "net_pnl": 851.91,
+          "exit": 1179.4,
+          "exit_time": "2026-11-25T15:14:59+05:30",
+          "exit_reason": "SQUARE_OFF_15:15",
+          "r_multiple": 0.8
         },
         {
           "symbol": "ITC",
@@ -2260,13 +2262,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25765.49,
-            "ema21": 25756.6,
+            "ema9": 25770.64,
+            "ema21": 25759.75,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 83847.03,
-            "ema21": 83820.37,
+            "ema9": 83851.59,
+            "ema21": 83824.76,
             "setup": "CE"
           }
         },
@@ -2280,7 +2282,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-25T15:16:05+05:30",
+      "updated_at": "2026-11-25T15:20:05+05:30",
       "final": false
     }
   }
