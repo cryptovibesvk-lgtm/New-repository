@@ -2035,12 +2035,12 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 1174.699951171875,
-          "unrealised": 445.19
+          "last": 1176.0,
+          "unrealised": 583.0
         },
         {
           "symbol": "ITC",
-          "status": "OPEN",
+          "status": "CLOSED",
           "entry_time": "2026-11-25T09:55:00+05:30",
           "entry": 306.85,
           "stop": 303.55,
@@ -2053,11 +2053,13 @@
           "or_high": 306.2,
           "or_low": 300.9,
           "or_mid": 303.55,
-          "gross_pnl": 0.0,
-          "charges": 0.0,
-          "net_pnl": 0.0,
-          "last": 310.5,
-          "unrealised": 1481.9
+          "gross_pnl": 2009.7,
+          "charges": 91.98,
+          "net_pnl": 1917.72,
+          "exit": 311.8,
+          "exit_time": "2026-11-25T11:15:00+05:30",
+          "exit_reason": "TARGET",
+          "r_multiple": 1.34
         },
         {
           "symbol": "TRENT",
@@ -2077,8 +2079,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 3312.699951171875,
-          "unrealised": 893.55
+          "last": 3316.0,
+          "unrealised": 1015.65
         }
       ],
       "notes": {},
@@ -2256,13 +2258,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25869.97,
-            "ema21": 25793.23,
+            "ema9": 25882.93,
+            "ema21": 25806.1,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 84154.63,
-            "ema21": 84056.22,
+            "ema9": 84223.95,
+            "ema21": 84107.56,
             "setup": "CE"
           }
         },
@@ -2276,7 +2278,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-25T11:15:05+05:30",
+      "updated_at": "2026-11-25T11:20:05+05:30",
       "final": false
     }
   }
