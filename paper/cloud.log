@@ -1,9 +1,3 @@
-  SENSEX       first 1-min candle 83413.39-83808.40
-  EMA9_21  #1 BUY 100 SENSEX 83800 CE @ prem 501.60 (index 83764.84, SL 83691.69, 09:50)  100 EMA9_CLOSE @ 83727.87 (prem 479.91)  net Rs -2,330.95
-  EMA9_21  #2 BUY 140 SENSEX 83800 CE @ prem 525.12 (index 83786.43, SL 83745.80, 09:55)  100 PARTIAL_+100 @ 83886.43 (prem 572.18) | 40 BREAKEVEN_STOP @ 83786.43 (prem 517.00)  net Rs 4,127.70
-  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
   ORB1:SENSEX: SENSEX ORB1 is not in the schedule
   EMA9_21:SENSEX: done for the day: trade made money
   SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
@@ -292,6 +286,12 @@ NIFTY + SENSEX options book: Rs 500,000 -> **Rs 508,323.39** (+1.66%), 16 trades
 All closed trades: 35  |  wins 15 (43%)  |  avg R +0.26  |  charges Rs 4,159.83  
 Exits: target 7, stop 9, 15:15 square-off 7
 journal: /home/runner/work/New-repository/New-repository/paper/journal.md
+history NIFTY 5m: +0 bars
+history SENSEX 5m: +0 bars
+history INDIAVIX 5m: +0 bars
+history NIFTY 1m: +0 bars
+history SENSEX 1m: +0 bars
+history INDIAVIX 1m: +0 bars
 history NIFTY 5m: +0 bars
 history SENSEX 5m: +0 bars
 history INDIAVIX 5m: +0 bars
