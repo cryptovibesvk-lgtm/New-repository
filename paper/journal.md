@@ -1,9 +1,9 @@
 # Paper trading journal (virtual money)
 
-Stocks book: Rs 500,000 -> **Rs 498,761.22** (-0.25%), 16 trades  
-NIFTY + SENSEX options book: Rs 500,000 -> **Rs 506,526.64** (+1.31%), 14 trades  
-All closed trades: 30  |  wins 11 (37%)  |  avg R +0.17  |  charges Rs 3,470.09  
-Exits: target 5, stop 9, 15:15 square-off 6
+Stocks book: Rs 500,000 -> **Rs 503,005.13** (+0.60%), 19 trades  
+NIFTY + SENSEX options book: Rs 500,000 -> **Rs 508,323.39** (+1.66%), 16 trades  
+All closed trades: 35  |  wins 15 (43%)  |  avg R +0.26  |  charges Rs 4,159.83  
+Exits: target 7, stop 9, 15:15 square-off 7
 
 | Date | Stock | Qty | Entry | Exit | Reason | Net P&L | R |
 |---|---|---|---|---|---|---|---|
@@ -37,5 +37,10 @@ Exits: target 5, stop 9, 15:15 square-off 6
 | 2026-11-20 | ORB1 NIFTY 25450 CE | 195 | 190.94 @ 09:17 | 195 TRAIL_STOP 200.02 | TRAIL_STOP | 1,631.73 | +0.80 |
 | 2026-11-23 | DLF | 157 | 793.60 @ 11:15 | 790.05 @ 15:15 | SQUARE_OFF_15:15 | -648.60 | -0.76 |
 | 2026-11-23 | ORB1 NIFTY 25900 PE | 195 | 168.03 @ 09:18 | 195 TRAIL_STOP 265.99 | TRAIL_STOP | 18,940.63 | +9.49 |
+| 2026-11-25 | TATACONSUM | 106 | 1170.50 @ 09:30 | 1179.40 @ 15:10 | SQUARE_OFF_15:15 | 851.91 | +0.80 |
+| 2026-11-25 | ITC | 406 | 306.85 @ 09:55 | 311.80 @ 11:15 | TARGET | 1,917.72 | +1.34 |
+| 2026-11-25 | TRENT | 37 | 3288.55 @ 10:20 | 3330.85 @ 11:50 | TARGET | 1,474.28 | +1.30 |
+| 2026-11-25 | EMA9_21 SENSEX 83800 CE | 100 | 501.60 @ 09:50 | 100 EMA9_CLOSE 479.91 | EMA9_CLOSE | -2,330.95 | -0.62 |
+| 2026-11-25 | EMA9_21 SENSEX 83800 CE | 140 | 525.12 @ 09:55 | 100 PARTIAL_+100 572.18; 40 BREAKEVEN_STOP 517.00 | BREAKEVEN_STOP | 4,127.70 | +1.35 |
 
 Virtual fills on delayed Yahoo 5-minute bars with 0.05% slippage per side. Not financial advice.
