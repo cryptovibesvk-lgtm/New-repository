@@ -2035,8 +2035,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 1176.0,
-          "unrealised": 583.0
+          "last": 1175.0,
+          "unrealised": 477.0
         },
         {
           "symbol": "ITC",
@@ -2079,8 +2079,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 3316.0,
-          "unrealised": 1015.65
+          "last": 3313.39990234375,
+          "unrealised": 919.45
         }
       ],
       "notes": {},
@@ -2258,13 +2258,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25882.93,
-            "ema21": 25806.1,
+            "ema9": 25891.25,
+            "ema21": 25816.86,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 84223.95,
-            "ema21": 84107.56,
+            "ema9": 84289.43,
+            "ema21": 84159.68,
             "setup": "CE"
           }
         },
@@ -2278,7 +2278,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-25T11:20:05+05:30",
+      "updated_at": "2026-11-25T11:25:05+05:30",
       "final": false
     }
   }
