@@ -7,117 +7,6 @@
   ORB1:SENSEX: SENSEX ORB1 is not in the schedule
   EMA9_21:SENSEX: done for the day: trade made money
   SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-25 11:23 IST
-PAPER 2026-11-25  indices NIFTY, SENSEX  watchlist BAJAJHLDNG, BAJFINANCE, ITC, TRENT, TATACONSUM
-  BAJAJHLDNG   OR 11707.00-11836.00
-  BAJFINANCE   OR 1114.95-1136.30
-  ITC          OR 300.90-306.20
-  TRENT        OR 3239.30-3281.40
-  TATACONSUM   OR 1153.40-1169.10
-  OPEN   TATACONSUM   BUY 106 @ 1170.50 (09:30)  stop 1161.25  target 1184.40  last 1176.00  unrealised Rs 583.00
-  CLOSED ITC          BUY 406 @ 306.85 (09:55)  stop 303.55  target 311.80  -> TARGET 311.80 (11:15)  net Rs 1,917.72
-  OPEN   TRENT        BUY 37 @ 3288.55 (10:20)  stop 3260.35  target 3330.85  last 3316.00  unrealised Rs 1,015.65
-  index today: SENSEX
-  NIFTY        first 1-min candle 25620.20-25746.45
-  SENSEX       first 1-min candle 83413.39-83808.40
-  EMA9_21  #1 BUY 100 SENSEX 83800 CE @ prem 501.60 (index 83764.84, SL 83691.69, 09:50)  100 EMA9_CLOSE @ 83727.87 (prem 479.91)  net Rs -2,330.95
-  EMA9_21  #2 BUY 140 SENSEX 83800 CE @ prem 525.12 (index 83786.43, SL 83745.80, 09:55)  100 PARTIAL_+100 @ 83886.43 (prem 572.18) | 40 BREAKEVEN_STOP @ 83786.43 (prem 517.00)  net Rs 4,127.70
-  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: done for the day: trade made money
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-25 11:24 IST
-PAPER 2026-11-25  indices NIFTY, SENSEX  watchlist BAJAJHLDNG, BAJFINANCE, ITC, TRENT, TATACONSUM
-  BAJAJHLDNG   OR 11707.00-11836.00
-  BAJFINANCE   OR 1114.95-1136.30
-  ITC          OR 300.90-306.20
-  TRENT        OR 3239.30-3281.40
-  TATACONSUM   OR 1153.40-1169.10
-  OPEN   TATACONSUM   BUY 106 @ 1170.50 (09:30)  stop 1161.25  target 1184.40  last 1176.00  unrealised Rs 583.00
-  CLOSED ITC          BUY 406 @ 306.85 (09:55)  stop 303.55  target 311.80  -> TARGET 311.80 (11:15)  net Rs 1,917.72
-  OPEN   TRENT        BUY 37 @ 3288.55 (10:20)  stop 3260.35  target 3330.85  last 3316.00  unrealised Rs 1,015.65
-  index today: SENSEX
-  NIFTY        first 1-min candle 25620.20-25746.45
-  SENSEX       first 1-min candle 83413.39-83808.40
-  EMA9_21  #1 BUY 100 SENSEX 83800 CE @ prem 501.60 (index 83764.84, SL 83691.69, 09:50)  100 EMA9_CLOSE @ 83727.87 (prem 479.91)  net Rs -2,330.95
-  EMA9_21  #2 BUY 140 SENSEX 83800 CE @ prem 525.12 (index 83786.43, SL 83745.80, 09:55)  100 PARTIAL_+100 @ 83886.43 (prem 572.18) | 40 BREAKEVEN_STOP @ 83786.43 (prem 517.00)  net Rs 4,127.70
-  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: done for the day: trade made money
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-25 11:25 IST
-PAPER 2026-11-25  indices NIFTY, SENSEX  watchlist BAJAJHLDNG, BAJFINANCE, ITC, TRENT, TATACONSUM
-  BAJAJHLDNG   OR 11707.00-11836.00
-  BAJFINANCE   OR 1114.95-1136.30
-  ITC          OR 300.90-306.20
-  TRENT        OR 3239.30-3281.40
-  TATACONSUM   OR 1153.40-1169.10
-  OPEN   TATACONSUM   BUY 106 @ 1170.50 (09:30)  stop 1161.25  target 1184.40  last 1175.00  unrealised Rs 477.00
-  CLOSED ITC          BUY 406 @ 306.85 (09:55)  stop 303.55  target 311.80  -> TARGET 311.80 (11:15)  net Rs 1,917.72
-  OPEN   TRENT        BUY 37 @ 3288.55 (10:20)  stop 3260.35  target 3330.85  last 3313.40  unrealised Rs 919.45
-  index today: SENSEX
-  NIFTY        first 1-min candle 25620.20-25746.45
-  SENSEX       first 1-min candle 83413.39-83808.40
-  EMA9_21  #1 BUY 100 SENSEX 83800 CE @ prem 501.60 (index 83764.84, SL 83691.69, 09:50)  100 EMA9_CLOSE @ 83727.87 (prem 479.91)  net Rs -2,330.95
-  EMA9_21  #2 BUY 140 SENSEX 83800 CE @ prem 525.12 (index 83786.43, SL 83745.80, 09:55)  100 PARTIAL_+100 @ 83886.43 (prem 572.18) | 40 BREAKEVEN_STOP @ 83786.43 (prem 517.00)  net Rs 4,127.70
-  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: done for the day: trade made money
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
-history NIFTY 5m: +1 bars
-history SENSEX 5m: +2 bars
-history INDIAVIX 5m: +1 bars
-history NIFTY 1m: +5 bars
-history SENSEX 1m: +6 bars
-history INDIAVIX 1m: +5 bars
---- tick 2026-11-25 11:26 IST
-PAPER 2026-11-25  indices NIFTY, SENSEX  watchlist BAJAJHLDNG, BAJFINANCE, ITC, TRENT, TATACONSUM
-  BAJAJHLDNG   OR 11707.00-11836.00
-  BAJFINANCE   OR 1114.95-1136.30
-  ITC          OR 300.90-306.20
-  TRENT        OR 3239.30-3281.40
-  TATACONSUM   OR 1153.40-1169.10
-  OPEN   TATACONSUM   BUY 106 @ 1170.50 (09:30)  stop 1161.25  target 1184.40  last 1175.00  unrealised Rs 477.00
-  CLOSED ITC          BUY 406 @ 306.85 (09:55)  stop 303.55  target 311.80  -> TARGET 311.80 (11:15)  net Rs 1,917.72
-  OPEN   TRENT        BUY 37 @ 3288.55 (10:20)  stop 3260.35  target 3330.85  last 3313.40  unrealised Rs 919.45
-  index today: SENSEX
-  NIFTY        first 1-min candle 25620.20-25746.45
-  SENSEX       first 1-min candle 83413.39-83808.40
-  EMA9_21  #1 BUY 100 SENSEX 83800 CE @ prem 501.60 (index 83764.84, SL 83691.69, 09:50)  100 EMA9_CLOSE @ 83727.87 (prem 479.91)  net Rs -2,330.95
-  EMA9_21  #2 BUY 140 SENSEX 83800 CE @ prem 525.12 (index 83786.43, SL 83745.80, 09:55)  100 PARTIAL_+100 @ 83886.43 (prem 572.18) | 40 BREAKEVEN_STOP @ 83786.43 (prem 517.00)  net Rs 4,127.70
-  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: done for the day: trade made money
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-25 11:27 IST
-PAPER 2026-11-25  indices NIFTY, SENSEX  watchlist BAJAJHLDNG, BAJFINANCE, ITC, TRENT, TATACONSUM
-  BAJAJHLDNG   OR 11707.00-11836.00
-  BAJFINANCE   OR 1114.95-1136.30
-  ITC          OR 300.90-306.20
-  TRENT        OR 3239.30-3281.40
-  TATACONSUM   OR 1153.40-1169.10
-  OPEN   TATACONSUM   BUY 106 @ 1170.50 (09:30)  stop 1161.25  target 1184.40  last 1175.00  unrealised Rs 477.00
-  CLOSED ITC          BUY 406 @ 306.85 (09:55)  stop 303.55  target 311.80  -> TARGET 311.80 (11:15)  net Rs 1,917.72
-  OPEN   TRENT        BUY 37 @ 3288.55 (10:20)  stop 3260.35  target 3330.85  last 3313.40  unrealised Rs 919.45
-  index today: SENSEX
-  NIFTY        first 1-min candle 25620.20-25746.45
-  SENSEX       first 1-min candle 83413.39-83808.40
-  EMA9_21  #1 BUY 100 SENSEX 83800 CE @ prem 501.60 (index 83764.84, SL 83691.69, 09:50)  100 EMA9_CLOSE @ 83727.87 (prem 479.91)  net Rs -2,330.95
-  EMA9_21  #2 BUY 140 SENSEX 83800 CE @ prem 525.12 (index 83786.43, SL 83745.80, 09:55)  100 PARTIAL_+100 @ 83886.43 (prem 572.18) | 40 BREAKEVEN_STOP @ 83786.43 (prem 517.00)  net Rs 4,127.70
-  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: done for the day: trade made money
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
 --- tick 2026-11-25 11:28 IST
 PAPER 2026-11-25  indices NIFTY, SENSEX  watchlist BAJAJHLDNG, BAJFINANCE, ITC, TRENT, TATACONSUM
   BAJAJHLDNG   OR 11707.00-11836.00
@@ -281,6 +170,117 @@ PAPER 2026-11-25  indices NIFTY, SENSEX  watchlist BAJAJHLDNG, BAJFINANCE, ITC, 
   OPEN   TATACONSUM   BUY 106 @ 1170.50 (09:30)  stop 1161.25  target 1184.40  last 1178.80  unrealised Rs 879.81
   CLOSED ITC          BUY 406 @ 306.85 (09:55)  stop 303.55  target 311.80  -> TARGET 311.80 (11:15)  net Rs 1,917.72
   OPEN   TRENT        BUY 37 @ 3288.55 (10:20)  stop 3260.35  target 3330.85  last 3316.90  unrealised Rs 1,048.95
+  index today: SENSEX
+  NIFTY        first 1-min candle 25620.20-25746.45
+  SENSEX       first 1-min candle 83413.39-83808.40
+  EMA9_21  #1 BUY 100 SENSEX 83800 CE @ prem 501.60 (index 83764.84, SL 83691.69, 09:50)  100 EMA9_CLOSE @ 83727.87 (prem 479.91)  net Rs -2,330.95
+  EMA9_21  #2 BUY 140 SENSEX 83800 CE @ prem 525.12 (index 83786.43, SL 83745.80, 09:55)  100 PARTIAL_+100 @ 83886.43 (prem 572.18) | 40 BREAKEVEN_STOP @ 83786.43 (prem 517.00)  net Rs 4,127.70
+  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: done for the day: trade made money
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+history NIFTY 5m: +1 bars
+history SENSEX 5m: +2 bars
+history INDIAVIX 5m: +1 bars
+history NIFTY 1m: +5 bars
+history SENSEX 1m: +6 bars
+history INDIAVIX 1m: +5 bars
+--- tick 2026-11-25 11:36 IST
+PAPER 2026-11-25  indices NIFTY, SENSEX  watchlist BAJAJHLDNG, BAJFINANCE, ITC, TRENT, TATACONSUM
+  BAJAJHLDNG   OR 11707.00-11836.00
+  BAJFINANCE   OR 1114.95-1136.30
+  ITC          OR 300.90-306.20
+  TRENT        OR 3239.30-3281.40
+  TATACONSUM   OR 1153.40-1169.10
+  OPEN   TATACONSUM   BUY 106 @ 1170.50 (09:30)  stop 1161.25  target 1184.40  last 1178.80  unrealised Rs 879.81
+  CLOSED ITC          BUY 406 @ 306.85 (09:55)  stop 303.55  target 311.80  -> TARGET 311.80 (11:15)  net Rs 1,917.72
+  OPEN   TRENT        BUY 37 @ 3288.55 (10:20)  stop 3260.35  target 3330.85  last 3316.90  unrealised Rs 1,048.95
+  index today: SENSEX
+  NIFTY        first 1-min candle 25620.20-25746.45
+  SENSEX       first 1-min candle 83413.39-83808.40
+  EMA9_21  #1 BUY 100 SENSEX 83800 CE @ prem 501.60 (index 83764.84, SL 83691.69, 09:50)  100 EMA9_CLOSE @ 83727.87 (prem 479.91)  net Rs -2,330.95
+  EMA9_21  #2 BUY 140 SENSEX 83800 CE @ prem 525.12 (index 83786.43, SL 83745.80, 09:55)  100 PARTIAL_+100 @ 83886.43 (prem 572.18) | 40 BREAKEVEN_STOP @ 83786.43 (prem 517.00)  net Rs 4,127.70
+  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: done for the day: trade made money
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-25 11:37 IST
+PAPER 2026-11-25  indices NIFTY, SENSEX  watchlist BAJAJHLDNG, BAJFINANCE, ITC, TRENT, TATACONSUM
+  BAJAJHLDNG   OR 11707.00-11836.00
+  BAJFINANCE   OR 1114.95-1136.30
+  ITC          OR 300.90-306.20
+  TRENT        OR 3239.30-3281.40
+  TATACONSUM   OR 1153.40-1169.10
+  OPEN   TATACONSUM   BUY 106 @ 1170.50 (09:30)  stop 1161.25  target 1184.40  last 1178.80  unrealised Rs 879.81
+  CLOSED ITC          BUY 406 @ 306.85 (09:55)  stop 303.55  target 311.80  -> TARGET 311.80 (11:15)  net Rs 1,917.72
+  OPEN   TRENT        BUY 37 @ 3288.55 (10:20)  stop 3260.35  target 3330.85  last 3316.90  unrealised Rs 1,048.95
+  index today: SENSEX
+  NIFTY        first 1-min candle 25620.20-25746.45
+  SENSEX       first 1-min candle 83413.39-83808.40
+  EMA9_21  #1 BUY 100 SENSEX 83800 CE @ prem 501.60 (index 83764.84, SL 83691.69, 09:50)  100 EMA9_CLOSE @ 83727.87 (prem 479.91)  net Rs -2,330.95
+  EMA9_21  #2 BUY 140 SENSEX 83800 CE @ prem 525.12 (index 83786.43, SL 83745.80, 09:55)  100 PARTIAL_+100 @ 83886.43 (prem 572.18) | 40 BREAKEVEN_STOP @ 83786.43 (prem 517.00)  net Rs 4,127.70
+  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: done for the day: trade made money
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-25 11:38 IST
+PAPER 2026-11-25  indices NIFTY, SENSEX  watchlist BAJAJHLDNG, BAJFINANCE, ITC, TRENT, TATACONSUM
+  BAJAJHLDNG   OR 11707.00-11836.00
+  BAJFINANCE   OR 1114.95-1136.30
+  ITC          OR 300.90-306.20
+  TRENT        OR 3239.30-3281.40
+  TATACONSUM   OR 1153.40-1169.10
+  OPEN   TATACONSUM   BUY 106 @ 1170.50 (09:30)  stop 1161.25  target 1184.40  last 1178.80  unrealised Rs 879.81
+  CLOSED ITC          BUY 406 @ 306.85 (09:55)  stop 303.55  target 311.80  -> TARGET 311.80 (11:15)  net Rs 1,917.72
+  OPEN   TRENT        BUY 37 @ 3288.55 (10:20)  stop 3260.35  target 3330.85  last 3316.90  unrealised Rs 1,048.95
+  index today: SENSEX
+  NIFTY        first 1-min candle 25620.20-25746.45
+  SENSEX       first 1-min candle 83413.39-83808.40
+  EMA9_21  #1 BUY 100 SENSEX 83800 CE @ prem 501.60 (index 83764.84, SL 83691.69, 09:50)  100 EMA9_CLOSE @ 83727.87 (prem 479.91)  net Rs -2,330.95
+  EMA9_21  #2 BUY 140 SENSEX 83800 CE @ prem 525.12 (index 83786.43, SL 83745.80, 09:55)  100 PARTIAL_+100 @ 83886.43 (prem 572.18) | 40 BREAKEVEN_STOP @ 83786.43 (prem 517.00)  net Rs 4,127.70
+  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: done for the day: trade made money
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-25 11:39 IST
+PAPER 2026-11-25  indices NIFTY, SENSEX  watchlist BAJAJHLDNG, BAJFINANCE, ITC, TRENT, TATACONSUM
+  BAJAJHLDNG   OR 11707.00-11836.00
+  BAJFINANCE   OR 1114.95-1136.30
+  ITC          OR 300.90-306.20
+  TRENT        OR 3239.30-3281.40
+  TATACONSUM   OR 1153.40-1169.10
+  OPEN   TATACONSUM   BUY 106 @ 1170.50 (09:30)  stop 1161.25  target 1184.40  last 1178.80  unrealised Rs 879.81
+  CLOSED ITC          BUY 406 @ 306.85 (09:55)  stop 303.55  target 311.80  -> TARGET 311.80 (11:15)  net Rs 1,917.72
+  OPEN   TRENT        BUY 37 @ 3288.55 (10:20)  stop 3260.35  target 3330.85  last 3316.90  unrealised Rs 1,048.95
+  index today: SENSEX
+  NIFTY        first 1-min candle 25620.20-25746.45
+  SENSEX       first 1-min candle 83413.39-83808.40
+  EMA9_21  #1 BUY 100 SENSEX 83800 CE @ prem 501.60 (index 83764.84, SL 83691.69, 09:50)  100 EMA9_CLOSE @ 83727.87 (prem 479.91)  net Rs -2,330.95
+  EMA9_21  #2 BUY 140 SENSEX 83800 CE @ prem 525.12 (index 83786.43, SL 83745.80, 09:55)  100 PARTIAL_+100 @ 83886.43 (prem 572.18) | 40 BREAKEVEN_STOP @ 83786.43 (prem 517.00)  net Rs 4,127.70
+  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Wed) is SENSEX EMA9_21
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Wed) is SENSEX EMA9_21
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: done for the day: trade made money
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-25 11:40 IST
+PAPER 2026-11-25  indices NIFTY, SENSEX  watchlist BAJAJHLDNG, BAJFINANCE, ITC, TRENT, TATACONSUM
+  BAJAJHLDNG   OR 11707.00-11836.00
+  BAJFINANCE   OR 1114.95-1136.30
+  ITC          OR 300.90-306.20
+  TRENT        OR 3239.30-3281.40
+  TATACONSUM   OR 1153.40-1169.10
+  OPEN   TATACONSUM   BUY 106 @ 1170.50 (09:30)  stop 1161.25  target 1184.40  last 1178.60  unrealised Rs 858.60
+  CLOSED ITC          BUY 406 @ 306.85 (09:55)  stop 303.55  target 311.80  -> TARGET 311.80 (11:15)  net Rs 1,917.72
+  OPEN   TRENT        BUY 37 @ 3288.55 (10:20)  stop 3260.35  target 3330.85  last 3320.30  unrealised Rs 1,174.75
   index today: SENSEX
   NIFTY        first 1-min candle 25620.20-25746.45
   SENSEX       first 1-min candle 83413.39-83808.40
