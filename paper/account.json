@@ -2035,8 +2035,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 1174.5,
-          "unrealised": 424.0
+          "last": 1175.9000244140625,
+          "unrealised": 572.4
         },
         {
           "symbol": "ITC",
@@ -2056,8 +2056,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 306.20001220703125,
-          "unrealised": -263.9
+          "last": 307.20001220703125,
+          "unrealised": 142.1
         }
       ],
       "notes": {},
@@ -2170,19 +2170,19 @@
                 "time": "2026-11-25T10:05:00+05:30",
                 "qty": 40,
                 "lots": 2.0,
-                "index": 83794.23,
-                "premium": 520.99,
-                "reason": "EMA9_CLOSE"
+                "index": 83786.43,
+                "premium": 517.0,
+                "reason": "BREAKEVEN_STOP"
               }
             ],
-            "gross_pnl": 4540.8,
-            "charges": 253.81,
-            "net_pnl": 4286.99,
+            "gross_pnl": 4381.2,
+            "charges": 253.5,
+            "net_pnl": 4127.7,
             "exit_time": "2026-11-25T10:05:00+05:30",
-            "exit_reason": "EMA9_CLOSE",
-            "exit_index": 83794.23,
-            "exit": 520.99,
-            "r_multiple": 1.4,
+            "exit_reason": "BREAKEVEN_STOP",
+            "exit_index": 83786.43,
+            "exit": 517.0,
+            "r_multiple": 1.35,
             "entry": 525.12
           }
         ],
@@ -2223,7 +2223,7 @@
             "done": true,
             "note": "done for the day: trade made money",
             "active": true,
-            "net": 1956.04
+            "net": 1796.75
           },
           "SELL_TIME:SENSEX": {
             "trades": 0,
@@ -2235,13 +2235,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25728.09,
-            "ema21": 25642.26,
+            "ema9": 25743.52,
+            "ema21": 25657.08,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 83822.98,
-            "ema21": 83740.47,
+            "ema9": 83806.52,
+            "ema21": 83739.37,
             "setup": "CE"
           }
         },
@@ -2255,7 +2255,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-25T10:19:05+05:30",
+      "updated_at": "2026-11-25T10:20:05+05:30",
       "final": false
     }
   }
