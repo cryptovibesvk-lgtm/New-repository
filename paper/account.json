@@ -2340,12 +2340,12 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 807.2000122070312,
-          "unrealised": 910.6
+          "last": 805.0,
+          "unrealised": 565.2
         },
         {
           "symbol": "TVSMOTOR",
-          "status": "OPEN",
+          "status": "CLOSED",
           "entry_time": "2026-11-26T10:25:00+05:30",
           "entry": 4610.75,
           "stop": 4589.45,
@@ -2358,11 +2358,13 @@
           "or_high": 4607.0,
           "or_low": 4571.9,
           "or_mid": 4589.45,
-          "gross_pnl": 0.0,
-          "charges": 0.0,
-          "net_pnl": 0.0,
-          "last": 4604.60009765625,
-          "unrealised": -166.05
+          "gross_pnl": -637.2,
+          "charges": 91.19,
+          "net_pnl": -728.39,
+          "exit": 4587.15,
+          "exit_time": "2026-11-26T10:35:00+05:30",
+          "exit_reason": "STOP",
+          "r_multiple": -1.09
         },
         {
           "symbol": "BAJAJ-AUTO",
@@ -2382,8 +2384,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 10834.0,
-          "unrealised": -59.95
+          "last": 10828.0,
+          "unrealised": -125.95
         }
       ],
       "notes": {},
@@ -2448,13 +2450,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25861.18,
-            "ema21": 25827.73,
+            "ema9": 25871.35,
+            "ema21": 25835.39,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 84121.77,
-            "ema21": 84078.22,
+            "ema9": 84162.06,
+            "ema21": 84105.47,
             "setup": "CE"
           }
         },
@@ -2468,7 +2470,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-26T10:35:05+05:30",
+      "updated_at": "2026-11-26T10:40:05+05:30",
       "final": false
     }
   }
