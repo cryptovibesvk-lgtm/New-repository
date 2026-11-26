@@ -1,67 +1,3 @@
-  BAJAJ-AUTO   OR 10680.00-10829.00
-  DLF          OR 793.65-800.00
-  AXISBANK     OR 1426.40-1441.10
-  TVSMOTOR     OR 4571.90-4607.00
-  OPEN   DLF          BUY 157 @ 801.40 (09:35)  stop 796.80  target 808.30  last 804.85  unrealised Rs 541.65
-  CLOSED TVSMOTOR     BUY 27 @ 4610.75 (10:25)  stop 4589.45  target 4642.70  -> STOP 4587.15 (10:35)  net Rs -728.39
-  OPEN   BAJAJ-AUTO   BUY 11 @ 10839.45 (10:30)  stop 10754.50  target 10966.90  last 10834.00  unrealised Rs -59.95
-  index today: SENSEX
-  NIFTY        first 1-min candle 25783.95-25876.00
-  SENSEX       first 1-min candle 83986.31-84283.97
-  EMA9_21  #1 BUY 100 SENSEX 84300 CE @ prem 955.44 (index 84340.00, SL 84252.84, 10:40)  100 EMA9_CLOSE @ 84267.93 (prem 912.19)  net Rs -4,590.42
-  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Thu) is SENSEX EMA9_21
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Thu) is SENSEX EMA9_21
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-26 10:59 IST
-PAPER 2026-11-26  indices NIFTY, SENSEX  watchlist GODREJCP, BAJAJ-AUTO, DLF, AXISBANK, TVSMOTOR
-  GODREJCP     OR 936.00-955.50
-  BAJAJ-AUTO   OR 10680.00-10829.00
-  DLF          OR 793.65-800.00
-  AXISBANK     OR 1426.40-1441.10
-  TVSMOTOR     OR 4571.90-4607.00
-  OPEN   DLF          BUY 157 @ 801.40 (09:35)  stop 796.80  target 808.30  last 804.85  unrealised Rs 541.65
-  CLOSED TVSMOTOR     BUY 27 @ 4610.75 (10:25)  stop 4589.45  target 4642.70  -> STOP 4587.15 (10:35)  net Rs -728.39
-  OPEN   BAJAJ-AUTO   BUY 11 @ 10839.45 (10:30)  stop 10754.50  target 10966.90  last 10834.00  unrealised Rs -59.95
-  index today: SENSEX
-  NIFTY        first 1-min candle 25783.95-25876.00
-  SENSEX       first 1-min candle 83986.31-84283.97
-  EMA9_21  #1 BUY 100 SENSEX 84300 CE @ prem 955.44 (index 84340.00, SL 84252.84, 10:40)  100 EMA9_CLOSE @ 84267.93 (prem 912.19)  net Rs -4,590.42
-  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Thu) is SENSEX EMA9_21
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Thu) is SENSEX EMA9_21
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-26 11:00 IST
-PAPER 2026-11-26  indices NIFTY, SENSEX  watchlist GODREJCP, BAJAJ-AUTO, DLF, AXISBANK, TVSMOTOR
-  GODREJCP     OR 936.00-955.50
-  BAJAJ-AUTO   OR 10680.00-10829.00
-  DLF          OR 793.65-800.00
-  AXISBANK     OR 1426.40-1441.10
-  TVSMOTOR     OR 4571.90-4607.00
-  OPEN   DLF          BUY 157 @ 801.40 (09:35)  stop 796.80  target 808.30  last 806.30  unrealised Rs 769.30
-  CLOSED TVSMOTOR     BUY 27 @ 4610.75 (10:25)  stop 4589.45  target 4642.70  -> STOP 4587.15 (10:35)  net Rs -728.39
-  OPEN   BAJAJ-AUTO   BUY 11 @ 10839.45 (10:30)  stop 10754.50  target 10966.90  last 10849.00  unrealised Rs 105.05
-  index today: SENSEX
-  NIFTY        first 1-min candle 25783.95-25876.00
-  SENSEX       first 1-min candle 83986.31-84283.97
-  EMA9_21  #1 BUY 100 SENSEX 84300 CE @ prem 955.44 (index 84340.00, SL 84252.84, 10:40)  100 EMA9_CLOSE @ 84267.93 (prem 912.19)  net Rs -4,590.42
-  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Thu) is SENSEX EMA9_21
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Thu) is SENSEX EMA9_21
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-26 11:01 IST
-PAPER 2026-11-26  indices NIFTY, SENSEX  watchlist GODREJCP, BAJAJ-AUTO, DLF, AXISBANK, TVSMOTOR
-  GODREJCP     OR 936.00-955.50
-  BAJAJ-AUTO   OR 10680.00-10829.00
-  DLF          OR 793.65-800.00
-  AXISBANK     OR 1426.40-1441.10
-  TVSMOTOR     OR 4571.90-4607.00
-  OPEN   DLF          BUY 157 @ 801.40 (09:35)  stop 796.80  target 808.30  last 806.30  unrealised Rs 769.30
-  CLOSED TVSMOTOR     BUY 27 @ 4610.75 (10:25)  stop 4589.45  target 4642.70  -> STOP 4587.15 (10:35)  net Rs -728.39
-  OPEN   BAJAJ-AUTO   BUY 11 @ 10839.45 (10:30)  stop 10754.50  target 10966.90  last 10849.00  unrealised Rs 105.05
   index today: SENSEX
   NIFTY        first 1-min candle 25783.95-25876.00
   SENSEX       first 1-min candle 83986.31-84283.97
@@ -298,3 +234,67 @@ history INDIAVIX 5m: +1 bars
 history NIFTY 1m: +5 bars
 history SENSEX 1m: +6 bars
 history INDIAVIX 1m: +5 bars
+--- tick 2026-11-26 11:13 IST
+PAPER 2026-11-26  indices NIFTY, SENSEX  watchlist GODREJCP, BAJAJ-AUTO, DLF, AXISBANK, TVSMOTOR
+  GODREJCP     OR 936.00-955.50
+  BAJAJ-AUTO   OR 10680.00-10829.00
+  DLF          OR 793.65-800.00
+  AXISBANK     OR 1426.40-1441.10
+  TVSMOTOR     OR 4571.90-4607.00
+  OPEN   DLF          BUY 157 @ 801.40 (09:35)  stop 796.80  target 808.30  last 807.45  unrealised Rs 949.85
+  CLOSED TVSMOTOR     BUY 27 @ 4610.75 (10:25)  stop 4589.45  target 4642.70  -> STOP 4587.15 (10:35)  net Rs -728.39
+  OPEN   BAJAJ-AUTO   BUY 11 @ 10839.45 (10:30)  stop 10754.50  target 10966.90  last 10855.00  unrealised Rs 171.05
+  index today: SENSEX
+  NIFTY        first 1-min candle 25783.95-25876.00
+  SENSEX       first 1-min candle 83986.31-84283.97
+  EMA9_21  #1 BUY 100 SENSEX 84300 CE @ prem 955.44 (index 84340.00, SL 84252.84, 10:40)  100 EMA9_CLOSE @ 84267.93 (prem 912.19)  net Rs -4,590.42
+  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Thu) is SENSEX EMA9_21
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Thu) is SENSEX EMA9_21
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-26 11:14 IST
+PAPER 2026-11-26  indices NIFTY, SENSEX  watchlist GODREJCP, BAJAJ-AUTO, DLF, AXISBANK, TVSMOTOR
+  GODREJCP     OR 936.00-955.50
+  BAJAJ-AUTO   OR 10680.00-10829.00
+  DLF          OR 793.65-800.00
+  AXISBANK     OR 1426.40-1441.10
+  TVSMOTOR     OR 4571.90-4607.00
+  OPEN   DLF          BUY 157 @ 801.40 (09:35)  stop 796.80  target 808.30  last 807.45  unrealised Rs 949.85
+  CLOSED TVSMOTOR     BUY 27 @ 4610.75 (10:25)  stop 4589.45  target 4642.70  -> STOP 4587.15 (10:35)  net Rs -728.39
+  OPEN   BAJAJ-AUTO   BUY 11 @ 10839.45 (10:30)  stop 10754.50  target 10966.90  last 10855.00  unrealised Rs 171.05
+  index today: SENSEX
+  NIFTY        first 1-min candle 25783.95-25876.00
+  SENSEX       first 1-min candle 83986.31-84283.97
+  EMA9_21  #1 BUY 100 SENSEX 84300 CE @ prem 955.44 (index 84340.00, SL 84252.84, 10:40)  100 EMA9_CLOSE @ 84267.93 (prem 912.19)  net Rs -4,590.42
+  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Thu) is SENSEX EMA9_21
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Thu) is SENSEX EMA9_21
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-26 11:15 IST
+PAPER 2026-11-26  indices NIFTY, SENSEX  watchlist GODREJCP, BAJAJ-AUTO, DLF, AXISBANK, TVSMOTOR
+  GODREJCP     OR 936.00-955.50
+  BAJAJ-AUTO   OR 10680.00-10829.00
+  DLF          OR 793.65-800.00
+  AXISBANK     OR 1426.40-1441.10
+  TVSMOTOR     OR 4571.90-4607.00
+  CLOSED DLF          BUY 157 @ 801.40 (09:35)  stop 796.80  target 808.30  -> TARGET 808.30 (11:10)  net Rs 991.15
+  CLOSED TVSMOTOR     BUY 27 @ 4610.75 (10:25)  stop 4589.45  target 4642.70  -> STOP 4587.15 (10:35)  net Rs -728.39
+  OPEN   BAJAJ-AUTO   BUY 11 @ 10839.45 (10:30)  stop 10754.50  target 10966.90  last 10854.00  unrealised Rs 160.05
+  index today: SENSEX
+  NIFTY        first 1-min candle 25783.95-25876.00
+  SENSEX       first 1-min candle 83986.31-84283.97
+  EMA9_21  #1 BUY 100 SENSEX 84300 CE @ prem 955.44 (index 84340.00, SL 84252.84, 10:40)  100 EMA9_CLOSE @ 84267.93 (prem 912.19)  net Rs -4,590.42
+  EMA9_21  #2 BUY 140 SENSEX 84500 CE @ prem 930.94 (index 84472.14, SL 84442.14, 11:05)    open, unrealised Rs -159.89
+  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Thu) is SENSEX EMA9_21
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Thu) is SENSEX EMA9_21
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+history NIFTY 5m: +1 bars
+history SENSEX 5m: +1 bars
+history INDIAVIX 5m: +1 bars
+history NIFTY 1m: +3 bars
+history SENSEX 1m: +4 bars
+history INDIAVIX 1m: +3 bars

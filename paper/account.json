@@ -2324,7 +2324,7 @@
       "trades": [
         {
           "symbol": "DLF",
-          "status": "OPEN",
+          "status": "CLOSED",
           "entry_time": "2026-11-26T09:35:00+05:30",
           "entry": 801.4,
           "stop": 796.8,
@@ -2337,11 +2337,13 @@
           "or_high": 800.0,
           "or_low": 793.65,
           "or_mid": 796.83,
-          "gross_pnl": 0.0,
-          "charges": 0.0,
-          "net_pnl": 0.0,
-          "last": 807.4500122070312,
-          "unrealised": 949.85
+          "gross_pnl": 1083.3,
+          "charges": 92.15,
+          "net_pnl": 991.15,
+          "exit": 808.3,
+          "exit_time": "2026-11-26T11:10:00+05:30",
+          "exit_reason": "TARGET",
+          "r_multiple": 1.22
         },
         {
           "symbol": "TVSMOTOR",
@@ -2384,8 +2386,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 10855.0,
-          "unrealised": 171.05
+          "last": 10854.0,
+          "unrealised": 160.05
         }
       ],
       "notes": {},
@@ -2449,6 +2451,43 @@
             "exit": 912.19,
             "r_multiple": -0.95,
             "entry": 955.44
+          },
+          {
+            "strategy": "EMA9_21",
+            "underlying": "SENSEX",
+            "side": "CE",
+            "strike": 84500,
+            "action": "BUY",
+            "expiry": "2026-12-03",
+            "symbol": "SENSEX 84500 CE",
+            "trade_no": 2,
+            "status": "OPEN",
+            "why": "retest of 9 EMA 84458.0 after bullish cross, closed above",
+            "entry_time": "2026-11-26T11:05:05+05:30",
+            "entry_index": 84472.14,
+            "entry_premium": 930.94,
+            "vix": 17.35,
+            "lot": 20,
+            "lots": 7.0,
+            "qty": 140,
+            "qty_open": 140,
+            "book_qty": 100,
+            "stop_index": 84442.14,
+            "initial_stop": 84442.14,
+            "sl_premium": 913.03,
+            "partial_index": 84572.14,
+            "partial_done": false,
+            "protected": false,
+            "best_points": 0.0,
+            "stop_moves": [],
+            "risk_at_stop": 2508.75,
+            "legs": [],
+            "gross_pnl": 0.0,
+            "charges": 0.0,
+            "net_pnl": 0.0,
+            "last_index": 84472.14,
+            "last_premium": 929.8,
+            "unrealised": -159.89
           }
         ],
         "notes": {
@@ -2485,7 +2524,7 @@
             "net": 0
           },
           "EMA9_21:SENSEX": {
-            "trades": 1,
+            "trades": 2,
             "done": false,
             "note": "",
             "active": true,
@@ -2501,13 +2540,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25927.11,
-            "ema21": 25884.22,
+            "ema9": 25932.99,
+            "ema21": 25890.79,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 84459.31,
-            "ema21": 84355.79,
+            "ema9": 84457.99,
+            "ema21": 84364.06,
             "setup": "CE"
           }
         },
@@ -2521,7 +2560,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-26T11:12:05+05:30",
+      "updated_at": "2026-11-26T11:15:06+05:30",
       "final": false
     }
   }
