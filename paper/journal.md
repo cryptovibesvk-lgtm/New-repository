@@ -1,9 +1,9 @@
 # Paper trading journal (virtual money)
 
-Stocks book: Rs 500,000 -> **Rs 503,619.75** (+0.72%), 19 trades  
-NIFTY + SENSEX options book: Rs 500,000 -> **Rs 508,323.39** (+1.66%), 16 trades  
-All closed trades: 35  |  wins 15 (43%)  |  avg R +0.28  |  charges Rs 4,160.01  
-Exits: target 7, stop 9, 15:15 square-off 7
+Stocks book: Rs 500,000 -> **Rs 502,799.44** (+0.56%), 22 trades  
+NIFTY + SENSEX options book: Rs 500,000 -> **Rs 498,994.68** (-0.20%), 18 trades  
+All closed trades: 40  |  wins 16 (40%)  |  avg R +0.17  |  charges Rs 5,048.68  
+Exits: target 8, stop 11, 15:15 square-off 7
 
 | Date | Stock | Qty | Entry | Exit | Reason | Net P&L | R |
 |---|---|---|---|---|---|---|---|
@@ -42,5 +42,10 @@ Exits: target 7, stop 9, 15:15 square-off 7
 | 2026-11-25 | TRENT | 37 | 3288.55 @ 10:20 | 3330.85 @ 11:50 | TARGET | 1,474.28 | +1.30 |
 | 2026-11-25 | EMA9_21 SENSEX 83800 CE | 100 | 501.60 @ 09:50 | 100 EMA9_CLOSE 479.91 | EMA9_CLOSE | -2,330.95 | -0.62 |
 | 2026-11-25 | EMA9_21 SENSEX 83800 CE | 140 | 525.12 @ 09:55 | 100 PARTIAL_+100 572.18; 40 BREAKEVEN_STOP 517.00 | BREAKEVEN_STOP | 4,127.70 | +1.35 |
+| 2026-11-26 | DLF | 157 | 801.40 @ 09:35 | 808.30 @ 11:10 | TARGET | 991.15 | +1.22 |
+| 2026-11-26 | TVSMOTOR | 27 | 4610.75 @ 10:25 | 4587.15 @ 10:35 | STOP | -728.39 | -1.09 |
+| 2026-11-26 | BAJAJ-AUTO | 11 | 10839.45 @ 10:30 | 10749.10 @ 14:05 | STOP | -1,083.07 | -1.06 |
+| 2026-11-26 | EMA9_21 SENSEX 84300 CE | 100 | 955.44 @ 10:40 | 100 EMA9_CLOSE 912.19 | EMA9_CLOSE | -4,590.42 | -0.95 |
+| 2026-11-26 | EMA9_21 SENSEX 84500 CE | 140 | 939.73 @ 11:05 | 140 EMA9_CLOSE 908.39 | EMA9_CLOSE | -4,738.29 | -1.01 |
 
 Virtual fills on delayed Yahoo 5-minute bars with 0.05% slippage per side. Not financial advice.
