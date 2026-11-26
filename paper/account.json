@@ -2370,7 +2370,7 @@
         },
         {
           "symbol": "BAJAJ-AUTO",
-          "status": "OPEN",
+          "status": "CLOSED",
           "entry_time": "2026-11-26T10:30:00+05:30",
           "entry": 10839.45,
           "stop": 10754.5,
@@ -2383,11 +2383,13 @@
           "or_high": 10829.0,
           "or_low": 10680.0,
           "or_mid": 10754.5,
-          "gross_pnl": 0.0,
-          "charges": 0.0,
-          "net_pnl": 0.0,
-          "last": 10784.0,
-          "unrealised": -609.95
+          "gross_pnl": -993.85,
+          "charges": 89.22,
+          "net_pnl": -1083.07,
+          "exit": 10749.1,
+          "exit_time": "2026-11-26T14:05:00+05:30",
+          "exit_reason": "STOP",
+          "r_multiple": -1.06
         }
       ],
       "notes": {},
@@ -2552,13 +2554,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25818.63,
-            "ema21": 25849.87,
+            "ema9": 25820.95,
+            "ema21": 25848.08,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 84061.97,
-            "ema21": 84118.57,
+            "ema9": 84025.12,
+            "ema21": 84095.42,
             "setup": "PE"
           }
         },
@@ -2572,7 +2574,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-26T14:07:05+05:30",
+      "updated_at": "2026-11-26T14:10:05+05:30",
       "final": false
     }
   }
