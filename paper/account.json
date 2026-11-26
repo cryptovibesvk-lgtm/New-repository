@@ -2340,8 +2340,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 804.8499755859375,
-          "unrealised": 541.65
+          "last": 806.2999877929688,
+          "unrealised": 769.3
         },
         {
           "symbol": "TVSMOTOR",
@@ -2384,8 +2384,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 10834.0,
-          "unrealised": -59.95
+          "last": 10849.0,
+          "unrealised": 105.05
         }
       ],
       "notes": {},
@@ -2501,13 +2501,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25911.36,
-            "ema21": 25864.38,
+            "ema9": 25919.01,
+            "ema21": 25872.12,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 84317.56,
-            "ema21": 84238.6,
+            "ema9": 84369.55,
+            "ema21": 84278.03,
             "setup": "CE"
           }
         },
@@ -2521,7 +2521,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-26T10:57:06+05:30",
+      "updated_at": "2026-11-26T11:02:05+05:30",
       "final": false
     }
   }
