@@ -2451,43 +2451,6 @@
             "exit": 912.19,
             "r_multiple": -0.95,
             "entry": 955.44
-          },
-          {
-            "strategy": "EMA9_21",
-            "underlying": "SENSEX",
-            "side": "CE",
-            "strike": 84500,
-            "action": "BUY",
-            "expiry": "2026-12-03",
-            "symbol": "SENSEX 84500 CE",
-            "trade_no": 2,
-            "status": "OPEN",
-            "why": "retest of 9 EMA 84458.0 after bullish cross, closed above",
-            "entry_time": "2026-11-26T11:05:05+05:30",
-            "entry_index": 84472.14,
-            "entry_premium": 930.94,
-            "vix": 17.35,
-            "lot": 20,
-            "lots": 7.0,
-            "qty": 140,
-            "qty_open": 140,
-            "book_qty": 100,
-            "stop_index": 84442.14,
-            "initial_stop": 84442.14,
-            "sl_premium": 913.03,
-            "partial_index": 84572.14,
-            "partial_done": false,
-            "protected": false,
-            "best_points": 0.0,
-            "stop_moves": [],
-            "risk_at_stop": 2508.75,
-            "legs": [],
-            "gross_pnl": 0.0,
-            "charges": 0.0,
-            "net_pnl": 0.0,
-            "last_index": 84472.14,
-            "last_premium": 929.8,
-            "unrealised": -159.89
           }
         ],
         "notes": {
@@ -2524,7 +2487,7 @@
             "net": 0
           },
           "EMA9_21:SENSEX": {
-            "trades": 2,
+            "trades": 1,
             "done": false,
             "note": "",
             "active": true,
@@ -2545,8 +2508,8 @@
             "setup": null
           },
           "SENSEX": {
-            "ema9": 84457.99,
-            "ema21": 84364.06,
+            "ema9": 84452.4,
+            "ema21": 84377.32,
             "setup": "CE"
           }
         },
@@ -2560,7 +2523,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-26T11:15:06+05:30",
+      "updated_at": "2026-11-26T11:16:05+05:30",
       "final": false
     }
   }
