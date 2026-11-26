@@ -1,42 +1,3 @@
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Thu) is SENSEX EMA9_21
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-26 10:09 IST
-PAPER 2026-11-26  indices NIFTY, SENSEX  watchlist GODREJCP, BAJAJ-AUTO, DLF, AXISBANK, TVSMOTOR
-  GODREJCP     OR 936.00-955.50
-  BAJAJ-AUTO   OR 10680.00-10829.00
-  DLF          OR 793.65-800.00
-  AXISBANK     OR 1426.40-1441.10
-  TVSMOTOR     OR 4571.90-4607.00
-  OPEN   DLF          BUY 157 @ 801.40 (09:35)  stop 796.80  target 808.30  last 801.00  unrealised Rs -62.80
-  index today: SENSEX
-  NIFTY        first 1-min candle 25783.95-25876.00
-  SENSEX       first 1-min candle 83986.31-84283.97
-  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Thu) is SENSEX EMA9_21
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Thu) is SENSEX EMA9_21
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-26 10:10 IST
-PAPER 2026-11-26  indices NIFTY, SENSEX  watchlist GODREJCP, BAJAJ-AUTO, DLF, AXISBANK, TVSMOTOR
-  GODREJCP     OR 936.00-955.50
-  BAJAJ-AUTO   OR 10680.00-10829.00
-  DLF          OR 793.65-800.00
-  AXISBANK     OR 1426.40-1441.10
-  TVSMOTOR     OR 4571.90-4607.00
-  OPEN   DLF          BUY 157 @ 801.40 (09:35)  stop 796.80  target 808.30  last 801.80  unrealised Rs 62.80
-  index today: SENSEX
-  NIFTY        first 1-min candle 25783.95-25876.00
-  SENSEX       first 1-min candle 83986.31-84283.97
-  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Thu) is SENSEX EMA9_21
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Thu) is SENSEX EMA9_21
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
-history NIFTY 5m: +1 bars
-history SENSEX 5m: +2 bars
-history INDIAVIX 5m: +1 bars
 history NIFTY 1m: +5 bars
 history SENSEX 1m: +6 bars
 history INDIAVIX 1m: +5 bars
@@ -298,3 +259,42 @@ history INDIAVIX 5m: +1 bars
 history NIFTY 1m: +5 bars
 history SENSEX 1m: +6 bars
 history INDIAVIX 1m: +5 bars
+--- tick 2026-11-26 10:26 IST
+PAPER 2026-11-26  indices NIFTY, SENSEX  watchlist GODREJCP, BAJAJ-AUTO, DLF, AXISBANK, TVSMOTOR
+  GODREJCP     OR 936.00-955.50
+  BAJAJ-AUTO   OR 10680.00-10829.00
+  DLF          OR 793.65-800.00
+  AXISBANK     OR 1426.40-1441.10
+  TVSMOTOR     OR 4571.90-4607.00
+  OPEN   DLF          BUY 157 @ 801.40 (09:35)  stop 796.80  target 808.30  last 805.20  unrealised Rs 596.60
+  index today: SENSEX
+  NIFTY        first 1-min candle 25783.95-25876.00
+  SENSEX       first 1-min candle 83986.31-84283.97
+  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Thu) is SENSEX EMA9_21
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Thu) is SENSEX EMA9_21
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-26 10:27 IST
+PAPER 2026-11-26  indices NIFTY, SENSEX  watchlist GODREJCP, BAJAJ-AUTO, DLF, AXISBANK, TVSMOTOR
+  GODREJCP     OR 936.00-955.50
+  BAJAJ-AUTO   OR 10680.00-10829.00
+  DLF          OR 793.65-800.00
+  AXISBANK     OR 1426.40-1441.10
+  TVSMOTOR     OR 4571.90-4607.00
+  OPEN   DLF          BUY 157 @ 801.40 (09:35)  stop 796.80  target 808.30  last 805.20  unrealised Rs 596.60
+  index today: SENSEX
+  NIFTY        first 1-min candle 25783.95-25876.00
+  SENSEX       first 1-min candle 83986.31-84283.97
+  EMA9_21  #1 BUY 100 SENSEX 84100 CE @ prem 949.49 (index 84092.96, SL 84062.96, 10:15)    open, unrealised Rs -110.92
+  ORB1:NIFTY: NIFTY ORB1 runs on Mon/Fri only - today (Thu) is SENSEX EMA9_21
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Thu) is SENSEX EMA9_21
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+history NIFTY 5m: +0 bars
+history SENSEX 5m: +2 bars
+history INDIAVIX 5m: +0 bars
+history NIFTY 1m: +2 bars
+history SENSEX 1m: +3 bars
+history INDIAVIX 1m: +2 bars
