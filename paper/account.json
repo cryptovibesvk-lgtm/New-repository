@@ -2340,8 +2340,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 807.0,
-          "unrealised": 879.2
+          "last": 807.2000122070312,
+          "unrealised": 910.6
         },
         {
           "symbol": "TVSMOTOR",
@@ -2361,8 +2361,29 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 4608.39990234375,
-          "unrealised": -63.45
+          "last": 4604.60009765625,
+          "unrealised": -166.05
+        },
+        {
+          "symbol": "BAJAJ-AUTO",
+          "status": "OPEN",
+          "entry_time": "2026-11-26T10:30:00+05:30",
+          "entry": 10839.45,
+          "stop": 10754.5,
+          "target": 10966.9,
+          "qty": 11,
+          "segment": "CASH",
+          "margin": 119233.95,
+          "slippage_pct": 0.0005,
+          "risk_at_stop": 1023.69,
+          "or_high": 10829.0,
+          "or_low": 10680.0,
+          "or_mid": 10754.5,
+          "gross_pnl": 0.0,
+          "charges": 0.0,
+          "net_pnl": 0.0,
+          "last": 10834.0,
+          "unrealised": -59.95
         }
       ],
       "notes": {},
@@ -2379,7 +2400,7 @@
         },
         "trades": [],
         "notes": {
-          "EMA9_21:SENSEX:1015": "10:15 EMA9_21 SENSEX CE skipped: stop 153 pts > max 130"
+          "EMA9_21:SENSEX:1015": "10:15 EMA9_21 SENSEX CE skipped: stop 199 pts > max 130"
         },
         "status": {
           "ORB1:NIFTY": {
@@ -2427,13 +2448,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25849.72,
-            "ema21": 25819.8,
+            "ema9": 25861.18,
+            "ema21": 25827.73,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 84100.06,
-            "ema21": 84063.95,
+            "ema9": 84121.77,
+            "ema21": 84078.22,
             "setup": "CE"
           }
         },
@@ -2447,7 +2468,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-26T10:32:05+05:30",
+      "updated_at": "2026-11-26T10:35:05+05:30",
       "final": false
     }
   }
