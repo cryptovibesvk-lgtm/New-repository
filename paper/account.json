@@ -2632,12 +2632,12 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 4036.39990234375,
-          "unrealised": -874.5
+          "last": 4027.199951171875,
+          "unrealised": -1150.5
         },
         {
           "symbol": "ETERNAL",
-          "status": "OPEN",
+          "status": "CLOSED",
           "entry_time": "2026-11-27T09:35:00+05:30",
           "entry": 371.1,
           "stop": 368.95,
@@ -2650,11 +2650,13 @@
           "or_high": 370.45,
           "or_low": 367.5,
           "or_mid": 368.98,
-          "gross_pnl": 0.0,
-          "charges": 0.0,
-          "net_pnl": 0.0,
-          "last": 369.79998779296875,
-          "unrealised": -439.4
+          "gross_pnl": -794.3,
+          "charges": 91.47,
+          "net_pnl": -885.77,
+          "exit": 368.75,
+          "exit_time": "2026-11-27T10:15:00+05:30",
+          "exit_reason": "STOP",
+          "r_multiple": -1.08
         }
       ],
       "notes": {},
@@ -2816,13 +2818,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25852.78,
-            "ema21": 25857.38,
+            "ema9": 25849.2,
+            "ema21": 25855.33,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 84073.86,
-            "ema21": 84106.84,
+            "ema9": 84078.02,
+            "ema21": 84103.21,
             "setup": null
           }
         },
@@ -2836,7 +2838,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-27T10:15:05+05:30",
+      "updated_at": "2026-11-27T10:20:05+05:30",
       "final": false
     }
   }
