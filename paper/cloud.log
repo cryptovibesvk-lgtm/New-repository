@@ -1,9 +1,3 @@
-  DLF          OR 809.80-815.00
-  ETERNAL      OR 367.50-370.45
-  CLOSED BSE          BUY 30 @ 4065.55 (09:30)  stop 4009.10  target 4150.25  -> STOP 4007.05 (10:35)  net Rs -1,844.97
-  CLOSED ETERNAL      BUY 338 @ 371.10 (09:35)  stop 368.95  target 374.35  -> STOP 368.75 (10:15)  net Rs -885.77
-  index today: NIFTY
-  NIFTY        first 1-min candle 25816.45-25866.25
   SENSEX       first 1-min candle 83944.60-84144.87
   ORB1     #1 BUY 195 NIFTY 25900 CE @ prem 193.59 (index 25902.90, SL 25882.90, 09:17)  195 STOP @ 25882.90 (prem 182.17)  net Rs -2,359.32
   ORB1     #2 BUY 325 NIFTY 25900 CE @ prem 184.46 (index 25883.70, SL 25863.70, 09:22)  325 STOP @ 25863.70 (prem 173.52)  net Rs -3,738.00
@@ -297,4 +291,10 @@ history SENSEX 5m: +1 bars
 history INDIAVIX 5m: +0 bars
 history NIFTY 1m: +0 bars
 history SENSEX 1m: +5 bars
+history INDIAVIX 1m: +0 bars
+history NIFTY 5m: +0 bars
+history SENSEX 5m: +0 bars
+history INDIAVIX 5m: +0 bars
+history NIFTY 1m: +0 bars
+history SENSEX 1m: +0 bars
 history INDIAVIX 1m: +0 bars
