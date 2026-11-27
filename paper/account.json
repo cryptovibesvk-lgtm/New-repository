@@ -2613,13 +2613,39 @@
           "or_mid": 368.98
         }
       },
-      "trades": [],
+      "trades": [
+        {
+          "symbol": "BSE",
+          "status": "OPEN",
+          "entry_time": "2026-11-27T09:30:00+05:30",
+          "entry": 4065.55,
+          "stop": 4009.1,
+          "target": 4150.25,
+          "qty": 30,
+          "segment": "CASH",
+          "margin": 121966.5,
+          "slippage_pct": 0.0005,
+          "risk_at_stop": 1783.49,
+          "or_high": 4033.7,
+          "or_low": 3984.5,
+          "or_mid": 4009.1,
+          "gross_pnl": 0.0,
+          "charges": 0.0,
+          "net_pnl": 0.0,
+          "last": 4063.5,
+          "unrealised": -61.5
+        }
+      ],
       "notes": {},
       "options": {
         "levels": {
           "NIFTY": {
             "high": 25866.25,
             "low": 25816.45
+          },
+          "SENSEX": {
+            "high": 84144.87,
+            "low": 83944.6
           }
         },
         "trades": [
@@ -2769,13 +2795,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25860.89,
-            "ema21": 25866.08,
+            "ema9": 25858.5,
+            "ema21": 25864.53,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 84272.44,
-            "ema21": 84247.54,
+            "ema9": 84219.1,
+            "ema21": 84226.4,
             "setup": null
           }
         },
@@ -2789,7 +2815,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-27T09:30:30+05:30",
+      "updated_at": "2026-11-27T09:35:05+05:30",
       "final": false
     }
   }
