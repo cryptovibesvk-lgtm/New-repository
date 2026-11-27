@@ -1,111 +1,5 @@
   EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
   SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-27 10:07 IST
-PAPER 2026-11-27  indices NIFTY, SENSEX  watchlist BAJAJHLDNG, BSE, MAXHEALTH, DLF, ETERNAL
-  BAJAJHLDNG   OR 11751.00-11900.00
-  BSE          OR 3984.50-4033.70
-  MAXHEALTH    OR 1083.80-1107.55
-  DLF          OR 809.80-815.00
-  ETERNAL      OR 367.50-370.45
-  OPEN   BSE          BUY 30 @ 4065.55 (09:30)  stop 4009.10  target 4150.25  last 4053.10  unrealised Rs -373.50
-  OPEN   ETERNAL      BUY 338 @ 371.10 (09:35)  stop 368.95  target 374.35  last 369.65  unrealised Rs -490.10
-  index today: NIFTY
-  NIFTY        first 1-min candle 25816.45-25866.25
-  SENSEX       first 1-min candle 83944.60-84144.87
-  ORB1     #1 BUY 195 NIFTY 25900 CE @ prem 193.59 (index 25902.90, SL 25882.90, 09:17)  195 STOP @ 25882.90 (prem 182.17)  net Rs -2,359.32
-  ORB1     #2 BUY 325 NIFTY 25900 CE @ prem 184.46 (index 25883.70, SL 25863.70, 09:22)  325 STOP @ 25863.70 (prem 173.52)  net Rs -3,738.00
-  ORB1:NIFTY: done for the day: 2 losing trades
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Fri) is NIFTY ORB1
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-27 10:08 IST
-PAPER 2026-11-27  indices NIFTY, SENSEX  watchlist BAJAJHLDNG, BSE, MAXHEALTH, DLF, ETERNAL
-  BAJAJHLDNG   OR 11751.00-11900.00
-  BSE          OR 3984.50-4033.70
-  MAXHEALTH    OR 1083.80-1107.55
-  DLF          OR 809.80-815.00
-  ETERNAL      OR 367.50-370.45
-  OPEN   BSE          BUY 30 @ 4065.55 (09:30)  stop 4009.10  target 4150.25  last 4053.10  unrealised Rs -373.50
-  OPEN   ETERNAL      BUY 338 @ 371.10 (09:35)  stop 368.95  target 374.35  last 369.65  unrealised Rs -490.10
-  index today: NIFTY
-  NIFTY        first 1-min candle 25816.45-25866.25
-  SENSEX       first 1-min candle 83944.60-84144.87
-  ORB1     #1 BUY 195 NIFTY 25900 CE @ prem 193.59 (index 25902.90, SL 25882.90, 09:17)  195 STOP @ 25882.90 (prem 182.17)  net Rs -2,359.32
-  ORB1     #2 BUY 325 NIFTY 25900 CE @ prem 184.46 (index 25883.70, SL 25863.70, 09:22)  325 STOP @ 25863.70 (prem 173.52)  net Rs -3,738.00
-  ORB1:NIFTY: done for the day: 2 losing trades
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Fri) is NIFTY ORB1
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-27 10:09 IST
-PAPER 2026-11-27  indices NIFTY, SENSEX  watchlist BAJAJHLDNG, BSE, MAXHEALTH, DLF, ETERNAL
-  BAJAJHLDNG   OR 11751.00-11900.00
-  BSE          OR 3984.50-4033.70
-  MAXHEALTH    OR 1083.80-1107.55
-  DLF          OR 809.80-815.00
-  ETERNAL      OR 367.50-370.45
-  OPEN   BSE          BUY 30 @ 4065.55 (09:30)  stop 4009.10  target 4150.25  last 4053.10  unrealised Rs -373.50
-  OPEN   ETERNAL      BUY 338 @ 371.10 (09:35)  stop 368.95  target 374.35  last 369.65  unrealised Rs -490.10
-  index today: NIFTY
-  NIFTY        first 1-min candle 25816.45-25866.25
-  SENSEX       first 1-min candle 83944.60-84144.87
-  ORB1     #1 BUY 195 NIFTY 25900 CE @ prem 193.59 (index 25902.90, SL 25882.90, 09:17)  195 STOP @ 25882.90 (prem 182.17)  net Rs -2,359.32
-  ORB1     #2 BUY 325 NIFTY 25900 CE @ prem 184.46 (index 25883.70, SL 25863.70, 09:22)  325 STOP @ 25863.70 (prem 173.52)  net Rs -3,738.00
-  ORB1:NIFTY: done for the day: 2 losing trades
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Fri) is NIFTY ORB1
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
---- tick 2026-11-27 10:10 IST
-PAPER 2026-11-27  indices NIFTY, SENSEX  watchlist BAJAJHLDNG, BSE, MAXHEALTH, DLF, ETERNAL
-  BAJAJHLDNG   OR 11751.00-11900.00
-  BSE          OR 3984.50-4033.70
-  MAXHEALTH    OR 1083.80-1107.55
-  DLF          OR 809.80-815.00
-  ETERNAL      OR 367.50-370.45
-  OPEN   BSE          BUY 30 @ 4065.55 (09:30)  stop 4009.10  target 4150.25  last 4044.00  unrealised Rs -646.50
-  OPEN   ETERNAL      BUY 338 @ 371.10 (09:35)  stop 368.95  target 374.35  last 370.00  unrealised Rs -371.80
-  index today: NIFTY
-  NIFTY        first 1-min candle 25816.45-25866.25
-  SENSEX       first 1-min candle 83944.60-84144.87
-  ORB1     #1 BUY 195 NIFTY 25900 CE @ prem 193.59 (index 25902.90, SL 25882.90, 09:17)  195 STOP @ 25882.90 (prem 182.17)  net Rs -2,359.32
-  ORB1     #2 BUY 325 NIFTY 25900 CE @ prem 184.46 (index 25883.70, SL 25863.70, 09:22)  325 STOP @ 25863.70 (prem 173.52)  net Rs -3,738.00
-  ORB1:NIFTY: done for the day: 2 losing trades
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Fri) is NIFTY ORB1
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
-history NIFTY 5m: +1 bars
-history SENSEX 5m: +2 bars
-history INDIAVIX 5m: +1 bars
-history NIFTY 1m: +5 bars
-history SENSEX 1m: +6 bars
-history INDIAVIX 1m: +5 bars
---- tick 2026-11-27 10:11 IST
-PAPER 2026-11-27  indices NIFTY, SENSEX  watchlist BAJAJHLDNG, BSE, MAXHEALTH, DLF, ETERNAL
-  BAJAJHLDNG   OR 11751.00-11900.00
-  BSE          OR 3984.50-4033.70
-  MAXHEALTH    OR 1083.80-1107.55
-  DLF          OR 809.80-815.00
-  ETERNAL      OR 367.50-370.45
-  OPEN   BSE          BUY 30 @ 4065.55 (09:30)  stop 4009.10  target 4150.25  last 4044.00  unrealised Rs -646.50
-  OPEN   ETERNAL      BUY 338 @ 371.10 (09:35)  stop 368.95  target 374.35  last 370.00  unrealised Rs -371.80
-  index today: NIFTY
-  NIFTY        first 1-min candle 25816.45-25866.25
-  SENSEX       first 1-min candle 83944.60-84144.87
-  ORB1     #1 BUY 195 NIFTY 25900 CE @ prem 193.59 (index 25902.90, SL 25882.90, 09:17)  195 STOP @ 25882.90 (prem 182.17)  net Rs -2,359.32
-  ORB1     #2 BUY 325 NIFTY 25900 CE @ prem 184.46 (index 25883.70, SL 25863.70, 09:22)  325 STOP @ 25863.70 (prem 173.52)  net Rs -3,738.00
-  ORB1:NIFTY: done for the day: 2 losing trades
-  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
-  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Fri) is NIFTY ORB1
-  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
-  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
-  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
 --- tick 2026-11-27 10:12 IST
 PAPER 2026-11-27  indices NIFTY, SENSEX  watchlist BAJAJHLDNG, BSE, MAXHEALTH, DLF, ETERNAL
   BAJAJHLDNG   OR 11751.00-11900.00
@@ -280,6 +174,112 @@ PAPER 2026-11-27  indices NIFTY, SENSEX  watchlist BAJAJHLDNG, BSE, MAXHEALTH, D
   DLF          OR 809.80-815.00
   ETERNAL      OR 367.50-370.45
   OPEN   BSE          BUY 30 @ 4065.55 (09:30)  stop 4009.10  target 4150.25  last 4027.20  unrealised Rs -1,150.50
+  CLOSED ETERNAL      BUY 338 @ 371.10 (09:35)  stop 368.95  target 374.35  -> STOP 368.75 (10:15)  net Rs -885.77
+  index today: NIFTY
+  NIFTY        first 1-min candle 25816.45-25866.25
+  SENSEX       first 1-min candle 83944.60-84144.87
+  ORB1     #1 BUY 195 NIFTY 25900 CE @ prem 193.59 (index 25902.90, SL 25882.90, 09:17)  195 STOP @ 25882.90 (prem 182.17)  net Rs -2,359.32
+  ORB1     #2 BUY 325 NIFTY 25900 CE @ prem 184.46 (index 25883.70, SL 25863.70, 09:22)  325 STOP @ 25863.70 (prem 173.52)  net Rs -3,738.00
+  ORB1:NIFTY: done for the day: 2 losing trades
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Fri) is NIFTY ORB1
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+history NIFTY 5m: +1 bars
+history SENSEX 5m: +2 bars
+history INDIAVIX 5m: +1 bars
+history NIFTY 1m: +5 bars
+history SENSEX 1m: +6 bars
+history INDIAVIX 1m: +5 bars
+--- tick 2026-11-27 10:21 IST
+PAPER 2026-11-27  indices NIFTY, SENSEX  watchlist BAJAJHLDNG, BSE, MAXHEALTH, DLF, ETERNAL
+  BAJAJHLDNG   OR 11751.00-11900.00
+  BSE          OR 3984.50-4033.70
+  MAXHEALTH    OR 1083.80-1107.55
+  DLF          OR 809.80-815.00
+  ETERNAL      OR 367.50-370.45
+  OPEN   BSE          BUY 30 @ 4065.55 (09:30)  stop 4009.10  target 4150.25  last 4027.20  unrealised Rs -1,150.50
+  CLOSED ETERNAL      BUY 338 @ 371.10 (09:35)  stop 368.95  target 374.35  -> STOP 368.75 (10:15)  net Rs -885.77
+  index today: NIFTY
+  NIFTY        first 1-min candle 25816.45-25866.25
+  SENSEX       first 1-min candle 83944.60-84144.87
+  ORB1     #1 BUY 195 NIFTY 25900 CE @ prem 193.59 (index 25902.90, SL 25882.90, 09:17)  195 STOP @ 25882.90 (prem 182.17)  net Rs -2,359.32
+  ORB1     #2 BUY 325 NIFTY 25900 CE @ prem 184.46 (index 25883.70, SL 25863.70, 09:22)  325 STOP @ 25863.70 (prem 173.52)  net Rs -3,738.00
+  ORB1:NIFTY: done for the day: 2 losing trades
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Fri) is NIFTY ORB1
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-27 10:22 IST
+PAPER 2026-11-27  indices NIFTY, SENSEX  watchlist BAJAJHLDNG, BSE, MAXHEALTH, DLF, ETERNAL
+  BAJAJHLDNG   OR 11751.00-11900.00
+  BSE          OR 3984.50-4033.70
+  MAXHEALTH    OR 1083.80-1107.55
+  DLF          OR 809.80-815.00
+  ETERNAL      OR 367.50-370.45
+  OPEN   BSE          BUY 30 @ 4065.55 (09:30)  stop 4009.10  target 4150.25  last 4027.20  unrealised Rs -1,150.50
+  CLOSED ETERNAL      BUY 338 @ 371.10 (09:35)  stop 368.95  target 374.35  -> STOP 368.75 (10:15)  net Rs -885.77
+  index today: NIFTY
+  NIFTY        first 1-min candle 25816.45-25866.25
+  SENSEX       first 1-min candle 83944.60-84144.87
+  ORB1     #1 BUY 195 NIFTY 25900 CE @ prem 193.59 (index 25902.90, SL 25882.90, 09:17)  195 STOP @ 25882.90 (prem 182.17)  net Rs -2,359.32
+  ORB1     #2 BUY 325 NIFTY 25900 CE @ prem 184.46 (index 25883.70, SL 25863.70, 09:22)  325 STOP @ 25863.70 (prem 173.52)  net Rs -3,738.00
+  ORB1:NIFTY: done for the day: 2 losing trades
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Fri) is NIFTY ORB1
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-27 10:23 IST
+PAPER 2026-11-27  indices NIFTY, SENSEX  watchlist BAJAJHLDNG, BSE, MAXHEALTH, DLF, ETERNAL
+  BAJAJHLDNG   OR 11751.00-11900.00
+  BSE          OR 3984.50-4033.70
+  MAXHEALTH    OR 1083.80-1107.55
+  DLF          OR 809.80-815.00
+  ETERNAL      OR 367.50-370.45
+  OPEN   BSE          BUY 30 @ 4065.55 (09:30)  stop 4009.10  target 4150.25  last 4027.20  unrealised Rs -1,150.50
+  CLOSED ETERNAL      BUY 338 @ 371.10 (09:35)  stop 368.95  target 374.35  -> STOP 368.75 (10:15)  net Rs -885.77
+  index today: NIFTY
+  NIFTY        first 1-min candle 25816.45-25866.25
+  SENSEX       first 1-min candle 83944.60-84144.87
+  ORB1     #1 BUY 195 NIFTY 25900 CE @ prem 193.59 (index 25902.90, SL 25882.90, 09:17)  195 STOP @ 25882.90 (prem 182.17)  net Rs -2,359.32
+  ORB1     #2 BUY 325 NIFTY 25900 CE @ prem 184.46 (index 25883.70, SL 25863.70, 09:22)  325 STOP @ 25863.70 (prem 173.52)  net Rs -3,738.00
+  ORB1:NIFTY: done for the day: 2 losing trades
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Fri) is NIFTY ORB1
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-27 10:24 IST
+PAPER 2026-11-27  indices NIFTY, SENSEX  watchlist BAJAJHLDNG, BSE, MAXHEALTH, DLF, ETERNAL
+  BAJAJHLDNG   OR 11751.00-11900.00
+  BSE          OR 3984.50-4033.70
+  MAXHEALTH    OR 1083.80-1107.55
+  DLF          OR 809.80-815.00
+  ETERNAL      OR 367.50-370.45
+  OPEN   BSE          BUY 30 @ 4065.55 (09:30)  stop 4009.10  target 4150.25  last 4027.20  unrealised Rs -1,150.50
+  CLOSED ETERNAL      BUY 338 @ 371.10 (09:35)  stop 368.95  target 374.35  -> STOP 368.75 (10:15)  net Rs -885.77
+  index today: NIFTY
+  NIFTY        first 1-min candle 25816.45-25866.25
+  SENSEX       first 1-min candle 83944.60-84144.87
+  ORB1     #1 BUY 195 NIFTY 25900 CE @ prem 193.59 (index 25902.90, SL 25882.90, 09:17)  195 STOP @ 25882.90 (prem 182.17)  net Rs -2,359.32
+  ORB1     #2 BUY 325 NIFTY 25900 CE @ prem 184.46 (index 25883.70, SL 25863.70, 09:22)  325 STOP @ 25863.70 (prem 173.52)  net Rs -3,738.00
+  ORB1:NIFTY: done for the day: 2 losing trades
+  EMA9_21:NIFTY: NIFTY EMA9_21 is not in the schedule
+  SELL_TIME:NIFTY: NIFTY SELL_TIME runs on Tue only - today (Fri) is NIFTY ORB1
+  ORB1:SENSEX: SENSEX ORB1 is not in the schedule
+  EMA9_21:SENSEX: SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1
+  SELL_TIME:SENSEX: SENSEX SELL_TIME is not in the schedule
+--- tick 2026-11-27 10:25 IST
+PAPER 2026-11-27  indices NIFTY, SENSEX  watchlist BAJAJHLDNG, BSE, MAXHEALTH, DLF, ETERNAL
+  BAJAJHLDNG   OR 11751.00-11900.00
+  BSE          OR 3984.50-4033.70
+  MAXHEALTH    OR 1083.80-1107.55
+  DLF          OR 809.80-815.00
+  ETERNAL      OR 367.50-370.45
+  OPEN   BSE          BUY 30 @ 4065.55 (09:30)  stop 4009.10  target 4150.25  last 4029.80  unrealised Rs -1,072.50
   CLOSED ETERNAL      BUY 338 @ 371.10 (09:35)  stop 368.95  target 374.35  -> STOP 368.75 (10:15)  net Rs -885.77
   index today: NIFTY
   NIFTY        first 1-min candle 25816.45-25866.25
