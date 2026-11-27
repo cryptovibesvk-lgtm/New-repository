@@ -2632,8 +2632,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 4053.39990234375,
-          "unrealised": -364.5
+          "last": 4062.39990234375,
+          "unrealised": -94.5
         },
         {
           "symbol": "ETERNAL",
@@ -2653,8 +2653,8 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 370.8999938964844,
-          "unrealised": -67.6
+          "last": 370.6000061035156,
+          "unrealised": -169.0
         }
       ],
       "notes": {},
@@ -2816,13 +2816,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25859.89,
-            "ema21": 25864.61,
+            "ema9": 25860.94,
+            "ema21": 25864.66,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 84151.08,
-            "ema21": 84191.61,
+            "ema9": 84089.67,
+            "ema21": 84154.55,
             "setup": null
           }
         },
@@ -2836,7 +2836,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-27T09:40:05+05:30",
+      "updated_at": "2026-11-27T09:45:05+05:30",
       "final": false
     }
   }
