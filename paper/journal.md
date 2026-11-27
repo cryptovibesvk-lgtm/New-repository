@@ -1,9 +1,9 @@
 # Paper trading journal (virtual money)
 
-Stocks book: Rs 500,000 -> **Rs 502,799.44** (+0.56%), 22 trades  
-NIFTY + SENSEX options book: Rs 500,000 -> **Rs 498,994.68** (-0.20%), 18 trades  
-All closed trades: 40  |  wins 16 (40%)  |  avg R +0.17  |  charges Rs 5,048.68  
-Exits: target 8, stop 11, 15:15 square-off 7
+Stocks book: Rs 500,000 -> **Rs 500,068.70** (+0.01%), 24 trades  
+NIFTY + SENSEX options book: Rs 500,000 -> **Rs 492,897.36** (-1.42%), 20 trades  
+All closed trades: 44  |  wins 16 (36%)  |  avg R +0.06  |  charges Rs 5,545.04  
+Exits: target 8, stop 15, 15:15 square-off 7
 
 | Date | Stock | Qty | Entry | Exit | Reason | Net P&L | R |
 |---|---|---|---|---|---|---|---|
@@ -47,5 +47,9 @@ Exits: target 8, stop 11, 15:15 square-off 7
 | 2026-11-26 | BAJAJ-AUTO | 11 | 10839.45 @ 10:30 | 10749.10 @ 14:05 | STOP | -1,083.07 | -1.06 |
 | 2026-11-26 | EMA9_21 SENSEX 84300 CE | 100 | 955.44 @ 10:40 | 100 EMA9_CLOSE 912.19 | EMA9_CLOSE | -4,590.42 | -0.95 |
 | 2026-11-26 | EMA9_21 SENSEX 84500 CE | 140 | 939.73 @ 11:05 | 140 EMA9_CLOSE 908.39 | EMA9_CLOSE | -4,738.29 | -1.01 |
+| 2026-11-27 | BSE | 30 | 4065.55 @ 09:30 | 4007.05 @ 10:35 | STOP | -1,844.97 | -1.03 |
+| 2026-11-27 | ETERNAL | 338 | 371.10 @ 09:35 | 368.75 @ 10:15 | STOP | -885.77 | -1.08 |
+| 2026-11-27 | ORB1 NIFTY 25900 CE | 195 | 193.59 @ 09:17 | 195 STOP 182.17 | STOP | -2,359.32 | -1.12 |
+| 2026-11-27 | ORB1 NIFTY 25900 CE | 325 | 184.46 @ 09:22 | 325 STOP 173.52 | STOP | -3,738.00 | -1.10 |
 
 Virtual fills on delayed Yahoo 5-minute bars with 0.05% slippage per side. Not financial advice.
