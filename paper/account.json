@@ -2632,8 +2632,29 @@
           "gross_pnl": 0.0,
           "charges": 0.0,
           "net_pnl": 0.0,
-          "last": 4063.5,
-          "unrealised": -61.5
+          "last": 4053.39990234375,
+          "unrealised": -364.5
+        },
+        {
+          "symbol": "ETERNAL",
+          "status": "OPEN",
+          "entry_time": "2026-11-27T09:35:00+05:30",
+          "entry": 371.1,
+          "stop": 368.95,
+          "target": 374.35,
+          "qty": 338,
+          "segment": "CASH",
+          "margin": 125431.8,
+          "slippage_pct": 0.0005,
+          "risk_at_stop": 818.19,
+          "or_high": 370.45,
+          "or_low": 367.5,
+          "or_mid": 368.98,
+          "gross_pnl": 0.0,
+          "charges": 0.0,
+          "net_pnl": 0.0,
+          "last": 370.8999938964844,
+          "unrealised": -67.6
         }
       ],
       "notes": {},
@@ -2795,13 +2816,13 @@
         },
         "ema": {
           "NIFTY": {
-            "ema9": 25858.5,
-            "ema21": 25864.53,
+            "ema9": 25859.89,
+            "ema21": 25864.61,
             "setup": null
           },
           "SENSEX": {
-            "ema9": 84219.1,
-            "ema21": 84226.4,
+            "ema9": 84151.08,
+            "ema21": 84191.61,
             "setup": null
           }
         },
@@ -2815,7 +2836,7 @@
           "Fri": "NIFTY ORB1"
         }
       },
-      "updated_at": "2026-11-27T09:35:05+05:30",
+      "updated_at": "2026-11-27T09:40:05+05:30",
       "final": false
     }
   }
