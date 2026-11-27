@@ -1,93 +1,93 @@
 {
-  "generated_ist": "2026-11-26T09:28:29+05:30",
+  "generated_ist": "2026-11-27T09:30:30+05:30",
   "mode": "daily",
   "universe": "nifty100",
   "scanned": 100,
   "matched": 5,
   "items": [
     {
-      "symbol": "GODREJCP",
-      "ltp": 938.5,
-      "chg_pct": 2.87,
-      "setup": "20D_BREAKOUT,BULL_FLAG",
-      "score": 76,
-      "note": "close above prior 20-day pivot 934.25; 13.4% impulse, 2.1% pullback",
-      "turnover_cr": 142.92,
-      "rsi14": 68.7,
-      "volume_ratio": 0.09,
-      "levels": {
-        "or_high": null,
-        "or_low": null,
-        "pivot": 934.25,
-        "stop_hint": 913.9
-      }
-    },
-    {
-      "symbol": "BAJAJ-AUTO",
-      "ltp": 10781.0,
-      "chg_pct": 1.3,
-      "setup": "BULL_FLAG,RECLAIM_20MA",
-      "score": 66,
-      "note": "8.1% impulse, 4.7% pullback; reclaimed 20DMA 10682.35",
-      "turnover_cr": 432.59,
-      "rsi14": 53.3,
+      "symbol": "BAJAJHLDNG",
+      "ltp": 11768.0,
+      "chg_pct": 2.99,
+      "setup": "20D_BREAKOUT,BULL_FLAG,52W_HIGH_PROX",
+      "score": 88,
+      "note": "close above prior 20-day pivot 11851.00; 13.6% impulse, 2.9% pullback; 1.3% below 52-week high",
+      "turnover_cr": 41.83,
+      "rsi14": 63.1,
       "volume_ratio": 0.08,
       "levels": {
         "or_high": null,
         "or_low": null,
-        "pivot": 11173.0,
-        "stop_hint": 10543.85
+        "pivot": 11851.0,
+        "stop_hint": 11430.45
       }
     },
     {
-      "symbol": "DLF",
-      "ltp": 797.4,
-      "chg_pct": 0.42,
-      "setup": "20D_BREAKOUT,52W_HIGH_PROX",
-      "score": 64,
-      "note": "close above prior 20-day pivot 795.95; 0.4% below 52-week high",
-      "turnover_cr": 242.91,
-      "rsi14": 76.1,
-      "volume_ratio": 0.07,
+      "symbol": "BSE",
+      "ltp": 4036.9,
+      "chg_pct": 1.17,
+      "setup": "20D_BREAKOUT,BULL_FLAG",
+      "score": 76,
+      "note": "close above prior 20-day pivot 4003.30; 11.2% impulse, 0.3% pullback",
+      "turnover_cr": 1597.98,
+      "rsi14": 71.4,
+      "volume_ratio": 0.22,
       "levels": {
         "or_high": null,
         "or_low": null,
-        "pivot": 795.95,
-        "stop_hint": 779.9
+        "pivot": 4003.3,
+        "stop_hint": 3920.4
       }
     },
     {
-      "symbol": "AXISBANK",
-      "ltp": 1431.2,
-      "chg_pct": 0.92,
-      "setup": "BULL_FLAG,52W_HIGH_PROX",
-      "score": 58,
-      "note": "18.3% impulse, 2.8% pullback; 1.9% below 52-week high",
-      "turnover_cr": 1067.13,
-      "rsi14": 68.6,
-      "volume_ratio": 0.29,
-      "levels": {
-        "or_high": null,
-        "or_low": null,
-        "pivot": 1458.9,
-        "stop_hint": 1396.05
-      }
-    },
-    {
-      "symbol": "TVSMOTOR",
-      "ltp": 4592.6,
-      "chg_pct": 1.42,
-      "setup": "BULL_FLAG,52W_HIGH_PROX",
-      "score": 58,
-      "note": "10.0% impulse, 2.3% pullback; 0.9% below 52-week high",
-      "turnover_cr": 410.62,
-      "rsi14": 64.5,
+      "symbol": "MAXHEALTH",
+      "ltp": 1093.55,
+      "chg_pct": 1.14,
+      "setup": "20D_BREAKOUT,BULL_FLAG",
+      "score": 76,
+      "note": "close above prior 20-day pivot 1102.10; 18.9% impulse, 1.9% pullback",
+      "turnover_cr": 493.18,
+      "rsi14": 77.2,
       "volume_ratio": 0.06,
       "levels": {
         "or_high": null,
         "or_low": null,
-        "pivot": 4636.1,
-        "stop_hint": 4477.45
+        "pivot": 1102.1,
+        "stop_hint": 1063.5
+      }
+    },
+    {
+      "symbol": "DLF",
+      "ltp": 813.8,
+      "chg_pct": 0.74,
+      "setup": "20D_BREAKOUT,52W_HIGH_PROX",
+      "score": 64,
+      "note": "close above prior 20-day pivot 812.35; 0.2% below 52-week high",
+      "turnover_cr": 266.91,
+      "rsi14": 79.0,
+      "volume_ratio": 0.08,
+      "levels": {
+        "or_high": null,
+        "or_low": null,
+        "pivot": 812.35,
+        "stop_hint": 796.1
+      }
+    },
+    {
+      "symbol": "ETERNAL",
+      "ltp": 369.8,
+      "chg_pct": 0.57,
+      "setup": "BULL_FLAG,52W_HIGH_PROX",
+      "score": 58,
+      "note": "9.7% impulse, 2.7% pullback; 2.2% below 52-week high",
+      "turnover_cr": 870.78,
+      "rsi14": 62.8,
+      "volume_ratio": 0.03,
+      "levels": {
+        "or_high": null,
+        "or_low": null,
+        "pivot": 378.0,
+        "stop_hint": 360.1
       }
     }
   ],

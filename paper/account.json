@@ -2576,6 +2576,221 @@
       },
       "updated_at": "2026-11-26T16:33:14+05:30",
       "final": true
+    },
+    "2026-11-27": {
+      "watchlist": [
+        "BAJAJHLDNG",
+        "BSE",
+        "MAXHEALTH",
+        "DLF",
+        "ETERNAL"
+      ],
+      "scanned_at": "2026-11-27T09:30:30+05:30",
+      "ranges": {
+        "BAJAJHLDNG": {
+          "or_high": 11900.0,
+          "or_low": 11751.0,
+          "or_mid": 11825.5
+        },
+        "BSE": {
+          "or_high": 4033.7,
+          "or_low": 3984.5,
+          "or_mid": 4009.1
+        },
+        "MAXHEALTH": {
+          "or_high": 1107.55,
+          "or_low": 1083.8,
+          "or_mid": 1095.68
+        },
+        "DLF": {
+          "or_high": 815.0,
+          "or_low": 809.8,
+          "or_mid": 812.4
+        },
+        "ETERNAL": {
+          "or_high": 370.45,
+          "or_low": 367.5,
+          "or_mid": 368.98
+        }
+      },
+      "trades": [],
+      "notes": {},
+      "options": {
+        "levels": {
+          "NIFTY": {
+            "high": 25866.25,
+            "low": 25816.45
+          }
+        },
+        "trades": [
+          {
+            "strategy": "ORB1",
+            "underlying": "NIFTY",
+            "side": "CE",
+            "strike": 25900,
+            "action": "BUY",
+            "expiry": "2026-12-01",
+            "symbol": "NIFTY 25900 CE",
+            "trade_no": 1,
+            "status": "CLOSED",
+            "why": "1-min close 25902.90 above first-minute high 25866.25",
+            "entry_time": "2026-11-27T09:17:00+05:30",
+            "entry_index": 25902.9,
+            "entry_premium": 193.59,
+            "vix": 16.11,
+            "lot": 65,
+            "lots": 3.0,
+            "qty": 195,
+            "qty_open": 0,
+            "book_qty": 0,
+            "stop_index": 25882.9,
+            "initial_stop": 25882.9,
+            "sl_premium": 182.81,
+            "partial_index": 25932.9,
+            "partial_done": false,
+            "protected": false,
+            "best_points": 2.75,
+            "stop_moves": [],
+            "risk_at_stop": 2101.92,
+            "legs": [
+              {
+                "time": "2026-11-27T09:19:00+05:30",
+                "qty": 195,
+                "lots": 3.0,
+                "index": 25882.9,
+                "premium": 182.17,
+                "reason": "STOP"
+              }
+            ],
+            "gross_pnl": -2226.9,
+            "charges": 132.42,
+            "net_pnl": -2359.32,
+            "exit_time": "2026-11-27T09:19:00+05:30",
+            "exit_reason": "STOP",
+            "exit_index": 25882.9,
+            "exit": 182.17,
+            "r_multiple": -1.12,
+            "entry": 193.59
+          },
+          {
+            "strategy": "ORB1",
+            "underlying": "NIFTY",
+            "side": "CE",
+            "strike": 25900,
+            "action": "BUY",
+            "expiry": "2026-12-01",
+            "symbol": "NIFTY 25900 CE",
+            "trade_no": 2,
+            "status": "CLOSED",
+            "why": "1-min close 25883.70 above first-minute high 25866.25",
+            "entry_time": "2026-11-27T09:22:00+05:30",
+            "entry_index": 25883.7,
+            "entry_premium": 184.46,
+            "vix": 16.22,
+            "lot": 65,
+            "lots": 5.0,
+            "qty": 325,
+            "qty_open": 0,
+            "book_qty": 0,
+            "stop_index": 25863.7,
+            "initial_stop": 25863.7,
+            "sl_premium": 174.04,
+            "partial_index": 25913.7,
+            "partial_done": false,
+            "protected": false,
+            "best_points": 0.0,
+            "stop_moves": [],
+            "risk_at_stop": 3386.08,
+            "legs": [
+              {
+                "time": "2026-11-27T09:23:00+05:30",
+                "qty": 325,
+                "lots": 5.0,
+                "index": 25863.7,
+                "premium": 173.52,
+                "reason": "STOP"
+              }
+            ],
+            "gross_pnl": -3555.5,
+            "charges": 182.5,
+            "net_pnl": -3738.0,
+            "exit_time": "2026-11-27T09:23:00+05:30",
+            "exit_reason": "STOP",
+            "exit_index": 25863.7,
+            "exit": 173.52,
+            "r_multiple": -1.1,
+            "entry": 184.46
+          }
+        ],
+        "notes": {},
+        "status": {
+          "ORB1:NIFTY": {
+            "trades": 2,
+            "done": true,
+            "note": "done for the day: 2 losing trades",
+            "active": true,
+            "net": -6097.32
+          },
+          "EMA9_21:NIFTY": {
+            "trades": 0,
+            "done": true,
+            "note": "NIFTY EMA9_21 is not in the schedule",
+            "active": true,
+            "net": 0
+          },
+          "SELL_TIME:NIFTY": {
+            "trades": 0,
+            "done": true,
+            "note": "NIFTY SELL_TIME runs on Tue only - today (Fri) is NIFTY ORB1",
+            "active": true,
+            "net": 0
+          },
+          "ORB1:SENSEX": {
+            "trades": 0,
+            "done": true,
+            "note": "SENSEX ORB1 is not in the schedule",
+            "active": false,
+            "net": 0
+          },
+          "EMA9_21:SENSEX": {
+            "trades": 0,
+            "done": true,
+            "note": "SENSEX EMA9_21 runs on Wed/Thu only - today (Fri) is NIFTY ORB1",
+            "active": false,
+            "net": 0
+          },
+          "SELL_TIME:SENSEX": {
+            "trades": 0,
+            "done": true,
+            "note": "SENSEX SELL_TIME is not in the schedule",
+            "active": false,
+            "net": 0
+          }
+        },
+        "ema": {
+          "NIFTY": {
+            "ema9": 25860.89,
+            "ema21": 25866.08,
+            "setup": null
+          },
+          "SENSEX": {
+            "ema9": 84272.44,
+            "ema21": 84247.54,
+            "setup": null
+          }
+        },
+        "index_today": "NIFTY",
+        "strategy_today": "ORB1",
+        "schedule": {
+          "Mon": "NIFTY ORB1",
+          "Tue": "NIFTY SELL_TIME",
+          "Wed": "SENSEX EMA9_21",
+          "Thu": "SENSEX EMA9_21",
+          "Fri": "NIFTY ORB1"
+        }
+      },
+      "updated_at": "2026-11-27T09:30:30+05:30",
+      "final": false
     }
   }
 }
